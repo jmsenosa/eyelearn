@@ -1,24 +1,64 @@
+
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 13, 2016 at 05:26 PM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 5.6.15
+-- Host: localhost
+-- Generation Time: Nov 30, 2016 at 10:45 AM
+-- Server version: 10.0.20-MariaDB
+-- PHP Version: 5.2.17
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `eyelearn_db`
+-- Database: `u252496202_learn`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attendance`
+--
+
+CREATE TABLE IF NOT EXISTS `attendance` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` int(11) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `attendance` varchar(255) DEFAULT NULL,
+  `canquiz` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+
+--
+-- Dumping data for table `attendance`
+--
+
+INSERT INTO `attendance` (`id`, `student_id`, `date`, `attendance`, `canquiz`) VALUES
+(1, 1, '2016-10-03', 'present', NULL),
+(2, 2, '2016-10-03', 'absent', NULL),
+(3, 3, '2016-10-03', 'absent', NULL),
+(4, 4, '2016-10-03', 'absent', NULL),
+(5, 6, '2016-10-03', 'present', NULL),
+(7, 6, '2016-10-04', 'present', NULL),
+(8, 12, '2014-10-06', 'present', NULL),
+(9, 15, '2016-10-04', 'present', NULL),
+(10, 10, '2016-10-04', 'present', NULL),
+(11, 9, '2016-10-04', 'present', NULL),
+(12, 15, '2016-10-09', 'absent', NULL),
+(13, 9, '2016-10-09', 'present', NULL),
+(14, 16, '2016-10-09', 'present', NULL),
+(15, 10, '2016-10-09', 'absent', NULL),
+(16, 9, '2016-10-10', 'present', NULL),
+(17, 16, '2016-10-10', 'absent', NULL),
+(18, 10, '2016-10-10', 'present', NULL),
+(19, 15, '2016-10-10', 'absent', NULL);
 
 -- --------------------------------------------------------
 
@@ -26,62 +66,48 @@ SET time_zone = "+00:00";
 -- Table structure for table `audio`
 --
 
-CREATE TABLE `audio` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `audio` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `filename` varchar(255) NOT NULL,
-  `folder` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `folder` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `audio`
 --
 
 INSERT INTO `audio` (`id`, `filename`, `folder`) VALUES
-(1, 'A.mp3', 'Mga Patinig'),
-(2, 'E.mp3', 'Mga Patinig'),
-(3, 'I.mp3', 'Mga Patinig'),
-(4, 'O.mp3', 'Mga Patinig'),
-(5, 'U.mp3', 'Mga Patinig'),
-(10, '2.mp3', 'Alamat ng Pinya'),
-(11, '3.mp3', 'Alamat ng Pinya'),
-(12, '4.mp3', 'Alamat ng Pinya'),
-(13, '5.mp3', 'Alamat ng Pinya'),
-(14, 'E.mp3', 'Ang Mga Patinig'),
-(15, 'A.mp3', 'Ang Mga Patinig'),
-(16, 'I.mp3', 'Ang Mga Patinig'),
-(17, 'O.mp3', 'Ang Mga Patinig'),
-(18, 'U.mp3', 'Ang Mga Patinig'),
-(20, 'aso.mp3', 'Ang titik A'),
-(21, 'baboy.mp3', 'Ang titik A'),
-(22, 'baka.mp3', 'Ang titik A'),
-(23, 'butiki.mp3', 'Ang titik A'),
-(24, 'ilong.mp3', 'Ang titik A'),
-(25, '3.mp3', 'ds'),
-(26, '2.mp3', 'ds'),
-(27, '5.mp3', 'ds'),
-(28, '4.mp3', 'ds'),
-(29, 'A.mp3', 'ds'),
-(30, 'A.mp3', 'Aralin tatlo'),
-(31, 'E.mp3', 'Aralin tatlo'),
-(32, 'O.mp3', 'Aralin tatlo'),
-(33, 'I.mp3', 'Aralin tatlo'),
-(34, 'U.mp3', 'Aralin tatlo'),
-(35, '33.mp3', 'patinig'),
-(36, '22.mp3', 'patinig'),
-(37, '44.mp3', 'patinig'),
-(38, '55.mp3', 'patinig'),
-(39, '66.mp3', 'patinig'),
-(40, 'I.mp3', 'ryan'),
-(41, 'E.mp3', 'ryan'),
-(42, 'O.mp3', 'ryan'),
-(43, 'BO.mp3', 'Testing to'),
-(44, 'BU.mp3', 'Testing to'),
-(45, 'DE.mp3', 'Testing to'),
-(46, 'DA.mp3', 'Testing to'),
-(47, 'DI.mp3', 'Testing to'),
-(48, 'DO.mp3', 'Testing to'),
-(49, 'DU.mp3', 'Testing to'),
-(50, 'E.mp3', 'Testing to');
+(1, 'BE.mp3', 'hard'),
+(2, 'BA.mp3', 'hard'),
+(3, 'BI - Copy.mp3', 'hard'),
+(4, 'BO - Copy (2).mp3', 'hard'),
+(5, 'BU.mp3', 'hard'),
+(6, 'BA (1) - Copy.mp3', 'sfsad'),
+(7, 'asdgfdfgdfgdfg.mp3', 'sfsad'),
+(8, 'BA.mp3', 'sfsad'),
+(9, 'BA (1).mp3', 'sfsad'),
+(10, 'BE (1).mp3', 'sfsad'),
+(11, 'BE (1) - Copy.mp3', 'sfsad'),
+(12, 'BE.mp3', 'sfsad'),
+(13, 'BI - Copy.mp3', 'sfsad'),
+(14, 'BI (1).mp3', 'sfsad'),
+(15, 'BI.mp3', 'sfsad'),
+(16, 'BO - Copy (2).mp3', 'sfsad'),
+(17, 'A (2) - Copy.mp3', 'Hard'),
+(18, 'A (1).mp3', 'Hard'),
+(19, 'A (1).mp3', 'eto'),
+(20, 'A (2) - Copy.mp3', 'eto'),
+(21, 'aaaa - Copy.mp3', 'eto'),
+(22, 'aaaa.mp3', 'eto'),
+(23, 'asdgfdfgdfgdfg.mp3', 'eto'),
+(24, 'BA (1) - Copy.mp3', 'eto'),
+(25, 'BA (1).mp3', 'eto'),
+(26, 'A (1).mp3', 'asa'),
+(27, 'A (2) - Copy.mp3', 'asa'),
+(28, 'A (2) - Copy.mp3', 'WDQE'),
+(29, 'A (1).mp3', 'WDQE'),
+(30, 'aaaa - Copy.mp3', 'WDQE');
 
 -- --------------------------------------------------------
 
@@ -89,38 +115,15 @@ INSERT INTO `audio` (`id`, `filename`, `folder`) VALUES
 -- Table structure for table `choice`
 --
 
-CREATE TABLE `choice` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `choice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `question_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `is_correct` tinyint(1) NOT NULL,
   `active` tinyint(1) NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `choice`
---
-
-INSERT INTO `choice` (`id`, `question_id`, `name`, `is_correct`, `active`, `last_update`) VALUES
-(1, 1, 'a. a', 1, 1, '2016-02-23 17:31:15'),
-(2, 1, 'b. b', 0, 1, '0000-00-00 00:00:00'),
-(3, 1, 'o. o', 0, 1, '0000-00-00 00:00:00'),
-(4, 2, 'a. o', 0, 1, '2016-02-23 17:34:39'),
-(5, 2, 'b. a', 1, 1, '2016-02-23 17:34:45'),
-(6, 2, 'c. e', 0, 1, '0000-00-00 00:00:00'),
-(7, 3, 'a. a', 0, 1, '0000-00-00 00:00:00'),
-(8, 3, 'b. e', 0, 1, '2016-02-23 17:32:37'),
-(9, 3, 'c. b', 1, 1, '2016-02-23 17:35:04'),
-(10, 4, 'a. k', 0, 1, '0000-00-00 00:00:00'),
-(11, 4, 'b. u', 0, 1, '0000-00-00 00:00:00'),
-(12, 4, 'c. b', 1, 1, '0000-00-00 00:00:00'),
-(13, 5, 'a. b', 0, 1, '0000-00-00 00:00:00'),
-(14, 5, 'b. i', 0, 1, '0000-00-00 00:00:00'),
-(15, 5, 'c. t', 1, 1, '2016-02-23 17:33:54'),
-(16, 6, 'a. t', 0, 1, '0000-00-00 00:00:00'),
-(17, 6, 'b. o', 1, 1, '2016-02-23 17:34:20'),
-(18, 6, 'c. k', 0, 1, '0000-00-00 00:00:00');
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -128,28 +131,37 @@ INSERT INTO `choice` (`id`, `question_id`, `name`, `is_correct`, `active`, `last
 -- Table structure for table `lesson`
 --
 
-CREATE TABLE `lesson` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `lesson` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `description` varchar(100) NOT NULL,
+  `description` date NOT NULL,
   `active` tinyint(1) NOT NULL,
   `last_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `audio` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `audio` varchar(255) NOT NULL,
+  `isDone` int(11) DEFAULT '0',
+  `lesson_number` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `lesson`
 --
 
-INSERT INTO `lesson` (`id`, `user_id`, `name`, `description`, `active`, `last_update`, `audio`) VALUES
-(3, 2, 'Ang Mga Patinig', '', 1, '0000-00-00 00:00:00', ''),
-(4, 2, 'Ang titik A', 'A', 1, '0000-00-00 00:00:00', ''),
-(6, 2, 'Aralin tatlo', '', 1, '0000-00-00 00:00:00', ''),
-(9, 2, 'Quiz 1', '', 1, '2016-09-06 04:52:35', ''),
-(10, 2, 'patinig', '', 1, '2016-09-07 08:51:32', ''),
-(11, 2, 'ryan', '', 1, '2016-09-09 08:38:53', ''),
-(12, 2, 'Testing to', '', 1, '2016-09-13 15:54:32', '');
+INSERT INTO `lesson` (`id`, `user_id`, `name`, `description`, `active`, `last_update`, `audio`, `isDone`, `lesson_number`) VALUES
+(1, 39, 'Hard', '2016-10-03', 1, '2016-10-03 18:18:34', '', 1, NULL),
+(2, 39, 'soft', '2016-10-04', 1, '2016-10-03 18:18:43', '', 0, NULL),
+(4, 39, 'Love', '2016-10-05', 1, '2016-10-03 18:19:23', '', 1, NULL),
+(5, 39, 'sfsad', '2017-09-13', 1, '2017-09-03 10:49:11', '', 0, NULL),
+(6, 41, 'Eto', '2016-10-04', 1, '2016-10-04 18:26:51', '', 1, NULL),
+(7, 41, 'asa', '2016-10-05', 1, '2016-10-04 18:31:02', '', 0, NULL),
+(8, 41, 'Good', '2016-10-05', 1, '2016-10-04 18:31:11', '', 1, NULL),
+(9, 41, 'Dsadas', '2016-10-06', 1, '2016-10-04 18:32:34', '', 1, NULL),
+(11, 41, 'sA', '2016-10-04', 1, '2016-10-04 14:36:54', '', 0, NULL),
+(12, 41, 'SADASD', '2016-10-05', 1, '2016-10-04 14:37:21', '', 0, NULL),
+(13, 42, 'WDQE', '2014-10-06', 1, '2014-10-06 09:53:19', '', 0, NULL),
+(14, 42, 'Sadsdas', '2016-10-04', 1, '2016-10-04 10:35:59', '', 0, NULL),
+(15, 42, 'sdasd', '2016-10-04', 1, '2016-10-04 10:36:14', '', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -157,79 +169,338 @@ INSERT INTO `lesson` (`id`, `user_id`, `name`, `description`, `active`, `last_up
 -- Table structure for table `lesson_dtl`
 --
 
-CREATE TABLE `lesson_dtl` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `lesson_dtl` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `lesson_id` int(11) NOT NULL,
   `filename` varchar(255) NOT NULL,
   `seconds` int(3) NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `audio_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `audio_id` int(11) NOT NULL,
+  `board` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `lesson_dtl`
 --
 
-INSERT INTO `lesson_dtl` (`id`, `lesson_id`, `filename`, `seconds`, `last_update`, `audio_id`) VALUES
-(11, 13, 'a.png', 2, '2016-08-22 05:37:20', 1),
-(13, 13, 'e.png', 2, '2016-08-22 07:45:55', 2),
-(14, 13, 'i.png', 2, '2016-08-22 05:42:03', 3),
-(15, 13, 'o.png', 2, '2016-08-22 05:42:16', 4),
-(16, 13, 'u.png', 2, '2016-08-22 05:42:25', 5),
-(17, 17, '1.png', 4, '2016-08-26 14:12:14', 0),
-(18, 17, '2.png', 2, '2016-08-26 14:13:30', 0),
-(19, 17, '3.png', 4, '2016-08-26 14:13:39', 0),
-(20, 17, '4.png', 1, '2016-08-26 14:13:48', 0),
-(21, 17, '5.png', 2, '2016-08-26 14:13:59', 0),
-(22, 3, 'a(2).png', 2, '2016-09-05 22:28:02', 1),
-(23, 3, 'e.png', 2, '2016-09-05 22:28:09', 2),
-(24, 3, 'i.png', 2, '2016-09-01 18:25:58', 3),
-(25, 3, 'o.png', 2, '2016-09-01 18:25:43', 4),
-(26, 3, 'u.png', 2, '2016-09-01 18:25:32', 18),
-(28, 4, '3.png', 2, '2016-09-01 21:40:15', 20),
-(29, 4, '10547671_814974965192819_4372190642617792283_n.jpg', 2, '2016-09-01 21:41:17', 21),
-(30, 4, '10559711_814974551859527_6101120209606421938_n.jpg', 2, '2016-09-01 21:42:01', 22),
-(31, 4, '10561781_814974508526198_7073469486283670844_n.jpg', 2, '2016-09-01 21:42:11', 23),
-(32, 4, '10505337_814974725192843_8292935193044712344_n.jpg', 2, '2016-09-01 21:41:46', 24),
-(33, 5, 'ha.png', 2, '2016-09-05 09:53:15', 25),
-(34, 5, 'ka.png', 2, '2016-09-05 09:53:26', 26),
-(35, 5, 'ma.png', 2, '2016-09-05 09:53:36', 27),
-(36, 5, 'na.png', 2, '2016-09-05 09:53:47', 28),
-(37, 5, 'nga.png', 2, '2016-09-05 09:53:58', 29),
-(38, 6, 'da.png', 2, '2016-09-05 09:56:20', 30),
-(39, 6, 'pa.png', 0, '2016-09-05 09:56:46', 30),
-(40, 6, 'wa.png', 0, '2016-09-05 09:57:05', 30),
-(41, 6, 'ta.png', 2, '2016-09-05 09:57:17', 33),
-(42, 6, 'ya.png', 2, '2016-09-05 09:57:29', 34),
-(43, 3, '10593230_814974838526165_4102144375927037405_n.jpg', 2, '2016-09-05 22:24:57', 14),
-(44, 3, '10593070_814974751859507_9118754705244324839_n.jpg', 2, '2016-09-05 22:25:09', 16),
-(45, 3, '10521698_814974595192856_8006211341600751288_n.jpg', 2, '2016-09-05 22:25:18', 14),
-(46, 10, '2.png', 3, '2016-09-07 00:53:54', 35),
-(47, 10, '4.png', 3, '2016-09-07 00:54:29', 36),
-(48, 10, '5.png', 3, '2016-09-07 00:54:39', 37),
-(49, 10, '1.png', 3, '2016-09-07 00:55:01', 39),
-(50, 11, '14182430_1213660812006678_706978079_n.jpg', 3, '2016-09-09 01:05:09', 40),
-(51, 11, 'pagsusulit.jpg', 3, '2016-09-09 01:05:23', 41),
-(52, 11, '10511495_750112411694856_5210835405411234904_o.jpg', 3, '2016-09-09 01:05:36', 42),
-(53, 3, 'DSCF4341.JPG', 2, '2016-09-13 07:31:10', 15),
-(54, 12, 'mali ko 2.png', 2, '2016-09-13 07:55:59', 43),
-(55, 12, 'mali ko.png', 2, '2016-09-13 07:56:09', 44),
-(56, 12, 'student account delete folder.png', 2, '2016-09-13 07:56:21', 45),
-(57, 12, 'tagal ng output naghahang.png', 2, '2016-09-13 07:56:37', 47),
-(58, 12, 'teacher.jpg', 2, '2016-09-13 07:56:49', 48);
+INSERT INTO `lesson_dtl` (`id`, `lesson_id`, `filename`, `seconds`, `last_update`, `audio_id`, `board`) VALUES
+(1, 1, 'ba.png', 2, '2016-10-03 10:20:18', 2, 1),
+(2, 1, 'be.png', 2, '2016-10-03 10:20:24', 1, 1),
+(3, 1, 'i.png', 2, '2016-10-03 10:20:34', 3, 1),
+(4, 1, 'o.png', 2, '2016-10-03 10:20:42', 4, 1),
+(5, 1, 'u.png', 2, '2016-10-03 10:20:50', 5, 1),
+(6, 6, 'babsbas.png', 2, '2016-10-04 10:28:21', 19, 1),
+(7, 6, 'daaaa.png', 2, '2016-10-04 10:28:29', 20, 1),
+(8, 6, 'haaaa.png', 2, '2016-10-04 10:28:40', 24, 1),
+(9, 6, 'kkkk.png', 2, '2016-10-04 10:28:48', 25, 1),
+(10, 13, 'logo.png', 2, '2014-10-06 01:54:00', 28, 1),
+(11, 13, 'circle-outline.png', 2, '2014-10-06 01:54:08', 29, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `parents`
+-- Table structure for table `logs`
 --
 
-CREATE TABLE `parents` (
-  `id` int(11) NOT NULL,
-  `parent_token` varchar(255) NOT NULL,
-  `fullname` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `logs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `message` varchar(255) DEFAULT NULL,
+  `action` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=245 ;
+
+--
+-- Dumping data for table `logs`
+--
+
+INSERT INTO `logs` (`id`, `message`, `action`, `created_at`) VALUES
+(1, 'mia rose Log in.', 'User Log in', '2016-10-03 18:13:08'),
+(2, 'mia rose Create User [diana].', 'User Create User', '2016-10-03 18:14:09'),
+(3, 'mia rose Log out.', 'User log out', '2016-10-03 18:14:23'),
+(4, 'diana mundo Log in.', 'User Log in', '2016-10-03 18:14:29'),
+(5, 'diana mundo Added new Section rose.', 'Add Section', '2016-10-03 18:15:11'),
+(6, 'diana mundo Create User [].', 'User Create User', '2016-10-03 18:15:47'),
+(7, 'diana mundo Create User [].', 'User Create User', '2016-10-03 18:16:05'),
+(8, 'diana mundo Create User [].', 'User Create User', '2016-10-03 18:16:32'),
+(9, 'diana mundo Added new Lesson hard.', 'Add Lesson', '2016-10-03 18:18:34'),
+(10, 'diana mundo Added new Lesson soft.', 'Add Lesson', '2016-10-03 18:18:43'),
+(11, 'diana mundo Added new Lesson donee.', 'Add Lesson', '2016-10-03 18:18:57'),
+(12, 'diana mundo Deleted Lesson donee.', 'Delete Lesson', '2016-10-03 18:19:10'),
+(13, 'diana mundo Added new Lesson love.', 'Add Lesson', '2016-10-03 18:19:23'),
+(14, 'diana mundo Updated Lesson Love.', 'Update Lesson', '2016-10-03 18:19:28'),
+(15, 'diana mundo Added .', 'Add Lesson Content', '2016-10-03 18:20:18'),
+(16, 'diana mundo Added .', 'Add Lesson Content', '2016-10-03 18:20:24'),
+(17, 'diana mundo Added .', 'Add Lesson Content', '2016-10-03 18:20:34'),
+(18, 'diana mundo Added .', 'Add Lesson Content', '2016-10-03 18:20:42'),
+(19, 'diana mundo Added .', 'Add Lesson Content', '2016-10-03 18:20:50'),
+(20, 'diana mundo Added quiz 1.', 'Add Quiz', '2016-10-03 18:21:36'),
+(21, 'diana mundo Added quiz 2.', 'Add Quiz', '2016-10-03 18:22:03'),
+(22, 'diana mundo Added quiz 3.', 'Add Quiz', '2016-10-03 18:22:26'),
+(23, 'diana mundo Added quiz 4.', 'Add Quiz', '2016-10-03 18:22:46'),
+(24, 'diana mundo Added alamat ng daliri.', 'Add Story', '2016-10-03 18:23:24'),
+(25, 'diana mundo Updated Alamat Ng Daliri.', 'Update Story', '2016-10-03 18:23:30'),
+(26, 'diana mundo Create User [].', 'User Create User', '2016-10-03 10:27:22'),
+(27, 'diana mundo Create User [].', 'User Create User', '2016-10-03 10:28:01'),
+(28, 'diana mundo Create User [].', 'User Create User', '2016-10-03 10:28:35'),
+(29, 'sofas ako Log in.', 'User Log in', '2016-10-03 10:29:40'),
+(30, 'ikaw hard Log in.', 'User Log in', '2016-10-03 10:30:03'),
+(31, 'diana mundo Log out.', 'User log out', '2016-10-03 10:31:07'),
+(32, 'ako hard Log in.', 'Student Log in', '2016-10-03 10:31:14'),
+(33, 'soft ako Log in.', 'Student Log in', '2016-10-03 10:33:11'),
+(34, 'naku hard Log in.', 'Student Log in', '2016-10-03 10:33:20'),
+(35, 'soft ako Log in.', 'Student Log in', '2016-10-03 10:33:33'),
+(36, 'sofas ako Log in.', 'User Log in', '2016-10-03 10:37:17'),
+(37, 'diana mundo Log in.', 'User Log in', '2016-10-03 10:38:01'),
+(38, 'diana mundo Updated Lesson Hard.', 'Update Lesson', '2016-10-03 10:38:16'),
+(39, 'sofas ako Log in.', 'User Log in', '2016-10-03 10:42:41'),
+(40, 'diana mundo Log in.', 'User Log in', '2016-10-03 10:43:13'),
+(41, 'diana mundo Create User [].', 'User Create User', '2017-09-03 10:44:00'),
+(42, 'diana mundo Added new Lesson sfsad.', 'Add Lesson', '2017-09-03 10:49:11'),
+(43, 'diana mundo Log out.', 'User log out', '2017-09-03 10:50:39'),
+(44, 'mia rose Log in.', 'User Log in', '2017-09-03 10:50:47'),
+(45, 'mia rose Create User [again].', 'User Create User', '2017-09-03 10:51:25'),
+(46, 'mia rose Log out.', 'User log out', '2016-10-03 10:54:17'),
+(47, 'diana mundo Log in.', 'User Log in', '2016-10-03 10:54:25'),
+(48, 'ikaw hard Log in.', 'User Log in', '2016-10-03 10:55:09'),
+(49, 'sofas ako Log in.', 'User Log in', '2016-10-03 18:04:56'),
+(50, 'mia rose Log in.', 'User Log in', '2016-10-03 18:15:31'),
+(51, 'mia rose Create User [paul].', 'User Create User', '2016-10-03 18:16:53'),
+(52, 'mia rose Log out.', 'User log out', '2016-10-03 18:18:19'),
+(53, 'sofas ako Log in.', 'User Log in', '2016-10-03 18:18:31'),
+(54, 'Paul Mangahas Log in.', 'User Log in', '2016-10-03 18:18:49'),
+(55, 'Paul Mangahas Added new Section jehova.', 'Add Section', '2016-10-03 18:19:41'),
+(56, 'Paul Mangahas Create User [].', 'User Create User', '2016-10-03 18:20:32'),
+(57, 'Paul Mangahas Create User [].', 'User Create User', '2016-10-03 18:22:20'),
+(58, 'Paul Mangahas Create User [].', 'User Create User', '2016-10-03 18:22:44'),
+(59, 'Paul Mangahas Added new Lesson eto.', 'Add Lesson', '2016-10-04 18:26:51'),
+(60, 'Paul Mangahas Added .', 'Add Lesson Content', '2016-10-04 18:28:21'),
+(61, 'Paul Mangahas Added .', 'Add Lesson Content', '2016-10-04 18:28:29'),
+(62, 'Paul Mangahas Added .', 'Add Lesson Content', '2016-10-04 18:28:40'),
+(63, 'Paul Mangahas Added .', 'Add Lesson Content', '2016-10-04 18:28:48'),
+(64, 'Paul Mangahas Added p1.', 'Add Quiz', '2016-10-04 18:29:32'),
+(65, 'Paul Mangahas Added p1.', 'Add Quiz', '2016-10-04 18:30:07'),
+(66, 'Paul Mangahas Added quiz 3.', 'Add Quiz', '2016-10-04 18:30:35'),
+(67, 'Paul Mangahas Added new Lesson asa.', 'Add Lesson', '2016-10-04 18:31:02'),
+(68, 'Paul Mangahas Added new Lesson Good.', 'Add Lesson', '2016-10-04 18:31:11'),
+(69, 'Paul Mangahas Updated Lesson Good.', 'Update Lesson', '2016-10-04 18:31:17'),
+(70, 'lina Marallag Log in.', 'User Log in', '2016-10-04 18:31:52'),
+(71, 'Paul Mangahas Added new Lesson Dsadas.', 'Add Lesson', '2016-10-04 18:32:34'),
+(72, 'Paul Mangahas Updated Lesson Dsadas.', 'Update Lesson', '2016-10-04 18:32:41'),
+(73, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 18:35:24'),
+(74, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:35:59'),
+(75, 'Paul Mangahas Added Good.', 'Add Story', '2016-10-04 14:36:59'),
+(76, 'Paul Mangahas Updated Good.', 'Update Story', '2016-10-04 14:37:08'),
+(77, 'lina Marallag Log in.', 'User Log in', '2016-10-04 14:39:22'),
+(78, 'Paul Mangahas Updated Lesson Eto.', 'Update Lesson', '2016-10-04 14:39:59'),
+(79, 'sofas ako Log in.', 'User Log in', '2016-10-04 14:40:25'),
+(80, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:47:53'),
+(81, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 16:24:08'),
+(82, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 16:24:18'),
+(83, 'Paul Mangahas Log in.', 'User Log in', '2016-10-04 16:24:29'),
+(84, 'Paul Mangahas Log out.', 'User log out', '2016-10-04 14:24:59'),
+(85, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:25:05'),
+(86, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:27:09'),
+(87, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:37:22'),
+(88, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:14:09'),
+(89, 'lina Marallag Log in.', 'User Log in', '2016-10-04 14:14:43'),
+(90, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:29:49'),
+(91, 'lina Marallag Log in.', 'User Log in', '2016-10-04 14:30:18'),
+(92, 'Paul Mangahas Log in.', 'User Log in', '2016-10-04 14:30:44'),
+(93, 'Paul Mangahas Added new Lesson sdasdas.', 'Add Lesson', '2016-10-04 14:30:57'),
+(94, 'Charles Marallag Log in.', 'Student Log in', '2016-10-04 14:31:12'),
+(95, 'lina Marallag Log in.', 'User Log in', '2016-10-04 14:31:58'),
+(96, 'Paul Mangahas Log in.', 'User Log in', '2016-10-04 14:36:02'),
+(97, 'Paul Mangahas Deleted Lesson sdasdas.', 'Delete Lesson', '2016-10-04 14:36:41'),
+(98, 'Paul Mangahas Added new Lesson sA.', 'Add Lesson', '2016-10-04 14:36:54'),
+(99, 'Paul Mangahas Log out.', 'User log out', '2016-10-04 14:37:06'),
+(100, 'Paul Mangahas Log in.', 'User Log in', '2016-10-04 14:37:12'),
+(101, 'Paul Mangahas Added new Lesson SADASD.', 'Add Lesson', '2016-10-04 14:37:21'),
+(102, 'Paul Mangahas Log out.', 'User log out', '2016-10-04 14:38:06'),
+(103, 'Paul Mangahas Log in.', 'User Log in', '2016-10-04 14:38:15'),
+(104, 'Paul Mangahas Create User [].', 'User Create User', '2013-10-04 14:39:18'),
+(105, 'Paul Mangahas Log out.', 'User log out', '2016-10-04 14:39:57'),
+(106, 'Paul Mangahas Log in.', 'User Log in', '2016-10-04 14:40:16'),
+(107, 'Paul Mangahas Log out.', 'User log out', '2016-10-01 14:43:32'),
+(108, 'Paul Mangahas Log in.', 'User Log in', '2016-10-01 14:43:37'),
+(109, 'Paul Mangahas Updated profile', 'User Update Profile', '2016-10-01 14:44:12'),
+(110, 'pam Mangahas Updated profile', 'User Update Profile', '2016-10-01 14:44:24'),
+(111, 'pam tabas Log out.', 'User log out', '2016-10-01 14:46:16'),
+(112, 'Charles Marallag Log in.', 'Student Log in', '2016-10-01 16:12:26'),
+(113, 'pam tabas Log in.', 'User Log in', '2016-10-01 16:13:44'),
+(114, 'pam tabas Log out.', 'User log out', '2016-10-01 16:18:16'),
+(115, 'mia rose Log in.', 'User Log in', '2016-10-01 16:18:24'),
+(116, 'mia rose Log out.', 'User log out', '2016-10-01 16:18:28'),
+(117, 'pam tabas Log in.', 'User Log in', '2016-10-01 16:18:38'),
+(118, 'pam tabas Log out.', 'User log out', '2016-10-01 16:18:46'),
+(119, 'mia rose Log in.', 'User Log in', '2016-10-01 16:18:53'),
+(120, 'mia rose Delete User [pam].', 'User Delete User', '2016-10-01 16:19:03'),
+(121, 'mia rose Create User [rosalie].', 'User Create User', '2016-10-01 16:19:59'),
+(122, 'mia rose Log out.', 'User log out', '2016-10-01 09:20:17'),
+(123, 'Rosalie mijares Log in.', 'User Log in', '2016-10-01 09:20:38'),
+(124, 'Rosalie mijares Added new Section ava.', 'Add Section', '2016-10-01 09:20:58'),
+(125, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-01 09:21:43'),
+(126, 'Rosalie mijares Log in.', 'User Log in', '2016-10-01 09:26:03'),
+(127, 'Rosalie mijares Log out.', 'User log out', '2016-10-01 09:26:36'),
+(128, 'Rosalie mijares Log in.', 'User Log in', '2016-10-01 09:27:25'),
+(129, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-01 09:27:58'),
+(130, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-04 09:28:47'),
+(131, 'Rosalie mijares Create User [].', 'User Create User', '2015-07-04 09:29:10'),
+(132, 'Rosalie mijares Log out.', 'User log out', '2016-10-06 09:30:11'),
+(133, 'Rosalie mijares Log in.', 'User Log in', '2016-10-06 09:50:29'),
+(134, 'Rosalie mijares Create User [].', 'User Create User', '2014-10-06 09:52:53'),
+(135, 'Rosalie mijares Added new Lesson WDQE.', 'Add Lesson', '2014-10-06 09:53:19'),
+(136, 'Rosalie mijares Added .', 'Add Lesson Content', '2014-10-06 09:54:00'),
+(137, 'Rosalie mijares Added .', 'Add Lesson Content', '2014-10-06 09:54:08'),
+(138, 'Rosalie mijares Added SADSA.', 'Add Quiz', '2014-10-06 09:54:32'),
+(139, 'Rosalie mijares Added quiz 1.', 'Add Quiz', '2014-10-06 09:54:44'),
+(140, 'Rosalie mijares Log out.', 'User log out', '2014-10-06 09:54:47'),
+(141, 'Rosalie mijares Log in.', 'User Log in', '2014-10-06 09:54:59'),
+(142, 'Rosalie mijares Log out.', 'User log out', '2014-10-06 09:55:09'),
+(143, 'sadasda sdasd Log in.', 'Student Log in', '2014-10-06 09:55:15'),
+(144, 'sadasda sdasd Log in.', 'Student Log in', '2014-10-06 09:55:43'),
+(145, 'Rosalie mijares Log in.', 'User Log in', '2014-10-06 09:55:55'),
+(146, 'sadasda sdasd Log in.', 'Student Log in', '2014-10-06 09:56:08'),
+(147, 'Rosalie mijares Create User [].', 'User Create User', '2009-11-06 10:17:08'),
+(148, 'Rosalie mijares Log out.', 'User log out', '2009-11-06 10:17:32'),
+(149, 'Rosalie mijares Log in.', 'User Log in', '2016-10-04 10:31:00'),
+(150, 'Rosalie mijares Create User [].', 'User Create User', '2015-10-04 10:32:30'),
+(151, 'Rosalie mijares Log out.', 'User log out', '2016-10-04 10:32:59'),
+(152, 'mia rose Log in.', 'User Log in', '2016-10-04 10:33:04'),
+(153, 'mia rose Log out.', 'User log out', '2016-10-04 10:33:46'),
+(154, 'Rosalie mijares Log in.', 'User Log in', '2016-10-04 10:33:57'),
+(155, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-04 10:35:00'),
+(156, 'mine daa Log in.', 'User Log in', '2016-10-04 10:35:26'),
+(157, 'Rosalie mijares Added new Lesson sad.', 'Add Lesson', '2016-10-04 10:35:59'),
+(158, 'Rosalie mijares Updated Lesson Sadsdas.', 'Update Lesson', '2016-10-04 10:36:08'),
+(159, 'Rosalie mijares Added new Lesson sdasd.', 'Add Lesson', '2016-10-04 10:36:14'),
+(160, 'add daa Log in.', 'Student Log in', '2016-10-04 10:38:01'),
+(161, 'chalie marallag Log in.', 'Student Log in', '2016-10-04 10:42:33'),
+(162, 'Rosalie mijares Log in.', 'User Log in', '2016-10-04 10:42:56'),
+(163, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-04 10:43:19'),
+(164, 'Rosalie mijares Log out.', 'User log out', '2016-10-04 10:43:25'),
+(165, 'dw ewe Log in.', 'Student Log in', '2016-10-04 10:43:29'),
+(166, 'Rosalie mijares Log out.', 'User log out', '2016-10-04 10:43:54'),
+(167, 'Rosalie mijares Log in.', 'User Log in', '2016-10-09 14:26:06'),
+(168, 'Rosalie mijares Log out.', 'User log out', '2016-10-09 14:27:58'),
+(169, 'mia rose Log in.', 'User Log in', '2016-10-09 14:28:10'),
+(170, 'sam nicole Log in.', 'Student Log in', '2016-10-09 14:41:19'),
+(171, 'mia rose Log in.', 'User Log in', '2016-10-09 14:43:13'),
+(172, 'mia rose Log out.', 'User log out', '2016-10-09 14:43:18'),
+(173, 'Rosalie mijares Log in.', 'User Log in', '2016-10-09 14:43:38'),
+(174, 'mia rose Log in.', 'User Log in', '2016-10-09 14:58:23'),
+(175, 'mia rose Create User [Mama].', 'User Create User', '2016-10-09 14:59:48'),
+(176, 'mia rose Log out.', 'User log out', '2016-10-09 15:00:26'),
+(177, 'mia rose Log in.', 'User Log in', '2016-10-09 15:03:53'),
+(178, 'mia rose Log out.', 'User log out', '2016-10-09 15:04:16'),
+(179, 'Rosalie mijares Log in.', 'User Log in', '2016-10-09 15:04:27'),
+(180, 'Rosalie mijares Log out.', 'User log out', '2016-10-09 15:07:10'),
+(181, 'Rosalie mijares Log in.', 'User Log in', '2016-10-09 15:07:47'),
+(182, 'mine daa Log in.', 'User Log in', '2016-10-09 15:08:17'),
+(183, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-09 15:12:03'),
+(184, 'Rosalie mijares Log out.', 'User log out', '2016-10-09 15:12:14'),
+(185, 'Rosalie mijares Log in.', 'User Log in', '2016-10-09 15:38:58'),
+(186, 'Rosalie mijares Log in.', 'User Log in', '2016-10-09 15:41:00'),
+(187, 'Rosalie mijares Log out.', 'User log out', '2016-10-09 15:43:12'),
+(188, 'mia rose Log in.', 'User Log in', '2016-10-09 16:15:49'),
+(189, 'chalie marallag Log in.', 'Student Log in', '2016-10-09 16:16:43'),
+(190, 'mia rose Log in.', 'User Log in', '2016-10-10 00:52:09'),
+(191, 'mia rose Log in.', 'User Log in', '2016-10-10 02:27:50'),
+(192, 'mia rose Log out.', 'User log out', '2016-10-10 02:30:10'),
+(193, 'sam nicole Log in.', 'Student Log in', '2016-10-10 02:30:23'),
+(194, 'sam nicole Log in.', 'Student Log in', '2016-10-10 02:30:30'),
+(195, 'mia rose Log in.', 'User Log in', '2016-10-10 02:30:44'),
+(196, 'mia rose Log out.', 'User log out', '2016-10-10 02:31:17'),
+(197, 'mia rose Log in.', 'User Log in', '2016-10-10 02:32:31'),
+(198, 'mia rose Log out.', 'User log out', '2016-10-10 02:34:43'),
+(199, 'diana mundo Log in.', 'User Log in', '2016-10-10 02:34:54'),
+(200, 'diana mundo Create User [].', 'User Create User', '2016-10-10 02:35:38'),
+(201, 'diana mundo Log out.', 'User log out', '2016-10-10 02:36:03'),
+(202, 'sam nicole Log in.', 'Student Log in', '2016-10-10 02:37:02'),
+(203, 'diana mundo Log in.', 'User Log in', '2016-10-10 02:37:26'),
+(204, 'diana mundo Create User [].', 'User Create User', '2016-10-10 02:39:11'),
+(205, 'diana mundo Log out.', 'User log out', '2016-10-10 02:41:51'),
+(206, 'mia rose Log in.', 'User Log in', '2016-10-10 02:43:04'),
+(207, 'mia rose Log out.', 'User log out', '2016-10-10 02:47:15'),
+(208, 'sam nicole Log in.', 'Student Log in', '2016-10-10 02:47:26'),
+(209, 'sam nicole Log in.', 'Student Log in', '2016-10-10 02:49:19'),
+(210, 'mia rose Log in.', 'User Log in', '2016-10-10 02:51:22'),
+(211, 'mia rose Log out.', 'User log out', '2016-10-10 02:52:58'),
+(212, 'sam nicole Log in.', 'Student Log in', '2016-10-10 02:55:06'),
+(213, 'mia rose Log in.', 'User Log in', '2016-10-10 02:57:24'),
+(214, 'mia rose Log out.', 'User log out', '2016-10-10 03:02:34'),
+(215, 'sam nicole Log in.', 'Student Log in', '2016-10-10 03:03:41'),
+(216, 'Rosalie mijares Log in.', 'User Log in', '2016-10-10 03:04:11'),
+(217, 'Rosalie mijares Log out.', 'User log out', '2016-10-10 03:05:07'),
+(218, 'sam nicole Log in.', 'Student Log in', '2016-10-10 03:05:19'),
+(219, 'Rosalie mijares Log in.', 'User Log in', '2016-10-10 03:07:32'),
+(220, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-10 03:09:13'),
+(221, 'Rosalie mijares Log out.', 'User log out', '2016-10-10 03:24:09'),
+(222, 'Rosalie mijares Log in.', 'User Log in', '2016-10-10 06:00:37'),
+(223, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-10 06:05:22'),
+(224, 'add daa Log in.', 'Student Log in', '2016-10-12 04:25:18'),
+(225, 'Rosalie mijares Log in.', 'User Log in', '2016-10-12 04:25:35'),
+(226, 'Rosalie mijares Create User [].', 'User Create User', '2016-10-12 04:28:11'),
+(227, 'Rosalie mijares Log out.', 'User log out', '2016-10-12 04:28:48'),
+(228, 'chalie marallag Log in.', 'Student Log in', '2016-10-12 04:29:04'),
+(229, 'mia rose Log in.', 'User Log in', '2016-10-12 15:52:39'),
+(230, 'mia rose Log in.', 'User Log in', '2016-10-12 15:55:33'),
+(231, 'mia rose Create User [admin002].', 'User Create User', '2016-10-12 15:59:33'),
+(232, 'mia rose Create User [admin001].', 'User Create User', '2016-10-12 16:03:16'),
+(233, 'mia rose Create User [admin001].', 'User Create User', '2016-10-12 16:14:18'),
+(234, 'mia rose Log in.', 'User Log in', '2016-10-13 06:48:09'),
+(235, 'mia rose Log in.', 'User Log in', '2016-10-17 13:07:16'),
+(236, 'sam nicole Log in.', 'Student Log in', '2016-11-21 19:04:13'),
+(237, 'chalie marallag Log in.', 'Student Log in', '2016-11-21 19:04:21'),
+(238, 'aDad asdaS Log in.', 'Student Log in', '2016-11-21 19:04:28'),
+(239, 'mia rose Log in.', 'User Log in', '2016-11-21 19:04:58'),
+(240, 'mia rose Log out.', 'User log out', '2016-11-21 19:08:28'),
+(241, 'Rosalie mijares Log in.', 'User Log in', '2016-11-21 19:08:41'),
+(242, 'Rosalie mijares Create User [].', 'User Create User', '2016-11-21 19:10:24'),
+(243, 'Rosalie mijares Log out.', 'User log out', '2016-11-21 19:10:45'),
+(244, 'mia rose Log in.', 'User Log in', '2016-11-30 07:04:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parent`
+--
+
+CREATE TABLE IF NOT EXISTS `parent` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `middle_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `phone` varchar(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `parent`
+--
+
+INSERT INTO `parent` (`id`, `username`, `password`, `first_name`, `last_name`, `middle_name`, `email`, `phone`) VALUES
+(1, 'ikaw', 'pass', 'ikaw', 'hard', NULL, NULL, NULL),
+(2, 'sofas', 'pass', 'sofas', 'ako', NULL, NULL, NULL),
+(3, 'lina', 'pass', 'lina', 'Marallag', NULL, NULL, NULL),
+(4, 'mine', 'pass', 'mine', 'daa', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parentstud`
+--
+
+CREATE TABLE IF NOT EXISTS `parentstud` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT NULL,
+  `student_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -237,8 +508,8 @@ CREATE TABLE `parents` (
 -- Table structure for table `quiz`
 --
 
-CREATE TABLE `quiz` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `quiz` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `lesson_id` int(11) NOT NULL,
   `description` varchar(225) NOT NULL,
   `audio` varchar(255) NOT NULL,
@@ -247,40 +518,24 @@ CREATE TABLE `quiz` (
   `choice1` varchar(255) NOT NULL,
   `choice2` varchar(255) NOT NULL,
   `choice3` varchar(255) NOT NULL,
-  `choice4` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `choice4` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `quiz`
 --
 
 INSERT INTO `quiz` (`id`, `lesson_id`, `description`, `audio`, `answer`, `type`, `choice1`, `choice2`, `choice3`, `choice4`) VALUES
-(11, 4, 'Quiz #2', 'baboy.mp3', '4', 'salita', '10559711_814974551859527_6101120209606421938_n.jpg', '10559711_814974551859527_6101120209606421938_n.jpg', '10559711_814974551859527_6101120209606421938_n.jpg', '10505337_814974725192843_8292935193044712344_n.jpg'),
-(12, 4, 'Quiz #3', 'baka.mp3', '4', 'salita', '10561781_814974508526198_7073469486283670844_n.jpg', '10561781_814974508526198_7073469486283670844_n.jpg', '10561781_814974508526198_7073469486283670844_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg'),
-(13, 3, 'Quiz #1', '2 (1).mp3', '3', 'salita', 'i.png', 'e.png', 'a(2).png', 'o.png'),
-(14, 3, 'Quiz #2', '2 (2).mp3', '1', 'salita', 'e.png', 'i.png', 'u.png', 'o.png'),
-(16, 3, 'number 3', '2 (4).mp3', '2', 'salita', 'i.png', 'o.png', 'u.png', 'a(2).png'),
-(17, 3, 'number 4', '2 (5).mp3', '1', 'salita', 'u.png', 'o.png', 'i.png', 'e.png'),
-(18, 4, 'Quiz #2', '2.mp3', '1', 'naiiba', '10547671_814974965192819_4372190642617792283_n.jpg', 'i.png', 'u.png', 'o.png'),
-(19, 4, 'Quiz #4', '5.mp3', '2', 'salita', '3.png', '10547671_814974965192819_4372190642617792283_n.jpg', '10561781_814974508526198_7073469486283670844_n.jpg', '10561781_814974508526198_7073469486283670844_n.jpg'),
-(20, 4, 'Quiz #5', '3.mp3', '3', 'salita', '10547671_814974965192819_4372190642617792283_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg', '10561781_814974508526198_7073469486283670844_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg'),
-(21, 6, 'Quiz #1', '22.mp3', '2', 'salita', 'da.png', 'pa.png', 'ta.png', 'ta.png'),
-(22, 6, 'Quiz #2', '33.mp3', '4', 'salita', 'ya.png', 'ta.png', 'wa.png', 'pa.png'),
-(23, 6, 'Quiz #3', '44.mp3', '3', 'salita', 'pa.png', 'da.png', 'ta.png', 'ya.png'),
-(24, 6, 'Quiz #4', '55.mp3', '4', 'salita', 'pa.png', 'da.png', 'ya.png', 'ta.png'),
-(25, 6, 'Quiz #5', '66.mp3', '1', 'salita', 'da.png', 'pa.png', 'ta.png', 'ya.png'),
-(26, 3, 'Quiz #5', 'q.mp3', '1', 'salita', 'u.png', 'i.png', 'a(2).png', 'e.png'),
-(27, 10, 'Quiz #1', '10.mp3', '3', 'salita', '2.png', '4.png', '5.png', '1.png'),
-(28, 10, 'Quiz #2', '11.mp3', '2', 'salita', '4.png', '2.png', '1.png', '5.png'),
-(29, 10, 'Quiz #3', '77.mp3', '1', 'salita', '2.png', '4.png', '1.png', '5.png'),
-(30, 10, 'Quiz #4', '88.mp3', '2', 'salita', '2.png', '1.png', '5.png', '4.png'),
-(31, 11, 'Quiz #1', '7777.mp3', '2', 'salita', 'pagsusulit.jpg', '10511495_750112411694856_5210835405411234904_o.jpg', '14182430_1213660812006678_706978079_n.jpg', '14182430_1213660812006678_706978079_n.jpg'),
-(32, 11, 'Quiz #2', '5555.mp3', '2', 'salita', '10511495_750112411694856_5210835405411234904_o.jpg', 'pagsusulit.jpg', 'pagsusulit.jpg', 'pagsusulit.jpg'),
-(33, 12, 'Quiz #1', 'BE.mp3', '2', 'naiiba', 'nga.png', '10561781_814974508526198_7073469486283670844_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg'),
-(34, 12, 'Story of Pineapple', 'BO.mp3', '2', 'salita', 'mali ko.png', 'mali ko.png', 'teacher.jpg', 'student account delete folder.png'),
-(35, 12, 'Quiz #4', 'BU.mp3', '1', 'naiiba', '10559711_814974551859527_6101120209606421938_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg', '10547671_814974965192819_4372190642617792283_n.jpg'),
-(36, 12, 'Quiz #4', 'DI.mp3', '4', 'salita', 'student account delete folder.png', 'mali ko.png', 'tagal ng output naghahang.png', 'teacher.jpg'),
-(37, 12, 'number 3', 'DU.mp3', '4', 'salita', 'student account delete folder.png', 'mali ko.png', 'mali ko 2.png', 'tagal ng output naghahang.png');
+(1, 1, 'quiz 1', 'BA.mp3', '1', 'salita', 'ba.png', 'be.png', 'o.png', 'u.png'),
+(2, 1, 'quiz 2', 'BE.mp3', '3', 'salita', 'ba.png', 'i.png', 'be.png', 'u.png'),
+(3, 1, 'quiz 3', 'BO.mp3', '2', 'salita', 'u.png', 'o.png', 'be.png', 'i.png'),
+(4, 1, 'quiz 4', 'BU.mp3', '4', 'salita', 'ba.png', 'be.png', 'i.png', 'u.png'),
+(5, 6, 'p1', 'A (2) - Copy.mp3', '2', 'salita', 'babsbas.png', 'daaaa.png', 'haaaa.png', 'haaaa.png'),
+(6, 6, 'p1', 'BO - Copy (2).mp3', '1', 'salita', 'babsbas.png', 'haaaa.png', 'daaaa.png', 'haaaa.png'),
+(7, 6, 'quiz 3', 'BI.mp3', '4', 'salita', 'daaaa.png', 'haaaa.png', 'kkkk.png', 'babsbas.png'),
+(8, 13, 'SADSA', 'A (1).mp3', '2', 'salita', 'logo.png', 'circle-outline.png', 'logo.png', 'circle-outline.png'),
+(9, 13, 'quiz 1', 'BE (1) - Copy.mp3', '1', 'salita', 'logo.png', 'logo.png', 'circle-outline.png', 'logo.png');
 
 -- --------------------------------------------------------
 
@@ -288,44 +543,36 @@ INSERT INTO `quiz` (`id`, `lesson_id`, `description`, `audio`, `answer`, `type`,
 -- Table structure for table `quiz_result`
 --
 
-CREATE TABLE `quiz_result` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `quiz_result` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `lesson_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `score` varchar(100) NOT NULL,
   `total_number` varchar(100) NOT NULL,
   `quiz_date` datetime NOT NULL,
   `quiz_status` tinyint(1) NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `remarks` varchar(255) DEFAULT NULL,
+  `current_item` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `quiz_result`
 --
 
-INSERT INTO `quiz_result` (`id`, `lesson_id`, `user_id`, `score`, `total_number`, `quiz_date`, `quiz_status`, `last_update`) VALUES
-(11, 3, 15, '4', '5', '2016-09-05 18:25:19', 0, '2016-09-05 16:26:09'),
-(12, 3, 15, '3', '5', '2016-09-05 18:26:14', 0, '2016-09-05 16:26:52'),
-(13, 3, 15, '2', '5', '2016-09-05 18:26:56', 0, '2016-09-05 16:27:28'),
-(14, 4, 15, '3', '5', '2016-09-05 18:27:33', 0, '2016-09-05 16:28:06'),
-(15, 4, 15, '4', '5', '2016-09-05 18:28:10', 0, '2016-09-05 16:28:45'),
-(16, 4, 15, '5', '5', '2016-09-05 18:30:08', 0, '2016-09-05 16:30:45'),
-(17, 6, 15, '1', '5', '2016-09-05 18:30:49', 0, '2016-09-05 16:31:29'),
-(18, 6, 15, '3', '5', '2016-09-05 18:31:57', 0, '2016-09-05 16:32:24'),
-(20, 6, 15, '3', '5', '2016-09-06 06:20:48', 0, '2016-09-06 04:21:57'),
-(21, 10, 15, '1', '4', '2016-09-07 09:02:38', 0, '2016-09-07 07:03:29'),
-(22, 10, 15, '1', '4', '2016-09-07 09:03:34', 0, '2016-09-07 07:04:10'),
-(23, 10, 15, '4', '4', '2016-09-07 09:05:03', 0, '2016-09-07 07:06:05'),
-(24, 3, 19, '1', '5', '2016-09-09 09:09:46', 0, '2016-09-09 07:11:12'),
-(25, 10, 19, '0', '4', '2016-09-09 09:11:56', 0, '2016-09-09 07:12:31'),
-(26, 11, 19, '2', '2', '2016-09-09 09:12:55', 0, '2016-09-09 07:13:06'),
-(27, 11, 19, '0', '2', '2016-09-09 09:13:14', 0, '2016-09-09 07:13:29'),
-(28, 11, 19, '2', '2', '2016-09-09 09:13:31', 0, '2016-09-09 07:13:45'),
-(29, 3, 19, '1', '5', '2016-09-09 09:14:33', 0, '2016-09-09 07:15:15'),
-(30, 3, 19, '1', '5', '2016-09-09 09:16:35', 0, '2016-09-09 07:17:17'),
-(31, 11, 15, '0', '2', '2016-09-09 09:26:11', 0, '2016-09-09 07:26:58'),
-(32, 11, 15, '1', '2', '2016-09-13 15:09:11', 0, '2016-09-13 13:09:31'),
-(33, 11, 15, '1', '2', '2016-09-13 15:09:37', 0, '2016-09-13 13:10:09');
+INSERT INTO `quiz_result` (`id`, `lesson_id`, `user_id`, `score`, `total_number`, `quiz_date`, `quiz_status`, `last_update`, `remarks`, `current_item`) VALUES
+(1, 1, 2, '2', '4', '2016-10-03 10:32:00', 0, '2016-10-03 02:32:00', 'Very good', 5),
+(2, 1, 2, '3', '4', '2016-10-03 10:32:19', 0, '2016-10-03 02:32:19', 'Fantastic', 5),
+(3, 1, 2, '4', '4', '2016-10-03 10:32:39', 0, '2016-10-03 02:32:39', 'Excellent', 5),
+(4, 1, 3, '2', '4', '2016-10-03 10:35:37', 0, '2016-10-03 02:35:37', 'Very good', 5),
+(5, 1, 3, '0', '4', '2016-10-03 10:35:52', 0, '2016-10-03 02:35:52', 'Needs Improvement', 5),
+(6, 1, 3, '3', '4', '2016-10-03 10:36:10', 0, '2016-10-03 02:36:10', 'Fantastic', 5),
+(7, 6, 6, '1', '3', '2016-10-04 14:38:02', 0, '2016-10-04 06:38:02', 'good', 4),
+(8, 6, 6, '0', '3', '2016-10-04 14:38:21', 0, '2016-10-04 06:38:21', 'Needs Improvement', 4),
+(9, 6, 6, '0', '3', '2016-10-04 14:38:34', 0, '2016-10-04 06:38:34', 'Needs Improvement', 4),
+(10, 13, 12, '0', '2', '2014-10-06 09:56:59', 0, '2014-10-06 01:56:59', 'Needs Improvement', 3),
+(11, 13, 12, '0', '2', '2014-10-06 09:57:11', 0, '2014-10-06 01:57:11', 'Needs Improvement', 3);
 
 -- --------------------------------------------------------
 
@@ -333,13 +580,36 @@ INSERT INTO `quiz_result` (`id`, `lesson_id`, `user_id`, `score`, `total_number`
 -- Table structure for table `quiz_take`
 --
 
-CREATE TABLE `quiz_take` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `quiz_take` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `quiz_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
   `score` varchar(100) NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `section`
+--
+
+CREATE TABLE IF NOT EXISTS `section` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `section` varchar(255) DEFAULT NULL,
+  `created_by` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `section`
+--
+
+INSERT INTO `section` (`id`, `section`, `created_by`) VALUES
+(1, 'rose', 39),
+(2, 'jehova', 41),
+(3, 'ava', 42);
 
 -- --------------------------------------------------------
 
@@ -347,23 +617,24 @@ CREATE TABLE `quiz_take` (
 -- Table structure for table `story`
 --
 
-CREATE TABLE `story` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `story` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` varchar(100) NOT NULL,
   `filename` varchar(255) NOT NULL,
   `active` tinyint(1) NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `story`
 --
 
 INSERT INTO `story` (`id`, `user_id`, `name`, `description`, `filename`, `active`, `last_update`) VALUES
-(6, 2, 'Alamat ng Pinya ', 'Story of Pineapple', 'Ang Alamat ng pinya.mp4', 1, '2016-09-05 20:27:47'),
-(7, 2, 'Bata', 'Story Of Pineapple', '6 Almost Immortal Animals - YouTube.mp4', 1, '2016-09-05 20:39:15');
+(1, 39, 'Alamat Ng Daliri', 'Sad', 'ANG ALAMAT NG MGA DALIRI.mp4', 1, '2016-10-03 10:23:24'),
+(2, 41, 'Good', 'Quiz 1', 'IKAW BA''Y MABUTING TAO-.mp4', 1, '2016-10-04 06:36:59');
 
 -- --------------------------------------------------------
 
@@ -371,15 +642,43 @@ INSERT INTO `story` (`id`, `user_id`, `name`, `description`, `filename`, `active
 -- Table structure for table `student`
 --
 
-CREATE TABLE `student` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `student` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lrn` varchar(13) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `middle_name` varchar(100) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `active` tinyint(1) NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `teacher` int(11) DEFAULT NULL,
+  `section` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `sy` year(4) DEFAULT NULL,
+  `parent_last_name` varchar(255) DEFAULT NULL,
+  `parent_first_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`id`, `lrn`, `first_name`, `middle_name`, `last_name`, `active`, `last_update`, `teacher`, `section`, `address`, `sy`, `parent_last_name`, `parent_first_name`) VALUES
+(9, '111111111111', 'sam', '', 'nicole', 1, '0000-00-00 00:00:00', 42, 'ava', 'jaskdjsa', 2016, 'nicole', 'nica'),
+(10, '222222222222', 'chalie', '', 'marallag', 1, '0000-00-00 00:00:00', 42, 'ava', 'adhajk', 2016, 'marallag', 'charles'),
+(11, '333333333333', 'aDad', '', 'asdaS', 1, '0000-00-00 00:00:00', 42, 'ava', 'asASa', 2015, 'ASAs', 'aSa'),
+(12, '455555555555', 'sadasda', '', 'sdasd', 1, '0000-00-00 00:00:00', 42, 'ava', 'ADASDA', 2014, 'ASAs', 'ASAs'),
+(13, '121211111111', 'dad', '', 'dsadas', 1, '0000-00-00 00:00:00', 42, 'ava', 'asdsad', 2009, 'dfdfds', 'asdasd'),
+(14, '666666666666', 'nica', '', 'meneses', 1, '0000-00-00 00:00:00', 42, 'ava', 'asd', 2015, 'meneses', 'nila'),
+(15, '999999999999', 'add', '', 'daa', 1, '0000-00-00 00:00:00', 42, 'ava', 'asas', 2016, 'daa', 'mine'),
+(16, '555555555555', 'dw', '', 'ewe', 1, '0000-00-00 00:00:00', 42, 'ava', 'asdas', 2016, 'ewe', 'sa'),
+(17, '', '', '', '', 0, '0000-00-00 00:00:00', 0, '', '', 0000, '', ''),
+(18, '', '', '', '', 0, '0000-00-00 00:00:00', 0, '', '', 0000, '', ''),
+(19, '', '', '', '', 0, '0000-00-00 00:00:00', 0, '', '', 0000, '', ''),
+(20, '', '', '', '', 0, '0000-00-00 00:00:00', 0, '', '', 0000, '', ''),
+(21, '', '', '', '', 0, '0000-00-00 00:00:00', 0, '', '', 0000, '', ''),
+(22, '', '', '', '', 0, '0000-00-00 00:00:00', 0, '', '', 0000, '', ''),
+(23, '', '', '', '', 0, '0000-00-00 00:00:00', 0, '', '', 0000, '', '');
 
 -- --------------------------------------------------------
 
@@ -387,10 +686,9 @@ CREATE TABLE `student` (
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `type_id` tinyint(1) NOT NULL,
-  `parent_id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(40) DEFAULT NULL,
   `first_name` varchar(30) NOT NULL,
@@ -400,29 +698,23 @@ CREATE TABLE `users` (
   `phone` varchar(50) NOT NULL,
   `address` varchar(200) NOT NULL,
   `active` tinyint(1) NOT NULL,
+  `fromtime` time DEFAULT NULL,
   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `parent_token` varchar(255) NOT NULL,
-  `created_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `totime` time DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=47 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `type_id`, `parent_id`, `username`, `password`, `first_name`, `middle_name`, `last_name`, `email`, `phone`, `address`, `active`, `last_update`, `parent_token`, `created_by`) VALUES
-(1, 1, 0, 'admin', 'pass', 'admin', '', 'istrator', 'arianeburnscode@yahoo.com', '09422916120', 'sss', 1, '2016-02-12 00:33:01', '', 0),
-(2, 2, 0, 'teacher', 'pass', 'ariane', '', 'de leon', 'arianeburnscode@yahoo.com', '09422916120', '111', 1, '2016-03-03 04:21:56', '', 0),
-(3, 3, 0, 'yvette', 'pass', 'yvette', '', 'de leon', 'arianeburnscode@yahoo.com', '09422916120', 'aa', 1, '2016-02-18 20:05:14', '', 0),
-(6, 3, 0, 'millet', 'pass', 'Millet', 'sofe', 'bangcaya', 'arianeburnscode@yahoo.com', '09422916120', 'ss', 1, '0000-00-00 00:00:00', '', 0),
-(9, 2, 0, 'teacher2', 'pass', 'Nenita', 'francisco', 'de leon', 'arianeburnscode@yahoo.com', '09422916120', 'aa', 1, '0000-00-00 00:00:00', '', 0),
-(10, 1, 0, 'newadmin', 'pass', 'newadmin', 'newadmin', 'newadmin', 'arianeburnscode@yahoo.com', '09422916120', 'newadmin', 1, '0000-00-00 00:00:00', '', 0),
-(11, 1, 0, 'admin2', '1234', 'charles', 'm', 'marallag', 'charles_darwin_marallag@yahoo.com', '09265686310', 'QC', 1, '0000-00-00 00:00:00', '', 0),
-(12, 2, 0, 'newTeacher', 'qwer', 'darwin', '', 'marallag', 'odnanref_marallag@yahoo.com', '11212112122', 'qc', 1, '2016-03-02 23:25:29', '', 0),
-(15, 4, 0, '01-2016-0001', '', 'Charles', 'D', 'Marallag', '', '', 'muÃ±oz', 1, '0000-00-00 00:00:00', '57c81d6b88d1c', 2),
-(16, 4, 0, '01-2016-0002', '', 'Ryan', 'D', 'Dalaodao', '', '', 'aaaa', 1, '0000-00-00 00:00:00', '57c81e013e525', 2),
-(17, 4, 0, '01-2016-0000', '', 'Rose Marlyn', 'Bugos', 'Mijares', '', '', '200 kaliraya Street cluster 28 tatalon', 1, '0000-00-00 00:00:00', '57c90c2191c51', 9),
-(18, 4, 0, '01-2016-0003', '', 'Rose Marlyn', 'Bugos', 'Mijares', '', '', '200 kaliraya Street cluster 28 tatalon', 1, '0000-00-00 00:00:00', '57cfdea7c8057', 2),
-(19, 4, 0, '01-2016-0005', '', 'Joseph', 'n', 'Tamayo', '', '', 'mmmm', 1, '0000-00-00 00:00:00', '57d25e781aeaa', 2);
+INSERT INTO `users` (`id`, `type_id`, `username`, `password`, `first_name`, `middle_name`, `last_name`, `email`, `phone`, `address`, `active`, `fromtime`, `last_update`, `totime`) VALUES
+(1, 1, 'admin', 'pass', 'mia', '', 'rose', 'miarose@gmail.com', '09422916120', 'sss', 1, '00:00:00', '2016-09-29 22:16:14', NULL),
+(39, 2, 'diana', 'pass', 'diana', '', 'mundo', 'diana@gmail.com', '09282262875', 'tatalon', 1, '09:00:00', '0000-00-00 00:00:00', '12:00:00'),
+(40, 2, 'again', 'pass', 'again', '', 'again', 'pass@gmail.com', '09464461156', 'pass', 1, '12:00:00', '0000-00-00 00:00:00', '15:00:00'),
+(42, 2, 'rosalie', 'pass', 'Rosalie', '', 'mijares', 'rosalie@gmail.com', '09464456641', 'tatalon', 1, '08:00:00', '0000-00-00 00:00:00', '16:00:00'),
+(46, 0, '', '', '', '', '', '', '', '', 0, '00:00:00', '0000-00-00 00:00:00', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -430,13 +722,14 @@ INSERT INTO `users` (`id`, `type_id`, `parent_id`, `username`, `password`, `firs
 -- Table structure for table `user_type`
 --
 
-CREATE TABLE `user_type` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `active` tinyint(1) NOT NULL,
-  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `user_type`
@@ -444,151 +737,8 @@ CREATE TABLE `user_type` (
 
 INSERT INTO `user_type` (`id`, `name`, `description`, `active`, `last_update`) VALUES
 (1, 'admin', 'admin', 1, '0000-00-00 00:00:00'),
-(2, 'teacher', 'teacher', 1, '0000-00-00 00:00:00'),
-(3, 'parents', 'parents', 1, '0000-00-00 00:00:00'),
-(4, 'student', 'student', 1, '0000-00-00 00:00:00');
+(2, 'teacher', 'teacher', 1, '0000-00-00 00:00:00');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `audio`
---
-ALTER TABLE `audio`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `choice`
---
-ALTER TABLE `choice`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `lesson`
---
-ALTER TABLE `lesson`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `lesson_dtl`
---
-ALTER TABLE `lesson_dtl`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `parents`
---
-ALTER TABLE `parents`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `quiz`
---
-ALTER TABLE `quiz`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `quiz_result`
---
-ALTER TABLE `quiz_result`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `quiz_take`
---
-ALTER TABLE `quiz_take`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `story`
---
-ALTER TABLE `story`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `student`
---
-ALTER TABLE `student`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
-
---
--- Indexes for table `user_type`
---
-ALTER TABLE `user_type`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `audio`
---
-ALTER TABLE `audio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
---
--- AUTO_INCREMENT for table `choice`
---
-ALTER TABLE `choice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT for table `lesson`
---
-ALTER TABLE `lesson`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
--- AUTO_INCREMENT for table `lesson_dtl`
---
-ALTER TABLE `lesson_dtl`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
---
--- AUTO_INCREMENT for table `parents`
---
-ALTER TABLE `parents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `quiz`
---
-ALTER TABLE `quiz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
---
--- AUTO_INCREMENT for table `quiz_result`
---
-ALTER TABLE `quiz_result`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
---
--- AUTO_INCREMENT for table `quiz_take`
---
-ALTER TABLE `quiz_take`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `story`
---
-ALTER TABLE `story`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `student`
---
-ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
---
--- AUTO_INCREMENT for table `user_type`
---
-ALTER TABLE `user_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
