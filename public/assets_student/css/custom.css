@@ -1,0 +1,60 @@
+
+.form-newsletter input[type=text] {
+	width: 220px;
+	margin: 0 auto 15px;
+	padding: 18px 25px;
+	font-size: 14px;
+	color: #4e87a0;
+	background: url(../images/bg_input.png) no-repeat;
+	border: none;
+}
+.form-newsletter input[type=text]::-webkit-input-placeholder {
+	color: #4e87a0;
+}
+
+.form-newsletter input[type=text]:-moz-placeholder { /* Firefox 18- */
+	color: #4e87a0;
+}
+
+.form-newsletter input[type=text]::-moz-placeholder {  /* Firefox 19+ */
+	color: #4e87a0;
+}
+
+.form-newsletter input[type=text]:-ms-input-placeholder {  
+	color: #4e87a0;
+}
+
+.form-newsletter input[type=password] {
+	width: 220px;
+	margin: 0 auto 15px;
+	padding: 18px 25px;
+	font-size: 14px;
+	color: #4e87a0;
+	background: url(../images/bg_input.png) no-repeat;
+	border: none;
+}
+.form-newsletter input[type=password]::-webkit-input-placeholder {
+	color: #4e87a0;
+}
+
+.form-newsletter input[type=password]:-moz-placeholder { /* Firefox 18- */
+	color: #4e87a0;
+}
+
+.form-newsletter input[type=password]::-moz-placeholder {  /* Firefox 19+ */
+	color: #4e87a0;
+}
+
+.form-newsletter input[type=password]:-ms-input-placeholder {  
+	color: #4e87a0;
+}
+
+
+input.red[type=submit] {
+	color: #fff;
+	border: none;
+	background: url(../images/bg_red-btn.png) no-repeat;
+}
+input.red[type=submit]:hover{
+	opacity: 0.8;
+}

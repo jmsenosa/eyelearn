@@ -1,0 +1,8 @@
+EYE LEARNING
+
+TODO: 
+
+ - Admin page display only user manager DONE!
+ - Admin page display password of all user DONE!
+ - Teacher page remove admin  DONE!
+ - Teacher page can't edit other teacher  DONE!

@@ -1,0 +1,1739 @@
+Feb 02, 2016 05:35:40 | Logs Cleared: by User ID 1
+Feb 02, 2016 05:42:15 | User log out: admin istrator Log out.
+Feb 02, 2016 05:48:23 | User Log in: admin istrator Log in.
+Feb 02, 2016 05:48:49 | User Delete User: admin istrator Delete User [ariane].
+Feb 02, 2016 05:54:31 | User Create User: admin istrator Create User [dam].
+Feb 02, 2016 05:54:46 | User log out: admin istrator Log out.
+Feb 02, 2016 05:54:52 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 06:14:29 | User Log in: admin istrator Log in.
+Feb 02, 2016 06:20:29 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 06:24:54 | User Log in: admin istrator Log in.
+Feb 02, 2016 06:55:22 | User Log in: admin istrator Log in.
+Feb 02, 2016 06:55:40 | User log out: admin istrator Log out.
+Feb 02, 2016 06:55:45 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 06:55:53 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 06:55:58 | User Log in: admin istrator Log in.
+Feb 02, 2016 06:58:12 | User Update User: admin istrator Update User [faculty].
+Feb 02, 2016 07:02:07 | User Update User: admin istrator Update User [faculty].
+Feb 02, 2016 07:02:13 | User Update User: admin istrator Update User [janz].
+Feb 02, 2016 07:02:19 | User Update User: admin istrator Update User [faculty].
+Feb 02, 2016 07:04:07 | User Update User: admin istrator Update User [faculty].
+Feb 02, 2016 07:05:40 | User Update User: admin istrator Update User [dam].
+Feb 02, 2016 07:05:51 | User Update User: admin istrator Update User [dam].
+Feb 02, 2016 07:05:54 | User Update User: admin istrator Update User [dam].
+Feb 02, 2016 07:05:59 | User Update User: admin istrator Update User [dam].
+Feb 02, 2016 09:10:49 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:11:13 | User Update User: Daniel Marion Toquero Update User [dam].
+Feb 02, 2016 09:11:26 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:11:39 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:11:49 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:11:57 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:12:14 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:14:47 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:14:49 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:14:54 | User log out: admin istrator Log out.
+Feb 02, 2016 09:14:57 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:17:43 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:17:46 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:19:08 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:19:10 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:19:17 | User Update User: admin istrator Update User [faculty].
+Feb 02, 2016 09:19:19 | User log out: admin istrator Log out.
+Feb 02, 2016 09:19:24 | User Log in [Inactive]: danielle ingrid toquero Log in [Inactive].
+Feb 02, 2016 09:19:36 | User Log in [Inactive]: danielle ingrid toquero Log in [Inactive].
+Feb 02, 2016 09:19:54 | User Log in [Inactive]: danielle ingrid toquero Log in [Inactive].
+Feb 02, 2016 09:20:08 | User Log in [Inactive]: danielle ingrid toquero Log in [Inactive].
+Feb 02, 2016 09:20:14 | User Log in [Inactive]: danielle ingrid toquero Log in [Inactive].
+Feb 02, 2016 09:20:32 | User Log in [Inactive]: danielle ingrid toquero Log in [Inactive].
+Feb 02, 2016 09:20:56 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:20:57 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:21:00 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:21:02 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:21:29 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:21:36 | User log out: admin istrator Log out.
+Feb 02, 2016 09:21:39 | User Log in [Inactive]: Daniel Marion Toquero Log in [Inactive].
+Feb 02, 2016 09:21:46 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:22:19 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:22:23 | User log out: admin istrator Log out.
+Feb 02, 2016 09:22:25 | User Log in [Inactive]: Daniel Marion Toquero Log in [Inactive].
+Feb 02, 2016 09:22:27 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:22:28 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:22:38 | User Update User: admin istrator Update User [dam].
+Feb 02, 2016 09:22:39 | User log out: admin istrator Log out.
+Feb 02, 2016 09:22:41 | User Log in: Daniel Marion Toquero Log in.
+Feb 02, 2016 09:22:49 | User Update User: Daniel Marion Toquero Update User [dam].
+Feb 02, 2016 09:22:50 | User log out: Daniel Marion Toquero Log out.
+Feb 02, 2016 09:22:52 | User Log in [Inactive]: Daniel Marion Toquero Log in [Inactive].
+Feb 02, 2016 09:22:54 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:23:07 | User Update User: admin istrator Update User [faculty].
+Feb 02, 2016 09:27:50 | User Create User: admin istrator Create User [ayet].
+Feb 02, 2016 09:28:48 | User log out: admin istrator Log out.
+Feb 02, 2016 09:28:53 | User Log in: Daniel Wyett Toquero Log in.
+Feb 02, 2016 09:29:14 | User log out: Daniel Wyett Toquero Log out.
+Feb 02, 2016 09:29:20 | User Log in: Daniel Wyett Toquero Log in.
+Feb 02, 2016 09:29:23 | User log out: Daniel Wyett Toquero Log out.
+Feb 02, 2016 09:29:31 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:29:37 | User log out: admin istrator Log out.
+Feb 02, 2016 09:29:44 | User Log in: Daniel Wyett Toquero Log in.
+Feb 02, 2016 09:29:50 | User log out: Daniel Wyett Toquero Log out.
+Feb 02, 2016 09:30:14 | User Log in: admin istrator Log in.
+Feb 02, 2016 09:35:52 | User Create Event: admin istrator Create Event [Tagisan ng Talino 2016].
+Feb 02, 2016 09:38:35 | User log out: admin istrator Log out.
+Feb 02, 2016 09:38:53 | User log out: admin istrator Log out.
+Feb 03, 2016 03:32:56 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:36:38 | User Create User: admin istrator Create User [daniel].
+Feb 03, 2016 03:36:50 | User log out: admin istrator Log out.
+Feb 03, 2016 03:36:58 | User Log in: Daniel Toquero Log in.
+Feb 03, 2016 03:38:33 | User log out: Daniel Toquero Log out.
+Feb 03, 2016 03:38:43 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:41:41 | User Update User: admin istrator Update User [daniel].
+Feb 03, 2016 03:41:53 | User log out: admin istrator Log out.
+Feb 03, 2016 03:42:03 | User Log in [Inactive]: Daniel Toquero Log in [Inactive].
+Feb 03, 2016 03:42:26 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:47:22 | User log out: admin istrator Log out.
+Feb 03, 2016 03:49:44 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:49:46 | User log out: admin istrator Log out.
+Feb 03, 2016 03:50:00 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:50:50 | User log out: admin istrator Log out.
+Feb 03, 2016 03:51:26 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:52:07 | User log out: admin istrator Log out.
+Feb 03, 2016 03:52:32 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:52:34 | User log out: admin istrator Log out.
+Feb 03, 2016 03:55:05 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:55:53 | User Update User: admin istrator Update User [headadmin].
+Feb 03, 2016 03:55:56 | User log out: admin istrator Log out.
+Feb 03, 2016 03:56:03 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:57:12 | User log out: admin istrator Log out.
+Feb 03, 2016 03:57:29 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:58:11 | User Log in: Daniel Wyett Toquero Log in.
+Feb 03, 2016 03:58:55 | User log out: Daniel Wyett Toquero Log out.
+Feb 03, 2016 03:59:03 | User log out: admin istrator Log out.
+Feb 03, 2016 03:59:08 | User Log in: admin istrator Log in.
+Feb 03, 2016 03:59:19 | User Log in: danielle ingrid toquero Log in.
+Feb 03, 2016 03:59:28 | User log out: danielle ingrid toquero Log out.
+Feb 03, 2016 03:59:57 | User log out: admin istrator Log out.
+Feb 03, 2016 04:00:03 | User Log in: admin istrator Log in.
+Feb 03, 2016 04:00:12 | User log out: admin istrator Log out.
+Feb 03, 2016 04:00:15 | User Log in: danielle ingrid toquero Log in.
+Feb 03, 2016 04:00:43 | User log out: danielle ingrid toquero Log out.
+Feb 03, 2016 04:00:46 | User Log in: admin istrator Log in.
+Feb 03, 2016 04:01:53 | User Log in: admin istrator Log in.
+Feb 03, 2016 04:03:48 | User Delete User: admin istrator Delete User [faculty].
+Feb 03, 2016 04:03:50 | User Create User: admin istrator Create User [admin].
+Feb 03, 2016 04:03:52 | User Delete User: admin istrator Delete User [kevzpogi].
+Feb 03, 2016 04:03:57 | User Delete User: admin istrator Delete User [tomquinto].
+Feb 03, 2016 04:04:05 | User Delete User: admin istrator Delete User [janz].
+Feb 03, 2016 04:04:18 | User Delete User: admin istrator Delete User [dam].
+Feb 03, 2016 04:04:24 | User Delete User: admin istrator Delete User [ayet].
+Feb 03, 2016 04:04:30 | User Delete User: admin istrator Delete User [daniel].
+Feb 03, 2016 04:04:35 | User Delete User: admin istrator Delete User [admin].
+Feb 03, 2016 04:05:09 | User log out: admin istrator Log out.
+Feb 03, 2016 04:05:24 | User Log in: admin istrator Log in.
+Feb 03, 2016 04:05:42 | User Create User: admin istrator Create User [admin].
+Feb 03, 2016 04:07:16 | User Create User: admin istrator Create User [faculty].
+Feb 03, 2016 04:11:01 | User log out: admin istrator Log out.
+Feb 03, 2016 04:11:08 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 04:11:34 | User log out: Jovie Malana Log out.
+Feb 03, 2016 04:11:40 | User Log in: Mel Galat Log in.
+Feb 03, 2016 04:12:32 | User log out: Mel Galat Log out.
+Feb 03, 2016 04:12:47 | User Log in: admin istrator Log in.
+Feb 03, 2016 04:13:02 | User log out: admin istrator Log out.
+Feb 03, 2016 04:13:05 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 04:13:45 | User log out: Jovie Malana Log out.
+Feb 03, 2016 04:13:49 | User Log in: admin istrator Log in.
+Feb 03, 2016 04:24:46 | User log out: admin istrator Log out.
+Feb 03, 2016 06:39:58 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 06:40:14 | User log out: Jovie Malana Log out.
+Feb 03, 2016 06:40:30 | User Log in: admin istrator Log in.
+Feb 03, 2016 06:40:48 | User log out: admin istrator Log out.
+Feb 03, 2016 06:41:06 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 06:45:20 | User log out: Jovie Malana Log out.
+Feb 03, 2016 06:45:31 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:03:51 | User log out: admin istrator Log out.
+Feb 03, 2016 07:05:09 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:05:55 | User log out: admin istrator Log out.
+Feb 03, 2016 07:06:01 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:07:05 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:07:19 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:07:29 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:21:36 | User log out: admin istrator Log out.
+Feb 03, 2016 07:21:39 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:22:42 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:22:46 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:26:33 | User log out: admin istrator Log out.
+Feb 03, 2016 07:27:04 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:27:09 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:27:12 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:27:42 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:27:45 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:27:57 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:28:07 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:28:09 | User log out: admin istrator Log out.
+Feb 03, 2016 07:28:13 | User Log in: Mel Galat Log in.
+Feb 03, 2016 07:28:48 | User log out: Mel Galat Log out.
+Feb 03, 2016 07:28:51 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:29:25 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:29:28 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:29:34 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:29:37 | User Log in: Mel Galat Log in.
+Feb 03, 2016 07:33:23 | User log out: Mel Galat Log out.
+Feb 03, 2016 07:33:28 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:33:30 | User log out: admin istrator Log out.
+Feb 03, 2016 07:33:34 | User Log in: Mel Galat Log in.
+Feb 03, 2016 07:34:26 | User log out: Mel Galat Log out.
+Feb 03, 2016 07:34:28 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:34:39 | User Create Event: admin istrator Create Event [Valentines Day].
+Feb 03, 2016 07:35:25 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:35:28 | User Log in: Mel Galat Log in.
+Feb 03, 2016 07:35:31 | User log out: Mel Galat Log out.
+Feb 03, 2016 07:35:33 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:35:35 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:35:39 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:38:44 | User log out: admin istrator Log out.
+Feb 03, 2016 07:38:50 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:39:30 | User log out: admin istrator Log out.
+Feb 03, 2016 07:39:33 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:39:38 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:39:41 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:39:44 | User log out: admin istrator Log out.
+Feb 03, 2016 07:39:49 | User Log in: Mel Galat Log in.
+Feb 03, 2016 07:42:11 | User log out: Mel Galat Log out.
+Feb 03, 2016 07:42:15 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:44:03 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:44:10 | User Log in: admin istrator Log in.
+Feb 03, 2016 07:45:23 | User Update Event: admin istrator Update Event [Valentines Day].
+Feb 03, 2016 07:45:31 | User Delete Event: admin istrator Delete Event [Valentines Day].
+Feb 03, 2016 07:46:57 | User Create Event: admin istrator Create Event [Valentines Day].
+Feb 03, 2016 07:57:58 | User log out: admin istrator Log out.
+Feb 03, 2016 07:58:01 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 07:58:08 | User log out: Jovie Malana Log out.
+Feb 03, 2016 07:58:11 | User Log in: admin istrator Log in.
+Feb 03, 2016 08:28:40 | User log out: admin istrator Log out.
+Feb 03, 2016 08:28:49 | User Log in: admin istrator Log in.
+Feb 03, 2016 08:31:11 | User log out: admin istrator Log out.
+Feb 03, 2016 08:31:23 | User Log in: admin istrator Log in.
+Feb 03, 2016 08:34:35 | User Update Event: admin istrator Update Event [Valentines Day].
+Feb 03, 2016 08:35:45 | User log out: admin istrator Log out.
+Feb 03, 2016 08:38:39 | User log out: admin istrator Log out.
+Feb 03, 2016 08:38:42 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 08:40:12 | User Log in: admin istrator Log in.
+Feb 03, 2016 08:41:50 | User Create Event: admin istrator Create Event [Sportsfest].
+Feb 03, 2016 08:43:29 | User log out: Jovie Malana Log out.
+Feb 03, 2016 08:43:32 | User Log in: admin istrator Log in.
+Feb 03, 2016 08:45:44 | User log out: admin istrator Log out.
+Feb 03, 2016 08:45:47 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 08:46:12 | User Create Event: Jovie Malana Create Event [For IT ONLY].
+Feb 03, 2016 08:46:45 | User Create Event: Jovie Malana Create Event [For HRM Only].
+Feb 03, 2016 08:46:52 | User log out: Jovie Malana Log out.
+Feb 03, 2016 08:48:59 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 09:13:22 | User log out: Jovie Malana Log out.
+Feb 03, 2016 09:13:25 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 09:13:42 | User log out: Jovie Malana Log out.
+Feb 03, 2016 09:13:46 | User Log in: admin istrator Log in.
+Feb 03, 2016 09:53:38 | User Update Event: admin istrator Update Event [For HRM Only].
+Feb 03, 2016 10:30:45 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 10:33:33 | User log out: Jovie Malana Log out.
+Feb 03, 2016 10:35:30 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 10:36:59 | User log out: Jovie Malana Log out.
+Feb 03, 2016 10:37:29 | User Log in: admin istrator Log in.
+Feb 03, 2016 10:45:57 | User log out: admin istrator Log out.
+Feb 03, 2016 10:46:24 | User Log in: admin istrator Log in.
+Feb 03, 2016 10:48:57 | User log out: admin istrator Log out.
+Feb 03, 2016 10:52:19 | User Log in: admin istrator Log in.
+Feb 03, 2016 10:52:27 | User log out: admin istrator Log out.
+Feb 03, 2016 10:53:19 | User Log in: admin istrator Log in.
+Feb 03, 2016 10:56:53 | User log out: admin istrator Log out.
+Feb 03, 2016 11:00:21 | User Log in: admin istrator Log in.
+Feb 03, 2016 11:01:29 | User log out: admin istrator Log out.
+Feb 03, 2016 11:07:32 | User Log in: admin istrator Log in.
+Feb 03, 2016 11:08:47 | User Update User: admin istrator Update User [faculty].
+Feb 03, 2016 11:08:51 | User log out: admin istrator Log out.
+Feb 03, 2016 11:10:16 | User Log in: admin istrator Log in.
+Feb 03, 2016 11:10:36 | User Update User: admin istrator Update User [faculty].
+Feb 03, 2016 11:10:42 | User log out: admin istrator Log out.
+Feb 03, 2016 11:10:55 | User Log in: Jovie Malana Log in.
+Feb 03, 2016 11:12:21 | User log out: Jovie Malana Log out.
+Feb 03, 2016 11:13:06 | User Log in: Mel Galat Log in.
+Feb 03, 2016 11:14:42 | User log out: Mel Galat Log out.
+Feb 03, 2016 11:15:11 | User Log in: admin istrator Log in.
+Feb 03, 2016 11:20:59 | User log out: admin istrator Log out.
+Feb 04, 2016 02:18:44 | User Log in: Jovie Malana Log in.
+Feb 04, 2016 02:18:45 | User log out: Jovie Malana Log out.
+Feb 04, 2016 02:18:52 | User Log in: admin istrator Log in.
+Feb 04, 2016 02:20:37 | User Update User: admin istrator Update User [faculty].
+Feb 04, 2016 02:20:43 | User Update User: admin istrator Update User [faculty].
+Feb 04, 2016 03:44:34 | User Log in: admin istrator Log in.
+Feb 04, 2016 06:57:09 | User log out: admin istrator Log out.
+Feb 04, 2016 06:57:12 | User Log in: Jovie Malana Log in.
+Feb 04, 2016 06:57:14 | User log out: Jovie Malana Log out.
+Feb 04, 2016 06:57:18 | User Log in: admin istrator Log in.
+Feb 05, 2016 02:54:32 | User Log in: Jovie Malana Log in.
+Feb 05, 2016 02:54:34 | User log out: Jovie Malana Log out.
+Feb 05, 2016 02:54:43 | User Log in: admin istrator Log in.
+Feb 05, 2016 03:00:41 | User Log in: Jovie Malana Log in.
+Feb 05, 2016 04:45:28 | User log out: Jovie Malana Log out.
+Feb 05, 2016 04:46:53 | User Log in: Jovie Malana Log in.
+Feb 05, 2016 04:47:35 | User log out: Jovie Malana Log out.
+Feb 05, 2016 05:02:00 | User Log in: admin istrator Log in.
+Feb 05, 2016 05:05:55 | User log out: admin istrator Log out.
+Feb 05, 2016 05:06:02 | User Log in: Mel Galat Log in.
+Feb 09, 2016 01:24:27 | User Log in: Jovie Malana Log in.
+Feb 09, 2016 01:24:29 | User log out: Jovie Malana Log out.
+Feb 09, 2016 01:46:43 | User Log in: admin istrator Log in.
+Feb 09, 2016 01:46:49 | User log out: admin istrator Log out.
+Feb 09, 2016 02:32:22 | User Log in: Jovie Malana Log in.
+Feb 09, 2016 02:32:57 | User Log in: Jovie Malana Log in.
+Feb 09, 2016 02:35:23 | User log out: Jovie Malana Log out.
+Feb 09, 2016 02:35:38 | User Log in: Jovie Malana Log in.
+Feb 09, 2016 02:36:42 | User log out: Jovie Malana Log out.
+Feb 09, 2016 02:36:46 | User Log in: admin istrator Log in.
+Feb 09, 2016 02:37:32 | User log out: admin istrator Log out.
+Feb 09, 2016 02:38:52 | User log out: Jovie Malana Log out.
+Feb 09, 2016 02:39:09 | User Log in: Jovie Malana Log in.
+Feb 09, 2016 02:39:12 | User log out: Jovie Malana Log out.
+Feb 09, 2016 02:39:21 | User Log in: Jovie Malana Log in.
+Feb 09, 2016 02:39:26 | User log out: Jovie Malana Log out.
+Feb 09, 2016 02:39:38 | User Log in: admin istrator Log in.
+Feb 09, 2016 02:49:56 | User log out: admin istrator Log out.
+Feb 09, 2016 02:50:34 | User Log in: admin istrator Log in.
+Feb 09, 2016 02:51:33 | User Update User: admin istrator Update User [admin].
+Feb 09, 2016 02:51:51 | User log out: admin istrator Log out.
+Feb 09, 2016 02:52:25 | User Log in: Mel Galat Log in.
+Feb 09, 2016 02:52:30 | User log out: Mel Galat Log out.
+Feb 09, 2016 02:52:54 | User Log in: admin istrator Log in.
+Feb 09, 2016 02:53:56 | User Create User: admin istrator Create User [headadmin2].
+Feb 09, 2016 02:55:14 | User log out: admin istrator Log out.
+Feb 09, 2016 02:55:22 | User Log in: Gil Joseph Obdianela Log in.
+Feb 09, 2016 02:55:38 | User log out: Gil Joseph Obdianela Log out.
+Feb 09, 2016 02:57:05 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:04:19 | User log out: admin istrator Log out.
+Feb 09, 2016 03:04:54 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:06:13 | User log out: admin istrator Log out.
+Feb 09, 2016 03:10:06 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:10:10 | User log out: admin istrator Log out.
+Feb 09, 2016 03:10:30 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:17:00 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:17:13 | User log out: admin istrator Log out.
+Feb 09, 2016 03:18:55 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:19:16 | User Update User: admin istrator Update User [faculty].
+Feb 09, 2016 03:19:17 | User log out: admin istrator Log out.
+Feb 09, 2016 03:45:55 | User log out: admin istrator Log out.
+Feb 09, 2016 03:46:01 | User Log in [Inactive]: Jovie Malana Log in. [Inactive]
+Feb 09, 2016 03:46:08 | User Log in [Inactive]: Jovie Malana Log in. [Inactive]
+Feb 09, 2016 03:46:20 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:46:44 | User log out: admin istrator Log out.
+Feb 09, 2016 03:46:48 | User Log in [Inactive]: Jovie Malana Log in. [Inactive]
+Feb 09, 2016 03:46:51 | User Log in [Inactive]: Jovie Malana Log in. [Inactive]
+Feb 09, 2016 03:47:05 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:47:36 | User log out: admin istrator Log out.
+Feb 09, 2016 03:47:40 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:47:50 | User log out: admin istrator Log out.
+Feb 09, 2016 03:48:24 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:50:22 | User Sign in - Inactive: Jovie Malana Inactive.
+Feb 09, 2016 03:50:34 | User Sign in - Inactive: Jovie Malana Inactive.
+Feb 09, 2016 03:50:37 | User Create User: admin istrator Create User [2345].
+Feb 09, 2016 03:50:44 | User Sign in - Inactive: Jovie Malana Inactive.
+Feb 09, 2016 03:53:22 | User Sign in - Inactive: Jovie Malana Inactive.
+Feb 09, 2016 03:53:26 | User Sign in - Inactive: Jovie Malana Inactive.
+Feb 09, 2016 03:53:29 | User Log in: admin istrator Log in.
+Feb 09, 2016 03:56:49 | User Create User: admin istrator Create User [admin2].
+Feb 09, 2016 03:57:40 | User Create User: admin istrator Create User [admin2].
+Feb 09, 2016 03:58:44 | User log out: admin istrator Log out.
+Feb 09, 2016 03:58:51 | User Log in: Danielle Ingrid Toquero Log in.
+Feb 09, 2016 03:58:56 | User log out: Danielle Ingrid Toquero Log out.
+Feb 09, 2016 03:59:09 | User Log in: admin istrator Log in.
+Feb 09, 2016 04:09:06 | User log out: admin istrator Log out.
+Feb 09, 2016 04:09:13 | User Log in: Gil Joseph Obdianela Log in.
+Feb 09, 2016 04:09:18 | User log out: Gil Joseph Obdianela Log out.
+Feb 09, 2016 04:09:24 | User Log in: admin istrator Log in.
+Feb 09, 2016 04:09:50 | User Update User: admin istrator Update User [headadmin2].
+Feb 09, 2016 04:10:01 | User log out: admin istrator Log out.
+Feb 09, 2016 04:10:09 | User Sign in - Inactive: Gil Joseph Obdianela Inactive.
+Feb 09, 2016 04:10:19 | User Sign in - Inactive: Gil Joseph Obdianela Inactive.
+Feb 09, 2016 04:10:24 | User Log in: admin istrator Log in.
+Feb 09, 2016 04:10:36 | User Delete User: admin istrator Delete User [headadmin2].
+Feb 09, 2016 04:11:49 | User log out: admin istrator Log out.
+Feb 09, 2016 04:11:57 | User Sign in - Inactive: Mel Galat Inactive.
+Feb 09, 2016 04:12:06 | User Log in: admin istrator Log in.
+Feb 09, 2016 04:12:20 | User Delete User: admin istrator Delete User [2345].
+Feb 09, 2016 04:16:56 | User Create User: admin istrator Create User [faculty2].
+Feb 09, 2016 04:21:02 | User Update User: admin istrator Update User [admin].
+Feb 09, 2016 06:10:10 | User log out: admin istrator Log out.
+Feb 09, 2016 06:10:13 | User Log in: Jovie Malana Log in.
+Feb 09, 2016 06:10:16 | User log out: Jovie Malana Log out.
+Feb 09, 2016 06:10:20 | User Log in: admin istrator Log in.
+Feb 09, 2016 07:02:19 | User log out: admin istrator Log out.
+Feb 09, 2016 07:02:45 | User Sign in - Inactive: Mel Galat Inactive.
+Feb 09, 2016 07:02:53 | User Log in: admin istrator Log in.
+Feb 09, 2016 07:13:37 | User Delete Event: admin istrator Delete Event [For IT ONLY].
+Feb 09, 2016 07:13:45 | User Delete Event: admin istrator Delete Event [For HRM Only].
+Feb 09, 2016 07:16:32 | User Create Event: admin istrator Create Event [Defense].
+Feb 10, 2016 02:01:50 | User Log in: admin istrator Log in.
+Feb 10, 2016 02:21:08 | User Create Event: admin istrator Create Event [Mock Defense].
+Feb 10, 2016 02:41:52 | User Log in: admin istrator Log in.
+Feb 10, 2016 03:35:07 | User Log in: admin istrator Log in.
+Feb 10, 2016 03:38:35 | User Delete Event: admin istrator Delete Event [Defense].
+Feb 10, 2016 03:38:37 | User Delete Event: admin istrator Delete Event [Mock Defense].
+Feb 10, 2016 03:44:50 | User log out: admin istrator Log out.
+Feb 10, 2016 03:45:08 | User Log in: admin istrator Log in.
+Feb 10, 2016 03:47:23 | User log out: admin istrator Log out.
+Feb 10, 2016 03:47:36 | User Sign in - Inactive: Mel Galat Inactive.
+Feb 10, 2016 03:49:25 | User Log in: admin istrator Log in.
+Feb 10, 2016 04:06:06 | User log out: admin istrator Log out.
+Feb 10, 2016 04:06:11 | User Log in: Danielle Ingrid Toquero Log in.
+Feb 10, 2016 04:06:20 | User log out: Danielle Ingrid Toquero Log out.
+Feb 10, 2016 04:06:43 | User Log in: admin istrator Log in.
+Feb 10, 2016 04:27:32 | User Delete User: admin istrator Delete User [faculty2].
+Feb 10, 2016 05:27:15 | User Log in: admin istrator Log in.
+Feb 10, 2016 05:37:40 | User Log in: admin istrator Log in.
+Feb 10, 2016 06:01:29 | User Create User: admin istrator Create User [faculty].
+Feb 10, 2016 06:01:59 | User Delete User: admin istrator Delete User [faculty].
+Feb 10, 2016 06:51:06 | User Create Event: admin istrator Create Event [Ash Wednesday].
+Feb 10, 2016 06:53:16 | User log out: admin istrator Log out.
+Feb 10, 2016 06:53:23 | User Log in: admin istrator Log in.
+Feb 10, 2016 07:23:18 | User log out: admin istrator Log out.
+Feb 10, 2016 07:23:23 | User Sign in - Inactive: Mel Galat Inactive.
+Feb 10, 2016 07:23:28 | User Log in: Jovie Malana Log in.
+Feb 10, 2016 07:23:31 | User log out: Jovie Malana Log out.
+Feb 10, 2016 07:23:38 | User Log in: admin istrator Log in.
+Feb 10, 2016 07:32:31 | User Delete User: admin istrator Delete User [admin2].
+Feb 10, 2016 09:04:13 | User log out: admin istrator Log out.
+Feb 10, 2016 09:04:20 | User Log in: admin istrator Log in.
+Feb 10, 2016 09:15:58 | User Delete Event: admin istrator Delete Event [Ash Wednesday].
+Feb 10, 2016 09:17:11 | User Create Event: admin istrator Create Event [Ash Wednesday].
+Feb 10, 2016 09:17:39 | User Delete Event: admin istrator Delete Event [Ash Wednesday].
+Feb 10, 2016 09:18:07 | User Create Event: admin istrator Create Event [ Ash Wednesday].
+Feb 10, 2016 09:37:02 | User Delete Event: admin istrator Delete Event [ Ash Wednesday].
+Feb 10, 2016 09:38:05 | User Create Event: admin istrator Create Event [Ash Wednesday].
+Feb 10, 2016 09:38:11 | User Update Event: admin istrator Update Event [Ash Wednesday].
+Feb 10, 2016 09:38:31 | User Create Event: admin istrator Create Event [Ash Wednesday].
+Feb 10, 2016 09:38:57 | User Delete Event: admin istrator Delete Event [Ash Wednesday].
+Feb 10, 2016 09:41:29 | User Delete Event: admin istrator Delete Event [Ash Wednesday].
+Feb 10, 2016 09:42:23 | User Create Event: admin istrator Create Event [Ash Wednesday].
+Feb 10, 2016 09:46:16 | User Log in: admin istrator Log in.
+Feb 10, 2016 09:47:37 | User Create User: admin istrator Create User [jknm].
+Feb 10, 2016 09:47:54 | User Delete User: admin istrator Delete User [jknm].
+Feb 10, 2016 09:49:17 | User Create User: admin istrator Create User [hjbkn].
+Feb 10, 2016 09:49:47 | User Update User: admin istrator Update User [hjbkn].
+Feb 10, 2016 09:50:01 | User Delete User: admin istrator Delete User [hjbkn].
+Feb 10, 2016 09:51:16 | User Create User: admin istrator Create User [mel].
+Feb 10, 2016 09:51:29 | User Delete User: admin istrator Delete User [mel].
+Feb 11, 2016 03:35:35 | User Log in: admin istrator Log in.
+Feb 11, 2016 04:30:38 | User Create Event: admin istrator Create Event [Sss].
+Feb 11, 2016 05:30:19 | User Create Event: admin istrator Create Event [ Ash Wednesday].
+Feb 11, 2016 05:32:08 | User log out: admin istrator Log out.
+Feb 11, 2016 05:32:14 | User Log in: Jovie Malana Log in.
+Feb 11, 2016 05:41:57 | User Create Event: Jovie Malana Create Event [Ash Wednesday].
+Feb 11, 2016 06:17:30 | User log out: Jovie Malana Log out.
+Feb 11, 2016 06:17:34 | User Log in: admin istrator Log in.
+Feb 11, 2016 06:56:52 | User Log in: admin istrator Log in.
+Feb 11, 2016 07:34:12 | User log out: admin istrator Log out.
+Feb 11, 2016 07:34:21 | User Log in: Jovie Malana Log in.
+Feb 11, 2016 07:52:53 | User log out: Jovie Malana Log out.
+Feb 11, 2016 07:52:57 | User Log in: admin istrator Log in.
+Feb 11, 2016 07:56:43 | User Update User: admin istrator Update User [coordinator].
+Feb 11, 2016 08:07:06 | User log out: admin istrator Log out.
+Feb 11, 2016 08:07:16 | User Log in: Ariane De Leon Log in.
+Feb 11, 2016 08:15:03 | User log out: Ariane De Leon Log out.
+Feb 11, 2016 08:15:06 | User Log in: Jovie Malana Log in.
+Feb 11, 2016 08:15:08 | User log out: Jovie Malana Log out.
+Feb 11, 2016 08:15:12 | User Log in: admin istrator Log in.
+Feb 11, 2016 08:17:08 | User log out: admin istrator Log out.
+Feb 11, 2016 08:17:10 | User Log in: Jovie Malana Log in.
+Feb 11, 2016 08:17:38 | User log out: Jovie Malana Log out.
+Feb 11, 2016 08:17:42 | User Log in: admin istrator Log in.
+Feb 11, 2016 08:24:28 | User Create Event: admin istrator Create Event [ss].
+Feb 11, 2016 08:26:42 | User Update Event: admin istrator Update Event [Ss].
+Feb 11, 2016 08:36:56 | User log out: admin istrator Log out.
+Feb 11, 2016 08:36:59 | User Log in: Jovie Malana Log in.
+Feb 11, 2016 08:50:07 | User Create Event: admin istrator Create Event [Mass].
+Feb 11, 2016 09:13:45 | User log out: Jovie Malana Log out.
+Feb 11, 2016 09:13:48 | User Log in: Jovie Malana Log in.
+Feb 11, 2016 09:13:50 | User log out: Jovie Malana Log out.
+Feb 11, 2016 09:13:54 | User Log in: admin istrator Log in.
+Feb 11, 2016 09:14:25 | User Delete User: admin istrator Delete User [coordinator].
+Feb 11, 2016 09:15:35 | User Create Event: admin istrator Create Event [ Ash Wednesday].
+Feb 11, 2016 11:49:03 | User Log in: Jovie Malana Log in.
+Feb 11, 2016 11:49:17 | User log out: Jovie Malana Log out.
+Feb 11, 2016 11:49:26 | User Log in: admin istrator Log in.
+Feb 11, 2016 11:51:08 | User log out: admin istrator Log out.
+Feb 12, 2016 02:21:30 | User Log in: admin istrator Log in.
+Feb 12, 2016 02:59:13 | User log out: admin istrator Log out.
+Feb 12, 2016 02:59:44 | User Log in: admin istrator Log in.
+Feb 12, 2016 03:06:18 | User log out: admin istrator Log out.
+Feb 12, 2016 03:07:13 | User Log in: admin istrator Log in.
+Feb 12, 2016 05:10:49 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 05:16:39 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 05:16:41 | User log out: Jovie Malana Log out.
+Feb 12, 2016 06:02:45 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 06:02:48 | User log out: Jovie Malana Log out.
+Feb 12, 2016 06:11:49 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 06:11:51 | User log out: Jovie Malana Log out.
+Feb 12, 2016 06:25:42 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 06:28:06 | User log out: Jovie Malana Log out.
+Feb 12, 2016 06:28:11 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 06:32:58 | User log out: Jovie Malana Log out.
+Feb 12, 2016 06:33:18 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 06:33:21 | User log out: Jovie Malana Log out.
+Feb 12, 2016 07:35:40 | User Log in: Jovie Malana Log in.
+Feb 12, 2016 07:53:15 | User Log in: admin istrator Log in.
+Feb 12, 2016 07:53:23 | User log out: admin istrator Log out.
+Feb 12, 2016 07:53:26 | User Log in: admin istrator Log in.
+Feb 12, 2016 08:00:16 | User Log in: admin istrator Log in.
+Feb 12, 2016 08:05:19 | User log out: admin istrator Log out.
+Feb 12, 2016 08:15:30 | User Log in: admin istrator Log in.
+Feb 12, 2016 08:29:01 | User log out: admin istrator Log out.
+Feb 12, 2016 08:29:06 | User Log in: admin istrator Log in.
+Feb 12, 2016 08:32:51 | User Create User: admin istrator Create User [teacher].
+Feb 12, 2016 08:33:02 | User Update User: admin istrator Update User [admin].
+Feb 12, 2016 08:33:39 | User Create User: admin istrator Create User [student].
+Feb 12, 2016 08:59:39 | User Update User: admin istrator Update User [teacher].
+Feb 12, 2016 09:00:03 | User Update User: admin istrator Update User [parents].
+Feb 12, 2016 09:00:33 | User Create User: admin istrator Create User [student].
+Feb 12, 2016 09:01:17 | User log out: admin istrator Log out.
+Feb 12, 2016 09:01:28 | User Log in: admin istrator Log in.
+Feb 12, 2016 09:01:35 | User Update User: admin istrator Update User [teacher].
+Feb 12, 2016 09:01:38 | User log out: admin istrator Log out.
+Feb 12, 2016 09:01:42 | User Log in: teacher teacher Log in.
+Feb 13, 2016 00:47:44 | User Log in: admin istrator Log in.
+Feb 13, 2016 02:25:01 | User Log in: admin istrator Log in.
+Feb 13, 2016 02:31:28 | User log out: admin istrator Log out.
+Feb 13, 2016 03:02:55 | User Log in: admin istrator Log in.
+Feb 13, 2016 03:12:30 | User log out: admin istrator Log out.
+Feb 13, 2016 03:12:45 | User Log in: admin istrator Log in.
+Feb 13, 2016 03:13:11 | User log out: admin istrator Log out.
+Feb 13, 2016 14:31:53 | User Log in: admin istrator Log in.
+Feb 13, 2016 14:44:16 | User log out: admin istrator Log out.
+Feb 13, 2016 14:50:46 | User Log in: admin istrator Log in.
+Feb 13, 2016 14:53:15 | User log out: admin istrator Log out.
+Feb 13, 2016 14:57:37 | User Log in: jeorge yyan de leon Log in.
+Feb 13, 2016 14:57:52 | User log out: jeorge yyan de leon Log out.
+Feb 13, 2016 15:13:45 | User Log in: admin istrator Log in.
+Feb 13, 2016 15:14:24 | User log out: admin istrator Log out.
+Feb 13, 2016 15:15:10 | User Log in: admin istrator Log in.
+Feb 13, 2016 15:15:37 | User Log in: admin istrator Log in.
+Feb 13, 2016 15:16:45 | User log out: admin istrator Log out.
+Feb 13, 2016 15:17:25 | User Log in: admin istrator Log in.
+Feb 13, 2016 15:20:58 | User log out: admin istrator Log out.
+Feb 13, 2016 15:26:30 | User Log in: teacher teacher Log in.
+Feb 13, 2016 15:28:00 | User Log in: teacher teacher Log in.
+Feb 13, 2016 15:32:46 | User log out: teacher teacher Log out.
+Feb 13, 2016 15:33:42 | User Log in: teacher teacher Log in.
+Feb 13, 2016 15:47:51 | User log out: teacher teacher Log out.
+Feb 13, 2016 15:51:21 | User Log in: admin istrator Log in.
+Feb 13, 2016 15:51:27 | User log out: admin istrator Log out.
+Feb 14, 2016 14:51:35 | User Log in: admin istrator Log in.
+Feb 14, 2016 14:57:19 | User log out: admin istrator Log out.
+Feb 14, 2016 15:00:04 | User Log in: admin istrator Log in.
+Feb 15, 2016 00:58:24 | User Log in: admin istrator Log in.
+Feb 15, 2016 01:35:53 | User log out: admin istrator Log out.
+Feb 15, 2016 01:38:42 | User Log in: teacher teacher Log in.
+Feb 15, 2016 01:42:55 | User log out: teacher teacher Log out.
+Feb 15, 2016 02:40:16 | User Log in: admin istrator Log in.
+Feb 15, 2016 02:40:45 | User Log in: admin istrator Log in.
+Feb 15, 2016 02:41:13 | User log out: admin istrator Log out.
+Feb 15, 2016 02:41:29 | User Log in: admin istrator Log in.
+Feb 15, 2016 02:41:37 | User log out: admin istrator Log out.
+Feb 15, 2016 02:43:37 | User Log in: admin istrator Log in.
+Feb 15, 2016 02:43:52 | User log out: admin istrator Log out.
+Feb 15, 2016 02:47:07 | User log out: admin istrator Log out.
+Feb 15, 2016 02:47:33 | User Log in: admin istrator Log in.
+Feb 15, 2016 02:48:42 | User log out: admin istrator Log out.
+Feb 15, 2016 02:54:00 | User Log in: admin istrator Log in.
+Feb 15, 2016 02:55:06 | User Log in: teacher teacher Log in.
+Feb 15, 2016 02:59:40 | User Log in: admin istrator Log in.
+Feb 15, 2016 03:00:34 | User log out: admin istrator Log out.
+Feb 15, 2016 03:00:45 | User Log in: admin istrator Log in.
+Feb 15, 2016 03:01:22 | User log out: admin istrator Log out.
+Feb 15, 2016 03:01:47 | User Log in: admin istrator Log in.
+Feb 15, 2016 03:09:37 | User log out: teacher teacher Log out.
+Feb 15, 2016 03:11:25 | User Log in: teacher teacher Log in.
+Feb 15, 2016 03:14:32 | User log out: admin istrator Log out.
+Feb 15, 2016 03:14:40 | User Log in: teacher teacher Log in.
+Feb 15, 2016 03:15:39 | User Update User: teacher teacher Update User [teacher].
+Feb 15, 2016 03:20:55 | User log out: ariane de leon Log out.
+Feb 15, 2016 03:21:56 | User Log in: yvette de leon Log in.
+Feb 15, 2016 03:22:15 | User log out: yvette de leon Log out.
+Feb 15, 2016 03:48:03 | User log out: ariane de leon Log out.
+Feb 15, 2016 03:49:32 | User Log in: admin istrator Log in.
+Feb 15, 2016 04:27:59 | User log out: admin istrator Log out.
+Feb 15, 2016 04:31:05 | User Log in: ariane de leon Log in.
+Feb 15, 2016 05:02:33 | User Log in: admin istrator Log in.
+Feb 15, 2016 05:57:38 | User log out: admin istrator Log out.
+Feb 15, 2016 05:58:36 | User Log in: admin istrator Log in.
+Feb 15, 2016 06:08:00 | User log out: admin istrator Log out.
+Feb 15, 2016 06:08:12 | User Log in: admin istrator Log in.
+Feb 15, 2016 06:31:17 | User log out: admin istrator Log out.
+Feb 15, 2016 06:31:23 | User Log in: ariane de leon Log in.
+Feb 15, 2016 07:13:54 | User log out: ariane de leon Log out.
+Feb 15, 2016 07:20:10 | User Log in: ariane de leon Log in.
+Feb 15, 2016 07:51:41 | User log out: ariane de leon Log out.
+Feb 15, 2016 07:51:45 | User Log in: admin istrator Log in.
+Feb 15, 2016 08:06:14 | User log out: admin istrator Log out.
+Feb 15, 2016 08:09:37 | User Log in: admin istrator Log in.
+Feb 15, 2016 08:14:30 | User log out: admin istrator Log out.
+Feb 15, 2016 08:14:36 | User Log in: ariane de leon Log in.
+Feb 15, 2016 08:16:11 | User log out: ariane de leon Log out.
+Feb 15, 2016 08:16:17 | User Log in: ariane de leon Log in.
+Feb 15, 2016 08:16:21 | User log out: ariane de leon Log out.
+Feb 15, 2016 08:16:24 | User Log in: admin istrator Log in.
+Feb 15, 2016 08:16:27 | User log out: admin istrator Log out.
+Feb 15, 2016 08:16:32 | User Log in: ariane de leon Log in.
+Feb 15, 2016 08:45:00 | User log out: ariane de leon Log out.
+Feb 15, 2016 08:46:47 | User Log in: ariane de leon Log in.
+Feb 15, 2016 09:16:35 | User Update User: ariane de leon Update User [student].
+Feb 15, 2016 09:18:35 | User Update User: ariane de leon Update User [student].
+Feb 15, 2016 09:21:51 | User Update User: ariane de leon Update User [parents].
+Feb 15, 2016 09:22:01 | User Update User: ariane de leon Update User [parents].
+Feb 16, 2016 01:44:25 | User Log in: admin istrator Log in.
+Feb 16, 2016 02:53:27 | User log out: admin istrator Log out.
+Feb 16, 2016 02:53:32 | User Log in: ariane de leon Log in.
+Feb 16, 2016 04:40:32 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 2 Mga Hugis].
+Feb 16, 2016 04:40:44 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 2 Mga Hugis].
+Feb 16, 2016 04:42:45 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 2 Mga Hugisss].
+Feb 16, 2016 04:42:53 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 2 Mga Hugiss].
+Feb 16, 2016 04:43:29 | User Edit Quiz: ariane de leon Edit Quiz [quiz 3 Mga kulay].
+Feb 16, 2016 04:44:54 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 2 Mga Hugiss].
+Feb 16, 2016 04:46:03 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 2 Mga Hugiss].
+Feb 16, 2016 05:01:07 | User Edit Quiz: ariane de leon Edit Quiz [ss].
+Feb 16, 2016 05:02:21 | User Edit Quiz: ariane de leon Edit Quiz [ss].
+Feb 16, 2016 05:02:49 | User Edit Quiz: ariane de leon Edit Quiz [ssfdf].
+Feb 16, 2016 05:04:20 | User Edit Quiz: ariane de leon Edit Quiz [quiz 3 Mga kulay].
+Feb 16, 2016 06:21:55 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 1 Mga Hayop].
+Feb 16, 2016 06:22:03 | User Edit Quiz: ariane de leon Edit Quiz [quiz 3 Mga kulay].
+Feb 16, 2016 06:22:18 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 1 Mga Hayop].
+Feb 16, 2016 06:22:39 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 1 Mga Hayop].
+Feb 16, 2016 06:41:21 | User Edit Quiz Question: ariane de leon Edit Quiz Question [ee].
+Feb 16, 2016 06:41:25 | User Edit Quiz Question: ariane de leon Edit Quiz Question [ee].
+Feb 16, 2016 06:42:15 | User Edit Quiz Question: ariane de leon Edit Quiz Question [ee].
+Feb 16, 2016 06:42:29 | User Edit Quiz Question: ariane de leon Edit Quiz Question [eeeeeww].
+Feb 16, 2016 06:56:51 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 1 Mga Hayop].
+Feb 16, 2016 06:56:57 | User Edit Quiz Question: ariane de leon Edit Quiz Question [sss].
+Feb 16, 2016 06:57:06 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 1 Mga Hayop].
+Feb 16, 2016 06:57:12 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 1 Mga Hayop].
+Feb 16, 2016 06:57:23 | User Edit Quiz Question: ariane de leon Edit Quiz Question [sssw].
+Feb 16, 2016 06:57:39 | User Edit Quiz Question: ariane de leon Edit Quiz Question [sssw].
+Feb 16, 2016 07:14:32 | User Edit Quiz Question: ariane de leon Edit Quiz Question [sssw].
+Feb 16, 2016 07:54:57 | User Edit Quiz Question: ariane de leon Edit Quiz Question [baboy].
+Feb 16, 2016 07:55:02 | User Edit Quiz Question: ariane de leon Edit Quiz Question [aso].
+Feb 16, 2016 08:23:20 | User Edit Quiz: ariane de leon Edit Quiz [Quiz 1 ].
+Feb 17, 2016 01:54:43 | User Log in: ariane de leon Log in.
+Feb 17, 2016 02:24:29 | User Edit Quiz: ariane de leon Edit Quiz [aso].
+Feb 17, 2016 02:25:08 | User Edit Quiz: ariane de leon Edit Quiz [aso].
+Feb 17, 2016 02:25:14 | User Edit Quiz: ariane de leon Edit Quiz [aso].
+Feb 17, 2016 02:27:42 | User Edit Quiz: ariane de leon Edit Quiz [baka].
+Feb 17, 2016 02:31:00 | User log out: ariane de leon Log out.
+Feb 17, 2016 05:47:40 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 05:48:10 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 05:51:32 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 05:51:57 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 05:52:03 | User Log in: admin istrator Log in.
+Feb 17, 2016 05:52:06 | User log out: admin istrator Log out.
+Feb 17, 2016 05:55:51 | User Log in: admin istrator Log in.
+Feb 17, 2016 05:55:54 | User log out: admin istrator Log out.
+Feb 17, 2016 05:55:59 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 07:23:50 | User Log in: admin istrator Log in.
+Feb 17, 2016 07:24:52 | User log out: admin istrator Log out.
+Feb 17, 2016 07:38:03 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 09:38:14 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 09:40:21 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 09:40:31 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 09:41:38 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 09:43:34 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 10:13:05 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 10:13:25 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 10:18:07 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 10:18:14 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 10:18:43 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 10:18:56 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 10:19:18 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 10:19:46 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 10:22:43 | User Log in: yvette de leon Log in.
+Feb 17, 2016 10:25:09 | User log out: yvette de leon Log out.
+Feb 17, 2016 11:29:04 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 11:29:11 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 11:29:18 | User Log in: admin istrator Log in.
+Feb 17, 2016 11:29:23 | User log out: admin istrator Log out.
+Feb 17, 2016 13:09:17 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 13:09:53 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 13:10:02 | User Log in: yvette de leon Log in.
+Feb 17, 2016 14:34:53 | User Log in: yvette de leon Log in.
+Feb 17, 2016 14:35:10 | User log out: yvette de leon Log out.
+Feb 17, 2016 19:57:09 | User Log in: yvette de leon Log in.
+Feb 17, 2016 20:05:19 | User log out: yvette de leon Log out.
+Feb 17, 2016 20:05:30 | User Log in: jeorge yyan de leon Log in.
+Feb 17, 2016 20:05:45 | User log out: jeorge yyan de leon Log out.
+Feb 17, 2016 20:05:54 | User Log in: ariane de leon Log in.
+Feb 17, 2016 20:07:09 | User log out: ariane de leon Log out.
+Feb 18, 2016 02:08:55 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 02:52:11 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 02:52:18 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 02:52:40 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 03:04:56 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 03:24:00 | User Log in: ariane de leon Log in.
+Feb 18, 2016 03:25:43 | User log out: ariane de leon Log out.
+Feb 18, 2016 03:29:23 | User Log in: ariane de leon Log in.
+Feb 18, 2016 03:29:28 | User Log in: admin istrator Log in.
+Feb 18, 2016 03:29:37 | User Log in: yvette de leon Log in.
+Feb 18, 2016 03:29:47 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 03:30:52 | User Log in: admin istrator Log in.
+Feb 18, 2016 03:31:00 | User log out: admin istrator Log out.
+Feb 18, 2016 03:31:05 | User Log in: ariane de leon Log in.
+Feb 18, 2016 04:19:03 | User log out: ariane de leon Log out.
+Feb 18, 2016 04:42:44 | User Log in: ariane de leon Log in.
+Feb 18, 2016 04:43:59 | User Create User: ariane de leon Create User [student2].
+Feb 18, 2016 04:44:37 | User log out: ariane de leon Log out.
+Feb 18, 2016 04:44:50 | User Log in: margaux bangcaya Log in.
+Feb 18, 2016 05:17:23 | User Log in: ariane de leon Log in.
+Feb 18, 2016 05:17:29 | User log out: ariane de leon Log out.
+Feb 18, 2016 05:18:22 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 05:19:09 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 05:19:31 | User Log in: ariane de leon Log in.
+Feb 18, 2016 05:21:50 | User log out: ariane de leon Log out.
+Feb 18, 2016 05:21:56 | User Log in: admin istrator Log in.
+Feb 18, 2016 05:42:28 | User Log in: admin istrator Log in.
+Feb 18, 2016 05:43:53 | User log out: admin istrator Log out.
+Feb 18, 2016 05:45:13 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:03:28 | User log out: admin istrator Log out.
+Feb 18, 2016 06:03:36 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:05:17 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:11:45 | User log out: admin istrator Log out.
+Feb 18, 2016 06:11:51 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:12:15 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:12:22 | User Log in: margaux bangcaya Log in.
+Feb 18, 2016 06:13:21 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:15:11 | User log out: admin istrator Log out.
+Feb 18, 2016 06:15:18 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:17:12 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:17:19 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:18:08 | User log out: admin istrator Log out.
+Feb 18, 2016 06:18:18 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:18:28 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:18:31 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:19:18 | User log out: admin istrator Log out.
+Feb 18, 2016 06:19:24 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:19:37 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:19:42 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:22:19 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:22:22 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:23:28 | User log out: admin istrator Log out.
+Feb 18, 2016 06:23:34 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:24:45 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:24:48 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:25:00 | User log out: admin istrator Log out.
+Feb 18, 2016 06:25:13 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:25:24 | User log out: admin istrator Log out.
+Feb 18, 2016 06:25:29 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:25:37 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:25:40 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:25:58 | User log out: admin istrator Log out.
+Feb 18, 2016 06:26:02 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 06:26:10 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 06:26:15 | User Log in: margaux bangcaya Log in.
+Feb 18, 2016 06:26:24 | User log out: margaux bangcaya Log out.
+Feb 18, 2016 06:26:26 | User Log in: admin istrator Log in.
+Feb 18, 2016 06:26:56 | User log out: admin istrator Log out.
+Feb 18, 2016 07:48:44 | User Log in: admin istrator Log in.
+Feb 18, 2016 07:49:11 | User log out: admin istrator Log out.
+Feb 18, 2016 07:49:31 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 07:49:36 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 07:51:31 | User Log in: admin istrator Log in.
+Feb 18, 2016 07:51:35 | User Log in: admin istrator Log in.
+Feb 18, 2016 08:20:26 | User Log in: ariane de leon Log in.
+Feb 18, 2016 08:25:43 | User log out: ariane de leon Log out.
+Feb 18, 2016 08:25:53 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 08:26:36 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 08:26:48 | User Log in: admin istrator Log in.
+Feb 18, 2016 08:46:00 | User log out: admin istrator Log out.
+Feb 18, 2016 08:47:34 | User Log in: yvette de leon Log in.
+Feb 18, 2016 08:48:12 | User Log in: yvette de leon Log in.
+Feb 18, 2016 08:49:45 | User Log in: ariane de leon Log in.
+Feb 18, 2016 09:01:34 | User log out: ariane de leon Log out.
+Feb 18, 2016 09:01:44 | User Log in: admin istrator Log in.
+Feb 18, 2016 09:02:01 | User log out: admin istrator Log out.
+Feb 18, 2016 09:20:53 | User Log in: ariane de leon Log in.
+Feb 18, 2016 09:21:01 | User log out: ariane de leon Log out.
+Feb 18, 2016 09:21:14 | User Log in: admin istrator Log in.
+Feb 18, 2016 09:33:06 | User Log in: admin istrator Log in.
+Feb 18, 2016 09:35:05 | User log out: admin istrator Log out.
+Feb 18, 2016 13:52:31 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 13:52:46 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 13:54:00 | User Log in: admin istrator Log in.
+Feb 18, 2016 13:59:32 | User log out: admin istrator Log out.
+Feb 18, 2016 13:59:43 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 14:00:06 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 14:00:13 | User Log in: margaux bangcaya Log in.
+Feb 18, 2016 14:00:34 | User log out: margaux bangcaya Log out.
+Feb 18, 2016 14:00:43 | User Log in: admin istrator Log in.
+Feb 18, 2016 14:07:43 | User log out: admin istrator Log out.
+Feb 18, 2016 14:07:54 | User Log in: yvette de leon Log in.
+Feb 18, 2016 14:13:22 | User log out: yvette de leon Log out.
+Feb 18, 2016 14:13:27 | User Log in: admin istrator Log in.
+Feb 18, 2016 14:35:55 | User log out: admin istrator Log out.
+Feb 18, 2016 14:36:04 | User Log in: admin istrator Log in.
+Feb 18, 2016 14:44:32 | User log out: admin istrator Log out.
+Feb 18, 2016 14:44:43 | User Log in: ariane de leon Log in.
+Feb 18, 2016 14:45:22 | User Edit Quiz: ariane de leon Edit Quiz [quiz 2].
+Feb 18, 2016 14:50:23 | User log out: ariane de leon Log out.
+Feb 18, 2016 14:50:29 | User Log in: ariane de leon Log in.
+Feb 18, 2016 14:50:32 | User log out: ariane de leon Log out.
+Feb 18, 2016 14:50:42 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 14:51:14 | User log out: jeorge yyan de leon Log out.
+Feb 18, 2016 14:58:58 | User Log in: jeorge yyan de leon Log in.
+Feb 18, 2016 21:41:55 | User Log in: admin istrator Log in.
+Feb 18, 2016 21:42:27 | User log out: admin istrator Log out.
+Feb 18, 2016 21:42:37 | User Log in: ariane de leon Log in.
+Feb 19, 2016 01:42:45 | User Log in: admin istrator Log in.
+Feb 19, 2016 01:42:58 | User log out: admin istrator Log out.
+Feb 19, 2016 01:43:03 | User Log in: yvette de leon Log in.
+Feb 19, 2016 01:43:22 | User log out: yvette de leon Log out.
+Feb 19, 2016 01:43:33 | User Log in: admin istrator Log in.
+Feb 19, 2016 02:22:35 | User log out: admin istrator Log out.
+Feb 19, 2016 02:22:37 | User Log in: admin istrator Log in.
+Feb 19, 2016 02:22:50 | User Update User: admin istrator Update User [yyan].
+Feb 19, 2016 02:23:02 | User Update User: admin istrator Update User [margaux].
+Feb 19, 2016 03:14:07 | User Create User: admin istrator Create User [millet].
+Feb 19, 2016 03:17:36 | User Update User: admin istrator Update User [].
+Feb 19, 2016 03:20:25 | User Update User: admin istrator Update User [].
+Feb 19, 2016 03:23:36 | User Update User: admin istrator Update User [].
+Feb 19, 2016 03:27:55 | User Update User: admin istrator Update User [].
+Feb 19, 2016 03:36:55 | User Log in: admin istrator Log in.
+Feb 19, 2016 03:44:34 | User log out: admin istrator Log out.
+Feb 19, 2016 03:44:37 | User Log in: ariane de leon Log in.
+Feb 19, 2016 03:48:10 | User log out: ariane de leon Log out.
+Feb 19, 2016 03:48:14 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 03:52:38 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 03:55:40 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 03:55:52 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 03:55:58 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 03:56:10 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 03:57:54 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 03:58:21 | User Log in: admin istrator Log in.
+Feb 19, 2016 04:00:15 | User log out: admin istrator Log out.
+Feb 19, 2016 04:01:25 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:04:09 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 04:04:13 | User Log in: ariane de leon Log in.
+Feb 19, 2016 04:04:52 | User log out: ariane de leon Log out.
+Feb 19, 2016 04:05:02 | User Log in: admin istrator Log in.
+Feb 19, 2016 04:05:14 | User Update User: admin istrator Update User [yvette].
+Feb 19, 2016 04:05:17 | User log out: admin istrator Log out.
+Feb 19, 2016 04:05:20 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:06:14 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:06:31 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:06:40 | User Log in: ariane de leon Log in.
+Feb 19, 2016 04:11:47 | User log out: ariane de leon Log out.
+Feb 19, 2016 04:11:51 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:12:02 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:12:06 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 04:12:17 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 04:12:26 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:12:32 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:12:36 | User Log in: margaux bangcaya Log in.
+Feb 19, 2016 04:12:48 | User log out: margaux bangcaya Log out.
+Feb 19, 2016 04:12:52 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:13:29 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:13:33 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:34:08 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:34:12 | User Log in: Millet bangcaya Log in.
+Feb 19, 2016 04:34:16 | User log out: Millet bangcaya Log out.
+Feb 19, 2016 04:34:29 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:44:41 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:44:44 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 04:44:53 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 04:44:57 | User Log in: margaux bangcaya Log in.
+Feb 19, 2016 04:45:07 | User log out: margaux bangcaya Log out.
+Feb 19, 2016 04:45:16 | User Log in: yvette de leon Log in.
+Feb 19, 2016 04:45:19 | User log out: yvette de leon Log out.
+Feb 19, 2016 04:45:23 | User Log in: Millet bangcaya Log in.
+Feb 19, 2016 04:45:40 | User log out: Millet bangcaya Log out.
+Feb 19, 2016 04:45:45 | User Log in: ariane de leon Log in.
+Feb 19, 2016 04:50:30 | User log out: ariane de leon Log out.
+Feb 19, 2016 05:06:46 | User Log in: admin istrator Log in.
+Feb 19, 2016 05:06:49 | User log out: admin istrator Log out.
+Feb 19, 2016 05:06:56 | User Log in: yvette de leon Log in.
+Feb 19, 2016 05:11:08 | User log out: yvette de leon Log out.
+Feb 19, 2016 05:11:44 | User Log in: yvette de leon Log in.
+Feb 19, 2016 05:14:52 | User log out: yvette de leon Log out.
+Feb 19, 2016 05:15:38 | User Log in: yvette de leon Log in.
+Feb 19, 2016 05:16:11 | User log out: yvette de leon Log out.
+Feb 19, 2016 05:16:35 | User Log in: Millet bangcaya Log in.
+Feb 19, 2016 05:16:52 | User log out: Millet bangcaya Log out.
+Feb 19, 2016 05:19:12 | User Log in: ariane de leon Log in.
+Feb 19, 2016 05:20:11 | User log out: ariane de leon Log out.
+Feb 19, 2016 05:20:21 | User Log in: admin istrator Log in.
+Feb 19, 2016 05:21:07 | User log out: admin istrator Log out.
+Feb 19, 2016 05:21:12 | User Log in: yvette de leon Log in.
+Feb 19, 2016 05:30:10 | User Log in: Millet bangcaya Log in.
+Feb 19, 2016 05:33:09 | User log out: Millet bangcaya Log out.
+Feb 19, 2016 06:12:52 | User Log in: admin istrator Log in.
+Feb 19, 2016 06:13:59 | User log out: admin istrator Log out.
+Feb 19, 2016 06:18:09 | User Log in: ariane de leon Log in.
+Feb 19, 2016 06:19:37 | User Log in: admin istrator Log in.
+Feb 19, 2016 06:19:43 | User Log in: admin istrator Log in.
+Feb 19, 2016 06:20:07 | User Log in: yvette de leon Log in.
+Feb 19, 2016 06:20:24 | User log out: yvette de leon Log out.
+Feb 19, 2016 06:20:28 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 06:20:35 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 06:20:42 | User Log in: ariane de leon Log in.
+Feb 19, 2016 06:23:46 | User Create User: admin istrator Create User [student1].
+Feb 19, 2016 06:25:25 | User log out: admin istrator Log out.
+Feb 19, 2016 06:26:25 | User Log in: Charles Marallag Log in.
+Feb 19, 2016 06:32:00 | User log out: ariane de leon Log out.
+Feb 19, 2016 06:32:09 | User Log in: ariane de leon Log in.
+Feb 19, 2016 06:40:15 | User log out: ariane de leon Log out.
+Feb 19, 2016 06:40:44 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 06:40:54 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 06:40:58 | User Log in: ariane de leon Log in.
+Feb 19, 2016 06:41:44 | User log out: ariane de leon Log out.
+Feb 19, 2016 06:41:49 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 06:42:20 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 06:42:24 | User Log in: ariane de leon Log in.
+Feb 19, 2016 06:49:39 | User log out: ariane de leon Log out.
+Feb 19, 2016 06:49:42 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 06:49:52 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 06:49:55 | User Log in: ariane de leon Log in.
+Feb 19, 2016 06:51:22 | User Edit Quiz: ariane de leon Edit Quiz [baboy].
+Feb 19, 2016 06:52:26 | User Log in: admin istrator Log in.
+Feb 19, 2016 06:53:38 | User log out: admin istrator Log out.
+Feb 19, 2016 06:54:27 | User Log in: Charles Marallag Log in.
+Feb 19, 2016 06:55:45 | User log out: Charles Marallag Log out.
+Feb 19, 2016 06:56:26 | User Log in: admin istrator Log in.
+Feb 19, 2016 06:56:33 | User log out: ariane de leon Log out.
+Feb 19, 2016 06:56:39 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 06:56:56 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 06:57:01 | User Log in: ariane de leon Log in.
+Feb 19, 2016 06:57:15 | User Edit Quiz: ariane de leon Edit Quiz [baka].
+Feb 19, 2016 06:57:22 | User log out: ariane de leon Log out.
+Feb 19, 2016 06:57:25 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 06:57:53 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 06:57:59 | User Log in: margaux bangcaya Log in.
+Feb 19, 2016 06:58:09 | User log out: admin istrator Log out.
+Feb 19, 2016 06:58:16 | User log out: margaux bangcaya Log out.
+Feb 19, 2016 06:58:25 | User Log in: yvette de leon Log in.
+Feb 19, 2016 06:59:21 | User log out: yvette de leon Log out.
+Feb 19, 2016 06:59:25 | User Log in: Millet bangcaya Log in.
+Feb 19, 2016 07:00:37 | User log out: Millet bangcaya Log out.
+Feb 19, 2016 07:00:49 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 07:10:06 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 07:10:09 | User Log in: margaux bangcaya Log in.
+Feb 19, 2016 07:10:21 | User log out: margaux bangcaya Log out.
+Feb 19, 2016 07:10:24 | User Log in: ariane de leon Log in.
+Feb 19, 2016 07:10:28 | User log out: ariane de leon Log out.
+Feb 19, 2016 07:10:31 | User Log in: yvette de leon Log in.
+Feb 19, 2016 07:11:07 | User log out: yvette de leon Log out.
+Feb 19, 2016 07:11:12 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 07:11:26 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 07:11:29 | User Log in: margaux bangcaya Log in.
+Feb 19, 2016 07:11:42 | User log out: margaux bangcaya Log out.
+Feb 19, 2016 07:11:46 | User Log in: yvette de leon Log in.
+Feb 19, 2016 07:11:50 | User log out: yvette de leon Log out.
+Feb 19, 2016 07:11:54 | User Log in: Millet bangcaya Log in.
+Feb 19, 2016 07:12:08 | User log out: Millet bangcaya Log out.
+Feb 19, 2016 07:12:12 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 07:12:21 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 07:12:24 | User Log in: margaux bangcaya Log in.
+Feb 19, 2016 07:12:33 | User log out: margaux bangcaya Log out.
+Feb 19, 2016 07:12:37 | User Log in: yvette de leon Log in.
+Feb 19, 2016 07:12:45 | User log out: yvette de leon Log out.
+Feb 19, 2016 07:12:50 | User Log in: Millet bangcaya Log in.
+Feb 19, 2016 07:13:10 | User log out: Millet bangcaya Log out.
+Feb 19, 2016 07:13:14 | User Log in: ariane de leon Log in.
+Feb 19, 2016 07:23:57 | User log out: ariane de leon Log out.
+Feb 19, 2016 08:46:47 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 08:46:55 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 08:48:43 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 08:53:14 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 08:53:24 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 08:59:24 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 08:59:27 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 08:59:45 | User log out: jeorge yyan de leon Log out.
+Feb 19, 2016 08:59:48 | User Log in: jeorge yyan de leon Log in.
+Feb 19, 2016 10:29:09 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 01:03:13 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 01:03:15 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 01:03:17 | User Log in: admin istrator Log in.
+Feb 20, 2016 01:03:43 | User log out: admin istrator Log out.
+Feb 20, 2016 01:03:47 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 01:20:11 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 01:20:16 | User Log in: ariane de leon Log in.
+Feb 20, 2016 01:22:04 | User log out: ariane de leon Log out.
+Feb 20, 2016 01:22:16 | User Log in: yvette de leon Log in.
+Feb 20, 2016 01:23:10 | User log out: yvette de leon Log out.
+Feb 20, 2016 01:23:15 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 01:27:53 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 01:27:57 | User Log in: ariane de leon Log in.
+Feb 20, 2016 01:35:13 | User log out: ariane de leon Log out.
+Feb 20, 2016 01:35:17 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 01:35:39 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 01:35:43 | User Log in: margaux bangcaya Log in.
+Feb 20, 2016 01:36:06 | User log out: margaux bangcaya Log out.
+Feb 20, 2016 01:36:10 | User Log in: ariane de leon Log in.
+Feb 20, 2016 01:36:40 | User log out: ariane de leon Log out.
+Feb 20, 2016 01:36:42 | User Log in: admin istrator Log in.
+Feb 20, 2016 01:38:10 | User log out: admin istrator Log out.
+Feb 20, 2016 01:38:15 | User Log in: ariane de leon Log in.
+Feb 20, 2016 01:49:11 | User log out: ariane de leon Log out.
+Feb 20, 2016 01:49:15 | User Log in: yvette de leon Log in.
+Feb 20, 2016 01:49:19 | User log out: yvette de leon Log out.
+Feb 20, 2016 01:49:22 | User Log in: Millet bangcaya Log in.
+Feb 20, 2016 01:49:27 | User log out: Millet bangcaya Log out.
+Feb 20, 2016 01:49:30 | User Log in: admin istrator Log in.
+Feb 20, 2016 01:56:59 | User log out: admin istrator Log out.
+Feb 20, 2016 01:57:02 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 02:33:31 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 03:17:09 | User Log in: ariane de leon Log in.
+Feb 20, 2016 03:17:55 | User log out: ariane de leon Log out.
+Feb 20, 2016 03:48:36 | User Log in: admin istrator Log in.
+Feb 20, 2016 03:48:48 | User log out: admin istrator Log out.
+Feb 20, 2016 03:48:53 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 04:08:10 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 04:12:24 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 04:12:55 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 04:22:19 | User Log in: admin istrator Log in.
+Feb 20, 2016 04:22:21 | User log out: admin istrator Log out.
+Feb 20, 2016 04:22:24 | User Log in: ariane de leon Log in.
+Feb 20, 2016 04:23:24 | User log out: ariane de leon Log out.
+Feb 20, 2016 04:23:28 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 04:29:48 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 04:34:05 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 04:46:09 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 04:48:14 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 04:48:38 | User Log in: admin istrator Log in.
+Feb 20, 2016 04:50:54 | User log out: admin istrator Log out.
+Feb 20, 2016 04:51:03 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 04:51:43 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 04:52:29 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 04:52:43 | User Log in: admin istrator Log in.
+Feb 20, 2016 04:53:09 | User log out: admin istrator Log out.
+Feb 20, 2016 05:02:28 | User Log in: admin istrator Log in.
+Feb 20, 2016 05:02:53 | User log out: admin istrator Log out.
+Feb 20, 2016 05:03:06 | User Log in: yvette de leon Log in.
+Feb 20, 2016 05:03:33 | User log out: yvette de leon Log out.
+Feb 20, 2016 05:03:53 | User Log in: Millet bangcaya Log in.
+Feb 20, 2016 05:04:04 | User log out: Millet bangcaya Log out.
+Feb 20, 2016 05:04:12 | User Log in: ariane de leon Log in.
+Feb 20, 2016 05:05:06 | User log out: ariane de leon Log out.
+Feb 20, 2016 05:05:17 | User Log in: Charles Marallag Log in.
+Feb 20, 2016 05:05:46 | User log out: Charles Marallag Log out.
+Feb 20, 2016 05:09:44 | User Log in: ariane de leon Log in.
+Feb 20, 2016 05:11:27 | User Log in: admin istrator Log in.
+Feb 20, 2016 05:11:29 | User log out: admin istrator Log out.
+Feb 20, 2016 05:14:19 | User log out: ariane de leon Log out.
+Feb 20, 2016 05:22:35 | User Log in: admin istrator Log in.
+Feb 20, 2016 05:30:49 | User log out: admin istrator Log out.
+Feb 20, 2016 05:32:23 | User Log in: admin istrator Log in.
+Feb 20, 2016 05:36:35 | User Log in: admin istrator Log in.
+Feb 20, 2016 05:43:20 | User log out: admin istrator Log out.
+Feb 20, 2016 05:43:55 | User Log in: admin istrator Log in.
+Feb 20, 2016 05:45:52 | User log out: admin istrator Log out.
+Feb 20, 2016 05:46:09 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 05:46:12 | User Log in: jeorge yyan de leon Log in.
+Feb 20, 2016 05:48:49 | User log out: jeorge yyan de leon Log out.
+Feb 20, 2016 05:49:01 | User Log in: yvette de leon Log in.
+Feb 20, 2016 05:49:27 | User log out: yvette de leon Log out.
+Feb 20, 2016 05:55:03 | User log out: admin istrator Log out.
+Feb 20, 2016 05:55:20 | User Log in: ariane de leon Log in.
+Feb 20, 2016 06:07:28 | User Create User: ariane de leon Create User [ryan].
+Feb 20, 2016 06:29:25 | User Edit Quiz: ariane de leon Edit Quiz [pagsusuri].
+Feb 20, 2016 06:34:54 | User Edit Quiz: ariane de leon Edit Quiz [Oo].
+Feb 20, 2016 06:35:33 | User log out: ariane de leon Log out.
+Feb 20, 2016 06:35:50 | User Log in: Ryan Dalaodao Log in.
+Feb 20, 2016 06:40:33 | User log out: Ryan Dalaodao Log out.
+Feb 20, 2016 06:40:43 | User Log in: ariane de leon Log in.
+Feb 20, 2016 06:51:45 | User log out: ariane de leon Log out.
+Feb 20, 2016 06:51:52 | User Log in: Charles Marallag Log in.
+Feb 20, 2016 06:51:52 | User Log in: Ryan Dalaodao Log in.
+Feb 20, 2016 06:53:27 | User log out: Ryan Dalaodao Log out.
+Feb 20, 2016 06:53:38 | User Log in: ariane de leon Log in.
+Feb 20, 2016 06:54:47 | User log out: ariane de leon Log out.
+Feb 20, 2016 06:54:57 | User Log in: Ryan Dalaodao Log in.
+Feb 20, 2016 06:56:55 | User log out: Ryan Dalaodao Log out.
+Feb 20, 2016 06:57:05 | User Log in: ariane de leon Log in.
+Feb 20, 2016 07:05:07 | User Edit Quiz: ariane de leon Edit Quiz [1. c].
+Feb 20, 2016 07:05:44 | User Edit Quiz: ariane de leon Edit Quiz [2. D].
+Feb 20, 2016 07:06:05 | User Edit Quiz: ariane de leon Edit Quiz [3. a].
+Feb 20, 2016 07:06:59 | User log out: ariane de leon Log out.
+Feb 20, 2016 07:07:07 | User Log in: Ryan Dalaodao Log in.
+Feb 20, 2016 07:07:42 | User log out: Ryan Dalaodao Log out.
+Feb 20, 2016 07:07:52 | User Log in: ariane de leon Log in.
+Feb 20, 2016 08:13:03 | User log out: Charles Marallag Log out.
+Feb 20, 2016 13:13:12 | User Log in: admin istrator Log in.
+Feb 24, 2016 00:56:14 | User Log in: admin istrator Log in.
+Feb 24, 2016 00:56:18 | User log out: admin istrator Log out.
+Feb 24, 2016 00:56:23 | User Log in: jeorge yyan de leon Log in.
+Feb 24, 2016 00:58:08 | User log out: jeorge yyan de leon Log out.
+Feb 24, 2016 00:58:10 | User Log in: admin istrator Log in.
+Feb 24, 2016 01:12:37 | User log out: admin istrator Log out.
+Feb 24, 2016 01:12:42 | User Log in: ariane de leon Log in.
+Feb 24, 2016 01:19:26 | User log out: ariane de leon Log out.
+Feb 24, 2016 01:19:28 | User Log in: admin istrator Log in.
+Feb 24, 2016 01:20:12 | User Create User: admin istrator Create User [teacher2].
+Feb 24, 2016 01:20:16 | User log out: admin istrator Log out.
+Feb 24, 2016 01:20:20 | User Log in: Nenita de leon Log in.
+Feb 24, 2016 01:20:25 | User log out: Nenita de leon Log out.
+Feb 24, 2016 01:20:29 | User Log in: ariane de leon Log in.
+Feb 24, 2016 01:24:58 | User Edit Quiz: ariane de leon Edit Quiz [a. A].
+Feb 24, 2016 01:25:09 | User log out: ariane de leon Log out.
+Feb 24, 2016 01:25:26 | User Log in: jeorge yyan de leon Log in.
+Feb 24, 2016 01:30:59 | User log out: jeorge yyan de leon Log out.
+Feb 24, 2016 01:31:04 | User Log in: ariane de leon Log in.
+Feb 24, 2016 01:31:15 | User Edit Quiz: ariane de leon Edit Quiz [a. a].
+Feb 24, 2016 01:32:04 | User Edit Quiz: ariane de leon Edit Quiz [a. o].
+Feb 24, 2016 01:32:37 | User Edit Quiz: ariane de leon Edit Quiz [b. e].
+Feb 24, 2016 01:32:50 | User Edit Quiz: ariane de leon Edit Quiz [c. l].
+Feb 24, 2016 01:33:54 | User Edit Quiz: ariane de leon Edit Quiz [c. t].
+Feb 24, 2016 01:34:20 | User Edit Quiz: ariane de leon Edit Quiz [b. o].
+Feb 24, 2016 01:34:39 | User Edit Quiz: ariane de leon Edit Quiz [a. o].
+Feb 24, 2016 01:34:45 | User Edit Quiz: ariane de leon Edit Quiz [b. a].
+Feb 24, 2016 01:35:04 | User Edit Quiz: ariane de leon Edit Quiz [c. b].
+Feb 24, 2016 01:35:24 | User log out: ariane de leon Log out.
+Feb 24, 2016 01:35:33 | User Log in: jeorge yyan de leon Log in.
+Feb 24, 2016 01:40:09 | User log out: jeorge yyan de leon Log out.
+Feb 24, 2016 01:40:15 | User Log in: margaux bangcaya Log in.
+Feb 24, 2016 01:40:50 | User log out: margaux bangcaya Log out.
+Feb 24, 2016 01:40:54 | User Log in: ariane de leon Log in.
+Feb 24, 2016 05:04:18 | User log out: ariane de leon Log out.
+Feb 24, 2016 05:04:22 | User Log in: jeorge yyan de leon Log in.
+Feb 24, 2016 06:23:33 | User log out: jeorge yyan de leon Log out.
+Feb 24, 2016 06:24:00 | User Log in: admin istrator Log in.
+Feb 24, 2016 07:25:06 | User log out: admin istrator Log out.
+Feb 24, 2016 07:25:09 | User Log in: ariane de leon Log in.
+Feb 24, 2016 08:03:46 | User Log in: ariane de leon Log in.
+Feb 24, 2016 08:44:42 | User log out: ariane de leon Log out.
+Feb 24, 2016 08:44:46 | User Log in: jeorge yyan de leon Log in.
+Feb 24, 2016 08:53:35 | User log out: jeorge yyan de leon Log out.
+Feb 24, 2016 08:53:44 | User Log in: ariane de leon Log in.
+Feb 24, 2016 09:24:51 | User log out: ariane de leon Log out.
+Feb 24, 2016 09:30:28 | User Log in: ariane de leon Log in.
+Feb 24, 2016 09:40:35 | User log out: ariane de leon Log out.
+Feb 24, 2016 09:57:36 | User Log in: ariane de leon Log in.
+Feb 24, 2016 10:06:00 | User log out: ariane de leon Log out.
+Feb 24, 2016 10:06:03 | User Log in: jeorge yyan de leon Log in.
+Feb 26, 2016 01:48:24 | User Log in: admin istrator Log in.
+Feb 26, 2016 01:48:27 | User log out: admin istrator Log out.
+Feb 26, 2016 01:48:31 | User Log in: ariane de leon Log in.
+Feb 26, 2016 01:50:00 | User Log in: ariane de leon Log in.
+Feb 26, 2016 03:21:40 | User log out: admin istrator Log out.
+Feb 26, 2016 03:21:42 | User Log in: admin istrator Log in.
+Feb 26, 2016 05:23:05 | User log out: admin istrator Log out.
+Feb 26, 2016 05:23:07 | User Log in: admin istrator Log in.
+Feb 26, 2016 05:23:10 | User log out: admin istrator Log out.
+Feb 26, 2016 05:23:13 | User Log in: ariane de leon Log in.
+Feb 29, 2016 05:57:48 | User log out: admin istrator Log out.
+Feb 29, 2016 05:57:51 | User Log in: admin istrator Log in.
+Feb 29, 2016 05:57:58 | User log out: admin istrator Log out.
+Feb 29, 2016 05:58:01 | User Log in: ariane de leon Log in.
+Feb 29, 2016 06:03:13 | User Update User: ariane de leon Update User [teacher].
+Feb 29, 2016 06:04:34 | User log out: ariane de leon Log out.
+Feb 29, 2016 06:04:36 | User Log in: admin istrator Log in.
+Feb 29, 2016 06:11:24 | User log out: admin istrator Log out.
+Feb 29, 2016 06:14:40 | User Log in: admin istrator Log in.
+Feb 29, 2016 06:18:51 | User log out: admin istrator Log out.
+Feb 29, 2016 06:18:54 | User Log in: ariane de leon Log in.
+Feb 29, 2016 07:18:34 | User Log in: admin istrator Log in.
+Feb 29, 2016 07:19:41 | User log out: admin istrator Log out.
+Feb 29, 2016 07:19:42 | User Log in: admin istrator Log in.
+Feb 29, 2016 07:38:14 | User log out: admin istrator Log out.
+Feb 29, 2016 07:48:53 | User Log in: admin istrator Log in.
+Feb 29, 2016 07:48:55 | User log out: admin istrator Log out.
+Feb 29, 2016 07:49:01 | User Log in: ariane de leon Log in.
+Feb 29, 2016 07:50:02 | User log out: ariane de leon Log out.
+Feb 29, 2016 07:50:07 | User Log in: Nenita de leon Log in.
+Feb 29, 2016 07:56:13 | User log out: Nenita de leon Log out.
+Feb 29, 2016 07:56:21 | User Log in: ariane de leon Log in.
+Feb 29, 2016 07:58:19 | User log out: ariane de leon Log out.
+Feb 29, 2016 07:58:22 | User Log in: Nenita de leon Log in.
+Feb 29, 2016 08:06:44 | User log out: Nenita de leon Log out.
+Feb 29, 2016 08:06:53 | User Log in: ariane de leon Log in.
+Feb 29, 2016 08:07:11 | User log out: ariane de leon Log out.
+Feb 29, 2016 08:07:16 | User Log in: Nenita de leon Log in.
+Feb 29, 2016 08:08:54 | User log out: Nenita de leon Log out.
+Feb 29, 2016 08:08:57 | User Log in: ariane de leon Log in.
+Feb 29, 2016 08:09:42 | User log out: ariane de leon Log out.
+Feb 29, 2016 08:09:45 | User Log in: Nenita de leon Log in.
+Feb 29, 2016 08:11:23 | User log out: Nenita de leon Log out.
+Feb 29, 2016 08:11:27 | User Log in: ariane de leon Log in.
+Mar 02, 2016 00:55:26 | User log out: admin istrator Log out.
+Mar 02, 2016 00:55:28 | User Log in: admin istrator Log in.
+Mar 02, 2016 00:55:46 | User Update User: admin istrator Update User [teacher].
+Mar 02, 2016 00:57:45 | User Update User: admin istrator Update User [teacher].
+Mar 02, 2016 00:59:53 | User log out: admin istrator Log out.
+Mar 02, 2016 01:00:03 | User Log in: ariane de leon Log in.
+Mar 03, 2016 00:21:08 | User Log in: admin istrator Log in.
+Mar 03, 2016 00:21:17 | User log out: admin istrator Log out.
+Mar 03, 2016 00:21:36 | User Log in: admin istrator Log in.
+Mar 03, 2016 00:21:56 | User Update User: admin istrator Update User [teacher].
+Mar 03, 2016 00:21:58 | User log out: admin istrator Log out.
+Mar 03, 2016 00:22:04 | User Log in: ariane de leon Log in.
+Mar 03, 2016 06:57:09 | User Log in: admin istrator Log in.
+Mar 03, 2016 06:59:21 | User log out: admin istrator Log out.
+Mar 03, 2016 07:19:58 | User Log in: admin istrator Log in.
+Mar 03, 2016 07:20:20 | User Create User: admin istrator Create User [newadmin].
+Mar 03, 2016 07:20:22 | User log out: admin istrator Log out.
+Mar 03, 2016 07:20:25 | User Log in: newadmin newadmin Log in.
+Mar 03, 2016 07:21:33 | User Log in: admin istrator Log in.
+Mar 03, 2016 07:22:28 | User Create User: admin istrator Create User [admin2].
+Mar 03, 2016 07:24:52 | User Create User: admin istrator Create User [newTeacher].
+Mar 03, 2016 07:25:29 | User Update User: admin istrator Update User [newTeacher].
+Mar 03, 2016 07:48:19 | User log out: admin istrator Log out.
+Mar 04, 2016 00:32:18 | User Log in: admin istrator Log in.
+Mar 04, 2016 00:32:56 | User log out: admin istrator Log out.
+Mar 04, 2016 00:33:00 | User Log in: ariane de leon Log in.
+Mar 04, 2016 00:33:10 | User log out: ariane de leon Log out.
+Mar 04, 2016 00:33:14 | User Log in: admin istrator Log in.
+Mar 04, 2016 03:02:31 | User log out: admin istrator Log out.
+Mar 04, 2016 03:02:34 | User Log in: admin istrator Log in.
+Mar 04, 2016 03:08:01 | User log out: admin istrator Log out.
+Mar 05, 2016 23:58:56 | User Log in: jeorge yyan de leon Log in.
+Mar 05, 2016 23:58:57 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:02:23 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 00:02:25 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:02:31 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 00:09:05 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:09:09 | User Log in: yvette de leon Log in.
+Mar 06, 2016 00:11:00 | User log out: yvette de leon Log out.
+Mar 06, 2016 00:11:04 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 00:13:32 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:13:36 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 00:15:24 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:15:33 | User Log in: yvette de leon Log in.
+Mar 06, 2016 00:17:38 | User log out: yvette de leon Log out.
+Mar 06, 2016 00:17:41 | User Log in: ariane de leon Log in.
+Mar 06, 2016 00:21:23 | User log out: ariane de leon Log out.
+Mar 06, 2016 00:21:24 | User Log in: admin istrator Log in.
+Mar 06, 2016 00:21:36 | User log out: admin istrator Log out.
+Mar 06, 2016 00:21:55 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 00:34:28 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:34:33 | User Log in: margaux bangcaya Log in.
+Mar 06, 2016 00:35:26 | User log out: margaux bangcaya Log out.
+Mar 06, 2016 00:35:30 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 00:46:05 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:46:09 | User Log in: margaux bangcaya Log in.
+Mar 06, 2016 00:47:25 | User log out: margaux bangcaya Log out.
+Mar 06, 2016 00:47:32 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 00:56:49 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 00:56:52 | User Log in: margaux bangcaya Log in.
+Mar 06, 2016 00:56:57 | User log out: margaux bangcaya Log out.
+Mar 06, 2016 00:57:00 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 01:17:57 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 01:18:00 | User Log in: margaux bangcaya Log in.
+Mar 06, 2016 01:18:06 | User log out: margaux bangcaya Log out.
+Mar 06, 2016 01:18:12 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 01:21:45 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 01:21:52 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 01:26:03 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 01:26:08 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 01:32:09 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 01:32:11 | User Log in: ariane de leon Log in.
+Mar 06, 2016 01:32:57 | User log out: ariane de leon Log out.
+Mar 06, 2016 01:33:00 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 01:40:17 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 01:40:20 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 01:40:39 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 01:40:49 | User Log in: margaux bangcaya Log in.
+Mar 06, 2016 02:02:00 | User log out: margaux bangcaya Log out.
+Mar 06, 2016 02:02:04 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 02:06:17 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 02:06:20 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 02:06:45 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 02:06:48 | User Log in: margaux bangcaya Log in.
+Mar 06, 2016 02:06:52 | User log out: margaux bangcaya Log out.
+Mar 06, 2016 02:07:07 | User Log in: admin istrator Log in.
+Mar 06, 2016 02:07:09 | User log out: admin istrator Log out.
+Mar 06, 2016 02:07:14 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 02:10:28 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 02:10:33 | User Log in: ariane de leon Log in.
+Mar 06, 2016 02:11:08 | User log out: ariane de leon Log out.
+Mar 06, 2016 02:12:39 | User Log in: ariane de leon Log in.
+Mar 06, 2016 02:12:53 | User log out: ariane de leon Log out.
+Mar 06, 2016 02:19:39 | User Log in: admin istrator Log in.
+Mar 06, 2016 02:19:52 | User log out: admin istrator Log out.
+Mar 06, 2016 02:19:53 | User Log in: admin istrator Log in.
+Mar 06, 2016 02:19:57 | User log out: admin istrator Log out.
+Mar 06, 2016 02:20:01 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 02:20:42 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 02:20:46 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 02:26:30 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 02:28:19 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 02:28:47 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 02:30:47 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 02:35:47 | User Log in: ariane de leon Log in.
+Mar 06, 2016 02:59:03 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 03:01:28 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 03:01:51 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 03:31:03 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 03:31:21 | User Log in: ariane de leon Log in.
+Mar 06, 2016 03:58:04 | User log out: ariane de leon Log out.
+Mar 06, 2016 03:58:15 | User Log in: ariane de leon Log in.
+Mar 06, 2016 04:04:07 | User log out: ariane de leon Log out.
+Mar 06, 2016 04:04:16 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 04:05:41 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 04:06:52 | User Log in: jeorge yyan de leon Log in.
+Mar 06, 2016 04:07:54 | User log out: jeorge yyan de leon Log out.
+Mar 06, 2016 04:08:05 | User Log in: ariane de leon Log in.
+Mar 06, 2016 04:08:27 | User Delete User: ariane de leon Delete User [yyan].
+Mar 06, 2016 04:32:46 | User log out: ariane de leon Log out.
+Mar 06, 2016 04:35:14 | User Log in: admin istrator Log in.
+Mar 06, 2016 04:36:01 | User Create User: admin istrator Create User [parent].
+Mar 06, 2016 04:36:18 | User Update User: admin istrator Update User [].
+Mar 06, 2016 04:36:25 | User log out: admin istrator Log out.
+Mar 06, 2016 04:36:42 | User Log in: Charles Marallag Log in.
+Mar 06, 2016 04:40:15 | User log out: Charles Marallag Log out.
+Mar 06, 2016 04:44:31 | User Log in: ariane de leon Log in.
+Mar 06, 2016 04:46:54 | User log out: ariane de leon Log out.
+Mar 06, 2016 04:47:09 | User Log in: Charles Marallag Log in.
+Mar 06, 2016 04:51:14 | User log out: Charles Marallag Log out.
+Mar 06, 2016 04:51:23 | User Log in: ariane de leon Log in.
+Mar 06, 2016 05:00:10 | User log out: ariane de leon Log out.
+Mar 06, 2016 07:00:25 | User Log in: Charles Marallag Log in.
+Mar 06, 2016 07:01:35 | User log out: Charles Marallag Log out.
+Mar 06, 2016 07:08:49 | User Log in: admin istrator Log in.
+Mar 06, 2016 07:10:56 | User Create User: admin istrator Create User [cd].
+Mar 06, 2016 07:15:30 | User Update User: admin istrator Update User [].
+Mar 06, 2016 07:15:55 | User Update User: admin istrator Update User [].
+Mar 06, 2016 07:16:41 | User Delete User: admin istrator Delete User [student1].
+Mar 06, 2016 07:17:06 | User log out: admin istrator Log out.
+Mar 06, 2016 07:17:15 | User Log in: darwin marallag Log in.
+Mar 06, 2016 07:20:26 | User log out: darwin marallag Log out.
+Mar 06, 2016 07:20:37 | User Log in: ariane de leon Log in.
+Mar 06, 2016 07:25:28 | User log out: ariane de leon Log out.
+Mar 06, 2016 07:25:37 | User Log in: darwin marallag Log in.
+Mar 06, 2016 07:29:27 | User log out: darwin marallag Log out.
+Mar 06, 2016 07:31:42 | User Log in: darwin marallag Log in.
+Mar 06, 2016 07:34:40 | User log out: darwin marallag Log out.
+Mar 06, 2016 07:34:52 | User Log in: ariane de leon Log in.
+Jul 31, 2016 16:45:54 | User Log in: admin istrator Log in.
+Jul 31, 2016 16:49:52 | User log out: admin istrator Log out.
+Jul 31, 2016 16:53:05 | User Log in: ariane de leon Log in.
+Jul 31, 2016 16:53:12 | User log out: ariane de leon Log out.
+Jul 31, 2016 16:56:56 | User Log in: yvette de leon Log in.
+Jul 31, 2016 16:57:13 | User log out: yvette de leon Log out.
+Jul 31, 2016 16:57:19 | User Log in: jeorge yyan de leon Log in.
+Jul 31, 2016 17:00:56 | User log out: jeorge yyan de leon Log out.
+Jul 31, 2016 17:02:47 | User Log in: admin istrator Log in.
+Jul 31, 2016 17:11:41 | User log out: admin istrator Log out.
+Jul 31, 2016 17:11:48 | User Log in: jeorge yyan de leon Log in.
+Jul 31, 2016 17:12:36 | User log out: jeorge yyan de leon Log out.
+Jul 31, 2016 17:12:59 | User Log in: ariane de leon Log in.
+Jul 31, 2016 17:19:28 | User log out: ariane de leon Log out.
+Jul 31, 2016 17:19:32 | User Log in: Ryan Dalaodao Log in.
+Jul 31, 2016 17:24:13 | User log out: Ryan Dalaodao Log out.
+Jul 31, 2016 17:24:19 | User Log in: admin istrator Log in.
+Jul 31, 2016 17:25:01 | User log out: admin istrator Log out.
+Jul 31, 2016 17:25:08 | User Log in: jeorge yyan de leon Log in.
+Jul 31, 2016 17:26:22 | User log out: jeorge yyan de leon Log out.
+Jul 31, 2016 17:26:31 | User Log in: ariane de leon Log in.
+Jul 31, 2016 17:27:03 | User log out: ariane de leon Log out.
+Jul 31, 2016 17:27:09 | User Log in: yvette de leon Log in.
+Jul 31, 2016 17:27:27 | User log out: yvette de leon Log out.
+Jul 31, 2016 17:27:33 | User Log in: ariane de leon Log in.
+Jul 31, 2016 17:30:52 | User log out: ariane de leon Log out.
+Jul 31, 2016 17:30:58 | User Log in: yvette de leon Log in.
+Jul 31, 2016 20:11:23 | User log out: Millet bangcaya Log out.
+Aug 02, 2016 18:33:23 | User Log in: ariane de leon Log in.
+Aug 02, 2016 19:03:37 | User log out: ariane de leon Log out.
+Aug 02, 2016 19:03:55 | User Log in: ariane de leon Log in.
+Aug 02, 2016 21:31:32 | User Log in: ariane de leon Log in.
+Aug 02, 2016 21:31:42 | User log out: ariane de leon Log out.
+Aug 02, 2016 21:31:47 | User Log in: jeorge yyan de leon Log in.
+Aug 02, 2016 22:15:22 | User log out: jeorge yyan de leon Log out.
+Aug 02, 2016 22:15:53 | User Log in: ariane de leon Log in.
+Aug 02, 2016 22:17:03 | User Log in: ariane de leon Log in.
+Aug 03, 2016 17:22:09 | User Log in: ariane de leon Log in.
+Aug 04, 2016 21:58:43 | User Log in: ariane de leon Log in.
+Aug 06, 2016 22:56:02 | User Log in: jeorge yyan de leon Log in.
+Aug 07, 2016 00:09:05 | User log out: jeorge yyan de leon Log out.
+Aug 07, 2016 10:30:10 | User Log in: ariane de leon Log in.
+Aug 07, 2016 15:42:42 | User Log in: jeorge yyan de leon Log in.
+Aug 07, 2016 15:44:45 | User Log in: ariane de leon Log in.
+Aug 07, 2016 15:46:22 | User log out: jeorge yyan de leon Log out.
+Aug 07, 2016 15:46:39 | User Log in: ariane de leon Log in.
+Aug 07, 2016 16:01:05 | User log out: ariane de leon Log out.
+Aug 07, 2016 16:01:09 | User Log in: jeorge yyan de leon Log in.
+Aug 07, 2016 16:07:46 | User log out: jeorge yyan de leon Log out.
+Aug 07, 2016 16:07:51 | User Log in: admin istrator Log in.
+Aug 07, 2016 16:16:41 | User log out: admin istrator Log out.
+Aug 07, 2016 16:31:54 | User Log in: ariane de leon Log in.
+Aug 07, 2016 16:34:00 | User log out: ariane de leon Log out.
+Aug 07, 2016 16:38:09 | User Log in: ariane de leon Log in.
+Aug 07, 2016 18:39:41 | User log out: ariane de leon Log out.
+Aug 07, 2016 18:48:59 | User log out: ariane de leon Log out.
+Aug 07, 2016 18:51:49 | User Log in: ariane de leon Log in.
+Aug 07, 2016 19:02:25 | User Log in: jeorge yyan de leon Log in.
+Aug 07, 2016 19:02:27 | User log out: jeorge yyan de leon Log out.
+Aug 07, 2016 19:02:35 | User Log in: ariane de leon Log in.
+Aug 07, 2016 19:02:37 | User log out: ariane de leon Log out.
+Aug 07, 2016 20:11:27 | User Log in: yvette de leon Log in.
+Aug 07, 2016 20:11:30 | User log out: yvette de leon Log out.
+Aug 07, 2016 20:12:02 | User Log in: Ryan Dalaodao Log in.
+Aug 07, 2016 20:12:04 | User log out: Ryan Dalaodao Log out.
+Aug 07, 2016 20:14:59 | User Log in: Ryan Dalaodao Log in.
+Aug 07, 2016 20:15:01 | User log out: Ryan Dalaodao Log out.
+Aug 07, 2016 20:15:10 | User Log in: yvette de leon Log in.
+Aug 07, 2016 20:15:15 | User log out: yvette de leon Log out.
+Aug 07, 2016 20:23:59 | User Log in: ariane de leon Log in.
+Aug 07, 2016 20:29:00 | User Log in: ariane de leon Log in.
+Aug 07, 2016 20:29:02 | User log out: ariane de leon Log out.
+Aug 07, 2016 20:30:35 | User Log in: ariane de leon Log in.
+Aug 07, 2016 20:30:49 | User log out: ariane de leon Log out.
+Aug 07, 2016 20:31:46 | User Log in: Charles Marallag Log in.
+Aug 07, 2016 20:31:49 | User log out: Charles Marallag Log out.
+Aug 07, 2016 20:31:58 | User Log in: yvette de leon Log in.
+Aug 07, 2016 20:32:53 | User Log in: admin istrator Log in.
+Aug 07, 2016 20:34:05 | User log out: admin istrator Log out.
+Aug 07, 2016 20:34:11 | User Log in: ariane de leon Log in.
+Aug 07, 2016 20:37:15 | User log out: ariane de leon Log out.
+Aug 07, 2016 20:37:48 | User Log in: ariane de leon Log in.
+Aug 08, 2016 00:22:56 | User Log in: ariane de leon Log in.
+Aug 08, 2016 01:36:59 | User log out: ariane de leon Log out.
+Aug 08, 2016 02:00:49 | User Log in: ariane de leon Log in.
+Aug 08, 2016 05:40:22 | User Log in: ariane de leon Log in.
+Aug 16, 2016 09:18:22 | User Log in: Charles Marallag Log in.
+Aug 16, 2016 09:18:49 | User log out: Charles Marallag Log out.
+Aug 16, 2016 09:19:07 | User Log in: Charles Marallag Log in.
+Aug 18, 2016 04:18:13 | User Log in: Charles Marallag Log in.
+Aug 18, 2016 07:44:34 | User Log in: Charles Marallag Log in.
+Aug 18, 2016 10:04:31 | User Log in: Charles Marallag Log in.
+Aug 18, 2016 16:02:15 | User Log in: Charles Marallag Log in.
+Aug 18, 2016 16:03:55 | User Log in: Charles Marallag Log in.
+Aug 18, 2016 16:43:34 | User Log in: admin istrator Log in.
+Aug 18, 2016 16:47:50 | User log out: admin istrator Log out.
+Aug 18, 2016 16:47:56 | User Log in: ariane de leon Log in.
+Aug 19, 2016 02:11:40 | User Log in: ariane de leon Log in.
+Aug 19, 2016 03:34:49 | User Log in: Charles Marallag Log in.
+Aug 21, 2016 13:33:27 | User Log in: Charles Marallag Log in.
+Aug 22, 2016 12:14:15 | User Log in: ariane de leon Log in.
+Aug 22, 2016 13:59:00 | User Log in: Charles Marallag Log in.
+Aug 22, 2016 17:17:31 | User Log in: Charles Marallag Log in.
+Aug 22, 2016 18:39:19 | User Log in: Charles Marallag Log in.
+Aug 26, 2016 13:12:34 | User Log in: Charles Marallag Log in.
+Aug 26, 2016 22:09:33 | User Log in: ariane de leon Log in.
+Aug 27, 2016 00:50:02 | User Log in: ariane de leon Log in.
+Aug 29, 2016 04:28:30 | User Log in: ariane de leon Log in.
+Aug 29, 2016 04:28:34 | User log out: ariane de leon Log out.
+Aug 29, 2016 04:28:56 | User Log in: ariane de leon Log in.
+Aug 29, 2016 04:30:14 | User Log in: Charles Marallag Log in.
+Aug 29, 2016 05:21:44 | User log out: ariane de leon Log out.
+Aug 29, 2016 05:28:22 | User Log in: Charles Marallag Log in.
+Aug 29, 2016 05:30:32 | User Log in: Nenita de leon Log in.
+Aug 29, 2016 06:19:25 | User Log in: Charles Marallag Log in.
+Aug 29, 2016 06:21:37 | User log out: Nenita de leon Log out.
+Aug 29, 2016 06:21:50 | User Log in: Charles Marallag Log in.
+Aug 29, 2016 11:56:35 | User Log in: ariane de leon Log in.
+Aug 29, 2016 14:18:58 | User Log in: Charles Marallag Log in.
+Aug 29, 2016 14:22:33 | User Log in: ariane de leon Log in.
+Aug 29, 2016 15:13:14 | User Log in: ariane de leon Log in.
+Aug 30, 2016 08:35:01 | User Log in: ariane de leon Log in.
+Aug 30, 2016 08:57:06 | User Log in: Charles Marallag Log in.
+Aug 30, 2016 15:16:55 | User Log in: ariane de leon Log in.
+Aug 30, 2016 15:17:51 | User Log in: Ryan Dalaodao Log in.
+Aug 30, 2016 15:58:22 | User Create User: ariane de leon Create User [01-2016-0007].
+Aug 30, 2016 15:59:31 | User Create User: ariane de leon Create User [].
+Aug 30, 2016 16:00:03 | User log out: ariane de leon Log out.
+Aug 30, 2016 16:00:13 | User Log in: ariane de leon Log in.
+Aug 30, 2016 19:21:19 | User Create User: ariane de leon Create User [03-2001-6232].
+Aug 30, 2016 19:28:46 | User Create User: ariane de leon Create User [11-1111-1111].
+Aug 30, 2016 19:29:23 | User Create User: ariane de leon Create User [11-1111-1234].
+Aug 30, 2016 19:30:24 | User log out: ariane de leon Log out.
+Aug 30, 2016 19:30:31 | User Log in: admin istrator Log in.
+Aug 30, 2016 19:32:40 | User log out: admin istrator Log out.
+Aug 30, 2016 19:34:03 | User Log in: ariane de leon Log in.
+Aug 30, 2016 19:34:54 | User Create User: ariane de leon Create User [01-2016-2222].
+Aug 30, 2016 19:42:32 | User Update User: ariane de leon Update User [01-2016-2222].
+Aug 30, 2016 19:43:05 | User Update User: ariane de leon Update User [02-2016-0002].
+Aug 30, 2016 19:43:35 | User log out: ariane de leon Log out.
+Aug 30, 2016 19:43:56 | User Log in: admin istrator Log in.
+Aug 30, 2016 19:44:05 | User log out: admin istrator Log out.
+Aug 30, 2016 19:44:08 | User Log in: ariane de leon Log in.
+Aug 30, 2016 19:47:37 | User Create User: ariane de leon Create User [02-1111-1111].
+Aug 30, 2016 19:47:48 | User Create User: ariane de leon Create User [33-3333-3333].
+Aug 30, 2016 19:57:19 | User Log in: ariane de leon Log in.
+Aug 30, 2016 19:57:24 | User log out: ariane de leon Log out.
+Aug 30, 2016 19:57:29 | User log out: ariane de leon Log out.
+Aug 30, 2016 19:57:38 | User Log in: ariane de leon Log in.
+Aug 30, 2016 19:59:44 | User Log in: ariane de leon Log in.
+Aug 30, 2016 20:06:13 | User log out: ariane de leon Log out.
+Aug 30, 2016 20:08:04 | User log out: ariane de leon Log out.
+Aug 30, 2016 20:08:12 | User Log in: admin istrator Log in.
+Aug 30, 2016 20:09:19 | User Create User: admin istrator Create User [rosemijares].
+Aug 30, 2016 20:09:39 | User log out: admin istrator Log out.
+Aug 30, 2016 20:09:56 | User Log in: Rose Marlyn Mijares Log in.
+Aug 30, 2016 20:10:45 | User Update User: Rose Marlyn Mijares Update User [rosemijares].
+Aug 30, 2016 20:10:51 | User log out: Rose Marlyn Mijares Log out.
+Aug 30, 2016 20:11:08 | User Log in: Rose Marlyn Mijares Log in.
+Aug 30, 2016 20:12:53 | User log out: Rose Marlyn Mijares Log out.
+Aug 30, 2016 20:12:58 | User Log in: ariane de leon Log in.
+Aug 30, 2016 20:13:23 | User log out: ariane de leon Log out.
+Aug 30, 2016 20:13:33 | User Log in: Rose Marlyn Mijares Log in.
+Aug 30, 2016 20:24:29 | User Log in: Charles Marallag Log in.
+Aug 30, 2016 20:43:08 | User Log in: ariane de leon Log in.
+Aug 30, 2016 20:43:21 | User Log in: Charles Marallag Log in.
+Aug 30, 2016 20:47:13 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 03:04:01 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 03:05:14 | User Log in: ariane de leon Log in.
+Aug 31, 2016 03:15:42 | User Log in: ariane de leon Log in.
+Aug 31, 2016 03:17:38 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 03:34:08 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 03:49:23 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 05:22:54 | User Log in: ariane de leon Log in.
+Aug 31, 2016 05:27:00 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 05:51:18 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 06:17:51 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 06:19:59 | User Log in: ariane de leon Log in.
+Aug 31, 2016 06:52:15 | User Log in: ariane de leon Log in.
+Aug 31, 2016 06:52:34 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 06:55:57 | User Log in: Charles Marallag Log in.
+Aug 31, 2016 06:57:33 | User log out: Charles Marallag Log out.
+Aug 31, 2016 10:21:57 | User Log in: ariane de leon Log in.
+Aug 31, 2016 15:07:07 | User Log in: ariane de leon Log in.
+Aug 31, 2016 15:07:28 | User Log in: ariane de leon Log in.
+Sep 01, 2016 00:23:57 | User Log in: Charles Marallag Log in.
+Sep 01, 2016 09:08:26 | User Log in: Charles Marallag Log in.
+Sep 01, 2016 13:35:22 | User Log in: Charles Marallag Log in.
+Sep 01, 2016 13:36:39 | User Log in: ariane de leon Log in.
+Sep 01, 2016 13:37:19 | User Create User: ariane de leon Create User [02-2016-0487].
+Sep 01, 2016 13:37:42 | User log out: ariane de leon Log out.
+Sep 01, 2016 13:50:10 | User Log in: ariane de leon Log in.
+Sep 01, 2016 13:55:23 | User Log in: ariane de leon Log in.
+Sep 01, 2016 14:20:46 | User Create User: Charles Marallag Create User [00-0022-3396].
+Sep 01, 2016 14:20:55 | User Delete User: Charles Marallag Delete User [02-2016-0487].
+Sep 01, 2016 14:21:02 | User Delete User: Charles Marallag Delete User [01-2016-02].
+Sep 01, 2016 14:21:10 | User Delete User: Charles Marallag Delete User [00-0022-3396].
+Sep 01, 2016 14:21:13 | User Delete User: Charles Marallag Delete User [01-2016-0001].
+Sep 01, 2016 14:23:43 | User Log in: ariane de leon Log in.
+Sep 01, 2016 14:24:33 | User Create User: ariane de leon Create User [01-2016-0002].
+Sep 01, 2016 14:25:07 | User Log in: Charles Marallag Log in.
+Sep 01, 2016 14:32:21 | User Log in: Charles Marallag Log in.
+Sep 01, 2016 14:32:42 | User log out: Charles Marallag Log out.
+Sep 01, 2016 14:32:47 | User Log in: ariane de leon Log in.
+Sep 01, 2016 14:56:18 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 02:20:43 | User Log in: ariane de leon Log in.
+Sep 02, 2016 02:21:13 | User log out: ariane de leon Log out.
+Sep 02, 2016 02:21:18 | User Log in: ariane de leon Log in.
+Sep 02, 2016 02:31:10 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 02:37:07 | User log out: Charles Marallag Log out.
+Sep 02, 2016 02:37:11 | User Log in: ariane de leon Log in.
+Sep 02, 2016 05:14:16 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 05:17:08 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 05:22:41 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 05:37:05 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 05:37:24 | User log out: Charles Marallag Log out.
+Sep 02, 2016 05:37:28 | User Log in: ariane de leon Log in.
+Sep 02, 2016 05:37:32 | User log out: ariane de leon Log out.
+Sep 02, 2016 05:37:35 | User Log in: ariane de leon Log in.
+Sep 02, 2016 05:45:08 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 05:48:00 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 05:50:03 | User Log in: ariane de leon Log in.
+Sep 02, 2016 05:55:02 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 05:55:30 | User log out: Charles Marallag Log out.
+Sep 02, 2016 05:55:32 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:30:09 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:30:19 | User log out: ariane de leon Log out.
+Sep 02, 2016 06:30:35 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 06:31:16 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:36:23 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:36:45 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 06:37:41 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:38:08 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 06:39:40 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:39:42 | User log out: ariane de leon Log out.
+Sep 02, 2016 06:39:46 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 06:40:26 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:45:21 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 06:51:02 | User Log in: ariane de leon Log in.
+Sep 02, 2016 06:51:09 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 07:03:17 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 07:20:33 | User Create User: Charles Marallag Create User [01-2016-0000].
+Sep 02, 2016 07:20:43 | User log out: Charles Marallag Log out.
+Sep 02, 2016 07:21:23 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 11:35:18 | User Log in: Charles Marallag Log in.
+Sep 02, 2016 12:04:40 | User log out: Charles Marallag Log out.
+Sep 02, 2016 12:04:48 | User Log in: ariane de leon Log in.
+Sep 04, 2016 06:08:48 | User Log in: Charles Marallag Log in.
+Sep 05, 2016 17:15:06 | User Log in: Charles Marallag Log in.
+Sep 05, 2016 17:18:30 | User log out: Charles Marallag Log out.
+Sep 05, 2016 17:18:37 | User Log in: ariane de leon Log in.
+Sep 05, 2016 17:29:59 | User Log in: Charles Marallag Log in.
+Sep 05, 2016 17:50:42 | User Log in: Charles Marallag Log in.
+Sep 05, 2016 17:51:02 | User log out: ariane de leon Log out.
+Sep 05, 2016 17:51:07 | User Log in: ariane de leon Log in.
+Sep 05, 2016 18:03:00 | User Log in: Charles Marallag Log in.
+Sep 05, 2016 18:03:15 | User log out: ariane de leon Log out.
+Sep 05, 2016 18:03:18 | User Log in: ariane de leon Log in.
+Sep 05, 2016 18:06:25 | User Log in: Charles Marallag Log in.
+Sep 05, 2016 18:39:05 | User log out: ariane de leon Log out.
+Sep 05, 2016 18:39:23 | User Log in: ariane de leon Log in.
+Sep 05, 2016 18:45:48 | User log out: ariane de leon Log out.
+Sep 05, 2016 20:46:18 | User Log in: admin istrator Log in.
+Sep 06, 2016 01:04:43 | User log out: admin istrator Log out.
+Sep 06, 2016 01:05:14 | User Log in: admin istrator Log in.
+Sep 06, 2016 01:07:51 | User log out: admin istrator Log out.
+Sep 06, 2016 01:07:54 | User Log in: admin istrator Log in.
+Sep 06, 2016 01:08:56 | User log out: admin istrator Log out.
+Sep 06, 2016 01:21:08 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 01:33:00 | User Log in: ariane de leon Log in.
+Sep 06, 2016 01:33:03 | User log out: ariane de leon Log out.
+Sep 06, 2016 01:33:11 | User Log in: admin istrator Log in.
+Sep 06, 2016 03:02:30 | User log out: Charles Marallag Log out.
+Sep 06, 2016 03:02:52 | User Log in: Rose Marlyn Mijares Log in.
+Sep 06, 2016 03:16:33 | User log out: Rose Marlyn Mijares Log out.
+Sep 06, 2016 03:16:35 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 03:17:34 | User log out: Charles Marallag Log out.
+Sep 06, 2016 03:17:42 | User Log in: ariane de leon Log in.
+Sep 06, 2016 03:18:16 | User log out: ariane de leon Log out.
+Sep 06, 2016 03:18:28 | User Log in: admin istrator Log in.
+Sep 06, 2016 03:26:35 | User log out: admin istrator Log out.
+Sep 06, 2016 03:26:38 | User Log in: ariane de leon Log in.
+Sep 06, 2016 03:39:51 | User log out: admin istrator Log out.
+Sep 06, 2016 03:39:57 | User Log in: ariane de leon Log in.
+Sep 06, 2016 03:53:40 | User log out: ariane de leon Log out.
+Sep 06, 2016 03:53:58 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 04:01:23 | User log out: Charles Marallag Log out.
+Sep 06, 2016 04:02:11 | User Log in: Rose Marlyn Mijares Log in.
+Sep 06, 2016 04:41:46 | User log out: Rose Marlyn Mijares Log out.
+Sep 06, 2016 04:42:01 | User log out: ariane de leon Log out.
+Sep 06, 2016 04:42:07 | User Log in: Nenita de leon Log in.
+Sep 06, 2016 04:46:24 | User log out: Nenita de leon Log out.
+Sep 06, 2016 04:46:26 | User Log in: ariane de leon Log in.
+Sep 06, 2016 04:54:00 | User log out: ariane de leon Log out.
+Sep 06, 2016 04:54:09 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 06:04:49 | User log out: Charles Marallag Log out.
+Sep 06, 2016 06:04:59 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 06:07:28 | User log out: Charles Marallag Log out.
+Sep 06, 2016 06:07:33 | User Log in: ariane de leon Log in.
+Sep 06, 2016 06:14:30 | User Log in: ariane de leon Log in.
+Sep 06, 2016 06:15:48 | User log out: ariane de leon Log out.
+Sep 06, 2016 06:16:00 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 06:19:05 | User log out: Charles Marallag Log out.
+Sep 06, 2016 06:19:46 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 06:19:58 | User log out: Charles Marallag Log out.
+Sep 06, 2016 06:20:03 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 12:36:31 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 12:37:50 | User log out: Charles Marallag Log out.
+Sep 06, 2016 12:37:53 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 12:40:56 | User log out: Charles Marallag Log out.
+Sep 06, 2016 12:40:59 | User Log in: ariane de leon Log in.
+Sep 06, 2016 12:48:04 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 12:52:36 | User log out: Charles Marallag Log out.
+Sep 06, 2016 12:52:52 | User Log in: ariane de leon Log in.
+Sep 06, 2016 12:53:03 | User Log in: ariane de leon Log in.
+Sep 06, 2016 12:53:10 | User Log in: ariane de leon Log in.
+Sep 06, 2016 12:53:15 | User Log in: admin istrator Log in.
+Sep 06, 2016 12:54:33 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 12:54:56 | User log out: Charles Marallag Log out.
+Sep 06, 2016 12:55:06 | User Log in: ariane de leon Log in.
+Sep 06, 2016 12:57:02 | User log out: admin istrator Log out.
+Sep 06, 2016 12:57:05 | User Log in: Rose Marlyn Mijares Log in.
+Sep 06, 2016 12:57:20 | User log out: Rose Marlyn Mijares Log out.
+Sep 06, 2016 13:38:00 | User Log in: ariane de leon Log in.
+Sep 06, 2016 13:48:15 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 13:53:48 | User log out: ariane de leon Log out.
+Sep 06, 2016 13:53:55 | User Log in: admin istrator Log in.
+Sep 06, 2016 13:55:04 | User log out: admin istrator Log out.
+Sep 06, 2016 13:55:08 | User Log in: ariane de leon Log in.
+Sep 06, 2016 14:10:20 | User Log in: ariane de leon Log in.
+Sep 06, 2016 14:10:56 | User log out: ariane de leon Log out.
+Sep 06, 2016 14:11:03 | User Log in: Charles Marallag Log in.
+Sep 06, 2016 14:12:12 | User log out: Charles Marallag Log out.
+Sep 06, 2016 14:12:33 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 08:44:17 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 08:46:56 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 08:50:44 | User log out: Charles Marallag Log out.
+Sep 07, 2016 08:50:50 | User Log in: ariane de leon Log in.
+Sep 07, 2016 08:53:36 | User log out: ariane de leon Log out.
+Sep 07, 2016 08:53:41 | User Log in: ariane de leon Log in.
+Sep 07, 2016 09:01:50 | User log out: Charles Marallag Log out.
+Sep 07, 2016 09:01:58 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 09:04:53 | User log out: ariane de leon Log out.
+Sep 07, 2016 09:04:56 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 09:06:30 | User log out: Charles Marallag Log out.
+Sep 07, 2016 09:21:05 | User Log in: Rose Marlyn Mijares Log in.
+Sep 07, 2016 09:21:07 | User log out: Rose Marlyn Mijares Log out.
+Sep 07, 2016 09:21:13 | User Log in: Rose Marlyn Mijares Log in.
+Sep 07, 2016 09:21:14 | User log out: Rose Marlyn Mijares Log out.
+Sep 07, 2016 09:21:18 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 09:26:27 | User log out: Charles Marallag Log out.
+Sep 07, 2016 09:26:31 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 09:31:22 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 09:49:10 | User Log in: ariane de leon Log in.
+Sep 07, 2016 09:49:11 | User log out: ariane de leon Log out.
+Sep 07, 2016 09:49:14 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 10:31:34 | User log out: Charles Marallag Log out.
+Sep 07, 2016 10:32:36 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 10:33:55 | User log out: Charles Marallag Log out.
+Sep 07, 2016 10:34:34 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 10:36:21 | User log out: Charles Marallag Log out.
+Sep 07, 2016 10:36:27 | User Log in: Charles Marallag Log in.
+Sep 07, 2016 10:42:37 | User log out: Charles Marallag Log out.
+Sep 07, 2016 11:31:55 | User Log in: ariane de leon Log in.
+Sep 07, 2016 11:32:23 | User Create User: ariane de leon Create User [01-2016-0003].
+Sep 07, 2016 12:01:19 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 07:16:41 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 07:20:30 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 07:25:04 | User log out: Charles Marallag Log out.
+Sep 09, 2016 07:25:09 | User Log in: ariane de leon Log in.
+Sep 09, 2016 07:32:49 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 08:41:13 | User log out: ariane de leon Log out.
+Sep 09, 2016 08:41:33 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 08:41:44 | User log out: Charles Marallag Log out.
+Sep 09, 2016 08:42:26 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 08:47:22 | User log out: Charles Marallag Log out.
+Sep 09, 2016 08:47:25 | User Log in: ariane de leon Log in.
+Sep 09, 2016 09:01:31 | User Log in: ariane de leon Log in.
+Sep 09, 2016 09:01:32 | User log out: ariane de leon Log out.
+Sep 09, 2016 09:01:35 | User Log in: ariane de leon Log in.
+Sep 09, 2016 09:02:16 | User Create User: ariane de leon Create User [01-2016-0005].
+Sep 09, 2016 09:04:29 | User Log in: Joseph Tamayo Log in.
+Sep 09, 2016 09:09:16 | User Log in: Joseph Tamayo Log in.
+Sep 09, 2016 09:21:48 | User log out: Joseph Tamayo Log out.
+Sep 09, 2016 09:22:34 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 09:27:05 | User log out: Charles Marallag Log out.
+Sep 09, 2016 09:27:08 | User Log in: Charles Marallag Log in.
+Sep 09, 2016 10:53:42 | User log out: ariane de leon Log out.
+Sep 09, 2016 10:53:46 | User Log in: admin istrator Log in.
+Sep 13, 2016 02:05:10 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 02:08:32 | User log out: Charles Marallag Log out.
+Sep 13, 2016 02:08:38 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 02:34:02 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 14:39:41 | User Log in: ariane de leon Log in.
+Sep 13, 2016 14:40:17 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 14:40:28 | User log out: Charles Marallag Log out.
+Sep 13, 2016 14:40:31 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 15:10:34 | User log out: Charles Marallag Log out.
+Sep 13, 2016 15:10:51 | User Log in: Rose Marlyn Mijares Log in.
+Sep 13, 2016 15:11:49 | User log out: Rose Marlyn Mijares Log out.
+Sep 13, 2016 15:11:52 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 15:24:05 | User log out: ariane de leon Log out.
+Sep 13, 2016 15:24:13 | User Log in: admin istrator Log in.
+Sep 13, 2016 15:36:48 | User log out: admin istrator Log out.
+Sep 13, 2016 15:36:52 | User Log in: ariane de leon Log in.
+Sep 13, 2016 16:29:00 | User log out: ariane de leon Log out.
+Sep 13, 2016 16:29:06 | User Log in: admin istrator Log in.
+Sep 13, 2016 16:29:58 | User log out: admin istrator Log out.
+Sep 13, 2016 16:30:02 | User Log in: ariane de leon Log in.
+Sep 13, 2016 17:15:51 | User log out: Charles Marallag Log out.
+Sep 13, 2016 17:40:52 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 17:52:27 | User log out: ariane de leon Log out.
+Sep 13, 2016 17:53:20 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 17:56:13 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 17:56:20 | User log out: Charles Marallag Log out.
+Sep 13, 2016 18:24:49 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 18:27:16 | User Log in: ariane de leon Log in.
+Sep 13, 2016 18:28:12 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 18:45:44 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 18:49:50 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 18:50:28 | User Log in: Charles Marallag Log in.
+Sep 13, 2016 19:27:31 | User log out: ariane de leon Log out.
+Sep 13, 2016 19:27:43 | User Log in: ariane de leon Log in.
+Sep 13, 2016 19:27:48 | User log out: ariane de leon Log out.
+Sep 13, 2016 19:27:57 | User Log in: admin istrator Log in.
+Sep 13, 2016 19:28:20 | User log out: admin istrator Log out.
+Sep 13, 2016 19:28:25 | User Log in: ariane de leon Log in.
+Sep 13, 2016 19:59:24 | User Log in: Charles Marallag Log in.
+Sep 15, 2016 03:20:49 | User Log in: admin istrator Log in.
+Sep 15, 2016 03:20:52 | User log out: admin istrator Log out.
+Sep 15, 2016 03:27:24 | User Log in: Charles Marallag Log in.
+Sep 15, 2016 03:27:29 | User log out: Charles Marallag Log out.
+Sep 15, 2016 03:27:37 | User Log in: ariane de leon Log in.
+Sep 15, 2016 10:49:57 | User Log in: ariane de leon Log in.
+Sep 15, 2016 10:52:47 | User Log in: ariane de leon Log in.
