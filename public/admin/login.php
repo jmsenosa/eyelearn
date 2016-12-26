@@ -84,8 +84,8 @@ if (isset($_POST['submit'])) { // Form has been submitted.
 	</div>
 	
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.bxslider.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
-	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../assets/js/main.js"></script>
 </body>
 </html>
