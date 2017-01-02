@@ -1,3 +1,5 @@
+</div>  <!-- /.col-md-9-->
+</div>  <!-- /.container -->
  <hr>
 
         <!-- Footer -->

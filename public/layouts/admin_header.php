@@ -79,4 +79,10 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" style="margin-top:25px;">
+        <div class="">
+            <div class="row">
+                <div class="col-md-3">
+                    <?php include_layout_template('sidebar.php'); ?>
+                </div>
+                <div class="col-md-9">
