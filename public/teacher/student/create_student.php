@@ -10,8 +10,8 @@
 	
 	// Find all user type
 	$user_types = User_type::find_all_except_admin();
-	if(isset($_POST['submit'])) {
-		// print_r($_POST);
+ 
+    if(isset($_POST['submit'])) {
 		$check_username = Student::check_username($_POST['lrn']);
 		
 		if($check_username){
@@ -36,6 +36,7 @@
             $user->parent_first_name 		= $_POST['parent_first_name'];
             $user->teacher 		= $_SESSION['user_id'];
             $user->sy         = date('Y');
+ 
 			if($user->save()) {
 				log_action('User Create User', "{$session_user->full_name()} Create User [{$_POST['username']}].");
 				$session->message("Successfully created.");
@@ -108,14 +109,15 @@
                                     <label for="section" class="col-sm-1 control-label" >Section </label>
                                     <div class="col-sm-4">
                                         <select name="section" class="form-control" required>
+                                            <option>Select Section</option>
                                             <?php
                                             $sections = Section::find_all();
                                             foreach($sections as $section):
-                                                if($section->created_by == $_SESSION['user_id']):
+                                                // if($section->created_by == $_SESSION['user_id']):
                                                 ?>
                                             <option value="<?php echo $section->section ?>"><?php echo $section->section ?></option>
                                             <?php
-                                                endif;
+                                                // endif;
                                             endforeach;
                                             ?>
                                             
@@ -137,15 +139,16 @@
                                 <div class="form-group">
                                     <label for="status" class="col-sm-2 control-label">Status</label>
                                     <div class="col-sm-4">
-                                        Active
-                                        <input type="radio" name="active" id="active" value=1 checked='checked' /> Inactive
-                                        <input type="radio" name="active" id="active" value=0 />
+                                        
+                                        <input type="radio" name="active" id="active" value=1 checked='checked' /> Active<br> 
+                                        <input type="radio" name="active" id="active" value=0 /> Inactive
                                     </div>
                                 </div>
                                 <hr />
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-4">
-                                        <button type="submit" class="btn btn-primary" name="submit"><i class="fa fa-plus "></i> Add User</button>
+                                        <!-- <button type="submit" class="" name="submit" value=""><i class="fa fa-plus "></i> </button> -->
+                                        <input type="submit" name="submit" class="btn btn-primary" value="Add User">
                                     </div>
                                 </div>
                             </form>

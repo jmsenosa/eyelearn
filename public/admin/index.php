@@ -13,7 +13,10 @@
 	
 ?>
  <?php include_layout_template('admin_header.php'); ?>
- 
+ 	<div class="col-md-3">
+        <?php include_layout_template('sidebar.php'); ?>
+    </div>
+    <div class="col-md-9">
 	<!-- Page Heading/Breadcrumbs -->
 	<div class="row">
 		<div class="col-lg-12">
