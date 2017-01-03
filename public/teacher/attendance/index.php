@@ -38,17 +38,14 @@
                         <select name="section" class="form-control section">
                            <option></option>
                             <?php
-                                            $sections = Section::find_all();
-                                            foreach($sections as $section):
-                                                if($section->created_by == $_SESSION['user_id']):
-                                                ?>
-                                <option value="<?php echo $section->section ?>">
-                                    <?php echo $section->section ?>
-                                </option>
-                                <?php
-                                                endif;
-                                            endforeach;
-                                            ?>
+                                $sections = Section::find_all();
+                                foreach($sections as $section):
+                                    if($section->created_by == $_SESSION['user_id']): ?>
+                                        <option value="<?php echo $section->section ?>">
+                                            <?php echo $section->section ?>
+                                        </option>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
 
                         </select>
                     </div>
@@ -69,9 +66,7 @@
                             <?php foreach($students as $student): 
                                 if($student->teacher = $_SESSION['user_id']):
                            
-                            if($student->sy == date('Y')){
-
-                            ?>
+                            if($student->sy == date('Y')){ ?>
 
                                 <tr>
                                     <td><a href=# rel="tooltip" title="Show Profile"><?php echo $student->lrn; ?></a></td>
@@ -82,7 +77,7 @@
                                     <td>
                                         <?php echo $student->section ?>
                                     </td>
-                                     <td class='text-center'>
+                                    <td class='text-center'>
                                        <?php
                                         $attendance = Attendance::find_by_today_student($student->id,date('Y-m-d'));
                                         if(!empty($attendance)):
@@ -100,7 +95,7 @@
                                        <?php
                                         endif;
                                         ?>
-                                         </td>
+                                     </td>
                                 </tr>
 
                                 <?php 
