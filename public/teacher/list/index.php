@@ -38,14 +38,24 @@
 			<div id="myTabContent" class="tab-content">
 				<div class="tab-pane fade active in" id="service-one">
                     <br/>
-                     <div class="form-group">
-					   <label class="col-sm-1 control-label" style="text-align:left !important;">Year </label>
-					    <div class="col-lg-3">
-					  
-					  <input type="number" min="2000" max="<?php echo date('Y') ?>" value="<?php echo date('Y') ?>" class="form-control" id="datepicker">
-					  </div>
-                    </div><BR>
-                    <bR>
+                    <div class="form-group">
+				        <label class="col-sm-1 control-label" style="text-align:left !important;">Year </label>
+					    <div class="col-lg-6">
+
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="datepicker1">From</label>
+                                    <input type="number" min="2000" max="<?php echo date('Y') ?>" value="<?php echo date('Y') ?>" class="form-control" id="datepicker1">
+                                    <label for="datepicker2">To</label>
+                                    <input type="number" min="2000" max="<?php echo date('Y') ?>" value="<?php echo date('Y') ?>" class="form-control" id="datepicker2">
+                                    <button name="search-by-year" id="btnsearchyear" class="btn btn-secondary">Search</button>
+                                </div>
+                                 
+                            </form>
+                        </div> 
+                    </div>
+                    <br><br>
+                                    
 					
 					<div class="table-responsive">
 					<table class="table table-striped ">
@@ -97,26 +107,49 @@
 <script type="text/javascript">
 /*<![CDATA[*/
     
-          $.fn.dataTable.ext.search.push(
-                 function( settings, data, dataIndex ) {
-         var section = $('#datepicker').val();
-         var row = data[5]  || 0; // use data for the age column
- 
+    $.fn.dataTable.ext.search.push( function( settings, data, dataIndex ) {
+        var row = data[5]  || 0; // use data for the age column
+        /*var section = $('#datepicker').val();
+
         if (  row == section )
         {
             return true;
         }
+        return false;*/
+
+        var from = $('#datepicker1').val();
+        var to = $('#datepicker2').val();
+
+        if (from == to) {
+            if (  row == from )
+            {
+                return true;
+            } 
+        }else if (row >= from && row <= to){
+            return true;
+        } 
+
         return false;
-            }
-        );
-    
+    });
+
 	$(document).ready(function(){
 		$("[rel='tooltip']").tooltip();	
         $('.table').DataTable();
         var table = $('.table').DataTable();
-        $('#datepicker').on('change', function() {
-                        table.draw();
-                    } );
+
+        $('#datepicker1').on('change, click', function() {
+            $("#datepicker2").attr("min",$(this).val());
+            if ( $("#datepicker2").val() < $(this).val() ) {
+                $("#datepicker2").val($(this).val());
+            }
+        } );
+
+        $("#btnsearchyear").click(function(){
+            table.draw();
+
+            return false;
+        });
+
 	}); 
 /*]]>*/
 </script>

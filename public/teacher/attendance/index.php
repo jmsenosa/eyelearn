@@ -53,6 +53,7 @@
             </div>
                 <div class="col-lg-12">
                 <div class="table-responsive">
+
                     <table class="table table-striped ">
                         <thead>
                             <tr>
@@ -63,45 +64,55 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($students as $student): 
-                                if($student->teacher = $_SESSION['user_id']):
-                           
-                            if($student->sy == date('Y')){ ?>
+                            <?php if (date("D") != "Sat" || date("D") != "Sun"): ?>
+                                
+                                <?php foreach($students as $student): 
+                                    if($student->teacher = $_SESSION['user_id']):
+                               
+                                if($student->sy == date('Y')){ ?>
 
-                                <tr>
-                                    <td><a href=# rel="tooltip" title="Show Profile"><?php echo $student->lrn; ?></a></td>
-                                    <td>
-                                        <?php echo $student->full_name() ?>
-                                    </td>
-  
-                                    <td>
-                                        <?php echo $student->section ?>
-                                    </td>
-                                    <td class='text-center'>
-                                       <?php
-                                        $attendance = Attendance::find_by_today_student($student->id,date('Y-m-d'));
-                                        if(!empty($attendance)):
-                                        ?>
-                                        <button type="button" data-id="<?php echo $student->id ?>" <?php echo $attendance->attendance == "present" ? "disabled" : "" ?> class="btn btn-success present">Present</button>
-                                        <button type="button" data-id="<?php echo $student->id ?>" <?php echo $attendance->attendance == "absent" ? "disabled" : "" ?> class="btn btn-danger absent">Absent</button>
-                                       
-                                        
-                                        <?php
-
-                                        else:
+                                    <tr>
+                                        <td><a href=# rel="tooltip" title="Show Profile"><?php echo $student->lrn; ?></a></td>
+                                        <td>
+                                            <?php echo $student->full_name() ?>
+                                        </td>
+      
+                                        <td>
+                                            <?php echo $student->section ?>
+                                        </td>
+                                        <td class='text-center'>
+                                           <?php
+                                            $attendance = Attendance::find_by_today_student($student->id,date('Y-m-d'));
+                                            if(!empty($attendance)):
                                             ?>
-                                            <button type="button" data-id="<?php echo $student->id ?>" class="btn btn-success present">Present</button>
-                                            <button type="button" data-id="<?php echo $student->id ?>"  class="btn btn-danger absent">Absent</button>
-                                       <?php
-                                        endif;
-                                        ?>
-                                     </td>
-                                </tr>
+                                            <button type="button" data-id="<?php echo $student->id ?>" <?php echo $attendance->attendance == "present" ? "disabled" : "" ?> class="btn btn-success present">Present</button>
+                                            <button type="button" data-id="<?php echo $student->id ?>" <?php echo $attendance->attendance == "absent" ? "disabled" : "" ?> class="btn btn-danger absent">Absent</button>
+                                           
+                                            
+                                            <?php
 
-                                <?php 
-                            }
-                                endif;
-                            endforeach; ?>
+                                            else:
+                                                ?>
+                                                <button type="button" data-id="<?php echo $student->id ?>" class="btn btn-success present">Present</button>
+                                                <button type="button" data-id="<?php echo $student->id ?>"  class="btn btn-danger absent">Absent</button>
+                                           <?php
+                                            endif;
+                                            ?>
+                                         </td>
+                                    </tr>
+
+                                    <?php 
+                                }
+                                    endif;
+                                endforeach; ?>
+
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="4">
+                                        <p>No Classes available on weekends</p>
+                                    </td>
+                                </tr>
+                            <?php endif ?>
                         </tbody>
                     </table>
                 </div>
