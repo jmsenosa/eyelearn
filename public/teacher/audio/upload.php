@@ -1,13 +1,20 @@
 <?php
 if(!empty($_FILES)){
     
+    include("../../includes/config.php");
     //database configuration
-    $dbHost = 'localhost';
+/*    $dbHost = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
     $dbName = 'eyelearn_db';
+*/
     //connect with the database
-    $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+    //
+ 
+
+    $conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+
+
     if($conn->connect_errno){
         echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }

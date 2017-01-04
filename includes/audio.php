@@ -16,9 +16,14 @@ class Audio extends DatabaseObject {
 	protected $upload_dir="audio";
 	public $errors=array();
   
-  public static function find_by_lesson($lesson_id="") {
-    return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE folder='{$lesson_id}'");
-  }
+  	public static function find_by_lesson($lesson_id="") {
+		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE folder='{$lesson_id}'");
+  	}
+
+  	public static function find_by_lesson_name($lesson_name)
+  	{
+	    return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE filename='{$lesson_name}'");
+  	} 
   
   protected $upload_errors = array(
 		// http://www.php.net/manual/en/features.file-upload.errors.php

@@ -24,7 +24,7 @@
 		}elseif($_POST['repassword']!=$_POST['password']){
 			$session->message("Password not match");
 			redirect_to('create.php');
-		}elseif(strlen($_POST['phone']) != 11){
+		}elseif(strlen((string) $_POST['phone']) <= 11){
 			$session->message("Invalid Phone number. Please insert numeric 11 digit only");
 			redirect_to('create.php');
 		}else{

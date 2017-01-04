@@ -14,7 +14,11 @@
 	$id = ($_GET['id'] ? $_GET['id']:0);
 	// $id = 1;
 	$lesson = Lesson::find_by_id($id); 
-	$audios = Audio::find_by_lesson($lesson->name);
+	$audios = Audio::find_by_lesson($lesson->id);
+
+	if (count($audios) == 0) {
+		$audios = Audio::find_by_lesson_name($lesson->audio);
+	} 
 
 	if(isset($_POST['submit'])) {
 		
