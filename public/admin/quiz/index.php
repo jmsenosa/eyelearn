@@ -77,7 +77,7 @@
                 <th class="text-center" style="width: 20%">Name</th>
                 <th class="text-left">Created By</th>
                 <th class="text-center">Description</th>
-                <td style="width: 33%;"></td>
+                <td style="width: 35%;"></td>
             </tr>
         </thead>
         <tbody>    

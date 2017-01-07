@@ -31,6 +31,12 @@ class Quiz_Category extends DatabaseObject
 
     public static function find_by_id($id){
         $sql = "SELECT * FROM `".static::$table_name."` WHERE id='{$id}'";
-        return static::find_by_sql( $sql );
+        $category = static::find_by_sql( $sql );
+    
+        if (count($category) > 0) {
+            return $category[0];
+        }
+
+        return false;
     }
 }
