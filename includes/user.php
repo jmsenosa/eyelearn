@@ -21,8 +21,8 @@ class User extends DatabaseObject {
 	public $active;
 	public $last_update;
 
-     public $fromtime;
-     public $totime;
+    public $fromtime;
+    public $totime;
 	
 
 	
@@ -51,13 +51,19 @@ class User extends DatabaseObject {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE type_id!=1 ");
 	}
 	
-  public function full_name() {
-    if(isset($this->first_name) && isset($this->last_name)) {
-      return $this->first_name . " " . $this->last_name;
-    } else {
-      return "";
+    public function full_name() 
+    {
+        if(isset($this->first_name) && isset($this->last_name)) 
+        {
+            return $this->first_name . " " . $this->last_name;
+        } 
+        else 
+        {
+            return "";
+        }
+
+        // return (isset($this->first_name) && isset($this->last_name)) ? $this->first_name . " " . $this->last_name : "";
     }
-  }
   
 	// public function get_type() {
     // if(isset($this->type)) {

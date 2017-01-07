@@ -31,6 +31,6 @@ require_once(LIB_PATH.DS."fpdf".DS."fpdf.php");
 require_once(LIB_PATH.DS.'user.php');
 
 // Error Reporting
-error_reporting(0);
+// error_reporting(0);
 
 

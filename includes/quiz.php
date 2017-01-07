@@ -10,6 +10,7 @@ class Quiz extends DatabaseObject {
 
 	public $id;
 	public $lesson_id;
+	public $quiz_category_id;
 	public $description;
 	public $audio;
 	public $choice1;

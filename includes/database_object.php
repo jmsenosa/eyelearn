@@ -9,7 +9,7 @@ class DatabaseObject {
 	// http://www.php.net/lsb
 	
 	// Common Database Methods
-	public static function find_all() {
+  public static function find_all() {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` ");
   }
   
