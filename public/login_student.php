@@ -9,7 +9,6 @@ if (isset($_POST['submit'])) { // Form has been submitted.
 	$found_user = Student::check_username($lrn);
 	
 	
-	
   if ($found_user) {
 
 	
@@ -17,6 +16,7 @@ if (isset($_POST['submit'])) { // Form has been submitted.
 		  
 
 			$session->login($found_user);
+            
 			log_action('Student Log in', "{$found_user->full_name()} Log in.");
 			redirect_to("index.php");  
 		

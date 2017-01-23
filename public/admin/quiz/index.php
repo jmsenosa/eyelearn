@@ -76,7 +76,6 @@
             <tr>
                 <th class="text-center" style="width: 20%">Name</th>
                 <th class="text-left">Created By</th>
-                <th class="text-center">Description</th>
                 <td style="width: 35%;"></td>
             </tr>
         </thead>
@@ -84,9 +83,9 @@
             <?php foreach($lessons as $lesson): ?>
                 <?php $user = User::find_by_id($lesson->user_id); @$fullname = ucwords($user->full_name());  ?>
                 <tr>
-                    <td class="text-center">
-                        <?php echo ucwords($lesson->name); ?>                                        
+                    <td class="text-center">                                    
                         <a href='folder.php?id=<?php echo $lesson->id; ?>' rel="tooltip" title="View Content">
+                            <?php echo ucwords($lesson->name); ?>                          
                         </a>
                     </td>
         			<td>
@@ -95,19 +94,8 @@
         			<td>
                         <?php echo ucwords($lesson->description); ?>
                     </td>   
-                    <td> 
-                        <form method="get" class="form-inline">
-                            <div class="form-group">
-                                <label for=""></label>
-                                <select name="quiz_categories" id="quiz_categories-<?php echo $lesson->id;?>" class="form-control">
-                                    <option value="">Select Category</option>
-                                    <?php foreach($quiz_categories as $category): ?>
-                                        <option value="<?=$category->id;?>"><?=$category->name;?></option>
-                                    <?php endforeach ?>
-                                </select>
-                            </div>
-                            <button type="button" class="btn btn-default cq-btn" data-lesson_id="<?=$lesson->id;?>" >Create Quiz</button>
-                        </form> 
+                    <td class="text-right"> 
+                        <a href="folder.php?id=<?php echo $lesson->id; ?>"  role="button" class="btn btn-default"> View Quizes</a>
                     </td>          			
     		  </tr>
     		<?php endforeach; ?>
@@ -115,3 +103,4 @@
 	</table>
 </div> 
 <!-- Javascript Declaration -->
+ 

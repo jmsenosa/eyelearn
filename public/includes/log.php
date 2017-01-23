@@ -13,8 +13,18 @@ class Log extends DatabaseObject {
 	public $action;
 	public $created_at;
 
-	
-	
+	public static $export_fields = array('id', 'message', 'action', 'created_at');
+
+	public static function get_by_date($from, $to){
+
+		$from = $from." 00:00:00";
+		$to   = $to." 23:59:59";
+		
+		$sql = "SELECT * FROM `".static::$table_name."` WHERE created_at>='{$from}' AND created_at <= '{$to}' ";
+
+
+		return static::find_by_sql($sql);
+	}
 
 
 	

@@ -59,14 +59,14 @@ class Student extends DatabaseObject {
 
     public static function check_username($username="") {
 
-    $sql  = "SELECT * FROM student ";
-    $sql .= "WHERE lrn = '{$username}' ";
-    $sql .= "LIMIT 1";
-    $result_array = static::find_by_sql($sql);
+        $sql  = "SELECT * FROM student ";
+        $sql .= "WHERE lrn = '{$username}' ";
+        $sql .= "LIMIT 1";
+        $result_array = static::find_by_sql($sql);
 		return !empty($result_array) ? array_shift($result_array) : false;
 	}
     
-     public static function find_ifexist($first_name,$last_name,$lrn) {
+    public static function find_ifexist($first_name,$last_name,$lrn) {
 
     $sql  = "SELECT * FROM student ";
     $sql .= "WHERE lrn = '{$lrn}' and first_name = '{$first_name}' and last_name =  '{$last_name}' ";

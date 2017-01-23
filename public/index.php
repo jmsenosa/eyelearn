@@ -8,25 +8,25 @@
 	// Find User 
 	$user = Student::find_by_id($_SESSION['user_id']);	
 	$lesson = Lesson::find_by_date($user->teacher);
-    $teacher = User::find_by_id($user->teacher);
-    $isSched = false;
-    $isPresent = false;
-    $isSched = (time() >= strtotime($teacher->fromtime) && time() <= strtotime($teacher->totime)) ? true : false;
+  $teacher = User::find_by_id($user->teacher);
+  $isSched = false;
+  $isPresent = false;
+  $isSched = (time() >= strtotime($teacher->fromtime) && time() <= strtotime($teacher->totime)) ? true : false;
 
-    $attendance = Attendance::find_by_today_student($user->id,date('Y-m-d'));
+  $attendance = Attendance::find_by_today_student($user->id,date('Y-m-d'));
 
-    if($attendance){
-        $isPresent = $attendance->attendance == "present" ? true : false;
-    }
+  if($attendance){
+      $isPresent = $attendance->attendance == "present" ? true : false;
+  }
 
-    if($isSched && $isPresent){
-        
-    }
-    else{
-        $session->logout();
-        $session->message('Sorry, you can\'t use this system. Please, Login on your assigned schedule.'); // ikaw na bahala mag bago
-        redirect_to('login_student.php');
-    }
+  if($isSched && $isPresent){
+      
+  }
+  else{
+      $session->logout();
+      $session->message('Sorry, you can\'t use this system. Please, Login on your assigned schedule.'); // ikaw na bahala mag bago
+      redirect_to('login_student.php');
+  }
 	
  ?>
 <!DOCTYPE html>

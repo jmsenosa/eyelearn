@@ -9,6 +9,7 @@
 	
 	// Find all the User
 	$quizes = Quiz::find_by_lesson($_GET['id']);
+    $quiz_categories = Quiz_Category::find_all(); 
 
 ?>
     <?php include_layout_template('sub_header.php'); ?>
@@ -44,13 +45,13 @@
                                 </tr>
                             </thead>
                             <?php foreach($quizes as $quiz): ?>
-                                <?php $quiz_categories = Quiz_Category::find_by_id($quiz->quiz_category_id);  ?> 
+                                <?php $quiz_category = Quiz_Category::find_by_id($quiz->quiz_category_id);  ?> 
                                 <tr>
                                     <td>
                                         <?php echo ucwords($quiz->description); ?>
                                     </td>
                                     <td class='text-center'>
-                                        <?php echo ucwords($quiz_categories->name); ?>
+                                        <?php echo ucwords($quiz_category->name); ?>
                                     </td>
                                    
                                     <td class='text-center'> <a href="delete.php?id=<?php echo $quiz->id; ?>&folder=<?php echo $_GET['id'] ?>" rel="tooltip" title="Delete <?php echo ucwords($obj); ?>" onclick="return confirm('Are you sure you want to delete');"><i class="fa fa-trash text-danger"></i></a></td>
@@ -58,7 +59,49 @@
                                 <?php endforeach; ?>
                         </table>
                     </div>
-                    <a href="create.php?id=<?php echo $_GET['id']?>" class="btn btn-primary"> <i class="fa fa-plus "></i> Add
+                    <!-- <a href="create.php?id=<?php echo $_GET['id']?>" class="btn btn-primary"> <i class="fa fa-plus "></i> Add
                         <?php echo ucwords($obj); ?>
-                    </a>
+                    </a> -->
+                    <table class="table">
+                        <tr>
+                            <td class="text-right">
+                                <form method="get" class="form-inline">
+                                    <div class="form-group">
+                                        <label for=""></label>
+                                        <select name="quiz_categories" id="quiz_categories" class="form-control">
+                                            <option value="">Select Category</option>
+                                            <?php foreach($quiz_categories as $category): ?>
+                                                <option value="<?=$category->id;?>"><?=$category->name;?></option>
+                                            <?php endforeach ?>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-primary cq-btn" data-lesson_id="<?=$lesson->id;?>" >Create Quiz</button>
+                                </form> 
+                            </td>   
+                        </tr>
+                    </table>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            var urlShtdata = new Array;
+                            <?php foreach($quiz_categories as $category): ?>
+                            urlShtdata[<?=$category->id?>] = "<?php echo $category->filename;?>";
+                            <?php endforeach ?>
+
+                            $(".cq-btn").click();
+
+                            $(document).on("click",".cq-btn", function(){
+                                var lesson_id = '<?php echo $_GET['id']; ?>';
+                                var quiz_cat  = $("#quiz_categories").val(); 
+                                if (quiz_cat == 1) {
+                                    location = 'create.php?id=<?php echo $_GET['id']?>';                 
+                                    window.location=location; 
+                                }else{
+                                    var location = urlShtdata[quiz_cat]+"?id="+lesson_id+"&quiz_cat="+quiz_cat;
+                                    // alert(location)
+                                    window.location=location;
+                                }
+                                
+                            });
+                        });
+                    </script>
                     <?php include_layout_template('sub_footer.php'); ?>

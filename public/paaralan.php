@@ -12,7 +12,7 @@
     $isSched = false;
     $isPresent = false;
     
-           $isSched = (time() >= strtotime($teacher->fromtime) && time() <= strtotime($teacher->totime)) ? true : false;
+    $isSched = (time() >= strtotime($teacher->fromtime) && time() <= strtotime($teacher->totime)) ? true : false;
     $attendance = Attendance::find_by_today_student($user->id,date('Y-m-d'));
 
     if($attendance){
