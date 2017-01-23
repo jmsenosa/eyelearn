@@ -137,62 +137,60 @@
             <!-- Javascript Declaration -->
             <script type="text/javascript">
                 $.fn.dataTable.ext.search.push(
-                 function( settings, data, dataIndex ) {
-         var section = $('.section').val();
-         var row = data[2]  || 0; // use data for the age column
- 
-        if (  row == section )
-        {
-            return true;
-        }
-        return false;
-            }
-        );
+                    function( settings, data, dataIndex ) {
+                        var section = $('.section').val();
+                        var row = data[2]  || 0; // use data for the age column
+             
+                        if (  row == section )
+                        {
+                            return true;
+                        }
+                        return false;
+                    }
+                );
  
 
-                /*<![CDATA[*/
-                $(document).ready(function () {
-                    $("[rel='tooltip']").tooltip();
-                    $('.table').DataTable({
-                        "aaSorting": [[1,'asc']]
-                    });
-                    var table = $('.table').DataTable();
-                    // Event listener to the two range filtering inputs to redraw on input
-                    $('.section').on('change', function() {
-                        table.draw();
-                    } );
-                    
-                    $('.table').on('click','.present', function(e){
-                        
-                        var id = $(this).data('id');
-                        var thisElement = $(this);
-                        $.post('attendance.php', {id:id,type:"present"}, function(data){
-                            $('.present[data-id="'+id+'"]').prop('disabled', true);
-                            $('.absent[data-id="'+id+'"]').prop('disabled', false);
-                        });
-                    });
-                    
-                    $('.table').on('click','.absent', function(){
-                        var id = $(this).data('id');
-                        var thisElement = $(this);
-                        $.post('attendance.php', {id:id,type:"absent"}, function(data){
-                            $('.absent[data-id="'+id+'"]').prop('disabled', true);
-                            $('.present[data-id="'+id+'"]').prop('disabled', false);
-                        });
-                    });
-                    
-                    $('#teacher').on('change',function(){
-                            var id = $(this).val();
-                            
-                            $.post('section.php', {id:id}, function(data){
-                            $("#section").prop("selectedIndex", -1);
-                             $.each(data, function(i, value) {
-                                $('#section').append($('<option>').text(value.section).attr('value', value.section));
-                            });                         
-                        },'json');
-                    });
-                    
-                    
+        /*<![CDATA[*/
+        $(document).ready(function () {
+            $("[rel='tooltip']").tooltip();
+            $('.table').DataTable({
+                "aaSorting": [[1,'asc']]
+            });
+            var table = $('.table').DataTable();
+            // Event listener to the two range filtering inputs to redraw on input
+            $('.section').on('change', function() {
+                table.draw();
+            } );
+            
+            $('.table').on('click','.present', function(e){
+                
+                var id = $(this).data('id');
+                var thisElement = $(this);
+                $.post('attendance.php', {id:id,type:"present"}, function(data){
+                    $('.present[data-id="'+id+'"]').prop('disabled', true);
+                    $('.absent[data-id="'+id+'"]').prop('disabled', false);
+                });
+            });
+            
+            $('.table').on('click','.absent', function(){
+                var id = $(this).data('id');
+                var thisElement = $(this);
+                $.post('attendance.php', {id:id,type:"absent"}, function(data){
+                    $('.absent[data-id="'+id+'"]').prop('disabled', true);
+                    $('.present[data-id="'+id+'"]').prop('disabled', false);
+                });
+            });
+            
+            $('#teacher').on('change',function(){
+                var id = $(this).val();
+                
+                $.post('section.php', {id:id}, function(data){
+                    $("#section").prop("selectedIndex", -1);
+                    $.each(data, function(i, value) {
+                        $('#section').append($('<option>').text(value.section).attr('value', value.section));
+                    });                         
+                },'json');
+            });     
                 });
 
    

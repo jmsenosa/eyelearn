@@ -40,29 +40,19 @@
                                 <tr>
                                     <th>Description</th>
                                     <th class='text-center'>Type</th>
-                                    <th class='text-center'>Choice 1</th>
-                                    <th class='text-center'>Choice 2</th>
-                                    <th class='text-center'>Choice 3</th>
-                                    <th class='text-center'>Choice 4</th>
-                                    <th class='text-center'>Answer</th>
                                     <th class='text-center'>Option</th>
                                 </tr>
                             </thead>
                             <?php foreach($quizes as $quiz): ?>
+                                <?php $quiz_categories = Quiz_Category::find_by_id($quiz->quiz_category_id);  ?> 
                                 <tr>
                                     <td>
                                         <?php echo ucwords($quiz->description); ?>
                                     </td>
                                     <td class='text-center'>
-                                        <?php echo ucwords($quiz->type); ?>
+                                        <?php echo ucwords($quiz_categories->name); ?>
                                     </td>
-                                    <td class='text-center'> <img src="../../images/<?php echo ucwords($quiz->choice1); ?>" height="50" width="50"> </td>
-                                    <td class='text-center'> <img src="../../images/<?php echo ucwords($quiz->choice2); ?>" height="50" width="50"> </td>
-                                    <td class='text-center'> <img src="../../images/<?php echo ucwords($quiz->choice3); ?>" height="50" width="50"> </td>
-                                    <td class='text-center'> <img src="../../images/<?php echo ucwords($quiz->choice4); ?>" height="50" width="50"> </td>
-                                    <td class='text-center'>
-                                        <?php echo ucwords($quiz->answer); ?>
-                                    </td>
+                                   
                                     <td class='text-center'> <a href="delete.php?id=<?php echo $quiz->id; ?>&folder=<?php echo $_GET['id'] ?>" rel="tooltip" title="Delete <?php echo ucwords($obj); ?>" onclick="return confirm('Are you sure you want to delete');"><i class="fa fa-trash text-danger"></i></a></td>
                                 </tr>
                                 <?php endforeach; ?>

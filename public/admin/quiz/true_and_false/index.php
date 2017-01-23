@@ -12,6 +12,60 @@
     }
 
 
+    if(isset($_POST['submit'])){
+        $post = $_POST;
+        $quiz = new Quiz(); 
+
+        $quiz->lesson_id = $data['id'];
+        $quiz->quiz_category_id = $data['quiz_cat'];
+        $quiz->description = $post['title'];
+        $insert = $quiz->create();
+
+        
+
+        $uploadOk = 1;
+  
+        $base_url =  "/uploads/";
+
+        $target_dir = SITE_ROOT .DS. "uploads/"; 
+        $quizImages = [];
+
+        foreach ($_FILES as $key => $value) { 
+
+            $filename = $base_url.md5(basename($key).date("Y-m-dH:i:s"));
+  
+            $target_file = $target_dir . md5(basename($key).date("Y-m-dH:i:s"));
+            $imageFileType = pathinfo($value['name'],PATHINFO_EXTENSION); 
+
+            $file = $target_file.".".$imageFileType;
+            move_uploaded_file($value['tmp_name'], $file);
+            $quizImages[$key] = $filename.".".$imageFileType;
+        }
+
+        $display_text_true = $post['truth_text'];
+        $display_text_false = $post['false_text'];
+
+        foreach ($post['question'] as $key => $value) {
+            $quiztrueorfalse = new Quiz_True_Or_False();
+            // echo "<pre>"; print_r(json_encode($quiz)); die();
+            $quiztrueorfalse->quiz_id = $quiz->id; 
+            $quiztrueorfalse->question = $value;
+            $quiztrueorfalse->truth_text = $display_text_true;
+            $quiztrueorfalse->false_text = $display_text_false;
+            $quiztrueorfalse->correct_answer = $post['correct_answer'][$key];
+            $quiztrueorfalse->background = $quizImages['background'];
+            $quiztrueorfalse->true_image = $quizImages['true_image'];
+            $quiztrueorfalse->false_image = $quizImages['false_image'];
+            
+            $quiztrueorfalse->create(); 
+            
+        }
+
+        
+
+        /*  */
+    }
+
 
     $quiz_category = Quiz_Category::find_by_id($quiz_category_id); 
     // echo "<pre>"; var_dump($quiz_category ); die(); 
@@ -58,33 +112,22 @@
             <div class="well">
                 <p><?php echo $quiz_category->description; ?></p>
             </div>
-            <form method="post"  enctype="multipart/form-data">
+            <form method="post"  enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
                 <table class="table">
                     <tbody>
                         <tr>
-                            <th colspan="2" class="text-left">Question</th> 
-                        </tr>
-                        <tr>
-                            <td colspan="2"><textarea class="form-control" required name="question"></textarea></td>
-                        </tr>
-                        <tr>
-                            <th class="text-left">Question background</th>
-                            <th class="text-left">Correct Answer</th>
-                        </tr>
-                        <tr>
-                            <td><input type="file" required name="background" accept="image/*" class="form-control"></td>
-                            <td> 
-                                <select required name="correct_answer" class="form-control">
-                                    <option></option>
-                                    <option value="true">True</option>
-                                    <option value="false">False</option>
-                                </select>
-                            </td>
+                            <th colspan="2" class="text-left">Title</th>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <hr>
+                                <input type="text" name="title" value="" required="" class="form-control">
                             </td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Questions background</th>
+                        </tr>
+                        <tr>
+                            <td><input name="background" type="file" multiple class="form-control" /></td>
                         </tr>
                         <tr>                            
                             <th colspan="2" class="text-left">Truth Selection</th>
@@ -118,6 +161,44 @@
                             </td>
                         </tr>
                     </tbody>
+                    
+                </table>
+                <hr>
+                <h3>Quiz Content</h3>
+                <?php for($ctr = 1; $ctr<=10; $ctr++){?>
+                <div class="col-md-6 col-md-offset-3">
+                    <hr>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="text-left"><h4>Question #<?php echo $ctr; ?></h4></th> 
+                            </tr>
+                            <tr>
+                                <td colspan="2"><textarea class="form-control" required name="question[<?php echo $ctr; ?>]"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th class="text-left">Correct Answer</th>
+                            </tr>
+                            <tr> 
+                                <td> 
+                                    <select required name="correct_answer[<?php echo $ctr; ?>]" class="form-control">
+                                        <option></option>
+                                        <option value="true">True</option>
+                                        <option value="false">False</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table> 
+                </div>
+                <?php } // end this ffor ?>
+                <table class="table">
                     <tfoot>
                         <tr>
                             <td colspan="2" class="text-center">
@@ -130,4 +211,7 @@
         </div>
     </div>
 </div> 
+<script type="text/javascript">
+    $("div#myId").dropzone({ url: "/file/post" });
+</script>
 <?php include_layout_template('sub_footer.php'); ?>

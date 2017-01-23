@@ -6,7 +6,7 @@ require_once(LIB_PATH.DS.'database.php');
 class Quiz extends DatabaseObject {
 	
 	protected static $table_name="quiz";
-	protected static $db_fields = array('id', 'lesson_id', 'description', 'audio', 'choice1', 'choice2', 'choice3', 'choice4', 'answer','type');
+	protected static $db_fields = array('id', 'quiz_category_id','lesson_id', 'description', 'audio', 'choice1', 'choice2', 'choice3', 'choice4', 'answer','type');
 
 	public $id;
 	public $lesson_id;
@@ -41,30 +41,39 @@ class Quiz extends DatabaseObject {
 	);
 
 	// Pass in $_FILE(['uploaded_file']) as an argument
-  public function attach_file($file) {
+  	public function attach_file($file) {
 		// Perform error checking on the form parameters
         $allowed =  array('mp3','wav');
         $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-		if(!$file || empty($file) || !is_array($file)) {
-		  // error: nothing uploaded or wrong argument usage
-		  $this->errors[] = "No file was uploaded.";
-		  return false;
-		} elseif(!in_array($ext,$allowed) ) {
+
+		if(!$file || empty($file) || !is_array($file)) 
+		{
+
+		  	// error: nothing uploaded or wrong argument usage
+			$this->errors[] = "No file was uploaded.";
+			return false;
+		} 
+		elseif(!in_array($ext,$allowed) ) 
+		{
+
             $this->errors[] = "invalid file format.";
-		  return false;
-        } elseif($file['error'] != 0) {
-		  // error: report what PHP says went wrong
-		  $this->errors[] = $this->upload_errors[$file['error']];
-		  return false;
-		} else {
+		  	return false;
+        } 
+        elseif($file['error'] != 0) 
+        {
+			// error: report what PHP says went wrong
+			$this->errors[] = $this->upload_errors[$file['error']];
+			return false;
+		} 
+		else 
+		{
 			// Set object attributes to the form parameters.
-		  $this->temp_path  = $file['tmp_name'];
-		  $this->audio   = basename($file['name']);
-		  // $this->type       = $file['type'];
-		  // $this->size       = $file['size'];
+			$this->temp_path  = $file['tmp_name'];
+			$this->audio   = basename($file['name']);
+			// $this->type       = $file['type'];
+			// $this->size       = $file['size'];
 			// Don't worry about saving anything to the database yet.
 			return true;
-
 		}
 	}
   
@@ -73,32 +82,33 @@ class Quiz extends DatabaseObject {
 		if(isset($this->id)) {
 			// Really just to update the caption
 			$this->update();
-		} else {
+		} 
+		else {
 			// Make sure there are no errors
 			
 			// Can't save if there are pre-existing errors
-		  if(!empty($this->errors)) { return false; }
+		  	if(!empty($this->errors)) { return false; }
 		  
 			// Make sure the caption is not too long for the DB
-		  if(strlen($this->description) > 255) {
+		  	if(strlen($this->description) > 255) {
 				$this->errors[] = "The caption can only be 255 characters long.";
 				return false;
 			}
 		
-		  // Can't save without filename and temp location
-		  if(empty($this->audio) || empty($this->temp_path)) {
-		    $this->errors[] = "The file location was not available.";
-		    return false;
-		  }
+			// Can't save without filename and temp location
+			if(empty($this->audio) || empty($this->temp_path)) {
+				$this->errors[] = "The file location was not available.";
+				return false;
+			}
 			
 			// Determine the target_path
-		  $target_path = SITE_ROOT .DS. 'public' .DS. 'audio' .DS. $this->audio;
+		  	$target_path = SITE_ROOT .DS. 'public' .DS. 'audio' .DS. $this->audio;
 		  
-		  // Make sure a file doesn't already exist in the target location
-		  if(file_exists($target_path)) {
-		    $this->errors[] = "The file {$this->audio} already exists.";
-		    return false;
-		  }
+			// Make sure a file doesn't already exist in the target location
+			if(file_exists($target_path)) {
+				$this->errors[] = "The file {$this->audio} already exists.";
+				return false;
+			}
 		
 			// Attempt to move the file 
 			if(move_uploaded_file($this->temp_path, $target_path)) {
@@ -109,7 +119,8 @@ class Quiz extends DatabaseObject {
 					unset($this->temp_path);
 					return true;
 				}
-			} else {
+			} 
+			else {
 				// File was not moved.
 		    $this->errors[] = "The file upload failed, possibly due to incorrect permissions on the upload folder.";
 		    return false;
@@ -121,7 +132,8 @@ class Quiz extends DatabaseObject {
 
 		if($this->delete()) {
             return true;
-		} else {
+		} 
+		else {
 			// database delete failed
 			return false;
 		}
