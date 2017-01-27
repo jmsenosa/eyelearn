@@ -5,30 +5,20 @@ require_once("../includes/initialize.php");
 if (isset($_POST['submit'])) { // Form has been submitted.
     error_reporting(E_ALL);
     $lrn = $_POST['lrn'];
-  // Check database to see if username/password exist.
-	$found_user = Student::check_username($lrn);
-	
-	
-  if ($found_user) {
+    // Check database to see if username/password exist.
+	$found_user = Student::check_username($lrn); 
+    if ($found_user) { 
+        $session->login($found_user);
 
-	
-
-		  
-
-			$session->login($found_user);
-            
-			log_action('Student Log in', "{$found_user->full_name()} Log in.");
-			redirect_to("index.php");  
-		
-
- 
-  } else {
-    $message = "LRN not found";
-  }
+        log_action('Student Log in', "{$found_user->full_name()} Log in.");
+        redirect_to("index.php");  
+    } else {
+        $message = "LRN not found";
+    }
   
 } else { // Form has not been submitted.
-  $username = "";
-  $password = "";
+    $username = "";
+    $password = "";
 }
 
 ?>

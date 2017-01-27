@@ -8,7 +8,7 @@
 	$obj = 'Audio';
 	
 	// Find all the User
-	$audios = Audio::find_by_lesson($_GET['folder']);
+	$audios = Audio::find_by_lesson_name($_GET['folder']);
 
 ?>
 <?php include_layout_template('sub_header.php'); ?>

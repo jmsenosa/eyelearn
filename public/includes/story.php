@@ -15,6 +15,7 @@ class Story extends DatabaseObject {
 	public $filename;
 	public $active;
 	public $last_update;
+	public $remarks;
 	
 	private $temp_path;
 	protected $upload_dir="video";

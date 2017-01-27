@@ -24,6 +24,15 @@ class User extends DatabaseObject {
     public $fromtime;
     public $totime;
 	
+    public $fullname = "";
+
+    public function __construct()
+    {
+        if(isset($this->first_name) && isset($this->last_name)) 
+        {
+            $this->fullname = $this->first_name . " " . $this->last_name;
+        }  
+    }
 
 	
 	//Find all except ADMIN
@@ -52,9 +61,10 @@ class User extends DatabaseObject {
 	}
 	
     public function full_name() 
-    {
+    { 
         if(isset($this->first_name) && isset($this->last_name)) 
         {
+            $this->fullname = $this->first_name . " " . $this->last_name;
             return $this->first_name . " " . $this->last_name;
         } 
         else 

@@ -52,6 +52,13 @@ class MySQLDatabase {
 		}
 		return $value;
 	}
+
+    public function dd($data) {
+        echo "<pre>";
+        print_r(json_encode($data));
+        echo "</pre>";
+        die();
+    }
 	
 	// "database-neutral" methods
   public function fetch_array($result_set) {

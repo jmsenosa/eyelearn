@@ -3,16 +3,18 @@
 	require_once('../includes/initialize.php');
 	
 	// Check if Logged in. If not the page will go to Signin page
-	 if (!$session->is_logged_in()) { redirect_to("login.php"); }
+	if (!$session->is_logged_in()) { redirect_to("login.php"); }
 	error_reporting(E_ALL);
 	// Find User 
 	$user = Student::find_by_id($_SESSION['user_id']);	
-	$quizes = Quiz::find_by_lesson($_GET['id']);
+	$quizes = Quiz::find_by_lesson_rand($_GET['id']);
+
     $total = count($quizes);
     $isContinue = Quiz_result::find_is_continue($_GET['id'], $_SESSION['user_id']);
     $number = 1;
     $score = 0;
     $attemp = Quiz_result::find_my_attemp($_GET['id'], $_SESSION['user_id']);
+
     $count = count($attemp) + 1;
     if(count($isContinue) > 0){
         $count -= 1;
@@ -22,9 +24,7 @@
         endforeach;
     }
     if(isset($_POST['submit'])){
-            
-				 redirect_to('paaralan.php');
-			
+        redirect_to('paaralan.php');	
     }
     
     
@@ -180,69 +180,63 @@
 
 </html>
 <script>
-    var item = <?php echo $number ?>;
-    var total_number = <?php echo $total ?>;
-    var correctAns = <?php echo $score ?>;
-    
+    $(document).ready(function(){
+        var item = <?php echo $number ?>;
+        var total_number = <?php echo $total ?>;
+        var correctAns = <?php echo $score ?>; 
+        $('.Quiz' + item).css('animation-duration','2s');
+        $('.Quiz' + item).addClass('animated fadeInRight');
+        $('.Quiz' + item).show();
+        setTimeout(function(){
+            document.getElementById('audio' + item).play();    
+        },2000);
 
-      
-            $('.Quiz' + item).css('animation-duration','2s');
-            $('.Quiz' + item).addClass('animated fadeInRight');
-            $('.Quiz' + item).show();
-                setTimeout(function(){
-                    document.getElementById('audio' + item).play();    
-                },2000);
-
-    $('.ear').on('click',function(){
-        var id = $(this).data('id');
-        document.getElementById(id).play();
-    })
-    
-    $('.sagot').on('click',function(){
-        if($(this).data('answer') == "yes"){
-            correctAns += 1;
-        }
-        var previtem = item;
-        item += 1;
-        $.post('pagsusulitcon.php', {id:'<?php echo $_GET['id'] ?>',current_item:item,score:correctAns,total_number:total_number,user_id:'<?php echo $_SESSION['user_id'] ?>'}, function(data){
-                            console.log(data);
-                        });
+        $('.ear').on('click',function(){
+            var id = $(this).data('id');
+            document.getElementById(id).play();
+        })
         
-       
-            $('.Quiz' + previtem).addClass('fadeOutLeft');       
-                setTimeout(function(){
-                $('.Quiz' + item).css('animation-duration','2s');
-                $('.Quiz' + item).addClass('animated fadeInRight');
-                $('.Quiz' + item).show();
-                    setTimeout(function(){
-                        document.getElementById('audio' + item).play();    
-                    },1000);
-
-            },1000);
-        
-        if(item == <?php echo $item+1 ?>){
-            
-                $('.score').addClass('animated fadeIn');
-                $('.score').show();
-             
-          
-            for(var x = 0;x < correctAns;x++){
-                $('<img src="student_assets/star.svg" width="80" height="80">').appendTo(".score");
+        $('.sagot').on('click',function(){
+            if($(this).data('answer') == "yes"){
+                correctAns += 1;
             }
-           }
+            var previtem = item;
+            item += 1;
+            $.post('pagsusulitcon.php', {id:'<?php echo $_GET['id'] ?>',current_item:item,score:correctAns,total_number:total_number,user_id:'<?php echo $_SESSION['user_id'] ?>'}, function(data){
+                                console.log(data);
+                            });
+            
+           
+                $('.Quiz' + previtem).addClass('fadeOutLeft');       
+                    setTimeout(function(){
+                    $('.Quiz' + item).css('animation-duration','2s');
+                    $('.Quiz' + item).addClass('animated fadeInRight');
+                    $('.Quiz' + item).show();
+                        setTimeout(function(){
+                            document.getElementById('audio' + item).play();    
+                        },1000);
 
+                },1000);
+            
+            if(item == <?php echo $item+1 ?>){
+                
+                    $('.score').addClass('animated fadeIn');
+                    $('.score').show();
+                 
+              
+                for(var x = 0;x < correctAns;x++){
+                    $('<img src="student_assets/star.svg" width="80" height="80">').appendTo(".score");
+                }
+               }
+        });
         
+        $('.go_back').click(function(){
+            $( "#form_submit" ).trigger( "click" );
+        });
         
-        
+        $('.btn-floating').on('click',function(){
+            var id = $(this).data('audioid');
+            document.getElementById(id).play();
+        });
     });
-    
-    $('.go_back').click(function(){
-        $( "#form_submit" ).trigger( "click" );
-    });
-    
-    $('.btn-floating').on('click',function(){
-        var id = $(this).data('audioid');
-        document.getElementById(id).play();
-    });
-
 </script>

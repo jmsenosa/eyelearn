@@ -51,8 +51,13 @@
 		</thead> 
 		<?php foreach($lessons as $lesson): ?>
 		  <tr>
+			<?php $user = User::find_by_id($lesson->user_id); ?>
 			<td><a href='folder.php?folder=<?php echo $lesson->name; ?>' rel="tooltip"  title="View Content" ><?php echo ucwords($lesson->name); ?></td>
-			<td><?php $user = User::find_by_id($lesson->user_id); echo ucwords($user->full_name());  ?></td>
+			<td>
+				<?php if (isset($user->first_name) && isset($user->last_name)): ?>
+					<?php echo $user->first_name. " ".$user->last_name; ?>
+				<?php endif ?>
+			</td>
 			<td><?php echo ucwords($lesson->description); ?></td>
 			
 		  </tr>

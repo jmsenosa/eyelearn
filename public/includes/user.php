@@ -22,7 +22,13 @@ class User extends DatabaseObject {
 	public $last_update;
     public $schedule;
 	
-
+    public function __construct()
+    {
+        if(isset($this->first_name) && isset($this->last_name)) 
+        {
+            $this->fullname = $this->first_name . " " . $this->last_name;
+        }  
+    }
 	
 	//Find all except ADMIN
 	public static function find_all_sudent() {
@@ -49,13 +55,20 @@ class User extends DatabaseObject {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE type_id!=1 ");
 	}
 	
-  public function full_name() {
-    if(isset($this->first_name) && isset($this->last_name)) {
-      return $this->first_name . " " . $this->last_name;
-    } else {
-      return "";
+    public function full_name() 
+    { 
+        if(isset($this->first_name) && isset($this->last_name)) 
+        {
+            $this->fullname = $this->first_name . " " . $this->last_name;
+            return $this->first_name . " " . $this->last_name;
+        } 
+        else 
+        {
+            return "";
+        }
+
+        // return (isset($this->first_name) && isset($this->last_name)) ? $this->first_name . " " . $this->last_name : "";
     }
-  }
   
 	// public function get_type() {
     // if(isset($this->type)) {

@@ -30,7 +30,14 @@ require_once(LIB_PATH.DS."fpdf".DS."fpdf.php");
 // load database-related classes
 require_once(LIB_PATH.DS.'user.php');
 
+function dd($data) {
+    echo "<pre>";
+    print_r(json_encode($data));
+    echo "</pre>";
+    die();
+}
+
 // Error Reporting
-error_reporting(0);
+// error_reporting(0);
 
 

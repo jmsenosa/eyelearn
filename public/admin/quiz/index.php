@@ -80,8 +80,8 @@
             </tr>
         </thead>
         <tbody>    
-            <?php foreach($lessons as $lesson): ?>
-                <?php $user = User::find_by_id($lesson->user_id); @$fullname = ucwords($user->full_name());  ?>
+            <?php foreach($lessons as $lesson): ?> 
+                <?php $user = User::find_by_id($lesson->user_id);  ?>
                 <tr>
                     <td class="text-center">                                    
                         <a href='folder.php?id=<?php echo $lesson->id; ?>' rel="tooltip" title="View Content">
@@ -89,7 +89,9 @@
                         </a>
                     </td>
         			<td>
-                        <?php echo $fullname; ?>
+                        <?php if (isset($user->first_name) && isset($user->last_name)): ?>
+                            <?php echo ucwords($user->first_name." ".$user->last_name); ?>
+                        <?php endif ?>
                     </td>
         			<td>
                         <?php echo ucwords($lesson->description); ?>
@@ -97,7 +99,7 @@
                     <td class="text-right"> 
                         <a href="folder.php?id=<?php echo $lesson->id; ?>"  role="button" class="btn btn-default"> View Quizes</a>
                     </td>          			
-    		  </tr>
+		        </tr>
     		<?php endforeach; ?>
         </tbody> 
 	</table>

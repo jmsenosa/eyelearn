@@ -3,7 +3,10 @@
          <i class="fa fa-user" aria-hidden="true"></i> <span>User Manager</span>
     </a> 
     <a href="student/index.php" class="list-group-item">
-        <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Parents and Students</span>
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Students</span>
+    </a>
+    <a href="parents/index.php" class="list-group-item">
+        <i class="fa fa-users" aria-hidden="true"></i></i> <span>Parents</span>
     </a>
     <a href="attendance/index.php" class="list-group-item">
         <i class="fa fa-calendar" aria-hidden="true"></i> <span>Attendance Manager</span>

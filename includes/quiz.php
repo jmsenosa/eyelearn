@@ -24,11 +24,11 @@ class Quiz extends DatabaseObject {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE lesson_id='{$lesson_id}'");
 	}
 
-    
+    public static function find_by_lesson_rand($lesson_id=0) {
+		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE lesson_id='{$lesson_id}' ORDER BY RAND()");
+	}
 
-    
-    
-  protected $upload_errors = array(
+  	protected $upload_errors = array(
 		// http://www.php.net/manual/en/features.file-upload.errors.php
 		UPLOAD_ERR_OK 				=> "No errors.",
 		UPLOAD_ERR_INI_SIZE  		=> "Larger than upload_max_filesize.",

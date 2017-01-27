@@ -1,11 +1,16 @@
 <?php
+require_once("../../../includes/config.php");
+
+
 if(!empty($_FILES)){
     
+
     //database configuration
-    $dbHost = 'localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'eyelearn_db';
+    $dbHost = DB_SERVER;
+    $dbUsername = DB_USER;
+    $dbPassword = DB_PASS;
+    $dbName = DB_NAME;
+
     //connect with the database
     $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
     if($conn->connect_errno){
@@ -16,6 +21,10 @@ if(!empty($_FILES)){
     $fileName = $_FILES['file']['name'];
     $targetFile = $targetDir.$fileName;
     
+    if (!file_exists("../../audio/" . $_POST['folder'])) {
+        mkdir("../../audio/" . $_POST['folder'], 0777, true);
+    }
+
     if(file_exists($targetFile)){
     
         echo "FIlE ALREADY EXIST!";

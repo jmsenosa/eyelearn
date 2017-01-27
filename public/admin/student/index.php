@@ -6,7 +6,7 @@
 	if (!$session->is_logged_in()) { redirect_to("signin.php"); }
 	
 	// Find all the User
-    $students = Students::find_all();
+    $students = Student::find_all();
     $obj = 'Parents and Student';
 	
 ?>

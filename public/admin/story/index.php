@@ -60,7 +60,12 @@
 					<?php foreach($stories as $story): ?>
 					  <tr>
 						<td><?php echo ucwords($story->name); ?></td>
-						<td><?php $user = User::find_by_id($story->user_id);  echo ucwords($user->full_name()); ?></td>
+						<td>
+							<?php $user = User::find_by_id($story->user_id); ?>
+							<?php if (isset($user->first_name) && isset($user->last_name)): ?>
+								<?php echo $user->first_name. " ".$user->last_name; ?>
+							<?php endif ?>						 	
+						 </td>
 						<td><?php echo ucwords($story->description); ?></td>
 						<td class='text-center'><?php echo $story->active==1 ? '<span class="label label-success">&nbsp;&nbsp;Active&nbsp;&nbsp;</span>':'<span class="label label-danger">In Active</span>'; ?></td>
 						<td class='text-center'><a href="update.php?id=<?php echo $story->id; ?>"  rel="tooltip"  title="Edit <?php echo ucwords($obj); ?>" ><i class="fa fa-pencil text-warning"></i></a> &nbsp; <a href="delete.php?id=<?php echo $story->id; ?>" rel="tooltip"  title="Delete <?php echo ucwords($obj); ?>" onclick="return confirm('Are you sure you want to delete');"><i class="fa fa-trash text-danger"></i></a></td>
