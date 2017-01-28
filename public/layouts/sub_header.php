@@ -24,6 +24,8 @@
 
     <!-- Custom Fonts -->
     <link href="../../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../../bower_components/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" media="screen" rel="stylesheet" type="text/css">
+
     <!-- jQuery -->
     <script src="../../assets/js/jquery.js"></script>
 
@@ -33,6 +35,7 @@
     <script src="../../assets/js/mask.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script src="../../../bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
     <script src="../../assets/js/jquery-ui.js"></script> 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

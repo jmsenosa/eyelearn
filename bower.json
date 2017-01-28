@@ -8,6 +8,8 @@
   "main": "",
   "license": "MIT",
   "dependencies": {
-    "AdminLTE": "admin-lte#^2.3.8"
+    "AdminLTE": "admin-lte#^2.3.8",
+    "multiselect": "multi-select#^0.9.12",
+    "bootstrap-multiselect": "^0.9.13"
   }
 }

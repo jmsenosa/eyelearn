@@ -67,7 +67,7 @@
                                 <td><?php echo $parent->phone ; ?></td>
                                 <td class="text-right">
                                     <a class="btn btn-info" role="btn" href="edit.php?id=<?php echo $parent->id; ?>">Update</a>
-                                    <a class="btn btn-danger" role="btn" href="delete.php?id=<?php echo $parent->id; ?>">Delete</a>
+                                    <a class="btn btn-danger delete-parent" role="btn" href="delete.php?id=<?php echo $parent->id; ?>">Delete</a>
                                 </td>
                             </tr>
                             <?php endforeach ?>
@@ -92,5 +92,14 @@
     $(document).ready(function(){
         $("[rel='tooltip']").tooltip(); 
     }); 
+
+    $(".delete-parent").click(function(){
+        r = confirm("Are you sure?");
+        if (r == true) {
+            return true;
+        } else {
+            return false;
+        }
+    });
 /*]]>*/
 </script>
