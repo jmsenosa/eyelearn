@@ -75,5 +75,13 @@ class Student extends DatabaseObject {
     $result_array = static::find_by_sql($sql);
 		return !empty($result_array) ? array_shift($result_array) : false;
 	}
+    public static function find_by_lrn($lrn) {
+
+        $sql  = "SELECT * FROM student ";
+        $sql .= "WHERE lrn = '{$lrn}'";
+        $sql .= "LIMIT 1";
+        $result_array = static::find_by_sql($sql);
+        return !empty($result_array) ? array_shift($result_array) : false;
+    }
 	
 }

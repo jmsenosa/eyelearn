@@ -24,8 +24,7 @@
 	
 	if(isset($_POST['submit'])) {
 
-		$section = Section::find_by_id($_POST['section']);
-		
+		$section = Section::find_by_id($_POST['section']);		
 
 		//Get user id to be edit	
 			// id, section_id, course_id, first_name, last_name, email, phone, active, last_update

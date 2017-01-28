@@ -34,7 +34,9 @@
 		LEFT JOIN
 			parent
 			ON
-				parentstud.parent_id = parent.id";
+				parentstud.parent_id = parent.id
+		GROUP BY student.id
+		";
 	$result = $conn->query($sql);
 
 	$obj = "Students";
