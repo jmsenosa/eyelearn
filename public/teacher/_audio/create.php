@@ -13,7 +13,7 @@
 <!-- Page Heading/Breadcrumbs -->
 <div class="row">
 	<div class="col-lg-12">
-		<h1 class="page-header">  <?php echo (isset($obj)) ? ucwords($obj) : $_GET['folder']; ?> <small></small></h1>
+		<h1 class="page-header">  <?php echo ucwords($obj); ?> <small></small></h1>
 		<ol class="breadcrumb">
 			<li><a href="../index.php"> Dashboard</a></li>
 			<li><a href="index.php"> Folder</a></li>
@@ -32,27 +32,24 @@
             </div>
 		</div>
 	</div>
-<!-- mute -->
 <?php include_layout_template('sub_footer.php'); ?>
 <script type="text/javascript">
-    Dropzone.options.dropzone = {
+   Dropzone.options.dropzone = {
         acceptedFiles: "audio/*",
-        init: function() {
-            this.on("addedfile", function(file) {
-                if (this.files.length) {
-                    var _i, _len;
-                    for (_i = 0, _len = this.files.length; _i < _len - 1; _i++) // -1 to exclude current file
-                    {
-                        if( this.files[_i].name === file.name && 
-                        this.files[_i].size === file.size && 
-                        this.files[_i].lastModifiedDate.toString() === file.lastModifiedDate.toString()) {
-                                
-                            this.removeFile(file);
-                        }
-                    }
-                }
-            });
+      init: function() {
+      this.on("addedfile", function(file) {
+    if (this.files.length) {
+        var _i, _len;
+        for (_i = 0, _len = this.files.length; _i < _len - 1; _i++) // -1 to exclude current file
+        {
+            if(this.files[_i].name === file.name && this.files[_i].size === file.size && this.files[_i].lastModifiedDate.toString() === file.lastModifiedDate.toString())
+            {
+                this.removeFile(file);
+            }
         }
+    }
+});
+    }
     }
     
    

@@ -9,7 +9,7 @@
 	
 	$user = User::find_by_id($_SESSION['user_id']);
 
-    $lessons = Lesson::find_all();	
+    $lessons = Lesson::find_by_user($_SESSION['user_id']);
 
 	
 	 
@@ -37,7 +37,7 @@
   <?php else: ?>
    <div class="alert alert-info alert-dismissible" role="alert">
 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> There are total of <strong><?php echo count($lessons); ?></strong> <?php echo ucwords($obj); ?> in the database.
+	  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>List of lessons.
 	</div>
   <?php endif; ?>
 <div class="table-responsive">
@@ -49,19 +49,18 @@
 			<th>Description</th>
 		  </tr>
 		</thead> 
-		<?php foreach($lessons as $lesson): ?>
+		<?php foreach($lessons as $lesson):$datetime = new DateTime($lesson->last_update);
+        if($datetime->format('Y') == date('Y')){ ?>
+      
 		  <tr>
-			<?php $user = User::find_by_id($lesson->user_id); ?>
 			<td><a href='folder.php?folder=<?php echo $lesson->name; ?>' rel="tooltip"  title="View Content" ><?php echo ucwords($lesson->name); ?></td>
-			<td>
-				<?php if (isset($user->first_name) && isset($user->last_name)): ?>
-					<?php echo $user->first_name. " ".$user->last_name; ?>
-				<?php endif ?>
-			</td>
+			<td><?php $user = User::find_by_id($lesson->user_id); echo ucwords($user->full_name());  ?></td>
 			<td><?php echo ucwords($lesson->description); ?></td>
 			
 		  </tr>
-		<?php endforeach; ?>
+		<?php 
+                                               }
+        endforeach; ?>
 		</table>
 </div>
 <?php include_layout_template('sub_footer.php'); ?>
@@ -70,7 +69,7 @@
 /*<![CDATA[*/
 	$(document).ready(function(){
 		$("[rel='tooltip']").tooltip();
-        $('.table').DataTable(); <!-- calling data table sorting sorting to -->
+        $('.table').DataTable();
 	}); 
 /*]]>*/
 </script>

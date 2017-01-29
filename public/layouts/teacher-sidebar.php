@@ -17,7 +17,9 @@
     <a href="lesson/index.php" class="list-group-item">
          <i class="fa fa-book" aria-hidden="true"></i> <span>Lesson Manager</span>
     </a>
-
+    <a href="audio/index.php" class="list-group-item">
+        <i class="fa fa-volume-up" aria-hidden="true"></i> <span>Audio Manager</span>
+    </a>
     <a href="quiz/index.php" class="list-group-item">
          <i class="fa fa-pencil" aria-hidden="true"></i> <span>Quiz Manager</span>
     </a>
