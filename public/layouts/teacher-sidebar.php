@@ -5,6 +5,9 @@
     <a href="section/index.php" class="list-group-item">
          <i class="fa fa-certificate" aria-hidden="true"></i> <span>Section Manager</span>
     </a> 
+    <a href="grading/index.php" class="list-group-item">
+        <i class="fa fa-university" aria-hidden="true"></i> <span>Grading Manager</span>
+    </a> 
     <a href="attendance/index.php" class="list-group-item">
          <i class="fa fa-calendar" aria-hidden="true"></i> <span>Attendance Manager</span>
     </a> 
