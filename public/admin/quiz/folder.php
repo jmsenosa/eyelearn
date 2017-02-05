@@ -32,7 +32,7 @@
             </div>
             <?php else: ?>
                 <div class="alert alert-info alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> There are total of <strong><?php echo count($quiz); ?></strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> There are total of <strong><?php echo count($quizes); ?></strong>
                     <?php echo ucwords($obj); ?> in the database. </div>
                 <?php endif; ?>
                     <div class="table-responsive">

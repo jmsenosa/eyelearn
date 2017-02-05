@@ -64,225 +64,107 @@ $lessonCount = 1;
     
     
     
-    <?php
-    if(isset($_GET['student_id'])):
-    ?>
+    <?php if(isset($_GET['student_id'])):  ?>
     <div class="container"><br><br>
-       <div class="card-panel">
-           <b><span class="orange-text">Orange </span><span class="blue-text text-darken-2">is for upcoming lesson,<span class="green-text"> Green</span> is for ongoing lesson and <span class="red-text">Red</span> is for finished lesson.
-</b></span>
+        <div class="card-panel">
+            <b>
+            <span class="orange-text">Orange </span>
+            <span class="blue-text text-darken-2">is for upcoming lesson,
+            <span class="green-text"> Green</span> is for ongoing lesson and 
+            <span class="red-text">Red</span> is for finished lesson.</b></span>
         </div>
         <div class="card-panel">
-      <span class="blue-text text-darken-2">Hover the mouse on the attemp score to see remarks.</span>
-    </div>
-      <?php
-        elseif(count($myStudents) == 0):
-        ?>
-            <div class="container"><br><br>
-        <div class="card-panel">
-          <span class="blue-text text-darken-2">Add student first to see records.</span>
+            <span class="blue-text text-darken-2">Hover the mouse on the attemp score to see remarks.</span>
         </div>
-        <?php
-        else:
-                ?>
-        <div class="container"><br><br>
-        
-        <div class="card-panel">
-          <span class="blue-text text-darken-2">Please Select your Student to see his/her Attendance, Results and Lesson Progress.</span>
-        </div>
-        <?php
-        
-        endif;
-        
-        ?>
-            <?php
-            if(!isset($_GET['student_id'])):
-                echo '<div class="row>';
-                foreach($myStudents as $mystudent):
-                $student = Student::find_by_id($mystudent->id);
-               ?>
-               <div class="col s12 m6">
-                    <div class="card horizontal">
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <p>Name: <?php echo $student->full_name(); ?></p>
-                          <p>Section: <?php echo $student->section; ?></p>
-                          <p>Teacher: <?php echo  User::find_by_id($student->teacher)->full_name(); ?></p>
-                        </div>
-                        <div class="card-action">
-                          <a href="?student_id=<?php echo $student->id ?>">Please click this to see reports</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                 
-               <?php
-                endforeach;
-                echo '</div>';
-            else:
-                             ?>
-        <div class="row">
-            <div class="col s12">
-                <ul class="tabs">
-                    <li class="tab col s6"><a href="#progress" class="active">Progress</a></li>
-                    <li class="tab col s6"><a href="#attendance">Attendance</a></li>
-                </ul>
+        <?php elseif(count($myStudents) == 0): ?>
+        <div class="container">
+            <br><br>
+            <div class="card-panel">
+              <span class="blue-text text-darken-2">Add student first to see records.</span>
             </div>
         </div>
-        <div id="progress">
-            <h3>Lesson Progress</h3>
-            <table class="centered">
-                <tr>
-                    <th>Lesson Name</th>
-                    <th>Date</th>
-                    <th>Total Items</th>
-                    <th>Attempt 1</th>
-                    <th>Attempt 2</th>
-                    <th>Attempt 3</th>
-                    
-                </tr>
-                <?php
-                    $check = Quiz_result::find_my_student_group_lesson($_GET['student_id']); 
-                    foreach($check as $checks){
-                         echo "<tr>";
-                        echo "<td style='text-align: left !important'>" . Lesson::find_by_id($checks->lesson_id)->name . "</td>";
-                        echo "<td style='text-align: left !important'>" . $checks->quiz_date . "</td>";
-                        echo "<td>" . $checks->total_number . "</td>";
-                        $lesson_result = Quiz_result::find_my_student($_GET['student_id'],$checks->lesson_id);
-                        for($i = 0;$i < 3;$i++){
-                           
-                            echo "<td class='tooltipped' style='cursor:pointer' data-position='top' data-tooltip='{$lesson_result[$i]->remarks}'>" . ($lesson_result[$i]->score == "" ? "N/a" : $lesson_result[$i]->score)  ."</td>";
-                            
-                        }
-                    }
-    ?>
-
-            </table>
+        <?php else: ?>
+        <div class="container"><br><br>        
+            <div class="card-panel">
+                <span class="blue-text text-darken-2">Please Select your Student to see his/her Attendance, Results and Lesson Progress.</span>
+            </div>
         </div>
-        <div id="attendance">
-            <h3>Attendance</h3>
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Attendance</th>
-                </tr>
-                <?php foreach ($attendance as $a): ?>
-                <tr>
-                    <td><?php echo $a->date; ?></td>
-                    <td><?php echo $a->attendance; ?></td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
-        </div>
-
-
-    <?php endif; ?>
-    </div>
-
-    
-    
-    
-    <ul id="slide-out" class="side-nav fixed <?php echo (isset($_GET['student_id']) ? '' : 'hide'); ?>">
-    
-    <?php foreach($lesson as $lessons){
-        
-        
-        if($lessons->user_id == Student::find_by_id($_GET['student_id'])->teacher){
-            
-            ?>
-               
-              <?php
-                if (!isset($prevdate)){
-                    ?>
-                    <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                    <li>
-                    <a  class="collapsible-header" href="#" >Lesson <?php echo $lessonCount ?></a>
-                    <div class="collapsible-body">
-                     <ul>
-                    <?php
-                    if($lessons->isDone == 1):
-                    ?>
-                     
-                    <li class="red darken-3"><a href="progress.php?lesson=<?php echo $lessons->id ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : "" ?>"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    elseif($lessons->description == date('Y-m-d')):
-                    ?>
-
-                    <li class="green"><a href="progress.php?lesson=<?php echo $lessons->id ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : "" ?>"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    else:
-                    ?>
-
-                    <li class="orange"><a href="#"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    endif;
-                    $prevdate = $lessons->description;
-                    $lessonCount = $lessonCount + 1;
-              
-                }
-            elseif($prevdate == $lessons->description){
-         
-                    if($lessons->isDone == 1):
-                    ?>       
-                    <li class="red darken-3"><a href="progress.php?lesson=<?php echo $lessons->id ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : "" ?>"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    elseif($lessons->description == date('Y-m-d')):
-                    ?>
-
-                    <li class="green"><a href="progress.php?lesson=<?php echo $lessons->id ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : "" ?>"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    else:
-                    ?>
-
-                    <li class="orange"><a href="#"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    endif;
-                $prevdate = $lessons->description;
-            }
-            elseif($prevdate != $lessons->description){
-              
-                ?>
-                        
-                    </ul>
-                        </div>
-                        </li>
+        <?php endif; ?>
+        <div class="container"><br><br>    
+            <?php if(!isset($_GET['student_id'])): ?>
+                <div class="row">
+                    <?php foreach($myStudents as $mystudent): ?>
+                        <?php $student = Student::find_by_id($mystudent->id); ?>
+                        <div class="col s12 m6">
+                            <div class="card horizontal">
+                                <div class="card-stacked">
+                                    <div class="card-content">
+                                        <p>Name: <?php echo $student->full_name(); ?></p>
+                                        <p>Section: <?php echo $student->section; ?></p>
+                                        <p>Teacher: <?php echo  User::find_by_id($student->teacher)->full_name(); ?></p>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="?student_id=<?php echo $student->id ?>">Please click this to see reports</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    <?php endforeach; ?>
+                </div>
+            <?php else: ?> 
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s6"><a href="#progress" class="active">Progress</a></li>
+                            <li class="tab col s6"><a href="#attendance">Attendance</a></li>
                         </ul>
-        </li>
-               <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                    <li>
-                    <a  class="collapsible-header" href="#" >Lesson <?php echo $lessonCount ?></a>
-                
-                    <div class="collapsible-body">
-                     <ul>
-                    <?php
-                    if($lessons->isDone == 1):
-                    ?>
-                        
-                    <li class="red darken-3"><a href="progress.php?lesson=<?php echo $lessons->id ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : "" ?>"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    elseif($lessons->description == date('Y-m-d')):
-                    ?>
-
-                    <li class="green"><a href="progress.php?lesson=<?php echo $lessons->id ?>&student_id=<?php echo isset($_GET['student_id']) ? $_GET['student_id'] : "" ?>"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    else:
-                    ?>
-
-                    <li class="orange"><a href="#"><?php echo $lessons->name ?></a></li>
-                    <?php
-                    endif;
-                    $prevdate = $lessons->description;
-                    $lessonCount = $lessonCount + 1;
-            }
-        }
-}
-?>
-    </ul>
-    
-                        </body>
+                    </div>
+                </div>
+                <div id="progress">
+                    <h3>Lesson Progress</h3>
+                    <table class="centered">
+                        <tr>
+                            <th>Lesson Name</th>
+                            <th>Date</th>
+                            <th>Total Items</th>
+                            <th>Attempt 1</th>
+                            <th>Attempt 2</th>
+                            <th>Attempt 3</th>                            
+                        </tr>
+                        <?php $check = Quiz_result::find_my_student_group_lesson($_GET['student_id']); ?>
+                        <?php foreach($check as $checks) { ?>
+                        <tr>
+                            <?php $lesson_result = Quiz_result::find_my_student($_GET['student_id'],$checks->lesson_id); ?>
+                            <td style='text-align: left !important'><?php echo Lesson::find_by_id($checks->lesson_id)->name; ?></td>
+                            <td style='text-align: left !important'><?php echo $checks->quiz_date; ?></td>
+                            <td><?php echo $checks->total_number; ?></td>
+                            <td style='text-align: left !important'><?php echo $checks->quiz_date; ?></td>
+                            <?php for($i = 0;$i < 3;$i++) { ?>
+                                <td class='tooltipped' style='cursor:pointer' data-position='top' data-tooltip='<?php echo $lesson_result[$i]->remarks; ?>'><?php echo ($lesson_result[$i]->score == "" ? "N/a" : $lesson_result[$i]->score); ?></td>
+                            <?php } ?>
+                        </tr>
+                        <?php } ?>
+                    </table>
+                </div>
+                <div id="attendance">
+                    <h3>Attendance</h3>
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Attendance</th>
+                        </tr>
+                        <?php foreach ($attendance as $a): ?>
+                        <tr>
+                            <td><?php echo $a->date; ?></td>
+                            <td><?php echo $a->attendance; ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </div> 
+            <?php endif; ?>
+        </div>   
+    </div> 
+</body>
 </html>
 
 <script>

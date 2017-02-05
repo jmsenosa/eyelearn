@@ -20,19 +20,22 @@ class Lesson extends DatabaseObject {
 	//Find by user 
 	public static function find_by_user($id=0) {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE user_id={$id}");
-  }
+    }
     //Find by user 
 	public static function find_by_date($id=0) {
         $date = date('Y-m-d');
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE user_id={$id} and description='{$date}'");
-  }
+    }
     
 	public static function find_all_by_date() {
         $date = date('Y-m-d');
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` ORDER BY description ASC");
-  }
+    }
 	
 
-
+    public static function find_all ()
+    {
+        return static::find_by_sql("SELECT * FROM `".static::$table_name."` ORDER BY description ASC");
+    }
 	
 }

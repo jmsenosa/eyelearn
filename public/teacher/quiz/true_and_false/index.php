@@ -71,7 +71,7 @@
     // echo "<pre>"; var_dump($quiz_category ); die(); 
     $obj = 'True or False Quiz'; 
     // include page header 
-    include_layout_template('sub_header.php'); 
+    include_layout_template('sub_header_q.php'); 
  ?>
 
 <!-- bread crumbs -->

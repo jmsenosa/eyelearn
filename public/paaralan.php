@@ -147,23 +147,23 @@
                                     <?php } ?> <a class="waves-effect btn green accent-3 prev_lesson" style="position:absolute;left:50px;top:400px;display:none">BUMALIK</a> </div>
                 <div class="lesson_content" style="position:relative;display:none;width:100%;top:50px;"> <a class="waves-effect btn blue-grey lighten-1 back_lesson" style="position:absolute;left:50px;display:none"><i class="fa fa-arrow-left"></i> BUMALIK SA ARALIN</a>
                     <?php
-                    foreach($lesson as $lessons){
-                        $lesson_dtl = Lesson_dtl::find_by_lesson($lessons->id);
-                        foreach($lesson_dtl as $contents){
-                            ?>
-                        <div class="content_<?php echo $lessons->id ?> board_<?php echo $contents->board ?>" style="position:absolute;display:none;width:100%;top:170px;left:500px;cursor:pointer" data-id="<?php echo $contents->id ?>" data-seconds="<?php echo $contents->seconds ?>">
-                            <img src="<?php echo 'images/' . $contents->filename ?>" style="position:absolute;width:250px;height:250px">
-                            <audio src="audio/<?php echo $lessons->name . '/' . Audio::find_by_id($contents->audio_id)->filename ?>" id='audio_<?php echo $contents->id ?>' class="audio">
-                        </div>
-                        <?php
+                        foreach($lesson as $lessons){
+                            $lesson_dtl = Lesson_dtl::find_by_lesson($lessons->id);
+                            foreach($lesson_dtl as $contents){
+                                ?>
+                            <div class="content_<?php echo $lessons->id ?> board_<?php echo $contents->board ?>" style="position:absolute;display:none;width:100%;top:170px;left:500px;cursor:pointer" data-id="<?php echo $contents->id ?>" data-seconds="<?php echo $contents->seconds ?>">
+                                <img src="<?php echo 'images/' . $contents->filename ?>" style="position:absolute;width:250px;height:250px">
+                                <audio src="audio/<?php echo $lessons->name . '/' . Audio::find_by_id($contents->audio_id)->filename ?>" id='audio_<?php echo $contents->id ?>' class="audio">
+                            </div>
+                            <?php
+                            }
                         }
-                    }
-                ?>
+                    ?>
                             <a class="waves-effect btn green accent-3 next_board" style="position:absolute;left:980px;top:550px;display:none">KASUNOD</a>
                             <a class="waves-effect btn green accent-3 prev_board" style="position:absolute;left:80px;top:550px;display:none">BUMALIK</a> </div>
                 </div>
         </section>
-                <audio src="student_assets/plop.wav" id="sound"></audio>
+        <audio src="student_assets/plop.wav" id="sound"></audio>
     </body>
 
     </html>

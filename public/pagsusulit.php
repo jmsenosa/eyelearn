@@ -33,26 +33,16 @@
 <html lang="en">
 
 <head>
-    <?php include('header.php'); ?>
-    
-  
+    <?php include('header.php'); ?>   
 </head>
 
 <body>
-    <section class="pagsusulit animated fadeIn">
-        
+    <section class="pagsusulit animated fadeIn">        
         <div class="site_title animated bounceInDown">
-            <?php
-                for($x = 1;$x<=$count;$x++){
-                    ?>
-                    <img height="50" width="50" src="student_assets/happy.svg">
-                          <?php      
-                }
-            ?>
-        </div>
-
-        
-        
+            <?php for($x = 1;$x<=$count;$x++){ ?>
+                <img height="50" width="50" src="student_assets/happy.svg">
+            <?php } ?>
+        </div>      
         <?php
             $item = 0;
             foreach($quizes as $quiz){
@@ -76,7 +66,7 @@
         <?php
                 }
                 
-                                if($quiz->type == "naiiba"){
+                if($quiz->type == "naiiba"){
                     
                 $item += 1;
                 ?>
@@ -153,6 +143,12 @@
                     </div>
                                             
         <?php
+                }
+
+                if ($quiz->type == "") {
+                    if ($quiz->quiz_category_id == 3) {
+                        redirect_to('pagsusulit_tama_mali.php?lesson_id='.$quiz->lesson_id."&quiz_id=".$quiz->id);
+                    }
                 }
             }
         ?>

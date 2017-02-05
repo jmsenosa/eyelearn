@@ -56,11 +56,11 @@ class Lesson_dtl extends DatabaseObject {
 		  return false;
 		} else {
 			// Set object attributes to the form parameters.
-		  $this->temp_path  = $file['tmp_name'];
-		  $this->filename   = basename($file['name']);
+		  	$this->temp_path  = $file['tmp_name'];
+		  	$this->filename   = basename($file['name']);
             
-		  // $this->type       = $file['type'];
-		  // $this->size       = $file['size'];
+		  	// $this->type       = $file['type'];
+		  	// $this->size       = $file['size'];
 			// Don't worry about saving anything to the database yet.
 			return true;
 
@@ -87,7 +87,7 @@ class Lesson_dtl extends DatabaseObject {
 		  }
 			
 			// Determine the target_path
-		  $target_path = SITE_ROOT .DS. 'public' .DS. $this->upload_dir .DS. $this->filename;
+		  $target_path = SITE_ROOT .DS. 'public' .DS. $this->upload_dir .DS. md5($this->filename."-".date("Y-m-d H:i:s A")).$this->filename; 
 		  
 		  // Make sure a file doesn't already exist in the target location
 		  if(file_exists($target_path)) {

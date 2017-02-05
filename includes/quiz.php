@@ -24,6 +24,10 @@ class Quiz extends DatabaseObject {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE lesson_id='{$lesson_id}'");
 	}
 
+	public static function find_by_id($id =0, $lesson_id = 0) {
+		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE id='{$id}' AND lesson_id = '".$lesson_id."'");	
+	}
+
     public static function find_by_lesson_rand($lesson_id=0) {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE lesson_id='{$lesson_id}' ORDER BY RAND()");
 	}

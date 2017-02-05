@@ -46,4 +46,22 @@ class Quiz_True_Or_False extends DatabaseObject {
 
         return static::find_by_sql( $sql );
     }
+
+    public function find_by_id_lesson($id = 0, $lesson_id = 0)
+    {
+        $sql = "
+            SELECT 
+                ".static::$table_name.".*, quiz.lesson_id 
+            FROM 
+                ".static::$table_name." 
+            JOIN
+                quiz 
+                    ON ".static::$table_name.".quiz_id = quiz.id
+            WHERE
+                lesson_id = '{$lesson_id}' AND quiz.id = '{$id}'
+        ";
+
+
+        return static::find_by_sql( $sql );
+    }
 }

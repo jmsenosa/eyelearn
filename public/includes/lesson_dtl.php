@@ -87,7 +87,8 @@ class Lesson_dtl extends DatabaseObject {
 		  }
 			
 			// Determine the target_path
-		  $target_path = SITE_ROOT .DS. 'public' .DS. $this->upload_dir .DS. $this->filename;
+		  $target_path = SITE_ROOT .DS. 'public' .DS. $this->upload_dir .DS. md5($this->filename."-".date("Y-m-d H:i:s A"))."-".$this->filename;
+ 
 		  
 		  // Make sure a file doesn't already exist in the target location
 		  if(file_exists($target_path)) {
