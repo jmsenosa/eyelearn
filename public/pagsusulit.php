@@ -45,12 +45,13 @@
         </div>      
         <?php
             $item = 0;
+            $quiz_id = 0;
             foreach($quizes as $quiz){
                 if($quiz->type == "salita"){
-                    
-                $item += 1;
+                    $quiz_id = $quiz->id;
+                    $item += 1;
                 ?>
-                    <div class="Quiz<?php echo $item ?> QuizDiv" data-quiztype="salita">
+                    <div class="Quiz<?php echo $item ?> QuizDiv" data-quiztype="salita" data-quiz_id="<?php echo $quiz->id ?>">
                         <div class="description" ><span style="font-size:32px;"><?php echo $item ?></span></div>
                         <audio style="position:absolute;left: 450px;top:80px" id="audio<?php echo $item ?>">
                           <source src="<?php echo 'audio/' . $quiz->audio ?>">
@@ -67,7 +68,7 @@
                 }
                 
                 if($quiz->type == "naiiba"){
-                    
+                $quiz_id = $quiz->id;
                 $item += 1;
                 ?>
                     <div class="Quiz<?php echo $item ?> QuizDiv" data-quiztype="naiiba">
@@ -162,6 +163,7 @@
         </div>
         
         <form method="POST" >
+            <input type="hidden" name="quiz_id" id="quiz_id" value="<?php echo $quiz_id; ?>">
             <input type="hidden" name="user_id" value="<?php echo $user->id ?>">
             <input type="hidden" name="score" value="" id="form_score">
             <input type="hidden" name="total_number" value="" id="form_total">
@@ -198,10 +200,16 @@
             }
             var previtem = item;
             item += 1;
-            $.post('pagsusulitcon.php', {id:'<?php echo $_GET['id'] ?>',current_item:item,score:correctAns,total_number:total_number,user_id:'<?php echo $_SESSION['user_id'] ?>'}, function(data){
-                                console.log(data);
-                            });
-            
+            $.post('pagsusulitcon.php', {
+                id:'<?php echo $_GET['id'] ?>',
+                current_item:item,
+                score:correctAns,
+                total_number:total_number,
+                quiz_id:"<?php echo $quiz_id; ?>"
+                user_id:'<?php echo $_SESSION['user_id'] ?>'}, function(data){
+                console.log(data);
+            });
+
            
                 $('.Quiz' + previtem).addClass('fadeOutLeft');       
                     setTimeout(function(){

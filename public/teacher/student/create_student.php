@@ -11,7 +11,7 @@
         die("Connection failed: " . $conn->connect_error);
     } 
     // Find section
-    $sections = Section::find_all();    
+    $sections = Section::find_all();  
     $parents = Magulang::get_all();
     
     $obj = 'student';
@@ -149,10 +149,12 @@
              <div class="form-group">
                 <label for="type" class="col-sm-2 control-label">Section</label>
                 <div class="col-sm-4">
-                   <select class="form-control" id="section_id" name="section_id" >
-                      <?php foreach($sections as $section): ?>
-                      <option <?php echo (isset($_POST['section_id'])) ? ($_POST['section_id'] == $section->id) ? "selected" : "" : ""; ?> value='<?php echo $section->id; ?>'  ><?php echo ucwords($section->section); ?></option>
-                     <?php endforeach; ?>
+                    <select class="form-control" id="section_id" name="section_id" >
+                        <?php foreach($sections as $section): ?>
+                            <?php if ($_SESSION["user_id"] == $section->created_by): ?>
+                                <option <?php echo (isset($_POST['section_id'])) ? ($_POST['section_id'] == $section->id) ? "selected" : "" : ""; ?> value='<?php echo $section->id; ?>'  ><?php echo ucwords($section->section); ?></option> 
+                            <?php endif ?>
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 <label for="email" class="col-sm-1 control-label">Email</label>

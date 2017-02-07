@@ -6,10 +6,15 @@
 	if (!$session->is_logged_in()) { redirect_to("signin.php"); }
        
 	// Find all the User
-   
-    if(isset($_GET['date'])):
+    
+
+    if (isset($_GET['date'])) {
         $students = Student::find_by_year($_GET['year']);
-    endif;
+    } else {
+        $students = Student::find_all();
+    }
+
+    // 
     $obj = 'Parents and Student';
 	
 ?>
@@ -35,7 +40,7 @@
                 <div class="form-group ">
                    <label for="section" class="col-sm-1 control-label" style="text-align:left !important;">Date </label>
                    <div class="col-sm-3">
-                   <input type="text" class="form-control" id="datepicker" onkeydown="return false" >
+                   <input type="text" class="form-control" id="datepicker" value="<?php echo (isset($_GET['date'])) ? $_GET['date'] : "";?>" onkeydown="return false" >
                     </div>
                 </div>
                     

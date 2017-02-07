@@ -48,46 +48,44 @@
 				<table class="table">
 					<thead>
 						<tr>
-						<th>LRN</th>
-						<th>Student Name</th>
-						<th class='text-center'>Quiz Date</th>
-						<th class='text-center'>Number of Items</th>
-						
-						<th class='text-center'>Attemp 1</th>
-						<th class='text-center'>Attemp 2</th>
-                        <th class='text-center'>Attemp 3</th>
-						<th class='text-center'>Option</th>
-					  </tr>
+    						<th>LRN</th>
+    						<th>Student Name</th>
+    						<th class='text-center'>Quiz Date</th>
+    						<th class='text-center'>Number of Items</th>
+    						
+    						<th class='text-center'>Attemp 1</th>
+    						<th class='text-center'>Attemp 2</th>
+                            <th class='text-center'>Attemp 3</th>
+    						<th class='text-center'>Option</th>
+				        </tr>
 					</thead> 
-					            <?php
-                foreach($students as $student):
-                if($student->teacher == $_SESSION['user_id']):
-                $check = Quiz_result::find_my_student_group_lesson($student->id); 
-                foreach($check as $checks){
-                    $datetime = new DateTime( $checks->quiz_date);
-        if($datetime->format('Y') == date('Y')){
-                     echo "<tr>";
-                    echo "<td>" . $student->lrn . "</td>";
-                    echo "<td>" . $student->full_name() . "</td>";
-                    echo "<td class='text-center'>" . $checks->quiz_date . "</td>";
-                    echo "<td class='text-center'>" . $checks->total_number . "</td>";
-                    $lesson_result = Quiz_result::find_my_student($student->id,$checks->lesson_id);
-                    for($i = 0;$i < 3;$i++){
-                       
-                        echo "<td class='text-center'>" . ($lesson_result[$i]->score == "" ? "N/a" : $lesson_result[$i]->score)  ."</td>";
-                        
-                    }
-                    echo '<td class="text-center"><a href="delete.php?lesson_id=' . $checks->lesson_id . '&student_id='. $student->id .'" onclick="return confirm(\'Are you sure you want to delete\');" rel="tooltip"  title="Delete record"><i class="fa fa-trash text-danger"></i></a></td>';
-                }
-                }
-                endif;
-                endforeach;
-                
-                    
-                ?>
-					</table>
+    	            <?php
+                    foreach($students as $student):
+                        if($student->teacher == $_SESSION['user_id']):
+                        $check = Quiz_result::find_my_student_group_lesson($student->id); 
+                        foreach($check as $checks){
+                            $datetime = new DateTime( $checks->quiz_date);
+                            if($datetime->format('Y') == date('Y')){
+                                echo "<tr>";
+                                echo "<td>" . $student->lrn . "</td>";
+                                echo "<td>" . $student->full_name() . "</td>";
+                                echo "<td class='text-center'>" . $checks->quiz_date . "</td>";
+                                echo "<td class='text-center'>" . $checks->total_number . "</td>";
+                                $lesson_result = Quiz_result::find_my_student($student->id,$checks->lesson_id);
+                                for($i = 0;$i < 3;$i++){
+                                   
+                                    echo "<td class='text-center'>" . @($lesson_result[$i]->score == "" ? "N/A" : $lesson_result[$i]->score)  ."</td>";
+                                    
+                                }
+                                echo '<td class="text-center"><a href="delete.php?lesson_id=' . $checks->lesson_id . '&student_id='. $student->id .'" onclick="return confirm(\'Are you sure you want to delete\');" rel="tooltip"  title="Delete record"><i class="fa fa-trash text-danger"></i></a></td>';
+                            }
+                        }
+                        endif;
+                    endforeach; 
+                    ?>
+				</table>
 			</div>
-			 <a href='viewpdf.php?id=<?php echo $event->id; ?>' target='blank' class="btn btn-danger" >View in PDF Files</a>
+			 <a href='view_csv.php' target='blank' class="btn btn-danger" >View in CSV FORMAT</a>
 		</div>
 	</div>
 	
@@ -102,11 +100,10 @@
         $('.textarea').on('change',function(){
             var id = $(this).data('id');
             var remarks = $(this).val();
-             $.post('remarks.php', {remarks:remarks,id:id}, function(data){
-            
-             console.log(data);
-             });
-             });
+            $.post('remarks.php', {remarks:remarks,id:id}, function(data){
+                console.log(data);
+            });
+        });
 	}); 
 /*]]>*/
 </script>

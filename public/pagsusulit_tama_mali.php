@@ -5,13 +5,13 @@
         
         $quiz = Quiz::find_by_id($_GET['quiz_id'], $_GET['lesson_id']);
         if (count($quiz) == 0) {           
-            redirect_to('paaralan.php');
+            // redirect_to('paaralan.php');
         }
         $quiz = $quiz[0];
 
         $tm_quizes = Quiz_True_Or_False::find_by_id_lesson($_GET['quiz_id'], $_GET['lesson_id']);
         if (count($tm_quizes) == 0) {
-            redirect_to('paaralan.php');
+            // redirect_to('paaralan.php');
         }
 
         if ( isset($_POST['submit'])  ) {
@@ -36,6 +36,7 @@
                 }
             }
             $quiz_result = new Quiz_result;
+            $quiz_result->quiz_id = $_GET['quiz_id'];
             $quiz_result->user_id = $_SESSION['user_id'];
             $quiz_result->lesson_id = $_GET['lesson_id'];
             $quiz_result->score   =  $score;

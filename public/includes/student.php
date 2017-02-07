@@ -24,11 +24,11 @@ class Student extends DatabaseObject {
 
 	
 	public function full_name() {
-	if(isset($this->first_name) && isset($this->last_name)) {
-		return $this->first_name . " " . $this->last_name;
-	} else {
-		return "";
-	}
+    	if(isset($this->first_name) && isset($this->last_name)) {
+    		return $this->first_name . " " . $this->last_name;
+    	} else {
+    		return "";
+    	}
 	}
   
     public static function find_by_year($sy){

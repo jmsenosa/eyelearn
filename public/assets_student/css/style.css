@@ -1693,3 +1693,7 @@ a.red:hover, a.yellow:hover{
 	}
 }
 
+.bg-danger
+{
+    color: #FFF !important;
+}

@@ -6,9 +6,10 @@ require_once(LIB_PATH.DS.'database.php');
 class Quiz_result extends DatabaseObject {
 	
 	protected static $table_name="quiz_result";
-	protected static $db_fields = array('id', 'user_id', 'score', 'total_number', 'quiz_date','lesson_id','remarks','current_item');
+    protected static $db_fields = array('id', 'quiz_id', 'user_id', 'score', 'total_number', 'quiz_date','lesson_id','remarks','current_item');
 
 	public $id;
+    public $quiz_id;
 	public $user_id;
     public $lesson_id;
 	public $score;

@@ -26,7 +26,7 @@
     <a href="story/index.php" class="list-group-item">
         <i class="fa fa-assistive-listening-systems" aria-hidden="true"></i> <span>Story Telling</span>
     </a>
-    <a href="story/index.php" class="list-group-item">
+    <a href="audit/index.php" class="list-group-item">
         <i class="fa fa-list" aria-hidden="true"></i> <span>Audit Trail</span>
     </a>
 </div>
