@@ -6,7 +6,12 @@
 	if (!$session->is_logged_in()) { redirect_to("signin.php"); }
 	
 	// Find all the User
-    $students = Student::find_all();
+    $data = [
+        "users.id"=>$_SESSION['user_id']
+    ];
+
+    $students = Student::get_all_with_parents($data); 
+
     $obj = 'Parents and Student';
     $user = User::find_by_id($_SESSION['user_id']);
 
@@ -42,7 +47,7 @@
 				        <label class="col-sm-1 control-label" style="text-align:left !important;">Year </label>
 					    <div class="col-lg-6">
 
-                            <form class="form-inline">
+                            <form class="form-inline" method="GET">
                                 <div class="form-group">
                                     <label for="datepicker1">From</label>
                                     <input type="number" min="2000" max="<?php echo date('Y') ?>" value="<?php echo date('Y') ?>" class="form-control" id="datepicker1">
@@ -70,25 +75,18 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach($students as $student): 
-                                if($student->teacher == $_SESSION['user_id']):
-                            ?>
+							<?php foreach($students as $student): ?>
                                 
 							<tr>
 								<td><a href=# rel="tooltip"  title="Student LRN"><?php echo $student->lrn; ?></a></td>
-								<td><?php echo $student->full_name() ?></td>
+								<td><?php echo $student->full_name; ?></td>
 								<td><?php echo $student->address; ?></td>
-								<td><?php
-                                    $magulang == "";
-                                    $magulang = Magulang::find_by_id(Parentstud::find_by_student_id($student->id)->parent_id);
-                                    echo $magulang == "" ? "N/A" : $magulang->full_name(); ?></td>
-								<td><?php echo $student->section ?></td>
+								<td><?php echo $student->parent_name; ?></td>
+								<td><?php echo $student->section_name ?></td>
 								<td><?php echo $student->sy ?></td>
 							</tr>
 							
-							<?php 
-                                endif;
-                            endforeach; ?>
+							<?php endforeach; ?>
 						</tbody>
 					</table>
 				</div>

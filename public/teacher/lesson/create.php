@@ -89,7 +89,7 @@
 			 <div class="form-group">
 				<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Date</label>
 				<div class="col-sm-4">
-				  <input type="date" class="form-control" id="description" name="description"  />
+				  <input type="text" class="form-control date-picker" id="description" name="description"  />
 				</div>
 				
 			  </div>

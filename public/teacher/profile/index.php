@@ -101,11 +101,11 @@
 			 <div class="form-group">
 				<label for="first_name" class="col-sm-2 control-label"> First name</label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="first_name" name="first_name"  value='<?php echo $user->first_name; ?>' />
+				  <input type="text" class="form-control lettersonly" id="first_name" name="first_name"  value='<?php echo $user->first_name; ?>' />
 				</div>
 				<label for="last_name" class="col-sm-1 control-label"> Last </label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="last_name" name="last_name"  value='<?php echo $user->last_name; ?>' />
+				  <input type="text" class="form-control lettersonly" id="last_name" name="last_name"  value='<?php echo $user->last_name; ?>' />
 				</div>	
 			  </div>
 			  <div class="form-group">
@@ -115,7 +115,7 @@
 				</div>
 				<label for="phone" class="col-sm-1 control-label"> Phone </label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="phone" name="phone"  value='<?php echo $user->phone; ?>' />
+				  <input type="text" class="form-control numbersonly" maxlength="11" id="phone" name="phone"  value='<?php echo $user->phone; ?>' />
 				</div>	
 			  </div>
 			 <div class="form-group">

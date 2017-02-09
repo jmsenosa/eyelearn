@@ -98,7 +98,7 @@
                     $lesson_result = Quiz_result::find_my_student($student->id,$checks->lesson_id);
                     for($i = 0;$i < 3;$i++){
                        
-                        echo "<td class='text-center'>" . ($lesson_result[$i]->score == "" ? "N/a" : $lesson_result[$i]->score)  ."</td>";
+                        echo "<td class='text-center'>" . (@$lesson_result[$i]->score == "" ? "N/a" : $lesson_result[$i]->score)  ."</td>";
                         
                     }
                     echo '<td class="text-center"><a href="delete.php?lesson_id=' . $checks->lesson_id . '&student_id='. $student->id .'" onclick="return confirm(\'Are you sure you want to delete\');" rel="tooltip"  title="Delete record"><i class="fa fa-trash text-danger"></i></a></td>';

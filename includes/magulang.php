@@ -22,6 +22,14 @@ class Magulang extends DatabaseObject {
         return $parent[0];
     }
 
+    public static function get_by_class() {
+
+        $sql = "";
+
+        return static::find_by_sql("SELECT * FROM `".static::$table_name."` ");
+    }
+
+
     public static function get_all() {
         return static::find_by_sql("SELECT * FROM `".static::$table_name."` ");
     }
@@ -52,5 +60,96 @@ class Magulang extends DatabaseObject {
         $result_array = static::find_by_sql($sql);
 		return !empty($result_array) ? array_shift($result_array) : false;
 	}
+
+    public static function get_with_student_teacher($teacher_id = 0, $section_id = 0)
+    { 
+
+        $sql = "
+            SELECT 
+                magulang.id as parent_id,
+                users.id as teacher_id,
+                CONCAT(users.first_name,' ',users.last_name) as teacher_name,
+                CONCAT(magulang.first_name,' ',magulang.last_name) as parent_name, 
+                magulang.email as email,
+                magulang.phone as phone,
+                student.address as address,
+                student.lrn as LRN,
+                CONCAT(student.first_name,' ',student.last_name) as student,
+                section.section as section
+                
+                
+            FROM 
+                users
+            JOIN
+                section
+                    ON
+                        section.created_by = users.id
+            JOIN
+                student
+                    ON 
+                        student.section_id = section.id
+            JOIN
+                parentstud
+                    ON
+                        parentstud.student_id = student.id
+            JOIN
+                parent as magulang
+                    ON
+                        magulang.id = parentstud.parent_id
+        ";  
+
+        if ( $teacher_id != 0 && $section_id != 0 ) 
+        {
+            $sql = $sql." WHERE users.id = {$teacher_id} AND section.id = {$section_id}";
+        }
+        elseif( $teacher_id != 0 && $section_id == 0 ) 
+        {
+            $sql = $sql." WHERE users.id = {$teacher_id}";
+        }
+        elseif( $teacher_id == 0 && $section_id != 0 ) 
+        {
+            $sql = $sql." WHERE section.id = {$section_id}"; 
+        }
+
+        $sql = $sql . " GROUP BY magulang.id 
+                        ORDER BY magulang.last_name ASC";
+
+        $result = [];                 
+
+        global $database;
+        $result_set = $database->query($sql);
+
+        while ($row = $database->fetch_array($result_set)) 
+        {
+            $raw_result = [];
+
+            $raw_result["parent_id"] = $row["parent_id"];
+            $raw_result["teacher_id"] = $row["teacher_id"];
+            $raw_result["teacher_name"] = $row["teacher_name"];
+            $raw_result["parent_name"] = $row["parent_name"]; 
+            $raw_result["email"] = $row["email"];
+            $raw_result["phone"] = $row["phone"];
+            $raw_result["address"] = $row["address"];
+            $raw_result["LRN"] = $row["LRN"];
+            $raw_result["student"] = $row["student"];
+            $raw_result["section"] = $row["section"];
+
+            $result[] = (object) $raw_result;
+        }
+    
+        return $result;
+    }
 	
 }
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

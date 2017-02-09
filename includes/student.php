@@ -84,5 +84,94 @@ class Student extends DatabaseObject {
         $result_array = static::find_by_sql($sql);
         return !empty($result_array) ? array_shift($result_array) : false;
     }
+
+    public static function get_all_with_parents($where = array())
+    {
+        $sql = "
+            SELECT 
+            student.*,
+            CONCAT(student.first_name,' ',student.last_name) as full_name,
+            parent.id as parent_id,
+            CONCAT(parent.first_name,' ',parent.last_name) as parent_name,
+            section.id as section_id,
+            section.section as section_name,
+            users.id as teacher_id,
+            CONCAT(users.first_name,' ',users.last_name) as teacher_name
+        FROM 
+            student 
+        JOIN
+            parentstud 
+                ON 
+                    parentstud.student_id = student.id
+        JOIN
+            parent
+                ON
+                    parent.id = parentstud.parent_id
+        JOIN
+            section
+                ON
+                    section.id = student.section_id
+        JOIN
+            users
+                ON
+                    users.id = section.created_by
+        ";
+
+        if (count($where) > 0) {
+            $sql_where = "WHERE";
+            $count = count($where);
+            $counter = 1;
+            // echo $count. " " . $counter; die();
+            foreach ($where as $key => $value) {
+
+                $value = (is_numeric($value)) ? $value : "'".$value."' ";
+
+                $sql_where .= " ".$key." = ".$value; 
+                if ($counter < $count) {
+                    $sql_where .= " AND";
+                }
+                $counter = $counter + 1;
+            }
+
+            $sql = $sql.$sql_where; 
+        }
+
+        $sql = $sql." GROUP BY student.id ORDER BY student.id ASC"; 
+
+        $result = [];                 
+
+        global $database;
+        $result_set = $database->query($sql);
+
+        while ($row = $database->fetch_array($result_set)) 
+        {
+ 
+            $raw_result = [];
+            $raw_result["lrn"] = $row['lrn'];
+            $raw_result["first_name"] = $row['first_name'];
+            $raw_result["middle_name"] = $row['middle_name'];
+            $raw_result["full_name"] = $row['full_name'];
+            $raw_result["last_name"] = $row['last_name'];
+            $raw_result["active"] = $row['active'];
+            $raw_result["last_update"] = $row['last_update'];
+            $raw_result["teacher"] = $row['teacher'];
+            $raw_result["section"] = $row['section'];
+            $raw_result["section_id"] = $row['section_id'];
+            $raw_result["address"] = $row['address'];
+            $raw_result["sy"] = $row['sy'];
+            $raw_result["parent_last_name"] = $row['parent_last_name'];
+            $raw_result["parent_first_name"] = $row['parent_first_name'];
+            $raw_result["parent_id"] = $row['parent_id'];
+            $raw_result["parent_name"] = $row['parent_name'];
+            $raw_result["section_name"] = $row['section_name'];
+            $raw_result["teacher_id"] = $row['teacher_id'];
+            $raw_result["teacher_name"] = $row['teacher_name'];
+            $result[] = (object) $raw_result;
+        } 
+
+
+
+        return $result;
+    }
 	
 }

@@ -34,6 +34,10 @@
     <a href="story/index.php" class="list-group-item">
          <i class="fa fa-file-movie-o aria-hidden="true"></i> <span>Story Telling</span>
     </a>
+
+    <a href="parents/index.php" class="list-group-item">
+         <i class="fa fa-certificate" aria-hidden="true"></i> <span>Parents</span>
+    </a> 
     
     <a href="profile/index.php" class="list-group-item">
          <i class="fa fa-list" aria-hidden="true"></i> <span>Profile</span>

@@ -47,5 +47,7 @@ class Magulang extends DatabaseObject {
     $result_array = static::find_by_sql($sql);
 		return !empty($result_array) ? array_shift($result_array) : false;
 	}
+
+    
 	
 }

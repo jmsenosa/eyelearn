@@ -39,6 +39,7 @@
         var node = $(this);
         node.val(node.val().replace(/[^0-9]/g,'') );
     });
-    
-   
+     
+    $('.date-picker').datepicker({ beforeShowDay: $.datepicker.noWeekends  });
+
 </script>

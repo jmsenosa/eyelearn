@@ -44,7 +44,7 @@
                 $student->last_name     = $_POST['last_name'];
                 $student->section       = $section->section;
                 $student->email         = $_POST['email'];
-                $student->phone         = $_POST['phone'];
+                // $student->phone         = $_POST['phone'];
                 $student->active        = $_POST['active'];
                 $student->sy        = date("Y");
                 if($student->save()) {
@@ -123,23 +123,23 @@
                 <div class="form-group">
                     <label for="lrn" class="col-sm-2 control-label">LRN</label>
                     <div class="col-sm-4">
-                        <input type="text" maxlength="13" class="form-control" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
+                        <input type="text" maxlength="13" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
                     </div>
                 </div>
               <div class="form-group">
                 <label for="first_name" class="col-sm-2 control-label">First Name</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="first_name" name="first_name" placeholder="<?php echo ucwords($obj); ?> First Name" value="<?php echo (isset($_POST['first_name'])) ? $_POST['first_name'] : ""; ?>" />
+                  <input type="text" class="form-control lettersonly" id="first_name" name="first_name" placeholder="<?php echo ucwords($obj); ?> First Name" value="<?php echo (isset($_POST['first_name'])) ? $_POST['first_name'] : ""; ?>" />
                 </div>
                 <label for="middle_name" class="col-sm-1 control-label"> Middle Name</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="middle_name"name="middle_name" placeholder="<?php echo ucwords($obj); ?> Middle Name"  value="<?php echo (isset($_POST['middle_name'])) ? $_POST['middle_name'] : ""; ?>" />
+                  <input type="text" class="form-control lettersonly" id="middle_name" name="middle_name" placeholder="<?php echo ucwords($obj); ?> Middle Name"  value="<?php echo (isset($_POST['middle_name'])) ? $_POST['middle_name'] : ""; ?>" />
                 </div>
               </div>
               <div class="form-group">
                 <label for="last_name" class="col-sm-2 control-label">Last Name</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="last_name" name="last_name" placeholder="<?php echo ucwords($obj); ?> Last Name" value="<?php echo (isset($_POST['last_name'])) ? $_POST['last_name'] : ""; ?>" />
+                  <input type="text" class="form-control lettersonly" id="last_name" name="last_name" placeholder="<?php echo ucwords($obj); ?> Last Name" value="<?php echo (isset($_POST['last_name'])) ? $_POST['last_name'] : ""; ?>" />
                 </div>
                 <label for="address" class="col-sm-1 control-label"> Address</label>
                 <div class="col-sm-4">
@@ -163,14 +163,15 @@
                 </div>  
               </div>
                <div class="form-group">
-                <label for="phone" class="col-sm-2 control-label">Phone</label>
-                <div class="col-sm-4">
+                <!-- <label for="phone" class="col-sm-2 control-label">Phone</label> -->
+                <!-- <div class="col-sm-4">
                    <input type="text" class="form-control" id="phone" name="phone" placeholder="<?php echo ucwords($obj); ?> Phone" value="<?php echo (isset($_POST['phone'])) ? $_POST['phone'] : ""; ?>" />
-                </div>
-                <label for="event_time" class="col-sm-1 control-label"> Status</label>
-                <div class="col-sm-4">
-                   Active <input type="radio" name="active" id="active" value=1  checked='checked'  />
-                 Inactive <input type="radio" name="active" id="active" value=0  />
+                </div> -->
+                <label for="event_time" class="col-sm-2 control-label"> Status</label>
+                <div class="col-sm-10">
+                    <br>
+                    Active <input type="radio" name="active" id="active" value=1  checked='checked'  />
+                    Inactive <input type="radio" name="active" id="active" value=0  />
                 </div>
               </div>
               <div class="col-xs-12">
@@ -179,7 +180,7 @@
                         <div class="form-group">
                             <label for="Parents" class="col-sm-2 control-label">Parents</label> 
                             <div class="col-sm-9" style="padding-left: 5px;">
-                                <select name="parents[]" class="form-control multiselect" required="required" multiple> 
+                                <select name="parents[]" class="form-control multiselect" required="required"> 
                                     <?php foreach ($parents as $parent): ?>   
                                         <?php $selected = ""; ?>
                                         <?php if (isset($_POST['parents'])): ?>

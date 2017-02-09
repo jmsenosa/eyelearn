@@ -90,7 +90,8 @@
 
                                 <tr>
                                    <?php
-                                     $attendance = Attendance::find_by_today($student->id,$_GET['date']);
+                                    $dateee = (isset($_GET['date'])) ? $_GET['date'] : date("Y-m-d");
+                                     $attendance = Attendance::find_by_today($student->id,$dateee);
                                 if(!empty($attendance)){
                                     foreach($attendance as $attend):
                                     
