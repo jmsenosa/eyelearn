@@ -33,6 +33,80 @@ class Student extends DatabaseObject {
     		return "";
 	    }
 	}
+
+    public static function find($id = 0){
+        if ($id != 0) {
+            $sql = "
+            
+            SELECT 
+                student.id as id,
+                student.*,
+                CONCAT(student.first_name,' ',student.last_name) as full_name,
+                parent.id as parent_id,
+                CONCAT(parent.first_name,' ',parent.last_name) as parent_name,
+                section.id as section_id,
+                section.section as section_name,
+                users.id as teacher_id,
+                CONCAT(users.first_name,' ',users.last_name) as teacher_name
+            FROM 
+                student 
+            LEFT JOIN
+                parentstud 
+                    ON 
+                        parentstud.student_id = student.id
+            LEFT JOIN
+                parent
+                    ON
+                        parent.id = parentstud.parent_id
+            LEFT JOIN
+                section
+                    ON
+                        section.id = student.section_id
+            LEFT JOIN
+                users
+                    ON
+                        users.id = section.created_by
+            ";
+            $sql .= "WHERE student.id = {$id} ";
+            $sql .= "LIMIT 1";
+
+            $result = [];                 
+
+            global $database;
+            $result_set = $database->query($sql);
+
+            while ($row = $database->fetch_array($result_set)) 
+            {
+     
+                $raw_result = [];
+                $raw_result["id"] = $row['id'];
+                $raw_result["lrn"] = $row['lrn'];
+                $raw_result["first_name"] = $row['first_name'];
+                $raw_result["middle_name"] = $row['middle_name'];
+                $raw_result["full_name"] = $row['full_name'];
+                $raw_result["last_name"] = $row['last_name'];
+                $raw_result["active"] = $row['active'];
+                $raw_result["last_update"] = $row['last_update'];
+                $raw_result["teacher"] = $row['teacher'];
+                $raw_result["section"] = $row['section'];
+                $raw_result["section_id"] = $row['section_id'];
+                $raw_result["address"] = $row['address'];
+                $raw_result["sy"] = $row['sy'];
+                $raw_result["parent_last_name"] = $row['parent_last_name'];
+                $raw_result["parent_first_name"] = $row['parent_first_name'];
+                $raw_result["parent_id"] = $row['parent_id'];
+                $raw_result["parent_name"] = $row['parent_name'];
+                $raw_result["section_name"] = $row['section_name'];
+                $raw_result["teacher_id"] = $row['teacher_id'];
+                $raw_result["teacher_name"] = $row['teacher_name'];
+                $result[] = (object) $raw_result;
+            } 
+
+            return (count($result) > 0) ? $result[0] : false;
+        }
+
+        return false;
+    }
   
     public static function find_by_year($sy){
 		
