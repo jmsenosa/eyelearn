@@ -8,6 +8,44 @@
 	// Find User 
 	$user = Student::find_by_id($_SESSION['user_id']);	
 	$quizes = Quiz::find_by_lesson_rand($_GET['id']);
+    $lesson = Lesson::find_by_id($_GET['id']);
+
+
+    $numbers = array(
+        "tm" => 0,
+        "mc" => 0
+    );
+
+    foreach ($quizes as $quiz) {
+        if ($quiz->quiz_category_id == 1) {
+            $numbers['mc'] = $numbers['mc'] + 1;
+        }else{            
+            $numbers['tm'] = $numbers['tm'] + 1;
+        }
+    }
+
+    $new_quizes = [];
+
+    $taken = Quiz_result::find_my_student($user->id,$lesson->id);
+    // echo "<pre>"; echo "egg: ".count($taken); echo "</pre>";
+    $attemp = Quiz_result::find_my_attemp($lesson->id,$user->id);
+    $count = sizeof($attemp) + 1;
+
+    if ($numbers['mc'] > $numbers['tm']) {
+        foreach ($quizes as $quiz) {
+            if ($quiz->quiz_category_id == 1) {
+                $new_quizes[] = $quiz;
+            }
+        }
+    }else{
+        foreach ($quizes as $quiz) {
+            if ($quiz->quiz_category_id != 1) {
+                $new_quizes[] = $quiz;
+            }
+        }
+    }
+
+    $quizes = $new_quizes; 
 
     $total = count($quizes);
     $isContinue = Quiz_result::find_is_continue($_GET['id'], $_SESSION['user_id']);
@@ -205,7 +243,7 @@
                 current_item:item,
                 score:correctAns,
                 total_number:total_number,
-                quiz_id:"<?php echo $quiz_id; ?>"
+                quiz_id:"<?php echo $quiz_id; ?>",
                 user_id:'<?php echo $_SESSION['user_id'] ?>'}, function(data){
                 console.log(data);
             });

@@ -58,6 +58,7 @@ class Lesson_dtl extends DatabaseObject {
 			// Set object attributes to the form parameters.
 		  	$this->temp_path  = $file['tmp_name'];
 		  	$this->filename   = basename($file['name']);
+ 
             
 		  	// $this->type       = $file['type'];
 		  	// $this->size       = $file['size'];

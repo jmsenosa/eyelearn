@@ -16,30 +16,25 @@
 	$lesson = Lesson::find_by_id($id); 
 	$audios = Audio::find_by_lesson($lesson->name);
 
-	if(isset($_POST['submit'])) {
+	if(isset($_POST['submit'])) {		
 		
-		
-			$lesson_dtl = new Lesson_dtl();
-			$lesson_dtl->lesson_id 	   = $_POST['lesson_id'];
-			$lesson_dtl->audio_id 	   = $_POST['audio_id'];
-			$lesson_dtl->seconds   = $_POST['seconds'];
-			$lesson_dtl->attach_file($_FILES['file_upload']);
-			$lesson_dtl->last_update 	= date('Y-m-d H:i:s');
-			if($lesson_dtl->save()) {
-				// Success
-				$session->message("The {$_POST['name']} was successfully Added.");
-                $user = User::find_by_id($_SESSION['user_id']);
-                log_action('Add Lesson Content', "{$user->full_name()} Added {$_POST['name']}.");
-				redirect_to('content.php?id='.$_POST['lesson_id']);
-			} else {
-				 $message = join("<br />", $lesson_dtl->errors);
-			}
-			
-		
-		
+		$lesson_dtl = new Lesson_dtl();
+		$lesson_dtl->lesson_id 	   = $_POST['lesson_id'];
+		$lesson_dtl->audio_id 	   = $_POST['audio_id'];
+		$lesson_dtl->seconds   = $_POST['seconds'];
+		$lesson_dtl->attach_file($_FILES['file_upload']);
+		$lesson_dtl->last_update 	= date('Y-m-d H:i:s');
+
+		if($lesson_dtl->save()) {
+			// Success
+			$session->message("The {$_POST['name']} was successfully Added.");
+            $user = User::find_by_id($_SESSION['user_id']);
+            log_action('Add Lesson Content', "{$user->full_name()} Added {$_POST['name']}.");
+			redirect_to('content.php?id='.$_POST['lesson_id']);
+		} else {
+			 $message = join("<br />", $lesson_dtl->errors);
+		}
 	}
-	
-	
 ?>
 <?php include_layout_template('sub_header.php'); ?>
 	<!-- Page Heading/Breadcrumbs -->

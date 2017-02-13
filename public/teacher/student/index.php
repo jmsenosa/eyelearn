@@ -35,9 +35,20 @@
 			parent
 			ON
 				parentstud.parent_id = parent.id
+		LEFT JOIN
+        	section
+            ON
+            	section.id = student.section_id
+        LEFT JOIN
+        	users 
+            ON
+            	users.id = section.created_by
 		WHERE 
-			teacher = ".$_SESSION['user_id']." 
+			users.id = ".$_SESSION['user_id']." 
 	"; 
+
+	
+	// echo "<pre>"; print_r($sql); die();
 
 	if ( isset($_POST['submit']) ) {
 		$dateStart = $_POST['yearstart'];

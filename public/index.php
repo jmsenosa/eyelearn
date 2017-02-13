@@ -8,6 +8,7 @@
     // Find User 
     $user = Student::find_by_id($_SESSION['user_id']);	
     $lesson = Lesson::find_by_date($user->teacher);
+    // dd($lesson);
     $teacher = User::find_by_id($user->teacher);
     $isSched = false;
     $isPresent = false;

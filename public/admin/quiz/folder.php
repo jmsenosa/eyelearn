@@ -9,6 +9,7 @@
 	
 	// Find all the User
 	$quizes = Quiz::find_by_lesson($_GET['id']);
+    $lesson = Lesson::find_by_id($_GET['id']); 
     $quiz_categories = Quiz_Category::find_all(); 
 
 ?>

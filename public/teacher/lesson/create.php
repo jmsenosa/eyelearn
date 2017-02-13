@@ -31,8 +31,8 @@
 			$lesson->user_id		= $_SESSION['user_id'];
 			$lesson->description	= $_POST['description'];
 			$lesson->active 		= $_POST['active'];
-            $lesson->audio 		= $fileName;
-            			$lesson->last_update 	= date('Y-m-d H:i:s');
+            $lesson->audio 		    = $fileName; 
+			$lesson->last_update 	= date('Y-m-d H:i:s');
 			if($lesson->save()) {
 				// Success
 				$session->message("The {$_POST['name']} was successfully Added.");

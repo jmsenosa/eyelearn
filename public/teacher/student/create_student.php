@@ -22,12 +22,8 @@
         $last_name = trim($_POST['last_name']);
         $check_duplicate = Student::find_by_lrn($_POST['lrn']); 
 
-        if($_POST['first_name']=='' && $_POST['last_name']==''  && $_POST['phone']==''  && $_POST['email']=='' ){
+        if($_POST['first_name']=='' && $_POST['last_name']==''  && $_POST['phone']=='' ){
             $session->message("Please input data on required fileds.");
-        }elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-            $session->message("Please check Email Format");
-        }elseif(!is_numeric($_POST['phone'])){
-            $session->message("Invalid Phone number. Please insert numeric value only");
         }else{
             if($check_duplicate === true){
                 $session->message("Unable to Add Student, Duplicate LRN");
@@ -44,6 +40,7 @@
                 $student->last_name     = $_POST['last_name'];
                 $student->section       = $section->section;
                 $student->email         = $_POST['email'];
+                $student->teacher       = $_SESSION['user_id'];
                 // $student->phone         = $_POST['phone'];
                 $student->active        = $_POST['active'];
                 $student->sy        = date("Y");
@@ -123,7 +120,7 @@
                 <div class="form-group">
                     <label for="lrn" class="col-sm-2 control-label">LRN</label>
                     <div class="col-sm-4">
-                        <input type="text" maxlength="13" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
+                        <input type="text" maxlength="12" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
                     </div>
                 </div>
               <div class="form-group">
@@ -148,7 +145,7 @@
               </div>
              <div class="form-group">
                 <label for="type" class="col-sm-2 control-label">Section</label>
-                <div class="col-sm-4">
+                <div class="col-sm-10">
                     <select class="form-control" id="section_id" name="section_id" >
                         <?php foreach($sections as $section): ?>
                             <?php if ($_SESSION["user_id"] == $section->created_by): ?>
@@ -157,10 +154,10 @@
                         <?php endforeach; ?>
                     </select>
                 </div>
-                <label for="email" class="col-sm-1 control-label">Email</label>
+                <!-- <label for="email" class="col-sm-1 control-label">Email</label>
                 <div class="col-sm-4">
                  <input type="text" class="form-control" id="email" name="email" value='<?php echo @$_POST['email'] ? $_POST['email'] : ''; ?>' placeholder="<?php echo ucwords($obj); ?> Email" value="<?php echo (isset($_POST['email'])) ? $_POST['email'] : ""; ?>" />
-                </div>  
+                </div>   -->
               </div>
                <div class="form-group">
                 <!-- <label for="phone" class="col-sm-2 control-label">Phone</label> -->

@@ -22,12 +22,8 @@
 		$last_name = trim($_POST['last_name']);
 		$check_duplicate = Student::find_by_lrn($_POST['lrn']); 
 
-		if($_POST['first_name']=='' && $_POST['last_name']==''  && $_POST['phone']==''  && $_POST['email']=='' ){
+		if($_POST['first_name']=='' && $_POST['last_name']==''  && $_POST['phone']=='' ){
 			$session->message("Please input data on required fileds.");
-		}elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-			$session->message("Please check Email Format");
-		}elseif(!is_numeric($_POST['phone'])){
-			$session->message("Invalid Phone number. Please insert numeric value only");
 		}else{
 			if($check_duplicate === true){
 				$session->message("Unable to Add Student, Duplicate LRN");
@@ -44,7 +40,8 @@
 				$student->last_name		= $_POST['last_name'];
 				$student->section	    = $section->section;
 				$student->email			= $_POST['email'];
-				$student->phone			= $_POST['phone'];
+                $student->teacher       = $_SESSION['user_id'];
+				// $student->phone			= $_POST['phone'];
 				$student->active 		= $_POST['active'];
 				$student->sy 		= date("Y");
 				if($student->save()) {
@@ -147,30 +144,33 @@
 				</div>
 			  </div>
 			 <div class="form-group">
-				<label for="type" class="col-sm-2 control-label">Section</label>
-				<div class="col-sm-4">
-				   <select class="form-control" id="section_id" name="section_id" >
-					  <?php foreach($sections as $section):	?>
-					  <option <?php echo (isset($_POST['section_id'])) ? ($_POST['section_id'] == $section->id) ? "selected" : "" : ""; ?> value='<?php echo $section->id; ?>'  ><?php echo ucwords($section->section); ?></option>
-					 <?php endforeach; ?>
-					</select>
-				</div>
-				<label for="email" class="col-sm-1 control-label">Email</label>
-				<div class="col-sm-4">
-				 <input type="text" class="form-control" id="email" name="email" value='<?php echo @$_POST['email'] ? $_POST['email'] : ''; ?>' placeholder="<?php echo ucwords($obj); ?> Email" value="<?php echo (isset($_POST['email'])) ? $_POST['email'] : ""; ?>" />
-				</div>	
-			  </div>
-			   <div class="form-group">
-				<label for="phone" class="col-sm-2 control-label">Phone</label>
-				<div class="col-sm-4">
-				   <input type="text" class="form-control numbersonly" id="phone" name="phone" placeholder="<?php echo ucwords($obj); ?> Phone" value="<?php echo (isset($_POST['phone'])) ? $_POST['phone'] : ""; ?>" />
-				</div>
-				<label for="event_time" class="col-sm-1 control-label"> Status</label>
-				<div class="col-sm-4">
-				   Active <input type="radio" name="active" id="active" value=1  checked='checked'  />
-				 Inactive <input type="radio" name="active" id="active" value=0  />
-				</div>
-			  </div>
+                <label for="type" class="col-sm-2 control-label">Section</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="section_id" name="section_id" >
+                        <?php foreach($sections as $section): ?>
+                            <?php if ($_SESSION["user_id"] == $section->created_by): ?>
+                                <option <?php echo (isset($_POST['section_id'])) ? ($_POST['section_id'] == $section->id) ? "selected" : "" : ""; ?> value='<?php echo $section->id; ?>'  ><?php echo ucwords($section->section); ?></option> 
+                            <?php endif ?>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <!-- <label for="email" class="col-sm-1 control-label">Email</label>
+                <div class="col-sm-4">
+                 <input type="text" class="form-control" id="email" name="email" value='<?php echo @$_POST['email'] ? $_POST['email'] : ''; ?>' placeholder="<?php echo ucwords($obj); ?> Email" value="<?php echo (isset($_POST['email'])) ? $_POST['email'] : ""; ?>" />
+                </div>   -->
+              </div>
+               <div class="form-group">
+                <!-- <label for="phone" class="col-sm-2 control-label">Phone</label> -->
+                <!-- <div class="col-sm-4">
+                   <input type="text" class="form-control" id="phone" name="phone" placeholder="<?php echo ucwords($obj); ?> Phone" value="<?php echo (isset($_POST['phone'])) ? $_POST['phone'] : ""; ?>" />
+                </div> -->
+                <label for="event_time" class="col-sm-2 control-label"> Status</label>
+                <div class="col-sm-10">
+                    <br>
+                    Active <input type="radio" name="active" id="active" value=1  checked='checked'  />
+                    Inactive <input type="radio" name="active" id="active" value=0  />
+                </div>
+              </div>
 			  <div class="col-xs-12">
 				<div class="row">
 					<div class="col-lg-12">
