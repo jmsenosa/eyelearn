@@ -14,7 +14,14 @@
     $id = $_GET['id'];
     $lessons = Lesson_dtl::find_by_lesson($id);
     $allLessons = Lesson_dtl::find_all();
+
     if(isset($_POST['submit'])) {
+
+        $quiz_master = new Quiz_Master();
+        $quiz_master->lesson_id = $id;
+        $quiz_master->created_by = $_SESSION["user_id"];
+
+        $quiz_master->save(); 
 
         foreach ($_POST['description'] as $key => $value) 
         {
@@ -29,6 +36,7 @@
             $quiz->choice4     = $_POST['choice4'][$key];
             $quiz->type        = $_POST['type'];
             $quiz->answer      = $_POST['answer'][$key];
+            $quiz->quiz_master_id = $quiz_master->id;
  
             $fileext = pathinfo($_FILES["audio"]["name"][$key], PATHINFO_EXTENSION);
             $new_filename = md5($_FILES["audio"]["name"][$key].rand(1000,9999999).date("Y-m-d H:i:s")).".".$fileext;

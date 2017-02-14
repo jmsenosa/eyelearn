@@ -62,8 +62,20 @@
 
             $quiz_result->current_item = 10;
 
-            $quiz_result->save(); 
-            redirect_to('paaralan.php');
+            $quiz_result->save();
+
+
+            $quiz_taken = new Quiz_Take();
+     
+            $quiz_taken->quiz_master_id =  $quiz->quiz_master_id;
+            $quiz_taken->student_id = $_SESSION['user_id'];
+            $quiz_taken->score = $score;
+            $quiz_taken->total_questions = $quiz_result->current_item;
+            $quiz_taken->last_update = $quiz_result->quiz_date;
+            $quiz_taken->lesson_id = $_GET['lesson_id'];
+        
+            $quiz_taken->save();
+            redirect_to('paaralan.php'); 
 
         }  
  

@@ -71,9 +71,9 @@
                             $quiz = Quiz::find_by_lesson($lessons->id);
 
                             if(!empty($quiz)) {
-                                $taken = Quiz_result::find_my_student($user->id,$lessons->id);
-                                // echo "<pre>"; echo "egg: ".count($taken); echo "</pre>";
-                                $attemp = Quiz_result::find_my_attemp($lessons->id,$user->id);
+                                $taken = Quiz_Take::find_by_student_id($user->id,$lessons->id);
+                                // echo "<pre>"; print_r($taken); echo "</pre>";
+                                $attemp = Quiz_Take::find_by_student_id($user->id,$lessons->id);
                                 $count = sizeof($attemp) + 1;
                                 if(sizeof($taken) < 3){ ?> 
                                     <div class="quiz-img">

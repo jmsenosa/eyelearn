@@ -6,7 +6,20 @@ require_once(LIB_PATH.DS.'database.php');
 class Quiz extends DatabaseObject {
 	
 	protected static $table_name="quiz";
-	protected static $db_fields = array('id', 'quiz_category_id','lesson_id', 'description', 'audio', 'choice1', 'choice2', 'choice3', 'choice4', 'answer','type');
+	protected static $db_fields = array(
+		'id', 
+		'quiz_category_id',
+		'lesson_id', 
+		'description', 
+		'audio', 
+		'choice1', 
+		'choice2', 
+		'choice3', 
+		'choice4', 
+		'answer',
+		'type',
+		'quiz_master_id'
+	);
 
 	public $id;
 	public $lesson_id;
@@ -19,6 +32,7 @@ class Quiz extends DatabaseObject {
     public $choice4;
     public $answer;
     public $type;
+    public $quiz_master_id;
 
 	public static function find_by_lesson($lesson_id=0) {
 		return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE lesson_id='{$lesson_id}'");
@@ -47,7 +61,8 @@ class Quiz extends DatabaseObject {
 	// Pass in $_FILE(['uploaded_file']) as an argument
   	public function attach_file($file) {
 		// Perform error checking on the form parameters
-        $allowed =  array('mp3','wav');
+        $allowed =  array('mp3','
+		wav');
         $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
 
 		if(!$file || empty($file) || !is_array($file)) 

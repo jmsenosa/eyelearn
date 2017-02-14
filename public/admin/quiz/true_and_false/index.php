@@ -14,14 +14,18 @@
 
     if(isset($_POST['submit'])){
         $post = $_POST;
+
+        $quiz_master = new Quiz_Master();
+        $quiz_master->lesson_id = $data["id"];
+        $quiz_master->created_by = $_SESSION["user_id"];
+        $quiz_master->save(); 
+
         $quiz = new Quiz(); 
 
         $quiz->lesson_id = $data['id'];
         $quiz->quiz_category_id = $data['quiz_cat'];
         $quiz->description = $post['title'];
-        $insert = $quiz->create();
-
-        
+        $insert = $quiz->create(); 
 
         $uploadOk = 1;
   

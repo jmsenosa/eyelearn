@@ -62,9 +62,21 @@
         endforeach;
     }
     if(isset($_POST['submit'])){
-        redirect_to('paaralan.php');	
-    }
+
+        $master = Quiz_Master::find_by_id($_POST["quiz_master_id"]);
+        // dd($master);
+        $quiz_taken = new Quiz_Take();
+ 
+        $quiz_taken->quiz_master_id = $_POST["quiz_master_id"];
+        $quiz_taken->student_id = $_POST["user_id"];
+        $quiz_taken->score = $_POST["score"];
+        $quiz_taken->total_questions = $_POST["total_number"];
+        $quiz_taken->last_update = $_POST["quiz_date"];
+        $quiz_taken->lesson_id = $master->lesson_id;
     
+        $quiz_taken->save();
+        redirect_to('paaralan.php');	
+    } 
     
  ?>
 <!DOCTYPE html>
@@ -84,9 +96,10 @@
         <?php
             $item = 0;
             $quiz_id = 0;
-            foreach($quizes as $quiz){
+            foreach($quizes as $quiz){ 
                 if($quiz->type == "salita"){
                     $quiz_id = $quiz->id;
+                    $quiz_maser_id = $quiz->quiz_master_id;
                     $item += 1;
                 ?>
                     <div class="Quiz<?php echo $item ?> QuizDiv" data-quiztype="salita" data-quiz_id="<?php echo $quiz->id ?>">
@@ -107,6 +120,7 @@
                 
                 if($quiz->type == "naiiba"){
                 $quiz_id = $quiz->id;
+                $quiz_maser_id = $quiz->quiz_master_id;
                 $item += 1;
                 ?>
                     <div class="Quiz<?php echo $item ?> QuizDiv" data-quiztype="naiiba">
@@ -200,11 +214,11 @@
              <br> 
         </div>
         
-        <form method="POST" >
-            <input type="hidden" name="quiz_id" id="quiz_id" value="<?php echo $quiz_id; ?>">
+        <form method="POST">
+            <input type="hidden" name="quiz_master_id" id="quiz_id" value="<?php echo $quiz_maser_id; ?>">
             <input type="hidden" name="user_id" value="<?php echo $user->id ?>">
-            <input type="hidden" name="score" value="" id="form_score">
-            <input type="hidden" name="total_number" value="" id="form_total">
+            <input type="hidden" name="score" value="0" id="form_score">
+            <input type="hidden" name="total_number" value="<?php echo $total ?>" id="form_total">
             <input type="hidden" name="quiz_date" value="<?php echo date("Y-m-d H:i:s")?>">
             <input type="submit" name="submit" value="submit" id="form_submit" style="display:none">
         </form>
@@ -237,39 +251,46 @@
                 correctAns += 1;
             }
             var previtem = item;
-            item += 1;
+            item = item + 1;
+
+            var totoong_quiz_id = $(this).closest(".QuizDiv").data("quiz_id");
+
             $.post('pagsusulitcon.php', {
                 id:'<?php echo $_GET['id'] ?>',
                 current_item:item,
                 score:correctAns,
                 total_number:total_number,
-                quiz_id:"<?php echo $quiz_id; ?>",
-                user_id:'<?php echo $_SESSION['user_id'] ?>'}, function(data){
-                console.log(data);
+                quiz_id:totoong_quiz_id,
+                user_id:'<?php echo $_SESSION['user_id'] ?>'
+            }, function(data){
+                data = $.parseJSON(data);
+                var form_score = $("#form_score").val();
+                form_score = parseInt(form_score) + parseInt( data["score"] );
+                $("#form_score").val(form_score);
             });
 
            
-                $('.Quiz' + previtem).addClass('fadeOutLeft');       
+            $('.Quiz' + previtem).addClass('fadeOutLeft');       
+                setTimeout(function(){
+                $('.Quiz' + item).css('animation-duration','2s');
+                $('.Quiz' + item).addClass('animated fadeInRight');
+                $('.Quiz' + item).show();
                     setTimeout(function(){
-                    $('.Quiz' + item).css('animation-duration','2s');
-                    $('.Quiz' + item).addClass('animated fadeInRight');
-                    $('.Quiz' + item).show();
-                        setTimeout(function(){
-                            document.getElementById('audio' + item).play();    
-                        },1000);
+                        document.getElementById('audio' + item).play();    
+                    },1000);
 
-                },1000);
+            },1000);
             
             if(item == <?php echo $item+1 ?>){
                 
-                    $('.score').addClass('animated fadeIn');
-                    $('.score').show();
+                $('.score').addClass('animated fadeIn');
+                $('.score').show();
                  
               
                 for(var x = 0;x < correctAns;x++){
                     $('<img src="student_assets/star.svg" width="80" height="80">').appendTo(".score");
                 }
-               }
+            }
         });
         
         $('.go_back').click(function(){
