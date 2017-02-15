@@ -1,3 +1,4 @@
+
 <?php
 	// Initialize Page
 	require_once('../../../includes/initialize.php');
@@ -7,6 +8,7 @@
 	
 	$obj = 'Lesson';
 	$user = User::find_by_id($_SESSION['user_id']);
+	$grading_periods = Grading_Quarters::find_all(); 
 	
 	if(isset($_POST['submit'])) {
 		
@@ -25,14 +27,18 @@
             $fileName = $_FILES['audio']['name'];
             $targetDir = "../../audio/" . $_POST['name'] . "/";
             $targetFile = $targetDir.$fileName;
+
             move_uploaded_file($_FILES['audio']['tmp_name'],$targetFile);
+
 			$lesson = new Lesson();
-			$lesson->name			= $_POST['name'];
-			$lesson->user_id		= $_SESSION['user_id'];
-			$lesson->description	= $_POST['description'];
-			$lesson->active 		= $_POST['active'];
-            $lesson->audio 		= $fileName;
-            			$lesson->last_update 	= date('Y-m-d H:i:s');
+			$lesson->name               = $_POST['name'];
+			$lesson->user_id            = $_SESSION['user_id'];
+			$lesson->description        = $_POST['description'];
+			$lesson->active             = $_POST['active'];
+			$lesson->grading_quarter_id = $_POST['grading_quarter_id'];
+			$lesson->audio              = $fileName;
+			$lesson->last_update        = date('Y-m-d H:i:s');
+
 			if($lesson->save()) {
 				// Success
 				$session->message("The {$_POST['name']} was successfully Added.");
@@ -60,58 +66,67 @@
 	</div>
 </div>
 <!-- /.row -->
-	
-	<div class="row">
-		<div class="col-md-12">
-			  <?php if($message):?>
-				 <div class="alert alert-danger alert-dismissible" role="alert">
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				  <strong><i class="fa fa-warning"></i> Warning!</strong> <?php echo output_message($message); ?>
-				</div>
-			  <?php else: ?>
-			   <div class="alert alert-info alert-dismissible" role="alert">
-				  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span > Please make sure Section Name is <strong>Unique</strong> 
-				</div>
-			  <?php endif; ?>
-			<form class="form-horizontal" action="create.php" enctype="multipart/form-data"  method="POST">
-			  <div class="form-group">
-				<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Name</label>
-				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="name" name="name" placeholder="<?php echo ucwords($obj); ?> Name" />
-				</div>
-				<label for="status" class="col-sm-1 control-label">Status</label>
-				<div class="col-sm-4">
-				   Active <input type="radio" name="active" id="active" value=1  checked='checked'  />
-				 Inactive <input type="radio" name="active" id="active" value=0  />
-				</div>
-			  </div>
-			 <div class="form-group">
-				<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Description</label>
-				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="description" name="description" placeholder="<?php echo ucwords($obj); ?> Description" />
-				</div>
-				
-			  </div>
-			  
-			  <div class="form-group">
-				<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Audio</label>
-				<div class="col-sm-4">
-				  <input type="file" class="form-control" id="description" name="audio" accept="audio/*" />
-				</div>
-				
-			  </div>
-			  
-			  <div class="form-group">
-				<div class="col-sm-offset-2 col-sm-4">
-				  <button type="submit" class="btn btn-success" name="submit">Add <?php echo ucwords($obj); ?></button>
-				</div>
-			  </div>
-			</form>
-			<hr />
+
+<div class="row">
+	<div class="col-md-12">
+		<?php if($message):?>
+		<div class="alert alert-danger alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<strong><i class="fa fa-warning"></i> Warning!</strong> <?php echo output_message($message); ?>
+		</div>
+		<?php else: ?>
+		<div class="alert alert-info alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span > Please make sure Section Name is <strong>Unique</strong>
+	</div>
+	<?php endif; ?>
+	<form class="form-horizontal" action="create.php" enctype="multipart/form-data"  method="POST">
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label"> Grading Quarter</label>
+			<div class="col-sm-4">
+				<select name="grading_quarter_id" id="" class="form-control">
+					<option>Select Quarter </option>
+					<?php foreach ($grading_periods as $period): ?>
+					<option value="<?php echo $period->id; ?>"><?php echo $period->name; ?></option>						
+					<?php endforeach ?>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Name</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="name" name="name" placeholder="<?php echo ucwords($obj); ?> Name" />
+			</div>
+			<label for="status" class="col-sm-1 control-label">Status</label>
+			<div class="col-sm-4">
+				Active <input type="radio" name="active" id="active" value=1  checked='checked'  />
+				Inactive <input type="radio" name="active" id="active" value=0  />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Date</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control date-picker" id="description" name="description" placeholder="<?php echo ucwords($obj); ?> Date" />
+			</div>
 			
 		</div>
-	</div>
-
-<?php include_layout_template('sub_footer.php'); ?>
 		
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Audio</label>
+			<div class="col-sm-4">
+				<input type="file" class="form-control" id="description" name="audio" accept="audio/*" />
+			</div>
+			
+		</div>
+		
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-4">
+				<button type="submit" class="btn btn-success" name="submit">Add <?php echo ucwords($obj); ?></button>
+			</div>
+		</div>
+	</form>
+	<hr />
+	
+</div>
+</div>
+<?php include_layout_template('sub_footer.php'); ?>

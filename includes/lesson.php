@@ -6,7 +6,7 @@ require_once(LIB_PATH.DS.'database.php');
 class Lesson extends DatabaseObject {
 	
 	protected static $table_name="lesson";
-	protected static $db_fields = array('id', 'name','isDone', 'user_id', 'description', 'active', 'audio', 'last_update');
+	protected static $db_fields = array('id', 'name','isDone', 'user_id', 'description', 'active', 'audio', 'last_update','grading_quarter_id');
 
 	public $id;
 	public $name;
@@ -14,7 +14,8 @@ class Lesson extends DatabaseObject {
 	public $description;
 	public $active;
     public $audio;
-        public $isDone;
+    public $isDone;
+    public $grading_quarter_id;
 	public $last_update;
 	
 	//Find by user 
