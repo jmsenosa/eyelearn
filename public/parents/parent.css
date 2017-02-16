@@ -594,3 +594,23 @@ opacity:0.9;
     
                         
 /**** resume ****/
+
+.fc-left > h2
+{
+    font-size: 16px !important;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.bg-success
+{
+    padding: 10px 15px;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+.bordered
+{
+    border: 1px solid rgba(169, 169, 169, 0.2);
+}
+

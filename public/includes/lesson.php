@@ -39,4 +39,14 @@ class Lesson extends DatabaseObject {
         return static::find_by_sql("SELECT * FROM `".static::$table_name."` ORDER BY description ASC");
     }
     
+
+    public static function get_by_quarter ($quarter_id = 0)
+    {
+        return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE grading_quarter_id={$quarter_id}");
+    }
+
+    public static function get_by_quarter_by_teacher ($quarter_id = 0, $teacher_id = 0)
+    {
+        return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE grading_quarter_id={$quarter_id} AND user_id = {$teacher_id}");
+    }
 }

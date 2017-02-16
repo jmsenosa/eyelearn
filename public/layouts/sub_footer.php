@@ -43,6 +43,10 @@
     $('.date-picker').datepicker({ 
         beforeShowDay: $.datepicker.noWeekends,
         dateFormat: "yy-mm-dd"
-  });
+    });
+
+    $('input').each(function(){
+        $(this).attr("autocomplete","off");
+    });
 
 </script>

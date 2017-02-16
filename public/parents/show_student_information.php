@@ -2,7 +2,9 @@
     // Initialize 
     require_once('../../includes/initialize.php');
     require_once('student_all.php');
+
     // Check if User is Logged in to view this page.
+    if (!$session->is_logged_in()) { redirect_to("login.php"); }
 
     $student_id = $_GET['student_id'];
     $student = StudentAll::get_student(['student.id' => $student_id]);
@@ -11,11 +13,13 @@
     {
         $student = $student[0];
         $parent = Magulang::find_by_id($student->parent_id);
+        $attendance = StudentAll::get_all_attendance($student->id); 
+        $periods = Grading_Quarters::find_all();
+        // echo $attendance; die();
     } else {
         redirect_to("index.php"); 
     }
 
-    if (!$session->is_logged_in()) { redirect_to("login.php"); }
 ?>
 
 <html>
@@ -98,9 +102,9 @@
         <div class="row"> 
             <div class="col-sm-12">
                 <!-- resumt -->
-                <br>
+                <br/>
                 <strong style="font-weight: bold; margin-bottom: 15px; display: block; font-size: 32px;"><?php echo  $student->full_name; ?></strong>
-                <hr>                            
+                <hr/>                            
                 <table class="table table-bordered">
                     <tr>
                         <th style="width:20%;">LRN: </th>
@@ -116,8 +120,15 @@
                     </tr>
                 </table> 
             </div>
-            <div class="col-sm-7"></div>
-            <div class="col-sm-5">
+            <div class="col-sm-12">
+                <hr/>
+            </div>
+            <div class="col-sm-8">
+                <?php include 'student_progress.php'; ?>
+            </div>
+            <div class="col-sm-4"> 
+                <div class="bg-success"><span style="font-size: 18px;">ATTENDANCE</span></div>
+                
                 <div id='calendar'></div>        
             </div>
         </div> 
@@ -127,7 +138,14 @@
     $(document).ready(function(){
         $('#calendar').fullCalendar({
             weekends: false,
-            theme: true
+            theme: true,
+            fixedWeekCount: false,
+            height: 370,
+            events: $.parseJSON('<?php echo $attendance; ?>')
+        });
+
+        $('#accordion').collapse({
+            toggle: true
         });
     });
 </script>
