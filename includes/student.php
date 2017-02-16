@@ -247,5 +247,83 @@ class Student extends DatabaseObject {
 
         return $result;
     }
+
+    public static function get_all_joined($params = array()) {
+        $sql = '
+            SELECT 
+                student.id as id,
+                student.lrn as lrn,
+                capitalize(concat(student.first_name, " ",student.last_name)) as full_name,
+                student.sy as school_year,
+                parent.id as parent_id,
+                capitalize(concat(parent.first_name, " ",parent.last_name)) as parent_name,
+                section.id as section_id,
+                capitalize(section.section) as section_name,
+                users.id as teacher_id,
+                capitalize(concat(users.first_name, " ",users.last_name)) as teacher_name,
+                IF(student.active = 1,"active", "inactive") as status
+            FROM 
+                student 
+            LEFT JOIN
+                parentstud ON
+                    parentstud.student_id = student.id
+            LEFT JOIN 
+                parent ON
+                    parent.id = parentstud.parent_id
+            LEFT JOIN
+                section ON
+                    section.id = student.section_id
+            LEFT JOIN
+                users ON
+                    users.id = section.created_by 
+        ';
+
+        if ( $params ) {
+            $where_sql = " WHERE ";
+            $count = count($params);
+            $counter = 1;
+            foreach ($params as $key => $value) {
+                
+                $where_sql .= $key." = ".$value; 
+                if ($counter < $count) {
+                    $where_sql .= " AND ";
+                }
+
+                $counter = $counter + 1;
+            }  
+
+            $sql = $sql. $where_sql;
+        }
+        
+        $sql = $sql. "
+            GROUP BY student.id
+            ORDER BY student.id
+        ";  
+        
+        $result = [];      
+        global $database;
+
+        $result_set = $database->query($sql);
+        while ($row = $database->fetch_array($result_set)) 
+        {
+            $singleArr = array();
+                        
+            $singleArr["id"] = $row["id"];                      
+            $singleArr["lrn"] = $row["lrn"];                   
+            $singleArr["full_name"] = $row["full_name"];      
+            $singleArr["school_year"] = $row["school_year"];   
+            $singleArr["parent_id"] = $row["parent_id"];      
+            $singleArr["parent_name"] = $row["parent_name"];   
+            $singleArr["section_id"] = $row["section_id"];      
+            $singleArr["section_name"] = $row["section_name"];
+            $singleArr["teacher_id"] = $row["teacher_id"];    
+            $singleArr["teacher_name"] = $row["teacher_name"];
+            $singleArr["status"] = $row["status"];            
+
+            $result[] =  (object) $singleArr;
+        }
+
+        return $result;
+    } 
 	
 }

@@ -210,10 +210,10 @@ class Grading extends DatabaseObject {
 
                 $counter = $counter + 1;
             }  
+
+            $sql = $sql. $where_sql;
         }
-
-        $sql = $sql. $where_sql;
-
+        
         $sql = $sql. "
             group by lesson_id
         "; 
