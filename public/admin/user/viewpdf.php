@@ -13,8 +13,19 @@
 	// }
 	
 	// Check if there is event_hdr_id available in the database
-	$results 			= User::find_all();
-	
+	$results = User::find_all();
+	if ($_GET['type'] == "admin") 
+    {
+        $results = User::find_admin();
+    }
+    elseif ($_GET['type'] == "teacher") 
+    {
+        $results = User::find_teacher();
+    }
+    else
+    {
+        $results = User::find_all();
+    }
 	
 	if(!$results) {
 		$session->message("The Event could not be located.");
@@ -23,42 +34,42 @@
 		
 class PDF extends FPDF
 {
-// Page header
-function Header()
-{
-    // Logo
-    $this->Image('../../images/eyelearnlogo.png',10,6,30);
-    // Arial bold 15
-    $this->SetFont('Arial','',12);
-    // Move to the right
-	// $this->SetXY(20,15);
-	// $this->Cell(00,00,'Eye Learing',0,0,'C');
-    // Line break
-    $this->Ln(20);
-}
+    // Page header
+    function Header()
+    {
+        // Logo
+        $this->Image('../../images/eyelearnlogo.png',10,6,30);
+        // Arial bold 15
+        $this->SetFont('Arial','',12);
+        // Move to the right
+    	// $this->SetXY(20,15);
+    	// $this->Cell(00,00,'Eye Learing',0,0,'C');
+        // Line break
+        $this->Ln(20);
+    }
 
-// Page footer
-function Footer()
-{
-    // Position at 1.5 cm from bottom
-    $this->SetY(-15);
-    // Arial italic 8
-    $this->SetFont('Arial','I',8);
-    // Page number
-    $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
-}
+    // Page footer
+    function Footer()
+    {
+        // Position at 1.5 cm from bottom
+        $this->SetY(-15);
+        // Arial italic 8
+        $this->SetFont('Arial','I',8);
+        // Page number
+        $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
+    }
 }
 
 // Instanciation of inherited class
 $pdf = new PDF();
 $pdf->AliasNbPages();
-$pdf->AddPage(L);
+$pdf->AddPage("L");
 // $pdf->Image('../../images/participant.jpg', 0, 0, 220);
 
 $pdf->SetFont('Arial','',10);
 
 $pdf->SetXY(10,40);
-$pdf->Cell(00,00,'Teacher List');
+$pdf->Cell(00,00,ucfirst($_GET["type"]).' List');
 $pdf->SetXY(10,45);
 
 // $pdf->SetFont('Arial','B',10);
@@ -98,18 +109,20 @@ $pdf->Cell(00,00,'Address');
 $pdf->SetFont('Arial','',10);
 $i=60; 
 foreach($results as $result):
-// id, quiz_id, user_id, score, total_number, last_update
-	$student = User::find_by_id($result->user_id); 
-	$quiz = Quiz::find_by_id($result->quiz_id); 
+    // dd($result);
+    // id, quiz_id, user_id, score, total_number, last_update 
+
+    @$full = trim(ucwords($result->first_name).' '.ucwords($result->last_name));
+    @$add = strtoupper($result->address);
 	
-	$pdf->SetXY(10,$i);
-	$pdf->Cell(00,00,ucwords($result->username));
+    $pdf->SetXY(10,$i);
+	$pdf->Cell(00,00,$result->username);
     $pdf->SetXY(50,$i);
-	$pdf->Cell(00,00,ucwords($result->first_name).' '.ucwords($result->last_name));
+	$pdf->Cell(00,00,$full);
 	$pdf->SetXY(100,$i);
-    $pdf->Cell(00,00,strtoupper($result->phone));
+    $pdf->Cell(00,00,$result->phone);
 	$pdf->SetXY(150,$i);
-    $pdf->Cell(00,00,strtoupper($result->address));
+    $pdf->Cell(00,00,$add);
 	$i+=5;
 endforeach;
 // for($i=1;$i<=40;$i++)

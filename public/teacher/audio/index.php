@@ -9,7 +9,7 @@
 	
 	$user = User::find_by_id($_SESSION['user_id']);
 
-    $lessons = Lesson::find_all();	
+    $lessons = Lesson::find_by_user($_SESSION['user_id']);
 
 	
 	 

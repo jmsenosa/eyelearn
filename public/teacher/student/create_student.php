@@ -40,6 +40,7 @@
                 $student->last_name     = $_POST['last_name'];
                 $student->section       = $section->section;
                 $student->email         = $_POST['email'];
+                $student->address         = $_POST['address'];
                 $student->teacher       = $_SESSION['user_id'];
                 // $student->phone         = $_POST['phone'];
                 $student->active        = $_POST['active'];

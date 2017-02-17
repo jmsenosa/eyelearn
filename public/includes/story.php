@@ -14,8 +14,7 @@ class Story extends DatabaseObject {
 	public $description;
 	public $filename;
 	public $active;
-	public $last_update;
-	public $remarks;
+	public $last_update; 
 	
 	private $temp_path;
 	protected $upload_dir="video";
@@ -77,13 +76,7 @@ class Story extends DatabaseObject {
 			// Make sure there are no errors
 			
 			// Can't save if there are pre-existing errors
-		  if(!empty($this->errors)) { return false; }
-		  
-			// Make sure the caption is not too long for the DB
-		  if(strlen($this->remarks) > 255) {
-				$this->errors[] = "The caption can only be 255 characters long.";
-				return false;
-			}
+		  if(!empty($this->errors)) { return false; } 
 		
 		  // Can't save without filename and temp location
 		  if(empty($this->filename) || empty($this->temp_path)) {

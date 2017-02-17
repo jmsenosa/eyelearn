@@ -15,6 +15,9 @@
         $parent = Magulang::find_by_id($student->parent_id);
         $attendance = StudentAll::get_all_attendance($student->id); 
         $periods = Grading_Quarters::find_all();
+        $newAll = new StudentAll();
+        $student_data = $newAll->get_charts_result($student->id);
+        // dd($student_data);
         // echo $attendance; die();
     } else {
         redirect_to("index.php"); 
@@ -65,6 +68,8 @@
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
     <script src="../../../bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+    <script src="http://code.highcharts.com/highcharts.js" type="text/javascript"></script>
+
     <script src="../assets/js/jquery-ui.js"></script> 
 
     <!-- <script src='../../bower_components/fullcalendar/dist/jquery.min.js'></script> -->
@@ -123,12 +128,17 @@
             <div class="col-sm-12">
                 <hr/>
             </div>
+            <div class="col-md-12">
+                <div id="quiz-chart"></div>
+            </div>
+            <div class="col-sm-12">
+                <hr/>
+            </div>
             <div class="col-sm-8">
                 <?php include 'student_progress.php'; ?>
             </div>
             <div class="col-sm-4"> 
-                <div class="bg-success"><span style="font-size: 18px;">ATTENDANCE</span></div>
-                
+                <div class="bg-success"><span style="font-size: 18px;">ATTENDANCE</span></div>                
                 <div id='calendar'></div>        
             </div>
         </div> 
@@ -146,6 +156,55 @@
 
         $('#accordion').collapse({
             toggle: true
+        });
+
+        var studentData = <?php echo $student_data; ?>;
+        console.log(studentData);
+        Highcharts.chart('quiz-chart', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Overall Quiz Performance'
+            }, 
+            subtitle: {
+                text: "Repeated quiz included"
+            },
+            xAxis: {
+                title: {
+                    text: 'Lesson - Quiz #'
+                },
+                type: 'category',
+                labels: { 
+                    style: {
+                        fontSize: '11px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Percentage'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            series: [{
+                name: 'Quiz',
+                data : studentData, 
+                dataLabels: {
+                    enabled: false,
+                    rotation: -90,
+                    color: '#FFFFFF',
+                    align: 'right', 
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            }]
         });
     });
 </script>

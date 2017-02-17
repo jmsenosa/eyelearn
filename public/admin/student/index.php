@@ -46,8 +46,7 @@
 		WHERE 
 			users.id = ".$_SESSION['user_id']." 
 	"; 
-
-	echo "<pre>"; print_r($sql); die();
+ 
 
 	if ( isset($_POST['submit']) ) {
 		$dateStart = $_POST['yearstart'];

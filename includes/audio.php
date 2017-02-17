@@ -22,7 +22,7 @@ class Audio extends DatabaseObject {
 
   	public static function find_by_lesson_name($lesson_name)
   	{
-	    return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE filename='{$lesson_name}'");
+	    return static::find_by_sql("SELECT * FROM `".static::$table_name."` WHERE folder='{$lesson_name}'");
   	} 
   
   protected $upload_errors = array(

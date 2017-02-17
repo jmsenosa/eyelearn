@@ -18,13 +18,14 @@
         $quiz_master = new Quiz_Master();
         $quiz_master->lesson_id = $data["id"];
         $quiz_master->created_by = $_SESSION["user_id"];
-        $quiz_master->save(); 
+        $quiz_master->save();  
 
         $quiz = new Quiz(); 
 
         $quiz->lesson_id = $data['id'];
         $quiz->quiz_category_id = $data['quiz_cat'];
         $quiz->description = $post['title'];
+        $quiz->quiz_master_id = $quiz_master->id;
         $insert = $quiz->create();        
 
         $uploadOk = 1;

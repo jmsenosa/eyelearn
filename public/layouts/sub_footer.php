@@ -47,6 +47,7 @@
 
     $('input').each(function(){
         $(this).attr("autocomplete","off");
+        $(this).attr("autocomplete","off");
     });
 
 </script>

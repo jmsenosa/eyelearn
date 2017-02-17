@@ -78,7 +78,7 @@ $pdf->Cell(00,00,'Created_by');
 
 $pdf->SetFont('Arial','B',10);
 $pdf->SetXY(90,50);
-$pdf->Cell(00,00,'Description');
+$pdf->Cell(00,00,'Date');
 
 $pdf->SetFont('Arial','B',10);
 $pdf->SetXY(140,50);
@@ -93,13 +93,15 @@ $pdf->Cell(00,00,'Status');
 $pdf->SetFont('Arial','',10);
 $i=60; 
 foreach($results as $result){
+    // echo $result->name;
     // id, quiz_id, user_id, score, total_number, last_update
 	$student = User::find_by_id($result->user_id);  
-	
+	@$full = ucwords($student->first_name).' '. ucwords($student->last_name);
+    // echo $full; die();
 	$pdf->SetXY(10,$i);
 	$pdf->Cell(00,00,ucwords($result->name));
 	$pdf->SetXY(50,$i);
-	$pdf->Cell(00,00,ucwords($student->first_name).' '.ucwords($student->last_name));
+	$pdf->Cell(00,00,$full);
 	$pdf->SetXY(90,$i);
 	$pdf->Cell(00,00,strtoupper($result->description));
 	$pdf->SetXY(140,$i);

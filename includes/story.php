@@ -77,12 +77,7 @@ class Story extends DatabaseObject {
 			
 			// Can't save if there are pre-existing errors
 		  if(!empty($this->errors)) { return false; }
-		  
-			// Make sure the caption is not too long for the DB
-		  if(strlen($this->remarks) > 255) {
-				$this->errors[] = "The caption can only be 255 characters long.";
-				return false;
-			}
+		   
 		
 		  // Can't save without filename and temp location
 		  if(empty($this->filename) || empty($this->temp_path)) {

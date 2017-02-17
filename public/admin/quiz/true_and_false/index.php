@@ -25,7 +25,8 @@
         $quiz->lesson_id = $data['id'];
         $quiz->quiz_category_id = $data['quiz_cat'];
         $quiz->description = $post['title'];
-        $insert = $quiz->create(); 
+        $quiz->quiz_master_id = $quiz_master->id;
+        $insert = $quiz->create();        
 
         $uploadOk = 1;
   

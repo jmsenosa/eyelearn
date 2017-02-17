@@ -66,12 +66,12 @@ class Magulang extends DatabaseObject {
 
         $sql = "
             SELECT 
-                magulang.id as parent_id,
+                parent.id as parent_id,
                 users.id as teacher_id,
                 CONCAT(users.first_name,' ',users.last_name) as teacher_name,
-                CONCAT(magulang.first_name,' ',magulang.last_name) as parent_name, 
-                magulang.email as email,
-                magulang.phone as phone,
+                CONCAT(parent.first_name,' ',parent.last_name) as parent_name, 
+                parent.email as email,
+                parent.phone as phone,
                 student.address as address,
                 student.lrn as LRN,
                 CONCAT(student.first_name,' ',student.last_name) as student,
@@ -79,23 +79,25 @@ class Magulang extends DatabaseObject {
                 
                 
             FROM 
-                users
-            JOIN
-                section
-                    ON
-                        section.created_by = users.id
-            JOIN
-                student
-                    ON 
-                        student.section_id = section.id
-            JOIN
+                parent
+            LEFT JOIN
                 parentstud
                     ON
-                        parentstud.student_id = student.id
-            JOIN
-                parent as magulang
+                        parentstud.parent_id = parent.id
+            LEFT JOIN
+                student
+                    ON 
+                        student.id = parentstud.student_id
+            
+            LEFT JOIN
+                section
                     ON
-                        magulang.id = parentstud.parent_id
+                        section.id = student.section_id 
+            
+            LEFT JOIN
+                users
+                    ON
+                        section.created_by = users.id 
         ";  
 
         if ( $teacher_id != 0 && $section_id != 0 ) 
@@ -111,8 +113,8 @@ class Magulang extends DatabaseObject {
             $sql = $sql." WHERE section.id = {$section_id}"; 
         }
 
-        $sql = $sql . " GROUP BY magulang.id 
-                        ORDER BY magulang.last_name ASC";
+        $sql = $sql . " GROUP BY parent.id 
+                        ORDER BY parent.last_name ASC";
 
         $result = [];                 
 

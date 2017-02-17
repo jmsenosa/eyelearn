@@ -8,7 +8,7 @@
 	// Find User 
 	$user = User::find_by_id($_SESSION['user_id']);
 	
-	$obj = 'Quiz Result';
+	$obj = 'Audit Trail';
 	
 	// Find all the Quiz
 	$results = Log::find_all();

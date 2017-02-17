@@ -89,5 +89,55 @@
             return $quizshit;
         }
 
+        public function get_charts_result($student_id) {
+            $sql = "
+                SELECT  
+                    quiz_take.id as take_id,
+                    concat(lesson.name ,'<br>',DATE_FORMAT(quiz_take.last_update, ".'"%b-%d"'.")) as lesson_title,
+                    quiz_master.id as quiz_no, 
+                    round(( quiz_take.score / quiz_take.total_questions * 100 ),2) as percentage
+                FROM 
+                    quiz_take
+                JOIN
+                    quiz_master
+                    ON
+                        quiz_master.id = quiz_take.quiz_master_id
+                LEFT JOIN
+                    quiz
+                    ON
+                        quiz.quiz_master_id = quiz_master.id
+                LEFT JOIN
+                    lesson
+                        ON
+                            lesson.id = quiz_take.lesson_id
+                LEFT JOIN
+                    student
+                        ON 
+                            student.id = quiz_take.student_id
+                WHERE 
+                    student.id = {$student_id}
+                GROUP BY 
+                    quiz_take.id
+                ORDER BY 
+                    quiz_take.id ASC,
+                    quiz_no ASC
+            ";
+
+            $quizshit = array();
+
+            if ($result = $this->mysqli->query($sql)) {
+                $data = array();
+                while ($obj = $result->fetch_object()) 
+                {   
+                    $newarr = array();
+                    $newarr[] = $obj->lesson_title."<br>Quiz #".$obj->quiz_no."<br>".$obj->take_id; 
+                    $newarr[] = floatval($obj->percentage); 
+
+                    $quizshit[] = $newarr;
+                }
+            }
+            return json_encode($quizshit);
+        }
+
     }
 ?>
