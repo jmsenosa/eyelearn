@@ -119,8 +119,8 @@
                 GROUP BY 
                     quiz_take.id
                 ORDER BY 
-                    quiz_take.id ASC,
-                    quiz_no ASC
+                    quiz_no ASC,
+                    quiz_take.id ASC
             ";
 
             $quizshit = array();
