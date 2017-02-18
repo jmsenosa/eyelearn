@@ -21,7 +21,7 @@
     }
  ?>
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" class="school-html-rand">
 
     <head>
         <?php include('header.php'); ?>
@@ -180,7 +180,7 @@
             $('.blackboardbig').removeClass('bounceOut');
             $('.blackboard').css({
                 'top': '0px'
-                , 'left': '0px'
+                , 'left': '6px'
             });
             $('.blackboardbig').show();
             $('.blackboardbig').addClass('animated bounceIn');

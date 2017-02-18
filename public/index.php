@@ -32,7 +32,7 @@
 	
  ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="landing-page">
 
 <head>
     <?php include('header.php'); ?>

@@ -1,13 +1,16 @@
+html, body
+{
+    min-height: 100%;
+    height: 100%;
+}
+
 section {
-    height: 680px;
-    width: 1200px;
-    width: 100%;
+    height: 100%;
+    width: 100%; 
    
 }
 
 .intro .content {
-    background-image: url('student_assets/boardbg.jpg');
-    background-size: contain;
     position: relative;
     width: 1200px;
     height: 680px;
@@ -43,26 +46,28 @@ section {
 
 .welcome .content {
     position: relative;
-    width: 1200px;
-    height: 680px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     margin: 0 auto;
 }
 
 .welcome .content .kalsada {
     position: absolute;
-    top: 300px;
+    /*top: 300px;*/
+    width: 100%;
+    bottom: -10px;
 }
 
 .welcome .content .kalsada img {
     height: 400px;
-    width: 1200px;
+    width: 100%;
 }
 
 .welcome .content .kubo {
     position: absolute;
-    top: 50px;
-    left: 250px;
+    top: 80px;
+    left: 371px;
 }
 
 .welcome .content .kubo img {
@@ -76,15 +81,15 @@ section {
 
 .welcome .content .clouds {
     position: absolute;
-    width: 1200px;
+    width: 100%;
     height: 280px;
 }
 
     .welcome .content .clouds .cloudsun {
         height: 200px;
         width: 200px;
-        position: absolute;
-        right: 0px;
+        position: absolute;    
+        right: 428px;
     }
 
     .welcome .content .clouds .cloud1 {
@@ -166,7 +171,7 @@ section {
         width: 300px;
         height: 300px;
         position: absolute;
-        left: 800px;
+        right: 100px;
         top: 100px;
         cursor: pointer;
 }
@@ -202,7 +207,7 @@ section {
     background-size: auto 100px;
     background-repeat: repeat-x;
     position: absolute;
-    top: 230px;
+    top: 276px;
     height: 100px;
     width: 100%;
     
@@ -217,42 +222,42 @@ section {
 .puno1 {
     position: absolute;
     height: 300px;
-    width: 100px;
+    max-width: 100%;
     left: 0px
 }
 
 .puno2 {
     position: absolute;
     height: 300px;
-    width: 100px;
+    max-width: 100%;
     left: 150px;
 }
 
 .puno3 {
     position: absolute;
     height: 300px;
-    width: 100px;
+    max-width: 100%;
     left: 550px;
 }
 
 .puno4 {
     position: absolute;
     height: 300px;
-    width: 100px;
-    left: 750px;
+    max-width: 100%;
+    right: 20px;
 }
 
 .puno5 {
     position: absolute;
     height: 300px;
-    width: 100px;
-    left: 1000px;
+    max-width: 100%;
+    left: 100%;
 }
 
 .paaralan {
     position: absolute;
     top: 350px;
-    left: 600px;
+    right: 380px;
 }
 
 
@@ -264,7 +269,7 @@ section {
 .lumabas {
     position: absolute;
     top: 400px;
-    left: 900px;
+    right: 60px;
 }
 
 .lumabas a img {
@@ -276,7 +281,7 @@ section {
 
 .school .content {
     position: relative;
-    width: 1200px;
+    width: 100%;
     height: 680px;
     overflow: hidden;
     margin: 0 auto;
@@ -287,7 +292,7 @@ section {
 }
 
 .school .content .room img {
-    width: 1200px;
+    width: 100%;
     height: 680px;
 }
 
@@ -295,11 +300,12 @@ section {
     position: absolute;
     top: 125px;
     left: 269px;
+    width: 100%;
 }
 
 .blackboard  .blackboardsmall {
-    width: 383px;
-    height: 169px;
+        width: 457px;
+    height: 214px;
     cursor: pointer;
 }
 
@@ -358,6 +364,7 @@ section {
     min-height: 680px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 #tama-mali-section .tm_question_container
@@ -573,3 +580,24 @@ section {
 {
     color: #FFF;
 }
+
+#landing-page
+{
+ 
+    background: url('student_assets/boardbg.jpg') no-repeat center center fixed !important ; 
+    -webkit-background-size: cover !important ;
+    -moz-background-size: cover !important ;
+    -o-background-size: cover !important ;
+    background-size: cover !important ; 
+    margin: 0px;
+    padding: 0px;
+}
+
+/*.school-html-rand
+{
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
