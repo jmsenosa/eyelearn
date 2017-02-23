@@ -16,7 +16,8 @@ class Quiz_True_Or_False extends DatabaseObject {
         'correct_answer',
         'background',
         'true_image',
-        'false_image'
+        'false_image',
+        'audio_id'
     );
 
     public $id;
