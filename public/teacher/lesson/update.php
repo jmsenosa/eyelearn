@@ -4,6 +4,7 @@
 	
 	// Check if Logged in. If not the page will go to Signin page
 	if (!$session->is_logged_in()) { redirect_to("signin.php"); }
+	$grading_periods = Grading_Quarters::find_all(); 
 	
 	
 	$obj = 'Lesson';
@@ -15,14 +16,15 @@
 	if(isset($_POST['submit'])) {
 			//Get user id to be edit
 		$lesson = Lesson::find_by_id($_POST['id']);
-					$lesson->name			= $_POST['name'];
-			$lesson->description	= $_POST['description'];
-				$lesson->active 		= $_POST['active'];
+		$lesson->name			= $_POST['name'];
+		$lesson->description	= $_POST['description'];
+		$lesson->active 		= $_POST['active'];
 		$lesson->isDone 		= $_POST['isDone'];
+		$lesson->grading_quarter_id = $_POST['grading_quarter_id'];
 		if($lesson->update()) {
 			// Success
 			$session->message("{$_POST['name']} successfully edited.");
-log_action('Update Lesson', "{$user->full_name()} Updated Lesson {$_POST['name']}.");
+			log_action('Update Lesson', "{$user->full_name()} Updated Lesson {$_POST['name']}.");
 			redirect_to('index.php');
 		} else {
 			$session->message("{$_POST['name']} successfully edited.");
@@ -58,6 +60,17 @@ log_action('Update Lesson', "{$user->full_name()} Updated Lesson {$_POST['name']
 		<?php endif; ?>
 		<form class="form-horizontal" action="update.php"  method="POST">
 			<input type='hidden' name='id' value='<?php echo $lesson->id; ?>'/>
+			<div class="form-group">
+				<label for="name" class="col-sm-2 control-label"> Grading Quarter</label>
+				<div class="col-sm-4">
+					<select name="grading_quarter_id" id="" class="form-control">
+						<option>Select Quarter </option>
+						<?php foreach ($grading_periods as $period): ?>
+						<option <?php echo ($lesson->grading_quarter_id == $period->id) ? "selected": ""; ?> value="<?php echo $period->id; ?>"><?php echo $period->name; ?></option>						
+						<?php endforeach ?>
+					</select>
+				</div>
+			</div>	 
 			<div class="form-group">
 				<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Name</label>
 				<div class="col-sm-4">

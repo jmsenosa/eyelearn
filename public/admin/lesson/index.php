@@ -45,8 +45,10 @@
 		<thead>
 			<tr>
 			<th>Name</th>
+			<th>Quarter</th>
 			<th>Created By</th>
 			<th>Description</th>
+            <th>Date Created</th>
 			<th class='text-center'>Status</th>
 			<th class='text-center'>Option</th>
 		  </tr>
@@ -66,7 +68,22 @@
 					<?php echo ucwords($lesson->name); ?>
 				<?php endif ?>
 			</td>
+			<?php $grading = Grading_Quarters::find_by_id($lesson->grading_quarter_id) ?>
+			<td><?php echo $grading->name; ?></td>
 			<td><?php $user = User::find_by_id($lesson->user_id); echo ucwords($user->full_name());  ?></td>
+			<td>
+                <?php echo ucwords($lesson->description); ?> 
+                <?php if ((strtotime($lesson->description." 01:00:00") == strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0) || (strtotime($lesson->description." 01:00:00") < strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0) ): ?>
+                    <span class="label label-success"> ONGOING</span>
+                <?php elseif ( strtotime($lesson->description." 01:00:00") > strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0):?>
+                    <span class="label label-warning"> PENDING</span>
+                <?php elseif($lesson->isDone == 1): ?>
+                    <span class="label label-danger"> DONE</span>
+                <?php elseif(strtotime($lesson->description." 01:00:00") < strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0): ?>
+                    <span class="label label-warning"> PENDING</span> 
+                <?php endif; ?>  
+            </td>
+            <td><?php echo ucwords($lesson->last_update); ?></td>
 			<td><?php echo ucwords($lesson->description); ?></td>
 			<td class='text-center'><?php echo $lesson->active==1 ? '<i class="fa fa-check text-success"></i>':'<i class="fa fa-remove text-danger"></i>'; ?></td>
 			<td class='text-center'><!--<a href="dtl.php?id=<?php echo $lesson->id; ?>"  rel="tooltip"  title="Add <?php echo ucwords($obj); ?>" ><i class="fa fa-plus text-success"></i></a> &nbsp; --><a href="update.php?id=<?php echo $lesson->id; ?>"  rel="tooltip"  title="Edit <?php echo ucwords($obj); ?>" ><i class="fa fa-pencil text-warning"></i></a> &nbsp; <a href="delete.php?id=<?php echo $lesson->id; ?>" rel="tooltip"  title="Delete <?php echo ucwords($obj); ?>" onclick="return confirm('Are you sure you want to delete');"><i class="fa fa-trash text-danger"></i></a></td>

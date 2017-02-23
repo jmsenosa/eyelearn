@@ -4,7 +4,7 @@
     
     // Check if Logged in. If not the page will go to Signin page
     if (!$session->is_logged_in()) { redirect_to("signin.php"); }
-    error_reporting(E_ALL);
+
     $obj = 'Lesson';
     
     $user = User::find_by_id($_SESSION['user_id']);
@@ -42,6 +42,7 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Quarter</th>
                 <th>Created By</th>
                 <th>Lesson Date</th>
                 <th>Date Created</th>
@@ -66,6 +67,8 @@
                     <?php echo ucwords($lesson->name); ?>
                 <?php endif ?>
             </td>
+            <?php $grading = Grading_Quarters::find_by_id($lesson->grading_quarter_id) ?>
+            <td><?php echo $grading->name; ?></td>
             <td><?php $user = User::find_by_id($lesson->user_id); echo ucwords($user->full_name());  ?></td>
             <td>
                 <?php echo ucwords($lesson->description); ?> 
