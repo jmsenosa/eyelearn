@@ -22,7 +22,8 @@
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 	
-	if(isset($_POST['submit'])) {
+	if(isset($_POST)) {
+
 
 		$section = Section::find_by_id($_POST['section']);		
 
@@ -39,7 +40,7 @@
 		// Create connection
 		
 
-		$mysql = "SELECT * FROM parentstud WHERE parent_id IN (".implode(',', $_POST['parents']).") AND student_id = ".$id; 
+		$mysql = "SELECT * FROM parentstud WHERE student_id = ".$id; 
 		$result = $conn->query($mysql); 
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()) {
@@ -164,6 +165,7 @@
 											$selected = "";
 											$mysql = "SELECT * FROM parentstud WHERE parent_id = ".$parent->id." AND student_id = ".$id. " LIMIT 1"; 
 											$result = $conn->query($mysql); 
+											
 											if ($result->num_rows > 0) {
 												while($row = $result->fetch_assoc()) {
 													if ($row['parent_id'] == $parent->id ) {
@@ -183,8 +185,8 @@
 			<br>
 		  	<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-4">
-				   <button type="submit" class="btn btn-success" name="submit" onclick="return confirm('Are you sure you want to save changes?');">Save</button>
-				  <button type="button" class="btn btn-danger" onClick='window.location.href = "index.php";' >Cancel </button>
+				   	<button type="submit" class="btn btn-success" name="submit" onclick="return confirm('Are you sure you want to save changes?');">Save</button>
+				  	<button type="button" class="btn btn-danger" onClick='window.location.href = "index.php";' >Cancel </button>
 				</div>
 		  	</div>
 		  	<div class="col-xs-offset-1 col-xs-9">

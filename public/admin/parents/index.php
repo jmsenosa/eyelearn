@@ -6,7 +6,9 @@
     if (!$session->is_logged_in()) { redirect_to("signin.php"); } 
 
     $parents = Magulang::get_all();
-
+    if (isset($_GET["message"])) {
+        $message = $_GET["message"];
+    }
 
 ?>
 <?php include_layout_template('sub_header.php'); ?>

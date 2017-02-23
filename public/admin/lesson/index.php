@@ -57,7 +57,15 @@
         ?>
       
 		  <tr>
-			<td><a href='content.php?id=<?php echo $lesson->id; ?>' rel="tooltip"  title="View Content" ><?php echo ucwords($lesson->name); ?></td>
+			<td>
+				<?php if ($lesson->isDone == 0): ?> 
+					<a href='content.php?id=<?php echo $lesson->id; ?>' rel="tooltip"  title="View Content" >
+						<?php echo ucwords($lesson->name); ?>
+					</a>
+				<?php else: ?>
+					<?php echo ucwords($lesson->name); ?>
+				<?php endif ?>
+			</td>
 			<td><?php $user = User::find_by_id($lesson->user_id); echo ucwords($user->full_name());  ?></td>
 			<td><?php echo ucwords($lesson->description); ?></td>
 			<td class='text-center'><?php echo $lesson->active==1 ? '<i class="fa fa-check text-success"></i>':'<i class="fa fa-remove text-danger"></i>'; ?></td>

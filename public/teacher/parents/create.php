@@ -23,7 +23,7 @@
             $check = Magulang::check_username($parent->username);
             if ($check === false) {
                 $parent->create();
-                header('Location: index.php');
+                header('Location: index.php?message="New parent added!"');
             }
         }
 

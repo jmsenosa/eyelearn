@@ -52,7 +52,14 @@
 		<?php foreach($lessons as $lesson): ?>
 		  <tr>
 			<?php $user = User::find_by_id($lesson->user_id); ?>
-			<td><a href='folder.php?folder=<?php echo $lesson->name; ?>' rel="tooltip"  title="View Content" ><?php echo ucwords($lesson->name); ?></td>
+			<td>
+				<?php if ($lesson->isDone == 0): ?> 
+					<a href='folder.php?folder=<?php echo $lesson->name; ?>' rel="tooltip"  title="View Content" ><?php echo ucwords($lesson->name); ?></a>
+				
+				<?php else: ?>
+					<?php echo ucwords($lesson->name); ?>
+				<?php endif ?>
+			</td>
 			<td>
 				<?php if (isset($user->first_name) && isset($user->last_name)): ?>
 					<?php echo $user->first_name. " ".$user->last_name; ?>

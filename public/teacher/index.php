@@ -29,6 +29,17 @@
 		</div>
 		<!-- /.row -->
 
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="well">
+					Hi <strong><?php echo ucwords($user->first_name." ".$user->last_name); ?></strong>!
+					<br>
+					Your time starts at <strong> <?php  echo date_format(date_create(date("Y-m-d")." ".$user->fromtime), "h:i A"); ?></strong> 
+					and ends at <strong><?php echo date_format( date_create(date("Y-m-d")." ".$user->totime), "h:i A"); ?> </strong>
+				</div>
+			</div>
+		</div>
+
 		<!-- Service Panels -->
 		<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
 		<div class="alert alert-info alert-dismissible" role="alert">

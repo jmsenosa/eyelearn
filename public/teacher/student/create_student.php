@@ -94,6 +94,11 @@
         {
             color: #FFF;
         }
+
+        ul.multiselect-container > li:nth-child(2) input[type="radio"]
+        {
+            display: none;
+        }
     </style>
     <div class="row">
         <div class="col-lg-12">
@@ -179,6 +184,7 @@
                             <label for="Parents" class="col-sm-2 control-label">Parents</label> 
                             <div class="col-sm-9" style="padding-left: 5px;">
                                 <select name="parents[]" class="form-control multiselect" required="required"> 
+                                    <option></option>
                                     <?php foreach ($parents as $parent): ?>   
                                         <?php $selected = ""; ?>
                                         <?php if (isset($_POST['parents'])): ?>
