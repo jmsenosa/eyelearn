@@ -131,8 +131,14 @@
                 <label for="fromtime" class="col-sm-2 control-label">Schedule</label>
                 <div class="col-sm-4">
                     <div class="row">
-                        <div class="col-xs-6"><input type="time" required="required" name="fromtime" min="06:00" value="06:00" max="20:00" class="form-control" id="fromtime"></div>
-                        <div class="col-xs-6"><input type="time" required="required" name="totime" min="10:00" value="10:00" class="form-control" id="totime"></div>
+                        <!-- $user->fromtime -->
+                        <?php $fromtime = ( isset($_POST["fromtime"]) ) ? $_POST["fromtime"] : (isset($user->fromtime)) ? $user->fromtime: "06:00"; ?>
+                        <?php $date = new DateTime(date("Y-m-d ").$fromtime); ?>                       
+                        <div class="col-xs-6"><input type="time" required="required" name="fromtime" min="06:00" value="<?php echo $date->format('H:i'); ?>" max="20:00" class="form-control" id="fromtime"></div>
+                        <!-- $user->totime -->
+                        <?php $totime = ( isset($_POST["totime"]) ) ? $_POST["totime"] : (isset($user->totime)) ? $user->totime: "06:00"; ?>
+                        <?php $date = new DateTime(date("Y-m-d ").$totime); ?>
+                        <div class="col-xs-6"><input type="time" required="required" name="totime" min="10:00" value="<?php echo $date->format('H:i'); ?>" max="23:59" class="form-control" id="totime"></div>
                     </div>
                 </div>
             </div>

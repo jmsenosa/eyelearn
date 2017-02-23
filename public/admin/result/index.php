@@ -55,7 +55,7 @@
                                             foreach($teachers as $teacher):
                                                
                                                 ?>
-                                <option value="<?php echo $teacher->full_name() ?>">
+                                <option data-id="<?php echo $teacher->id; ?>" value="<?php echo $teacher->full_name() ?>">
                                     <?php echo $teacher->full_name() ?>
                                 </option>
                                 <?php
@@ -111,7 +111,7 @@
 					</table>
 			</div>
 			</div>
-			<div class="col-md-12"><a href='viewpdf.php?id=<?php echo $event->id; ?>' target='blank' class="btn btn-danger" >View in PDF Files</a></div>
+			<div class="col-md-12"><a href='viewpdf.php' target='blank' class="btn btn-danger" id="print_pdf" >View in PDF Files</a></div>
 			 
 		</div>
 	</div>
@@ -154,5 +154,16 @@
                     } );
                     
 	}); 
+
+    $("#print_pdf").click(function(){
+        var flocation = $(this).attr("href");
+        var selected = $("#teacher").find("option:selected").data("id");
+        if (selected != "") { 
+            window.open( flocation+"?id="+selected );
+            return false;
+        }else{
+            return true;
+        }
+    });
 /*]]>*/
 </script>
