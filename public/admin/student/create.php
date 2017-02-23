@@ -177,8 +177,9 @@
 						<div class="form-group">
 							<label for="Parents" class="col-sm-2 control-label">Parents</label> 
 							<div class="col-sm-9" style="padding-left: 5px;">
-								<select name="parents[]" class="form-control multiselect" required="required" multiple> 
-									<?php foreach ($parents as $parent): ?>   
+								<select name="parents[]" class="form-control multiselect" required="required" > 
+									<option style="position:absolute;left:-1000px"></option>
+                                    <?php foreach ($parents as $parent): ?>   
 										<?php $selected = ""; ?>
 										<?php if (isset($_POST['parents'])): ?>
 											<?php foreach ($_POST['parents'] as $key => $value): ?>
