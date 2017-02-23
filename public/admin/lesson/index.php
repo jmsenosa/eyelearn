@@ -101,7 +101,9 @@
 /*<![CDATA[*/
 	$(document).ready(function(){
 		$("[rel='tooltip']").tooltip();	
-        $('.table').DataTable();
-	}); 
+        $('.table').DataTable(
+        {
+            "order": [[ 3, "desc" ]]
+        }); 
 /*]]>*/
 </script>

@@ -103,7 +103,7 @@
                                     
                                     else:
                                     ?>
-                                    N/A <!-- baguhin muna lang --> <?php
+                                    N/A  <?php
                                     endif;
                                     ?>
                                 </td>

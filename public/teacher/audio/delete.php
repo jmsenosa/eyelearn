@@ -16,7 +16,7 @@
 		$session->message("{$audio->name}  as successfully deleted.");
 		redirect_to("index.php");
 	} else {
-		$session->message("Unable to delete {$audio->name}.");
+		$session->message("Successfully deleted {$audio->name}.");
 		redirect_to('index.php');
 	}
   
