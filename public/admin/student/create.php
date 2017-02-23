@@ -93,6 +93,10 @@
 		{
 			color: #FFF;
 		}
+		ul.multiselect-container > li:nth-child(2) input[type="radio"]
+        {
+            display: none;
+        }
 	</style>
 	<div class="row">
 		<div class="col-lg-12">
