@@ -4,10 +4,14 @@
     error_reporting(E_ALL);
     // Check if Logged in. If not the page will go to Signin page
     if (!$session->is_logged_in()) { redirect_to("signin.php"); }
-    
+    $conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
     // Find user by id
     $session_user = User::find_by_id($_SESSION['user_id']);
-    
+    $parents = Magulang::get_all();
     // Find all user type
     $student_info = Student::find_by_id($_GET['id']);
     $user_types = User_type::find_all_except_admin();
@@ -33,6 +37,19 @@
             if($user->save()) {
                 log_action('User Create User', "{$session_user->full_name()} Create User [{$_POST['username']}].");
                 $session->message("Successfully created.");
+                $mysql = "SELECT * FROM parentstud WHERE parent_id IN (".implode(',', $_POST['parents']).") AND student_id = ".$student->id; 
+                    $result = $conn->query($mysql); 
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            $deleteSql = "DELETE FROM parentstud WHERE id = ".$row['id'];
+                            $conn->query($deleteSql);
+                        }
+                    }
+
+                    foreach ( $_POST['parents'] as $key => $value) {
+                        $sql = "INSERT INTO parentstud (parent_id, student_id) VALUES (".$value.",".$student->id.")";
+                        $conn->query($sql);
+                    }
                 redirect_to('index.php');
             } else {
                 $session->message("Unable to create.");
@@ -113,6 +130,31 @@
                     </select>
                 </div>
             </div>
+            
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="Parents" class="col-sm-2 control-label">Parents</label> 
+                            <div class="col-sm-9" style="padding-left: 5px;">
+                                <select name="parents[]" class="form-control multiselect" required="required"> 
+                                    <?php foreach ($parents as $parent): ?>   
+                                        <?php $selected = ""; ?>
+                                        <?php if (isset($_POST['parents'])): ?>
+                                            <?php foreach ($_POST['parents'] as $key => $value): ?>
+                                                <?php if ($value == $parent->id): ?>
+                                                    <?php $selected = "selected"; ?>
+                                                <?php endif ?>
+                                            <?php endforeach ?>
+                                        <?php endif ?>
+                                        <option <?php echo $selected; ?> value="<?php echo $parent->id; ?>"><?php echo $parent->first_name." ".$parent->last_name; ?></option>
+                                    <?php endforeach ?>
+                                </select> 
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- <div class="form-group">
                 <label for="first_name" class="col-sm-2 control-label">Parent First Name </label>
                 <div class="col-sm-4">
@@ -141,4 +183,14 @@
         <hr />
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.multiselect').multiselect({
+            buttonWidth: "100%",
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true
+        })
+
+    });
+</script>    
 <?php include_layout_template('sub_footer.php'); ?>

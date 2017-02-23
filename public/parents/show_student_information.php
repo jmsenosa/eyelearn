@@ -60,6 +60,7 @@
     <link href="../materialize.min.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="../assets/js/jquery.js"></script>
+    <script src="../materialize.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../assets/js/bootstrap.min.js"></script>
@@ -120,7 +121,7 @@
                     <tr>
                         <th style="width:20%;">School Year: </th>
                         <td><?php echo $student->school_year." - ".($student->school_year+1); ?></td> 
-                        <th style="width:20%;">School Year: </th>
+                        <th style="width:20%;">Teacher: </th>
                         <td><?php echo $student->teacher_name; ?></td>
                     </tr>
                 </table> 

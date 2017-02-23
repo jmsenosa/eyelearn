@@ -20,11 +20,11 @@
                 log_action('Add Section', "{$user->full_name()} Added new Section {$_POST['name']}.");
 				redirect_to('index.php');
 			} else {
-				$session->message("Unable to create {$obj}.");
-				redirect_to('index.php');
+				$message = "Duplicate entry or invalid value, Please try again!";
+				
 			}
 		
-		
+
 	}
 	
 ?>

@@ -121,13 +121,13 @@
                 <div class="form-group">
                     <label for="lrn" class="col-sm-2 control-label">LRN</label>
                     <div class="col-sm-4">
-                        <input type="text" maxlength="12" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
+                        <input type="text" maxlength="12" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  required />
                     </div>
                 </div>
               <div class="form-group">
                 <label for="first_name" class="col-sm-2 control-label">First Name</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control lettersonly" id="first_name" name="first_name" placeholder="<?php echo ucwords($obj); ?> First Name" value="<?php echo (isset($_POST['first_name'])) ? $_POST['first_name'] : ""; ?>" />
+                  <input type="text" class="form-control lettersonly" id="first_name" name="first_name" placeholder="<?php echo ucwords($obj); ?> First Name" value="<?php echo (isset($_POST['first_name'])) ? $_POST['first_name'] : ""; ?>" required/>
                 </div>
                 <label for="middle_name" class="col-sm-1 control-label"> Middle Name</label>
                 <div class="col-sm-4">
@@ -137,11 +137,11 @@
               <div class="form-group">
                 <label for="last_name" class="col-sm-2 control-label">Last Name</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control lettersonly" id="last_name" name="last_name" placeholder="<?php echo ucwords($obj); ?> Last Name" value="<?php echo (isset($_POST['last_name'])) ? $_POST['last_name'] : ""; ?>" />
+                  <input type="text" class="form-control lettersonly" id="last_name" name="last_name" placeholder="<?php echo ucwords($obj); ?> Last Name" value="<?php echo (isset($_POST['last_name'])) ? $_POST['last_name'] : ""; ?>" required/>
                 </div>
                 <label for="address" class="col-sm-1 control-label"> Address</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="address"name="address" placeholder="<?php echo ucwords($obj); ?> Address" value="<?php echo (isset($_POST['address'])) ? $_POST['address'] : ""; ?>"  />
+                  <input type="text" class="form-control" id="address"name="address" placeholder="<?php echo ucwords($obj); ?> Address" value="<?php echo (isset($_POST['address'])) ? $_POST['address'] : ""; ?>" required />
                 </div>
               </div>
              <div class="form-group">

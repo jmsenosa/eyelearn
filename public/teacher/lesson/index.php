@@ -63,7 +63,10 @@
             <td><?php echo str_pad($lesson->id,6,"0",STR_PAD_LEFT); ?></td>
 			<td><a href='content.php?id=<?php echo $lesson->id; ?>' rel="tooltip"  title="View Content" ><?php echo ucwords($lesson->name); ?></td>
 			<td><?php $user = User::find_by_id($lesson->user_id); echo ucwords($user->full_name());  ?></td>
-			<td><?php echo ucwords($lesson->description); ?></td>
+			<td><?php echo ucwords($lesson->description); 
+            if(strtotime($lesson->description) == date('Y-m-d')){ echo '<span class="label label-success"> ONGOING</span>';}
+            if(strtotime($lesson->description) < date('Y-m-d')){ echo '<span class="label label-warning"> PENDING</span>';} 
+            if(strtotime($lesson->description) > date('Y-m-d')){ echo '<span class="label label-danger"> DONE</span>';} ?></td>
               <td><?php echo ucwords($lesson->last_update); ?></td>
 			<td class='text-center'><?php echo $lesson->active==1 ? '<i class="fa fa-check text-success"></i>':'<i class="fa fa-remove text-danger"></i>'; ?></td>
 			<td class='text-center'><!--<a href="dtl.php?id=<?php echo $lesson->id; ?>"  rel="tooltip"  title="Add <?php echo ucwords($obj); ?>" ><i class="fa fa-plus text-success"></i></a> &nbsp; --><a href="update.php?id=<?php echo $lesson->id; ?>"  rel="tooltip"  title="Edit <?php echo ucwords($obj); ?>" ><i class="fa fa-pencil text-warning"></i></a> &nbsp; <a href="delete.php?id=<?php echo $lesson->id; ?>" rel="tooltip"  title="Delete <?php echo ucwords($obj); ?>" onclick="return confirm('Are you sure you want to delete');"><i class="fa fa-trash text-danger"></i></a></td>

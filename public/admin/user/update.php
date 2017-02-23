@@ -32,7 +32,6 @@
 	if(isset($_POST['submit'])) {
 		//Get user id to be edit	
 		$user = User::find_by_id($_POST['id']);
-		$user->type_id 		= $_POST['type_id'];
 		$user->username 	= $_POST['username'];
 		$user->password 	= $_POST['password'];
 		$user->first_name   = $_POST['first_name'];
@@ -95,11 +94,11 @@
 			 <div class="form-group">
 				<label for="first_name" class="col-sm-2 control-label"> First name</label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="first_name" name="first_name"  value='<?php echo $user->first_name; ?>' />
+				  <input type="text" class="form-control lettersonly" id="first_name" name="first_name"  value='<?php echo $user->first_name; ?>' />
 				</div>
 				<label for="last_name" class="col-sm-1 control-label"> Last </label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="last_name" name="last_name"  value='<?php echo $user->last_name; ?>' />
+				  <input type="text" class="form-control lettersonly" id="last_name" name="last_name"  value='<?php echo $user->last_name; ?>' />
 				</div>	
 			  </div>
 			  <div class="form-group">
@@ -109,7 +108,7 @@
 				</div>
 				<label for="phone" class="col-sm-1 control-label"> Phone </label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="phone" name="phone"  value='<?php echo $user->phone; ?>' />
+				  <input type="text" class="form-control numbersonly" id="phone" name="phone"  value='<?php echo $user->phone; ?>' />
 				</div>	
 			  </div>
 			 <div class="form-group">
@@ -117,14 +116,7 @@
 				<div class="col-sm-4">
 					<textarea class="form-control" rows="3" class="form-control" id="address" name="address"  /><?php echo $user->address; ?></textarea>
 				</div>
-				<label for="type_id" class="col-sm-1 control-label">User type</label>
-				<div class="col-sm-4">
-				   <select class="form-control" id="type_id" name="type_id" >
-					  <?php foreach($user_types as $user_type):	?>
-					  <option value='<?php echo $user_type->id; ?>'  <?php echo  ($user_type->id == $user->type_id ? 'selected="selected"':''); ?> ><?php echo ucwords($user_type->name); ?></option>
-					 <?php endforeach; ?>
-					</select>
-				</div>
+				
 			  </div>
 			  <div class="form-group">
 					<label for="status" class="col-sm-2 control-label">Active</label>

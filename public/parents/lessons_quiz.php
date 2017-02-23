@@ -6,7 +6,7 @@
         "pending" => ["color"=>"#f1c40f", "data" => []],
         "done" => ["color"=>"#e74c3c", "data" => []]
     ];
-
+    
     foreach ( $lessons as $lesson ) {
         if ( strtotime($lesson->description) <= strtotime(date("Y-m-d")) && $lesson->isDone == 0) {
             $grouped_lessons["ongoing"]["data"][] = $lesson;
@@ -52,15 +52,20 @@
                                     <tbody>
                                         <?php foreach ($quiz_takes as $num => $data): ?>
                                             <tr>
+                                               
                                                 <th class="text-center"><?php echo $num; ?></th>
                                                 <?php foreach ($data as $key => $value): ?>
-                                                    <td class="text-center"><?php echo $value; ?></td>
+                                                    <td class="text-center grade" data-original="<?php echo $value; ?>" style="cursor: pointer"><?php echo $value; ?></td>
+                                                    
+      
                                                 <?php endforeach ?>
+                                               
                                             </tr>
                                         <?php endforeach ?>
                                     </tbody>
                                 </table>
                             <?php else: ?>
+                               
                                 <div>No quiz found</div>
                             <?php endif ?>
                             <hr>

@@ -40,8 +40,8 @@
 			$user->email 		= $_POST['email'];
 			$user->phone 		= $_POST['phone'];
 			$user->address 		= $_POST['address'];
-            $user->fromtime 		= $_POST['from'];
-            $user->totime 	= $_POST['to'];
+            $user->fromtime 		= $_POST['fromtime'];
+            $user->totime 	= $_POST['totime'];
 			$user->active 		= $_POST['active'];
 		$user->last_update	= date('Y-m-d h:i:s');
 		if($user->save()){
@@ -96,11 +96,11 @@
 			 <div class="form-group">
 				<label for="first_name" class="col-sm-2 control-label"> First Name</label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="first_name" name="first_name" required  value='<?php echo $user->first_name; ?>' />
+				  <input type="text" class="form-control lettersonly" id="first_name" name="first_name" required  value='<?php echo $user->first_name; ?>' />
 				</div>
 				<label for="last_name" class="col-sm-1 control-label"> Last Name</label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="last_name" name="last_name" required value='<?php echo $user->last_name; ?>' />
+				  <input type="text" class="form-control lettersonly" id="last_name" name="last_name" required value='<?php echo $user->last_name; ?>' />
 				</div>	
 			  </div>
 			  <div class="form-group">
@@ -110,7 +110,7 @@
 				</div>
 				<label for="phone" class="col-sm-1 control-label"> Phone </label>
 				<div class="col-sm-4">
-				  <input type="text" class="form-control" id="phone" name="phone" required value='<?php echo $user->phone; ?>' />
+				  <input type="text" class="form-control numbersonly" id="phone" name="phone" required value='<?php echo $user->phone; ?>' />
 				</div>	
 			  </div>
 			 <div class="form-group">
@@ -118,14 +118,7 @@
 				<div class="col-sm-4">
 					<textarea class="form-control" rows="3" class="form-control" id="address" name="address"  /><?php echo $user->address; ?></textarea>
 				</div>
-				<label for="type_id" class="col-sm-1 control-label">User type</label>
-				<div class="col-sm-4">
-				   <select class="form-control" id="type_id" name="type_id" >
-					  <?php foreach($user_types as $user_type):	?>
-					  <option value='<?php echo $user_type->id; ?>'  <?php echo  ($user_type->id == $user->type_id ? 'selected="selected"':''); ?> ><?php echo ucwords($user_type->name); ?></option>
-					 <?php endforeach; ?>
-					</select>
-				</div>
+				
 			  </div>
 			  <div class="form-group">
 					<label for="status" class="col-sm-2 control-label">Active</label>
@@ -134,36 +127,15 @@
 				 Inactive <input type="radio" name="active" id="active" value=0  <?php echo $user->active==0 ? "checked='checked'":"" ?> />
 				</div>
 			  </div>
-              <div class="form-group">
-                                    <label for="phone" class="col-sm-2 control-label"> Schedule </label>
-                                    <div class="col-sm-4">
-                                        <select class="form-control" name="from">
-                                            <option value="08:00">8 AM</option>
-                                            <option value="09:00">9 AM</option>
-                                            <option value="10:00">10 AM</option>
-                                            <option value="11:00">11 AM</option>
-                                            <option value="12:00">12 PM</option>
-                                            <option value="13:00">1 PM</option>
-                                            <option value="14:00">2 PM</option>
-                                            <option value="15:00">3 PM</option>
-                                            <option value="16:00">4 PM</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div class="col-sm-4">
-                                        <select class="form-control" name="to">
-                                            <option value="08:00">8 AM</option>
-                                            <option value="09:00">9 AM</option>
-                                            <option value="10:00">10 AM</option>
-                                            <option value="11:00">11 AM</option>
-                                            <option value="12:00">12 PM</option>
-                                            <option value="13:00">1 PM</option>
-                                            <option value="14:00">2 PM</option>
-                                            <option value="15:00">3 PM</option>
-                                            <option value="16:00">4 PM</option>
-                                        </select>
-                                    </div>
-                                </div>
+               <div class="form-group">
+                <label for="fromtime" class="col-sm-2 control-label">Schedule</label>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-xs-6"><input type="time" required="required" name="fromtime" min="06:00" value="06:00" max="20:00" class="form-control" id="fromtime"></div>
+                        <div class="col-xs-6"><input type="time" required="required" name="totime" min="10:00" value="10:00" class="form-control" id="totime"></div>
+                    </div>
+                </div>
+            </div>
 			  <hr />
 			  <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-4">
@@ -177,7 +149,40 @@
 		</div>
         </div>
         <!-- /.row -->
-  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $("#fromtime").click(function(){
+            var timeVal = $(this).val();
+            if (timeVal.length > 0) {
+                var fromtime =  parseInt(timeVal.replace(":",""));
+
+                if (fromtime == 0 || fromtime == "0") 
+                {
+                    totime = "00:00";
+                }
+                else
+                { 
+                    totime = fromtime + 400;
+
+                    if (totime.toString().length == 3) {
+                        totime = "0"+totime;
+                        totime = totime.toString().match(/.{1,2}/g);
+                        totime = totime.join(":");
+                    }else{
+                        totime = totime.toString().match(/.{1,2}/g);
+                        totime = totime.join(":");
+                    }
+                    
+                    if (totime == "24:00") {
+                        totime = "00:00";
+                    }
+                }
+
+                $("#totime").val(totime).attr("min",totime);
+            } 
+        });
+    })
+</script>
 
 <?php include_layout_template('sub_footer.php'); ?>
 		
