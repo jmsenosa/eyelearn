@@ -185,7 +185,7 @@
 										<td><?php echo $student->address; ?></td>
 										<td><?php echo $student->p_first_name. " ".$student->p_last_name; ?></td>
 										<td><?php echo ($student->active == 1) ? '<i class="fa fa-check text-success"></i> Active' : '<i class="fa fa-remove text-danger"></i> Inactive'; ?></td>
-										<td class='text-center'><a href="update.php?id=<?php echo $student->id; ?>" rel="tooltip"  title="Edit User"><i class="fa fa-pencil text-warning"></i></a> &nbsp; <a href="delete.php?id=<?php echo $student->id; ?>" onclick="return confirm('Are you sure you want to delete');" rel="tooltip"  title="Delete User"><i class="fa fa-trash text-danger"></i></a></td>								
+										<td class='text-center'> &nbsp; <a href="delete.php?id=<?php echo $student->id; ?>" onclick="return confirm('Are you sure you want to delete');" rel="tooltip"  title="Delete User"><i class="fa fa-trash text-danger"></i></a></td>								
 									</tr>
 									<?php } ?>
 								<?php } else { ?>
@@ -196,7 +196,7 @@
 						</table>
 					</div>
 
-					<a href="create.php" class="btn btn-primary" >  Add</a> 
+					<!--<a href="create.php" class="btn btn-primary" >  Add</a> -->
 					</div>
 
 				</div>

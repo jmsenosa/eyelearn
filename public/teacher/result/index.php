@@ -85,7 +85,7 @@
                     ?>
 				</table>
 			</div>
-			 <a href='view_csv.php' target='blank' class="btn btn-danger" >View in CSV FORMAT</a>
+			 <a href='view_csv.php' target='blank' class="btn btn-danger" >Generate Report</a>
 		</div>
 	</div>
 	
