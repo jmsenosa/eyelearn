@@ -157,8 +157,9 @@
 						<div class="form-group">
 							<label for="Parents" class="col-sm-2 control-label">Parents</label> 
 							<div class="col-sm-8">
-								<select name="parents[]" class="form-control multiselect" required="required" multiple> 
-									<?php foreach ($parents as $parent): ?> 
+								<select name="parents[]" class="form-control multiselect" required="required" > 
+									<option></option>
+                                    <?php foreach ($parents as $parent): ?> 
 										<?php
 											$selected = "";
 											$mysql = "SELECT * FROM parentstud WHERE parent_id = ".$parent->id." AND student_id = ".$id. " LIMIT 1"; 
