@@ -186,7 +186,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Percentage'
+                    text: 'percentage per quiz'
                 }
             },
             legend: {
