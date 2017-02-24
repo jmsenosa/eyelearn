@@ -94,7 +94,7 @@
 		</table>
 </div>
 <a href="create.php" class="btn btn-primary" > <i class="fa fa-plus "></i> Add <?php echo ucwords($obj); ?></a> 
- <a href='viewpdf.php' target='blank' class="btn btn-danger" >View in PDF Files</a>
+ <!--<a href='viewpdf.php' target='blank' class="btn btn-danger" >View in PDF Files</a>-->
 <?php include_layout_template('sub_footer.php'); ?>
 <!-- Javascript Declaration -->
 <script type="text/javascript">
