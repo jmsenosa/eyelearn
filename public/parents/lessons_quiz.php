@@ -37,7 +37,7 @@
                         <?php foreach ($value["data"] as $lesson): ?>
                             <p><b><?php echo ucfirst($lesson->name); ?> Quizes</b></p>
                             <?php $studentall = new StudentAll() ?>
-                            <?php $quiz_takes = $studentall->quiz_takes($lesson); ?>
+                            <?php $quiz_takes = $studentall->quiz_takes($lesson, $student->id); ?>
                             <?php if ( count($quiz_takes) > 0 ): ?>                                
                                 <table class="table table-bordered">
                                     <thead>

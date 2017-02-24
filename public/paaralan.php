@@ -164,10 +164,14 @@
                 </div>
         </section>
         <audio src="student_assets/plop.wav" id="sound"></audio>
+        <img src="student_assets/room2-overlay.png" alt="" id="hahahidenananatin">
     </body>
-
+    
     </html>
     <script>
+        var initBg = "student_assets/room2.png";
+        var hoverBG = "student_assets/room2-overlay.png";
+
         var showBoard = false;
         var lesson = 0;
         var ie = 0;
@@ -197,6 +201,13 @@
                 $('.item' + (lesson + 1)).show();
             }
         });
+
+        $('.blackboardsmall').mouseover(function(){
+            $('.school .content .room img').attr("src",hoverBG);
+        }).mouseout(function(){
+            $('.school .content .room img').attr("src",initBg);
+        });
+
         $('.exit').on('click', function () {
             document.getElementById('sound').play();
             $('.lesson_content').hide();

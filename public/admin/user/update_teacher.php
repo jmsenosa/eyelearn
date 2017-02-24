@@ -18,7 +18,7 @@
 	$user_types = User_type::find_all();
 	
 	// Find  User
-	$user_id = ($_GET['id'] ? $_GET['id']:0);
+	$user_id = ($_GET['id'] ? $_GET['id'] : 0);
 	$user = User::find_by_id($user_id); 
 	
 	// Verification
@@ -31,19 +31,27 @@
 	
 	if(isset($_POST['submit'])) {
 		//Get user id to be edit	
-		$user = User::find_by_id($_POST['id']);
-		$user->username		= $_POST['username'];
-			$user->password		= $_POST['password'];
-			$user->first_name	= $_POST['first_name'];
-			$user->middle_name	= $_POST['middle_name'];
-			$user->last_name	= $_POST['last_name'];
-			$user->email 		= $_POST['email'];
-			$user->phone 		= $_POST['phone'];
-			$user->address 		= $_POST['address'];
-            $user->fromtime 		= $_POST['fromtime'];
-            $user->totime 	= $_POST['totime'];
-			$user->active 		= $_POST['active'];
-		$user->last_update	= date('Y-m-d h:i:s');
+
+        $date = new DateTime(date("Y-m-d ").$_POST['fromtime']);
+        $_POST['fromtime'] = date_format($date,"H:i:s");
+
+        $date = new DateTime(date("Y-m-d ").$_POST['totime']);
+        $_POST['totime'] = date_format($date,"H:i:s");
+
+        $user = User::find_by_id($_POST['id']);
+        $user->username		= $_POST['username'];
+        $user->password		= $_POST['password'];
+        $user->first_name	= $_POST['first_name'];
+        $user->middle_name	= isset($_POST['middle_name']) ? $_POST['middle_name'] : "";
+        $user->last_name	= $_POST['last_name'];
+        $user->email 		= $_POST['email'];
+        $user->phone 		= $_POST['phone'];
+        $user->address 		= $_POST['address'];
+        $user->fromtime     = $_POST['fromtime'];
+        $user->totime 	    = $_POST['totime']; 
+        $user->active 		= $_POST['active'];
+        $user->last_update	= date('Y-m-d h:i:s');
+ 
 		if($user->save()){
 			// Success
 			log_action('User Update User', "{$session_user->full_name()} Update User [{$_POST['username']}].");
@@ -81,7 +89,7 @@
 				 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Please input right date format.
 				</div>
 			  <?php endif; ?>
-			<form class="form-horizontal" action="update.php"   method="POST">
+			<form class="form-horizontal" method="POST">
 			   <input type='hidden' name='id' value='<?php echo $user->id; ?>'/>
 			  <div class="form-group">
 				<label for="username" class="col-sm-2 control-label">Username</label>
@@ -145,8 +153,9 @@
 			  <hr />
 			  <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-4">
-				   <button type="submit" class="btn btn-success" name="submit" onclick="return confirm('Are you sure you want to save changes?');">Save</button>
-				  <button type="button" class="btn btn-danger" onClick='window.location.href = "index.php";' >Cancel </button>
+				   <!-- <button type="submit" name="submit" ">Save</button> -->
+				   <input type="submit" value="Save" name="submit" class="btn btn-success" onclick="return confirm('Are you sure you want to save changes?');"">
+                    <button type="button" class="btn btn-danger" onClick='window.location.href = "index.php";' >Cancel </button>
 				</div>
 			  </div>
 			</form>

@@ -45,7 +45,7 @@
     }else{
         redirect_to("../index.php");
     }
-    $quiz_category = Quiz_Category::find_by_id($quiz_category_id); 
+    // $quiz_category = Quiz_Category::find_by_id($quiz_category_id); 
     // echo "<pre>"; var_dump($quiz_category ); die(); 
     $obj = 'True or False Quiz'; 
     include_layout_template('sub_header_q.php'); 
@@ -83,12 +83,7 @@
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> True or False Quiz
                 </div>
             <?php endif; ?> 
-        </div>
-        <div class="table-responsive">
-            <div class="well">
-                <p><?php echo $quiz_category->description; ?></p>
-            </div>
-        </div>
+        </div> 
         <div class="row" id="placethishere">
             <?php while ($obj = $result->fetch_object()) { ?>
                 <div class="col-md-6 col-md-offset-3 copythisshheet">

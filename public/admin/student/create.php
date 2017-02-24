@@ -124,7 +124,7 @@
 				<div class="form-group">
 					<label for="lrn" class="col-sm-2 control-label">LRN</label>
 					<div class="col-sm-4">
-						<input type="text" pattern="[0,9]{12}" title="Please input number up to 12 digits" maxlength="12" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
+						<input type="text" pattern="[0-9]{12}" title="Please input number up to 12 digits" maxlength="12" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
 					</div>
 				</div>
 			  <div class="form-group">
