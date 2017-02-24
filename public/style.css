@@ -304,15 +304,21 @@ section {
 }
 
 .blackboard  .blackboardsmall {
-        width: 457px;
+    width: 457px;
     height: 214px;
     cursor: pointer;
+    opacity: 0;
 }
 
 .blackboard .blackboardbig {
-    width : 1200px;
+    /* width : 1200px;
     height : 680px;
+    display: none; */
+    width: 1200px;
+    height: 835px;
     display: none;
+    top: -57px;
+    position: relative;
 }
 
 .pagsusulit {
@@ -625,4 +631,12 @@ section {
 {
     position: absolute; 
     left: -1000px;
+}
+
+#hahahidenananatin
+{
+    position: absolute;
+    left: -100000px;
+    width: 10px;
+    height: 10px;
 }
