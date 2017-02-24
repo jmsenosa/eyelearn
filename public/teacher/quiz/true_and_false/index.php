@@ -85,8 +85,10 @@
             $quiztrueorfalse->false_image = $quizImages['false_image'];
            
             $quiztrueorfalse->create(); 
+
         }  
 
+        redirect_to('view.php?master_id='.$quiz_master->id);
         $message = "Quizes created!";
 
         /*  */
