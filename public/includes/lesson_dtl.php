@@ -87,6 +87,7 @@ class Lesson_dtl extends DatabaseObject {
 		  }
 			
 			// Determine the target_path
+		  $this->filename = md5($this->filename."-".date("Y-m-d H:i:s A")).$this->filename;
 		  $target_path = SITE_ROOT .DS. 'public' .DS. $this->upload_dir .DS. md5($this->filename."-".date("Y-m-d H:i:s A"))."-".$this->filename;
  
 		  
