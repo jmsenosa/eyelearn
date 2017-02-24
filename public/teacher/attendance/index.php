@@ -6,7 +6,7 @@
 	if (!$session->is_logged_in()) { redirect_to("signin.php"); }
 	
 	// Find all the User
-    $students = Student::find_all();
+    $students = Student::find_by_teacher($_SESSION['user_id']);
     $obj = 'Parents and Student';
 	
 ?>
@@ -72,7 +72,7 @@
                                 if($student->sy == date('Y')){ ?>
 
                                     <tr>
-                                        <td><a href=# rel="tooltip" title="Show Profile"><?php echo $student->lrn; ?></a></td>
+                                        <td><?php echo $student->lrn; ?></td>
                                         <td>
                                             <?php echo $student->full_name() ?>
                                         </td>

@@ -44,22 +44,24 @@
             ON
             	users.id = section.created_by
 		WHERE 
-			users.id = ".$_SESSION['user_id']." 
+		 
 	"; 
  
 
 	if ( isset($_POST['submit']) ) {
 		$dateStart = $_POST['yearstart'];
 		$dateEnd   = $_POST['endstart'];
+        
+        // teacher
+		if (isset($_POST['teacher'])) {
+			$sql = $sql." users.id = ".$_POST['teacher']." "; 
+		}
 
 		if (strtotime($dateStart) <= strtotime($dateEnd)) {
 			$sql = $sql . " AND sy >= ".$dateStart." AND sy <= ".$dateEnd;
 		}
 
-		// teacher
-		if (isset($_POST['teacher'])) {
-			$sql = $sql." AND users.id = ".$_POST['teacher']." "; 
-		}
+		
 		// section
 		if (isset($_POST['section'])) {
 
@@ -183,15 +185,18 @@
 										<td><?php echo $student->address; ?></td>
 										<td><?php echo $student->p_first_name. " ".$student->p_last_name; ?></td>
 										<td><?php echo ($student->active == 1) ? '<i class="fa fa-check text-success"></i> Active' : '<i class="fa fa-remove text-danger"></i> Inactive'; ?></td>
-										<td class='text-center'><a href="update.php?id=<?php echo $student->id; ?>" rel="tooltip"  title="Edit User"><i class="fa fa-pencil text-warning"></i></a> &nbsp; <a href="delete.php?id=<?php echo $student->id; ?>" onclick="return confirm('Are you sure you want to delete');" rel="tooltip"  title="Delete User"><i class="fa fa-trash text-danger"></i></a></td>								
+										<td class='text-center'> &nbsp; <a href="delete.php?id=<?php echo $student->id; ?>" onclick="return confirm('Are you sure you want to delete');" rel="tooltip"  title="Delete User"><i class="fa fa-trash text-danger"></i></a></td>								
 									</tr>
 									<?php } ?>
-								<?php } ?>
+								<?php } else { ?>
+                                   <td colspan="6"><center>No Records to display.</center> </td>
+                                <?php } ?>
+
 							</tbody>
 						</table>
 					</div>
 
-					<a href="create.php" class="btn btn-primary" >  Add</a> 
+					<!--<a href="create.php" class="btn btn-primary" >  Add</a> -->
 					</div>
 
 				</div>

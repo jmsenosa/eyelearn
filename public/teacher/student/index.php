@@ -153,10 +153,11 @@
 							<?php } ?>
 						</tbody>
 					</table>
+                  
 				</div>
-
+                 </br>
 				<a href="create_student.php" class="btn btn-primary" >  Add</a> 
-				<a href='csv.php?id=<?php echo $user->id; ?>' target='blank' class="btn btn-danger" id="downloadCSV">Download CSV</a>
+                <a href='csv.php?id=<?php echo $user->id; ?>' target='blank' class="btn btn-danger" id="downloadCSV">Generate Report</a>
 			</div>
 
 			</div>

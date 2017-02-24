@@ -45,8 +45,10 @@
 		<thead>
 			<tr>
 			<th>Name</th>
+			<th>Quarter</th>
 			<th>Created By</th>
 			<th>Description</th>
+            <th>Date Created</th>
 			<th class='text-center'>Status</th>
 			<th class='text-center'>Option</th>
 		  </tr>
@@ -57,8 +59,31 @@
         ?>
       
 		  <tr>
-			<td><a href='content.php?id=<?php echo $lesson->id; ?>' rel="tooltip"  title="View Content" ><?php echo ucwords($lesson->name); ?></td>
+			<td>
+				<?php if ($lesson->isDone == 0): ?> 
+					<a href='content.php?id=<?php echo $lesson->id; ?>' rel="tooltip"  title="View Content" >
+						<?php echo ucwords($lesson->name); ?>
+					</a>
+				<?php else: ?>
+					<?php echo ucwords($lesson->name); ?>
+				<?php endif ?>
+			</td>
+			<?php $grading = Grading_Quarters::find_by_id($lesson->grading_quarter_id) ?>
+			<td><?php echo $grading->name; ?></td>
 			<td><?php $user = User::find_by_id($lesson->user_id); echo ucwords($user->full_name());  ?></td>
+			<td>
+                <?php echo ucwords($lesson->description); ?> 
+                <?php if ((strtotime($lesson->description." 01:00:00") == strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0) || (strtotime($lesson->description." 01:00:00") < strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0) ): ?>
+                    <span class="label label-success"> ONGOING</span>
+                <?php elseif ( strtotime($lesson->description." 01:00:00") > strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0):?>
+                    <span class="label label-warning"> PENDING</span>
+                <?php elseif($lesson->isDone == 1): ?>
+                    <span class="label label-danger"> DONE</span>
+                <?php elseif(strtotime($lesson->description." 01:00:00") < strtotime(date('Y-m-d')." 01:00:00") && $lesson->isDone == 0): ?>
+                    <span class="label label-warning"> PENDING</span> 
+                <?php endif; ?>  
+            </td>
+            <td><?php echo ucwords($lesson->last_update); ?></td>
 			<td><?php echo ucwords($lesson->description); ?></td>
 			<td class='text-center'><?php echo $lesson->active==1 ? '<i class="fa fa-check text-success"></i>':'<i class="fa fa-remove text-danger"></i>'; ?></td>
 			<td class='text-center'><!--<a href="dtl.php?id=<?php echo $lesson->id; ?>"  rel="tooltip"  title="Add <?php echo ucwords($obj); ?>" ><i class="fa fa-plus text-success"></i></a> &nbsp; --><a href="update.php?id=<?php echo $lesson->id; ?>"  rel="tooltip"  title="Edit <?php echo ucwords($obj); ?>" ><i class="fa fa-pencil text-warning"></i></a> &nbsp; <a href="delete.php?id=<?php echo $lesson->id; ?>" rel="tooltip"  title="Delete <?php echo ucwords($obj); ?>" onclick="return confirm('Are you sure you want to delete');"><i class="fa fa-trash text-danger"></i></a></td>
@@ -69,14 +94,16 @@
 		</table>
 </div>
 <a href="create.php" class="btn btn-primary" > <i class="fa fa-plus "></i> Add <?php echo ucwords($obj); ?></a> 
- <a href='viewpdf.php' target='blank' class="btn btn-danger" >View in PDF Files</a>
+ <!--<a href='viewpdf.php' target='blank' class="btn btn-danger" >View in PDF Files</a>-->
 <?php include_layout_template('sub_footer.php'); ?>
 <!-- Javascript Declaration -->
 <script type="text/javascript">
 /*<![CDATA[*/
 	$(document).ready(function(){
 		$("[rel='tooltip']").tooltip();	
-        $('.table').DataTable();
-	}); 
+        $('.table').DataTable(
+        {
+            "order": [[ 3, "desc" ]]
+        }); 
 /*]]>*/
 </script>

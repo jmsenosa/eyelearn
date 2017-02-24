@@ -22,7 +22,7 @@
             $session->message("The <strong>{$_POST['username']}</strong> is already taken");
             // redirect_to('create.php');
         }elseif($_POST['repassword'] != $_POST['password']){
-            $session->message("Password not match");
+            $message = "Password not match"; 
             // redirect_to('create.php');
         }else{
             $user = new User();
@@ -86,41 +86,41 @@
             <div class="form-group">
                 <label for="first_name" class="col-sm-2 control-label"> First Name</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control lettersonly" id="first_name" name="first_name" placeholder="First name" value='<?php echo @$_POST[' first_name '] ? $_POST['first_name '] : ' '; ?>' />
+                    <input type="text" class="form-control lettersonly" id="first_name" name="first_name" placeholder="First name" value='<?php echo @$_POST['first_name'] ? $_POST['first_name'] : ''; ?>' required />
                 </div>
                 <label for="middle_name" class="col-sm-1 control-label"> Middle Name</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control lettersonly" id="middle_name" name="middle_name" placeholder="Middle name" value='<?php echo @$_POST[' middle_name '] ? $_POST['middle_name '] : ' '; ?>' />
+                    <input type="text" class="form-control lettersonly" id="middle_name" name="middle_name" placeholder="Middle name" value='<?php echo @$_POST['middle_name'] ? $_POST['middle_name'] : ''; ?>' />
                 </div>
             </div>
             <div class="form-group">
                 <label for="last_name" class="col-sm-2 control-label"> Last Name</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control lettersonly" id="last_name" name="last_name" placeholder="Last name" value='<?php echo @$_POST[' last_name '] ? $_POST['last_name '] : ' '; ?>' />
+                    <input type="text" class="form-control lettersonly" id="last_name" name="last_name" placeholder="Last name" value='<?php echo @$_POST['last_name'] ? $_POST['last_name'] : ''; ?>' required/>
                 </div>
                 <label for="username" class="col-sm-1 control-label">Username</label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" value='<?php echo @$_POST[' username '] ? $_POST['username '] : ' '; ?>' />
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" value='<?php echo @$_POST['username'] ? $_POST['username'] : ''; ?>' required />
                 </div>
             </div>
             <div class="form-group">
                 <label for="password" class="col-sm-2 control-label"> Password</label>
                 <div class="col-sm-4">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" value='<?php echo @$_POST[' password '] ? $_POST['password '] : ''; ?>' />
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"  required />
                 </div>
                 <label for="repassword" class="col-sm-1 control-label"> Re-Type Password</label>
                 <div class="col-sm-4">
-                    <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Re-Type Password" value='<?php echo @$_POST[' repassword '] ? $_POST['repassword '] : ''; ?>' />
+                    <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Re-Type Password"  required />
                 </div>
             </div>
             <div class="form-group">
                 <label for="address" class="col-sm-2 control-label"> Address</label>
                 <div class="col-sm-4">
-                    <textarea class="form-control" rows="3" class="form-control" id="address" name="address" placeholder="Address" value='<?php echo @$_POST[' address '] ? $_POST['address '] : ' '; ?>' /></textarea>
+                    <textarea class="form-control" rows="3" class="form-control" id="address" name="address" placeholder="Address"/><?php echo @$_POST['address'] ? $_POST['address'] : ''; ?></textarea>
                 </div>
                 <label for="email" class="col-sm-1 control-label">Email</label>
                 <div class="col-sm-4">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" value='<?php echo @$_POST[' email '] ? $_POST['email '] : ''; ?>' />
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" value='<?php echo @$_POST['email'] ? $_POST['email'] : ''; ?>' required />
                 </div>
             </div>
 
@@ -128,7 +128,7 @@
             <div class="form-group">
                 <label for="phone" class="col-sm-2 control-label"> Phone </label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control numbersonly" maxlength="12" id="phone" name="phone" placeholder="Phone" value='<?php echo @$_POST[' phone '] ? $_POST['phone '] : ' '; ?>'/>
+                    <input type="text" class="form-control numbersonly" maxlength="12" id="phone" name="phone" placeholder="Phone" value='<?php echo @$_POST['phone'] ? $_POST['phone'] : ''; ?>' required />
                 </div>
                 <label for="status" class="col-sm-1 control-label">Status</label>
                 <div class="col-sm-4">
@@ -151,7 +151,7 @@
             <hr />
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
-                    <button type="submit" class="btn btn-primary" name="submit"><i class="fa fa-plus "></i> Add Admins</button>
+                    <button type="submit" class="btn btn-primary" name="submit"><i class="fa fa-plus "></i> Add Teacher</button>
                 </div>
             </div>
         </form>

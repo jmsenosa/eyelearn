@@ -4,46 +4,54 @@
     error_reporting(E_ALL);
     // Check if Logged in. If not the page will go to Signin page
     if (!$session->is_logged_in()) { redirect_to("signin.php"); }
-    
+    $conn = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
     // Find user by id
     $session_user = User::find_by_id($_SESSION['user_id']);
-    
+    $parents = Magulang::get_all();
     // Find all user type
     $student_info = Student::find_by_id($_GET['id']);
     $user_types = User_type::find_all_except_admin();
-    if(isset($_POST['submit'])) {
-        // print_r($_POST);
-        
-        if(is_numeric($_POST['first_name'])){
-            $session->message("Unable to insert numeric character on Firt Name");
-            redirect_to('update.php?id='.$_GET['id']);
-        }else{
-            $user = new Student();
-            $user->id       = $_GET['id'];
-            $user->lrn = $_POST['LRN'];
-            $user->first_name   = $_POST['first_name'];
-            $user->middle_name  = $_POST['middle_name'];
-            $user->last_name    = $_POST['last_name'];
-            $user->address      = $_POST['address'];
-            $user->active       = $_POST['active'];
-            $user->section      = $_POST['section']; 
-            $user->teacher      = $_SESSION['user_id'];
-            $user->sy         = date('Y');
-           
-            if($user->save()) {
-                log_action('User Create User', "{$session_user->full_name()} Create User [{$_POST['username']}].");
-                $session->message("Successfully created.");
-                redirect_to('index.php');
-            } else {
-                $session->message("Unable to create.");
-                redirect_to('index.php');
-            }
-        }
-        
-        
-    }
     
-    // print_r($_POST);
+    if(isset($_POST['submit'])) { 
+        
+        $user = new Student();
+        $user->id       = $_GET['id'];
+        $user->lrn = $_POST['LRN'];
+        $user->first_name   = $_POST['first_name'];
+        $user->middle_name  = $_POST['middle_name'];
+        $user->last_name    = $_POST['last_name'];
+        $user->address      = $_POST['address'];
+        $user->active       = $_POST['active'];
+        $user->section      = $_POST['section']; 
+        $user->teacher      = $_SESSION['user_id'];
+        $user->sy         = date('Y');
+        $user->save();
+        $session->message("Successfully created.");
+        
+        $mysql = "SELECT * FROM parentstud WHERE student_id = ".$student_info->id; 
+        $result = $conn->query($mysql); 
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $deleteSql = "DELETE FROM parentstud WHERE id = ".$row['id'];
+                $conn->query($deleteSql);
+            }
+        } 
+
+        foreach ( $_POST['parents'] as $key => $value) {
+            $sql = "INSERT INTO parentstud (parent_id, student_id) VALUES (".$value.",".$student_info->id.")";
+            $conn->query($sql);
+        }
+        $fn = $session_user->first_name." ".$session_user->first_name;
+        log_action('User Create User', "{$fn} Create User [{$session_user->username}].");
+        $session->message("User updated.");
+        redirect_to('index.php'); 
+    }
+
+    $id = ($_GET['id'] ? $_GET['id']:0);
 ?>
 <?php include_layout_template('sub_header.php'); ?>
 <!-- Page Heading/Breadcrumbs -->
@@ -60,9 +68,9 @@
 <div class="row">
     <div class="col-md-12">
         <?php if($message):?>
-        <div class="alert alert-danger alert-dismissible" role="alert">
+        <div class="alert alert-success alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <strong><i class="fa fa-info-circle"></i> Warning!</strong>
+            <strong><i class="fa fa-info-circle"></i> success!</strong>
             <?php echo output_message($message); ?>
         </div>
         <?php else: ?>
@@ -113,6 +121,37 @@
                     </select>
                 </div>
             </div>
+            
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label for="Parents" class="col-sm-2 control-label">Parents</label> 
+                            <div class="col-sm-9" style="padding-left: 5px;">
+                                <select name="parents[]" class="form-control multiselect" required="required"> 
+                                    <?php foreach ($parents as $parent): ?> 
+                                        <?php
+                                            $selected = "";
+                                            $mysql = "SELECT * FROM parentstud WHERE parent_id = ".$parent->id." AND student_id = ".$id. " LIMIT 1"; 
+                                            $result = $conn->query($mysql); 
+                                           
+                                            if ($result->num_rows > 0) {
+                                                while($row = $result->fetch_assoc()) {
+                                                    if ($row['parent_id'] == $parent->id ) {
+                                                        $selected = "selected";
+                                                    }
+                                                }
+                                            }
+                                        ?>
+
+                                        <option <?php echo $selected; ?> value="<?php echo $parent->id; ?>"><?php echo $parent->first_name." ".$parent->last_name; ?></option>
+                                    <?php endforeach ?>
+                                </select> 
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- <div class="form-group">
                 <label for="first_name" class="col-sm-2 control-label">Parent First Name </label>
                 <div class="col-sm-4">
@@ -134,11 +173,22 @@
             <hr />
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
-                    <button type="submit" class="btn btn-primary" name="submit"><i class="fa fa-plus "></i> Update User</button>
+                    <!-- <button type="submit" class="btn btn-primary" name="submit"><i class="fa fa-plus "></i> Update User</button> -->
+                    <input type="submit" name="submit" value="Update User" class="btn btn-primary">
                 </div>
             </div>
         </form>
         <hr />
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.multiselect').multiselect({
+            buttonWidth: "100%",
+            enableFiltering: true,
+            enableCaseInsensitiveFiltering: true
+        })
+
+    });
+</script>    
 <?php include_layout_template('sub_footer.php'); ?>

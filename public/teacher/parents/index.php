@@ -5,8 +5,12 @@
     // Check if Logged in. If not the page will go to Signin page
     if (!$session->is_logged_in()) { redirect_to("signin.php"); } 
 
-    $parents = Magulang::get_with_student_teacher($_SESSION['user_id']);
+    $parents = Magulang::get_all();
 
+
+    if (isset($_GET["message"])) {
+        $message = $_GET["message"];
+    }
 
 ?>
 <?php include_layout_template('sub_header.php'); ?>
@@ -48,11 +52,11 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Name</th>
+                                <th>Username</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Address</th>
-                                <th>Section</th>
                                 <th class="text-right"></th>
                             </tr>
                         </thead>
@@ -60,11 +64,11 @@
                             <?php foreach ($parents as $parent): ?>
                             <tr>
                                 <td></td>
-                                <td><?php echo $parent->parent_name ; ?></td>
+                                <td><?php echo $parent->username ; ?></td>
+                                <td><?php echo $parent->first_name ; ?></td>
+                                <td><?php echo $parent->last_name ; ?></td>
                                 <td><?php echo $parent->email ; ?></td>
                                 <td><?php echo $parent->phone ; ?></td>
-                                <td><?php echo $parent->address ; ?></td>
-                                <td><?php echo $parent->section ; ?></td>
                                 <td class="text-right">
                                     <a class="btn btn-info" role="btn" href="edit.php?id=<?php echo $parent->id; ?>">Update</a>
                                     <a class="btn btn-danger delete-parent" role="btn" href="delete.php?id=<?php echo $parent->id; ?>">Delete</a>

@@ -35,38 +35,59 @@
         $target_dir = SITE_ROOT .DS. "uploads/"; 
         $quizImages = [];
 
-        foreach ($_FILES as $key => $value) { 
+        foreach ($_FILES as $key => $value) {  
 
-            $filename = md5(basename($key).date("Y-m-dH:i:s"));
-  
-            $target_file = $target_dir . md5(basename($key).date("Y-m-dH:i:s"));
-            $imageFileType = pathinfo($value['name'],PATHINFO_EXTENSION); 
+            if ($key != "background") { 
 
-            $file = $target_file.".".$imageFileType;
-            move_uploaded_file($value['tmp_name'], $file);
-            $quizImages[$key] = $filename.".".$imageFileType;
+                $filename = md5(basename($key).date("Y-m-dH:i:s"));
+      
+                $target_file = $target_dir . md5(basename($key).date("Y-m-dH:i:s"));
+                $imageFileType = pathinfo($value['name'],PATHINFO_EXTENSION); 
+
+                $file = $target_file.".".$imageFileType;
+                move_uploaded_file($value['tmp_name'], $file);
+                $quizImages[$key] = $filename.".".$imageFileType;
+            }
         }
+
 
         $display_text_true = $post['truth_text'];
         $display_text_false = $post['false_text'];
 
-        foreach ($post['question'] as $key => $value) {
+        foreach ($post["audio_id"] as $key => $value) {
             $quiztrueorfalse = new Quiz_True_Or_False();
-            // echo "<pre>"; print_r(json_encode($quiz)); die();
-            $quiztrueorfalse->quiz_id = $quiz->id; 
-            $quiztrueorfalse->question = $value;
+
+            $newfile = array();
+
+            $newfile["name"]     = $_FILES['background']["name"][$key];
+            $newfile["type"]     = $_FILES['background']["type"][$key];
+            $newfile["tmp_name"] = $_FILES['background']["tmp_name"][$key];
+            $newfile["error"]    = $_FILES['background']["error"][$key];
+            $newfile["size"]     = $_FILES['background']["size"][$key];
+ 
+            $filename = md5(basename($newfile["name"]).date("Y-m-dH:i:s"));
+  
+            $target_file = $target_dir . md5(basename($newfile["name"]).date("Y-m-dH:i:s"));
+            $imageFileType = pathinfo($newfile["name"],PATHINFO_EXTENSION); 
+
+            $file = $target_file.".".$imageFileType;
+            move_uploaded_file($newfile['tmp_name'], $file);
+
+
+            $quiztrueorfalse->quiz_id = $quiz->id;  
+            $quiztrueorfalse->audio_id = $value;
             $quiztrueorfalse->truth_text = $display_text_true;
             $quiztrueorfalse->false_text = $display_text_false;
-            $quiztrueorfalse->correct_answer = $post['correct_answer'][$key];
-            $quiztrueorfalse->background = $quizImages['background'];
+            $quiztrueorfalse->correct_answer = $post["correct_answer"][$key]; 
+            $quiztrueorfalse->background = $filename.".".$imageFileType;
+
             $quiztrueorfalse->true_image = $quizImages['true_image'];
             $quiztrueorfalse->false_image = $quizImages['false_image'];
-            
+           
             $quiztrueorfalse->create(); 
-            
-        }
+        }  
 
-        
+        $message = "Quizes created!";
 
         /*  */
     }
@@ -127,13 +148,7 @@
                             <td colspan="2">
                                 <input type="text" name="title" value="" required="" class="form-control">
                             </td>
-                        </tr>
-                        <tr>
-                            <th class="text-left">Questions background</th>
-                        </tr>
-                        <tr>
-                            <td><input name="background" type="file" multiple class="form-control" /></td>
-                        </tr>
+                        </tr> 
                         <tr>                            
                             <th colspan="2" class="text-left">Truth Selection</th>
                         </tr>
@@ -169,40 +184,60 @@
                     
                 </table>
                 <hr>
-                <h3>Quiz Content</h3>
-                <?php for($ctr = 1; $ctr<=10; $ctr++){?>
-                <div class="col-md-6 col-md-offset-3">
-                    <hr>
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <th colspan="2" class="text-left"><h4>Question #<?php echo $ctr; ?></h4></th> 
-                            </tr>
-                            <tr>
-                                <td colspan="2"><textarea class="form-control" required name="question[<?php echo $ctr; ?>]"></textarea></td>
-                            </tr>
-                            <tr>
-                                <th class="text-left">Correct Answer</th>
-                            </tr>
-                            <tr> 
-                                <td> 
-                                    <select required name="correct_answer[<?php echo $ctr; ?>]" class="form-control">
-                                        <option></option>
-                                        <option value="true">True</option>
-                                        <option value="false">False</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <hr>
-                                </td>
-                            </tr>
-                            
-                        </tbody>
-                    </table> 
+                <h3>Quiz Content</h3> 
+                <div class="row" id="placethishere">
+                    <div class="col-md-6 col-md-offset-3 copythisshheet">
+                        <hr>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th colspan="2" class="text-left">Question/Background</th> 
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="file" class="form-control" name="background[]" required="required">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2" class="text-left">Audio</th> 
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <select class="form-control" name="audio_id[]" required="required">
+                                            <?php $lessonDta = Lesson::find_by_id($lesson_id); ?> 
+                                            <?php $audios = Audio::find_by_lesson_name($lessonDta->name) ?>
+                                            <option value="">Audios</option>
+                                            <?php foreach ($audios as $audio): ?>
+                                                <option value="<?php echo $audio->id; ?>"><?php echo $audio->filename; ?></option>
+                                            <?php endforeach ?>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Correct Answer</th>
+                                </tr>
+                                <tr> 
+                                    <td> 
+                                        <select required name="correct_answer[]" class="form-control" >
+                                            <option></option>
+                                            <option value="true">True</option>
+                                            <option value="false">False</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="text-right">
+                                            <button class="btn btn-warning duplicate-btn">Add</button> 
+                                        </div>
+                                        <hr>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table> 
+                    </div> 
                 </div>
-                <?php } // end this ffor ?>
                 <table class="table">
                     <tfoot>
                         <tr>
@@ -217,6 +252,21 @@
     </div>
 </div> 
 <script type="text/javascript">
-    $("div#myId").dropzone({ url: "/file/post" });
+    // $("div#myId").dropzone({ url: "/file/post" });
+    $(document).on("click",".duplicate-btn", function(){
+        var parent = $(this).closest(".copythisshheet");
+        var clone = parent.clone();
+        $(clone).find(":input").val("");
+        $(clone).insertAfter(parent);
+        $(this).removeClass("btn-warning").addClass("btn-danger");
+        $(this).removeClass("duplicate-btn").addClass("remove-btn");
+        $(this).html("Remove");
+        return false;
+    });
+
+    $(document).on("click",".remove-btn", function(){
+        $(this).closest(".copythisshheet").remove();
+        return false;
+    });
 </script>
 <?php include_layout_template('sub_footer.php'); ?>

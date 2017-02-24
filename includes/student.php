@@ -116,6 +116,14 @@ class Student extends DatabaseObject {
 		return self::find_by_sql($sql);
 	}	
     
+    public static function find_by_teacher($id){
+		
+		
+		$sql = "SELECT * FROM " . self::$table_name;
+		$sql .= " WHERE teacher='{$id}'";
+		return self::find_by_sql($sql);
+	}
+    
     public static function find_my_parent($lastname,$firstname){
 		
 		

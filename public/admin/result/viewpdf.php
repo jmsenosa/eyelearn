@@ -101,6 +101,8 @@ $pdf->Cell(00,00,'Remarks');
 $pdf->SetFont('Arial','',10);
 $i=60; 
 
+
+
 $query = '
     SELECT 
         quiz_take.id as id,
@@ -140,12 +142,25 @@ $query = '
         student
             ON 
                 student.id = quiz_take.student_id
-    GROUP BY 
+    LEFT JOIN
+        section
+            ON 
+                section.id = student.section_id
+    ';
+
+
+if (isset($_GET['id'])) {
+    if ($_GET['id'] != "" || $_GET['id'] != "undefined") {
+        $query = $query. " WHERE section.created_by = ".$_GET["id"]." "; 
+    }
+}
+
+$query = $query = $query. ' GROUP BY 
         quiz_take.id
     ORDER BY 
         quiz_no ASC,
         id ASC ';
-
+ 
 $mysqli = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
 if (mysqli_connect_errno()) {

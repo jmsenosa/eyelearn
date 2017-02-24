@@ -87,6 +87,7 @@ class Lesson_dtl extends DatabaseObject {
 		  }
 			
 			// Determine the target_path
+		  $this->filename = md5($this->filename."-".date("Y-m-d H:i:s A")).$this->filename;
 		  $target_path = SITE_ROOT .DS. 'public' .DS. $this->upload_dir .DS. md5($this->filename."-".date("Y-m-d H:i:s A"))."-".$this->filename;
  
 		  
@@ -132,10 +133,10 @@ class Lesson_dtl extends DatabaseObject {
 	}
 	
 	public function size_as_text() {
-		if($this->size < 1024) {
+		if($this->size < 1048576) {
 			return "{$this->size} bytes";
 		} elseif($this->size < 1048576) {
-			$size_kb = round($this->size/1024);
+			$size_kb = round($this->size/1048576);
 			return "{$size_kb} KB";
 		} else {
 			$size_mb = round($this->size/1048576, 1);

@@ -45,7 +45,7 @@
             // $attendance = json_encode( $attendance , true);
         }
 
-        public function quiz_takes($lesson) {
+        public function quiz_takes($lesson, $student_id) {
             $query = "SELECT 
                 quiz_master_id as id,
                 score,
@@ -55,10 +55,13 @@
             LEFT JOIN
                 quiz_take ON
                     quiz_take.quiz_master_id = quiz_master.id
-            WHERE quiz_master.lesson_id = {$lesson->id}
-            ORDER BY quiz_master.id ASC
+            WHERE 
+                quiz_master.lesson_id = {$lesson->id}  AND
+                quiz_take.student_id = {$student_id}
+            ORDER BY 
+                quiz_master.id ASC, quiz_take.id ASC
                 ";
-
+            // echo "<pre>"; print_r($query); die();
             $quizshit = array();
 
             if ($result = $this->mysqli->query($query)) {
@@ -93,7 +96,7 @@
             $sql = "
                 SELECT  
                     quiz_take.id as take_id,
-                    concat(lesson.name ,'<br>',DATE_FORMAT(quiz_take.last_update, ".'"%b-%d"'.")) as lesson_title,
+                    concat(lesson.name ,'<br>') as lesson_title,
                     quiz_master.id as quiz_no, 
                     round(( quiz_take.score / quiz_take.total_questions * 100 ),2) as percentage
                 FROM 
@@ -127,13 +130,22 @@
 
             if ($result = $this->mysqli->query($sql)) {
                 $data = array();
+                $counter = 1;
                 while ($obj = $result->fetch_object()) 
                 {   
                     $newarr = array();
-                    $newarr[] = $obj->lesson_title."<br>Quiz #".$obj->quiz_no."<br>".$obj->take_id; 
+                    $newarr[] = $obj->lesson_title."<br>Quiz #".$obj->quiz_no."<br> take #".$counter; 
                     $newarr[] = floatval($obj->percentage); 
 
                     $quizshit[] = $newarr;
+                    if ($counter < 3)
+                    {
+                        $counter = $counter + 1;
+                    }
+                    else
+                    {
+                        $counter = 1;
+                    }
                 }
             }
             return json_encode($quizshit);

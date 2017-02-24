@@ -26,7 +26,7 @@
         }else{ 
 
             $parent->save();
-            header('Location: index.php');
+            header('Location: index.php?message="Parent updated!"');
         }
     }
 

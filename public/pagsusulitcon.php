@@ -80,7 +80,7 @@ if ($result->num_rows > 0) {
     $quiz_result->score = $_POST['score'];
     $quiz_result->total_number = $_POST['total_number'];
     $quiz_result->quiz_date = $today;
-    $quiz_result->current_item = $_POST['current_item'];
+    $quiz_result->current_item = $_POST['current_item']-1;
     $quiz_result->remarks = $remarks;
     $quiz_result->save();
     $quiz = Quiz::find_by_id($_POST['quiz_id'],$_POST['id']);

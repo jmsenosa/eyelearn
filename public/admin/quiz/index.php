@@ -84,9 +84,11 @@
                 <?php $user = User::find_by_id($lesson->user_id);  ?>
                 <tr>
                     <td class="text-center">                                    
-                        <a href='folder.php?id=<?php echo $lesson->id; ?>' rel="tooltip" title="View Content">
-                            <?php echo ucwords($lesson->name); ?>                          
-                        </a>
+                        <?php if ($lesson->isDone == 0): ?> 
+                            <a href='folder.php?id=<?php echo $lesson->id; ?>' rel="tooltip" title="     View Content"><?php echo ucwords($lesson->name); ?></a>
+                        <?php else: ?>
+                            <?php echo ucwords($lesson->name); ?>
+                        <?php endif ?>
                     </td>
         			<td>
                         <?php if (isset($user->first_name) && isset($user->last_name)): ?>

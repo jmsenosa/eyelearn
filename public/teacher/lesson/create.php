@@ -34,7 +34,7 @@
 			$lesson->user_id            = $_SESSION['user_id'];
 			$lesson->description        = $_POST['description'];
 			$lesson->active             = $_POST['active'];
-			$lesson->audio              = $fileName; 
+			$lesson->audio              = "empty"; 
 			$lesson->grading_quarter_id = $_POST['grading_quarter_id'];
 			$lesson->last_update        = date('Y-m-d H:i:s');
 			
@@ -110,13 +110,7 @@
 			
 		</div>
 		
-		<div class="form-group">
-			<label for="name" class="col-sm-2 control-label"> <?php echo ucwords($obj); ?> Audio</label>
-			<div class="col-sm-4">
-				<input type="file" class="form-control" id="audio" name="audio" accept="audio/*" />
-			</div>
-			
-		</div>
+		
 		
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-4">

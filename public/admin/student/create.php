@@ -93,6 +93,10 @@
 		{
 			color: #FFF;
 		}
+		ul.multiselect-container > li:nth-child(2) input[type="radio"]
+        {
+            display: none;
+        }
 	</style>
 	<div class="row">
 		<div class="col-lg-12">
@@ -120,7 +124,7 @@
 				<div class="form-group">
 					<label for="lrn" class="col-sm-2 control-label">LRN</label>
 					<div class="col-sm-4">
-						<input type="text" maxlength="12" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
+						<input type="text" pattern="[0-9]{12}" title="Please input number up to 12 digits" maxlength="12" class="form-control numbersonly" id="lrn" name="lrn" placeholder="<?php echo ucwords($obj); ?> LRN" value="<?php echo (isset($_POST['lrn'])) ? $_POST['lrn'] : ""; ?>"  />
 					</div>
 				</div>
 			  <div class="form-group">
@@ -177,8 +181,9 @@
 						<div class="form-group">
 							<label for="Parents" class="col-sm-2 control-label">Parents</label> 
 							<div class="col-sm-9" style="padding-left: 5px;">
-								<select name="parents[]" class="form-control multiselect" required="required" multiple> 
-									<?php foreach ($parents as $parent): ?>   
+								<select name="parents[]" class="form-control multiselect" required="required" > 
+									<option style="position:absolute;left:-1000px"></option>
+                                    <?php foreach ($parents as $parent): ?>   
 										<?php $selected = ""; ?>
 										<?php if (isset($_POST['parents'])): ?>
 											<?php foreach ($_POST['parents'] as $key => $value): ?>

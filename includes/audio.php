@@ -105,10 +105,10 @@ class Audio extends DatabaseObject {
 	}
 	// size of image uploading 
 	public function size_as_text() {
-		if($this->size < 1024) {
+		if($this->size < 1048576) {
 			return "{$this->size} bytes";
 		} elseif($this->size < 1048576) {
-			$size_kb = round($this->size/1024);
+			$size_kb = round($this->size/1048576);
 			return "{$size_kb} KB";
 		} else {
 			$size_mb = round($this->size/1048576, 1);

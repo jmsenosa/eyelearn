@@ -24,7 +24,7 @@
 		$lesson_dtl->seconds   = $_POST['seconds'];
 		$lesson_dtl->attach_file($_FILES['file_upload']);
 		$lesson_dtl->last_update 	= date('Y-m-d H:i:s');
-
+		 
 		if($lesson_dtl->save()) {
 			// Success
 			$session->message("The {$_POST['name']} was successfully Added.");

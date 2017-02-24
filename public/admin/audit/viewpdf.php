@@ -13,8 +13,11 @@
 	// }
 	
 	// Check if there is event_hdr_id available in the database
-	$results 			= Log::find_all();
-	
+    $results = Log::find_all();
+    
+    if ( (isset($_GET['datefrom']) && $_GET['datefrom'] != "") && (isset($_GET['dateto']) && $_GET['dateto'] != "") ) {
+        $results = Log::get_by_date($_GET['datefrom'], $_GET['dateto']);
+    }	
 	
 	if(!$results) {
 		$session->message("The Event could not be located.");
@@ -52,7 +55,7 @@ function Footer()
 // Instanciation of inherited class
 $pdf = new PDF();
 $pdf->AliasNbPages();
-$pdf->AddPage(L);
+$pdf->AddPage("P");
 // $pdf->Image('../../images/participant.jpg', 0, 0, 220);
 
 $pdf->SetFont('Arial','',10);
@@ -95,15 +98,15 @@ $i=60;
 foreach($results as $result):
 // id, quiz_id, user_id, score, total_number, last_update
 	$pdf->SetXY(10,$i);
-	$pdf->Cell(00,00,ucwords($result->id));
+	$pdf->Cell(00,00,trim(preg_replace('/\s\s+/', ' ',ucwords($result->id))));
 	$pdf->SetXY(30,$i);
-    $pdf->Cell(00,00,strtoupper($result->action));
+    $pdf->Cell(00,00,strtoupper(preg_replace('/\s\s+/', ' ',$result->action)));
 	$pdf->SetXY(80,$i);
-	$pdf->Cell(00,00,strtoupper($result->message));
+	$pdf->Cell(00,00,strtoupper(preg_replace('/\s\s+/', ' ',$result->message)));
 	$pdf->SetXY(210,$i);
-	$pdf->Cell(00,00,strtoupper($result->created_at));
+	$pdf->Cell(00,00,strtoupper(preg_replace('/\s\s+/', ' ',$result->created_at)));
 
-	$i+=5;
+	$i = $i + 5;
 endforeach;
 // for($i=1;$i<=40;$i++)
     // $pdf->Cell(0,10,'Printing line number '.$i,0,1);

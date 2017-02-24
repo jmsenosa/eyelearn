@@ -108,7 +108,7 @@ class User extends DatabaseObject {
 	public static function check_username($username="") {
     global $database;
     $username = $database->escape_value($username);
-    $password = $database->escape_value($password);
+
 
     $sql  = "SELECT * FROM users ";
     $sql .= "WHERE username = '{$username}' ";

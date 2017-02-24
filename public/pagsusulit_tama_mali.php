@@ -118,7 +118,10 @@
             <?php $counter = 0; ?>
             <?php foreach ($tm_quizes as $tmquiz): ?>
                 <div class="tm_question_container <?php echo ($counter == 0) ? "tm-shown":"tm-hidden" ; ?>" id="tm-quiz-<?php echo $tmquiz->id; ?>" data-id="<?php echo $tmquiz->id; ?>" data-counter="<?php echo $counter; ?>">
-                    <h5 class="header text-center"><?php echo $quiz->description; ?></h5>
+                    <h4 class=" text-center">
+                        <?php echo $quiz->description; ?> <br>
+                        <span style="font-size: 17px !important; text-align: center;">Pindutin ng matagal ang larawan para tumunog.</span>
+                    </h4>
                     <div class="tm-question" style=" background: url('<?php echo url()."uploads/".$tmquiz->background?>') no-repeat center center; ">
                         <div class="question-wrapp">
                             <div class="table-type full-width">
@@ -128,7 +131,12 @@
                                     </div> 
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+                        <?php $audio = Audio::find_by_id($tmquiz->audio_id); ?>
+                        <audio controls="controls" class="tm-audio"> 
+                            <source src="<?php echo "audio/".$audio->filename; ?>" type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
                     </div>
                     <div class="tm-selection">
                         <div class="float-left text-center width50percent tm-choice">
@@ -151,8 +159,7 @@
             <?php endforeach ?>
             <div class="tm_question_container tm-hidden" id="submitter">
                 <h4 class="text-center">MGA SAGOT</h4>
-                <div class="questions-ansswers">
-                    
+                <div class="questions-ansswers">                    
                 </div>
                 <div class="text-center">
                     <input type="submit" name="submit" class="tm-submit" value="IPASA">
@@ -231,6 +238,10 @@
             }
 
             return false;
+        });
+
+        $(document).on("mousedown",".question-wrapp",function(){
+           $(this).closest(".tm-question").find(".tm-audio").get(0).play();
         });
     });
 </script>
