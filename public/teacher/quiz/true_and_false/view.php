@@ -38,8 +38,7 @@
                 WHERE 
                     quiz_master.id = {$master_id} 
             ";
-
-            // echo $sql; die();
+ 
         $result = $conn->query($sql);
 
     }else{
@@ -90,7 +89,7 @@
                     <hr>
                     <table class="table">
                         <tbody>
-                            <tr>
+                            <tr> 
                                 <th colspan="2" class="text-left">Question/Background</th> 
                             </tr>
                             <tr>

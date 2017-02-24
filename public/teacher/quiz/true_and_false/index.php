@@ -18,18 +18,25 @@
         $quiz_master = new Quiz_Master();
         $quiz_master->lesson_id = $data["id"];
         $quiz_master->created_by = $_SESSION["user_id"];
-        $quiz_master->save();  
+        $quiz_master->save();   
 
-        $quiz = new Quiz(); 
+        $dbHost = DB_SERVER;
+        $dbUsername = DB_USER;
+        $dbPassword = DB_PASS;
+        $dbName = DB_NAME;
 
-        $quiz->lesson_id = $data['id'];
-        $quiz->quiz_category_id = $data['quiz_cat'];
-        $quiz->description = $post['title'];
-        $quiz->quiz_master_id = $quiz_master->id;
-        $insert = $quiz->create();        
-
+        //connect with the database
+        $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+        $insertSQL = "INSERT 
+                        INTO 
+                            quiz (lesson_id, quiz_category_id, description, quiz_master_id, answer,type,choice1,choice2,choice3,choice4,audio)
+                        VALUES (".$data['id'].",".$data['quiz_cat'].",'".$post['title']."',".$quiz_master->id.", '','','','','','','')";
+        // print_r($insertSQL); die();
+        // // dd(); 
+        $conn->query($insertSQL);
+        $quiz_id = $conn->insert_id; 
         $uploadOk = 1;
-  
+
         $base_url =  "/uploads/";
 
         $target_dir = SITE_ROOT .DS. "uploads/"; 
@@ -74,28 +81,27 @@
             move_uploaded_file($newfile['tmp_name'], $file);
 
 
-            $quiztrueorfalse->quiz_id = $quiz->id;  
+            $quiztrueorfalse->quiz_id = $quiz_id;  
             $quiztrueorfalse->audio_id = $value;
+            $quiztrueorfalse->question = " ";
             $quiztrueorfalse->truth_text = $display_text_true;
             $quiztrueorfalse->false_text = $display_text_false;
             $quiztrueorfalse->correct_answer = $post["correct_answer"][$key]; 
             $quiztrueorfalse->background = $filename.".".$imageFileType;
 
             $quiztrueorfalse->true_image = $quizImages['true_image'];
-            $quiztrueorfalse->false_image = $quizImages['false_image'];
-           
+            $quiztrueorfalse->false_image = $quizImages['false_image']; 
             $quiztrueorfalse->create(); 
 
-        }  
+        }   
+
 
         redirect_to('view.php?master_id='.$quiz_master->id);
         $message = "Quizes created!";
-
-        /*  */
     }
 
 
-    $quiz_category = Quiz_Category::find_by_id($quiz_category_id); 
+    // $quiz_category = Quiz_Category::find_by_id($quiz_category_id); 
     // echo "<pre>"; var_dump($quiz_category ); die(); 
     $obj = 'True or False Quiz'; 
     // include page header 
@@ -138,7 +144,7 @@
         </div>
         <div class="table-responsive">
             <div class="well">
-                <p><?php echo $quiz_category->description; ?></p>
+                <p><?php //echo $quiz_category->description; ?></p>
             </div>
             <form method="post"  enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
                 <table class="table">
